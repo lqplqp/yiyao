@@ -5,6 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
+import com.lxkj.yiyao.shengji.HomeFragment;
+import com.lxkj.yiyao.shengji.ShenHeFragment;
+
 /**
  * Created by sun on 2017/1/18.
  */
@@ -30,11 +33,11 @@ public class VPFAdapter extends FragmentPagerAdapter {
                 //第position个fragment页面, new 出fragment并返回
                 switch (position){
                     case 0:
-
-                        break;
+                        HomeFragment homeFragment = new HomeFragment();
+                        return homeFragment;
                     case 1:
-
-                        break;
+                        ShenHeFragment shenHeFragment = new ShenHeFragment();
+                        return shenHeFragment;
                 }
                 break;
             case 1:
