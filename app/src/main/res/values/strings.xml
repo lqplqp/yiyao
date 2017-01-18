@@ -70,4 +70,6 @@
     <string name="commit">提交</string>
     <string name="shiji_notifylist_faqi">发起单位 :</string>
     <string name="shiji_notifylist_time">培训起始时间 : </string>
+    <string name="excel_export">excel导出</string>
+    <string name="back">返回</string>
 </resources>
