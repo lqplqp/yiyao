@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import com.lxkj.yiyao.utils.ToastUtil;
+
 import butterknife.ButterKnife;
 
 
@@ -41,7 +43,7 @@ public abstract class BaseActivity extends Activity{
     public abstract int getLayout();
 
     protected void toast(String msg){
-        Toast.makeText(mActivity,msg,Toast.LENGTH_SHORT).show();
+        ToastUtil.show(msg);
     }
 
 
