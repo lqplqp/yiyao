@@ -38,14 +38,6 @@ public class JGCompanyManFragment extends BaseFragment {
         return R.layout.jg_fragment_layout_jianguanrenyuan;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
-
     @OnClick({R.id.select, R.id.back, R.id.add})
     public void onClick(View view) {
         switch (view.getId()) {
