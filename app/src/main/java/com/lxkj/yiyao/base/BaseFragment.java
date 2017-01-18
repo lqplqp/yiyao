@@ -25,6 +25,11 @@ public abstract class BaseFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mActivity = getActivity();
         init();
+        System.out.print("");
+        System.out.print("");
+        System.out.print("");
+        System.out.print("");
+
     }
 
     private  void init(){
