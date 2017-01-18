@@ -46,4 +46,11 @@
     <string name="jg_xueli">学历 :</string>
     <string name="jg_address">单位地址 :</string>
     <string name="jg_home_welcome">欢迎</string>
+
+    <string name="sj_admin_username">用户名:</string>
+    <string name="sj_admin_register_time">注册时间:</string>
+
+    <string name="sj_shenhe_return">返回</string>
+
+    <string name="jadw_admin_add">新增</string>
 </resources>

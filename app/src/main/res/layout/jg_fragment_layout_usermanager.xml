@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.NoTitleBar"
+
+    >
+
+    <LinearLayout
+        android:background="#eaeaea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+
+            >
+            <ImageView
+                android:id="@+id/cx"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sj_shenhe_select"
+                />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/cx"
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询条件"
+                android:textColor="#333"
+                android:textSize="@dimen/title_textsize"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/blue_but_bg"
+                android:clickable="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/sj_shenhe_select"
+                android:textColor="@color/global_white"
+                android:id="@+id/select" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fillet_white_bg"
+            >
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户姓名："
+                android:textColor="#333"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_width="250dp"
+                android:layout_height="30dp"
+                android:id="@+id/imput_name" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/tj"
+                android:layout_centerVertical="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sj_shenhe_menu"
+                />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/tj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户列表"
+                android:textSize="@dimen/title_textsize"
+                android:textColor="#333"
+                android:layout_marginLeft="8dp"
+                />
+        </RelativeLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/fillet_white_bg">
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="用户姓名"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="性别"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="体检报告号"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="培训证号"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="培训有效期"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="50dp"
+                    android:paddingRight="50dp"
+                    android:paddingTop="5dp"
+                    android:text="过期提醒"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="80dp"
+                    android:paddingRight="80dp"
+                    android:paddingTop="5dp"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

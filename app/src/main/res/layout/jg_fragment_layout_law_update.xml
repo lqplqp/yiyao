@@ -79,13 +79,14 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginLeft="110dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/table_frame_fray"
                         android:lines="1"
                         android:paddingTop="10dp"
-                        android:id="@+id/number" />
+                        android:id="@+id/number"
+                        android:layout_alignParentTop="true"
+                        android:layout_toEndOf="@+id/textView" />
                 </RelativeLayout>
 
                 <LinearLayout
