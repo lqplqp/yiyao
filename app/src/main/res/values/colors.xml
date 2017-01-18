@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="global_black">#333</color>
+    <color name="global_white">#fff</color>
+    <color name="global_red">#ee0b0b</color>
+    <color name="global_gray">#bfbfbf</color>
+
+    <color name="global_bg_blue">#29a6eb</color>
+    <color name="global_bg_gray">#eaeaea</color>
+    <color name="login_text">#094f76</color>
+
+    <color name="login_register">#188dce</color>
+    <color name="login_login">#094f76</color>
+    <color name="line">@color/global_bg_gray</color>
+</resources>

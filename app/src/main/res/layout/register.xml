@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/global_bg_gray"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qy_admin"
+            android:textColor="@color/global_white"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:clickable="true"
+            android:background="@drawable/fillet_blue_bg"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qy_user"
+            android:textColor="@color/global_black"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:clickable="true"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qy_gongsi"
+            android:textColor="@color/global_black"
+            android:layout_marginLeft="40dp"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:clickable="true"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@drawable/fillet_white_bg"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/register_msg"
+            android:textColor="@color/global_red"
+            android:layout_margin="10dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/register_input_username"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null"
+            android:id="@+id/username" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/register_input_pwd"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null"
+            android:id="@+id/password" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="@string/register_input_repwd"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null"
+            android:id="@+id/repassword" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+        <RadioGroup
+            android:layout_marginLeft="18dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></LinearLayout>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_gray"
+                android:text="食品"
+                android:id="@+id/eat" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_gray"
+                android:text="药品"
+                android:id="@+id/yao" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_gray"
+                android:text="化妆品"
+                android:id="@+id/huazhuang" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_gray"
+                android:text="保健品"
+                android:id="@+id/baojian" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/global_gray"
+                android:text="医疗器械"
+                android:id="@+id/yiliao" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+
+                android:hint="@string/register_input_check"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp"
+                android:background="@null"
+                android:id="@+id/checkcode" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/image"
+                android:background="@color/global_black"
+                android:paddingTop="10dp"/>
+
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="180dp"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_but_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_marginLeft="135dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/quick_register"
+            android:id="@+id/register" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

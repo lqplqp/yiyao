@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--查询条件和查询条件之下的输入框  start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/sj_shenhe_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/sj_shenhe_selectmsg"
+                    android:textColor="@color/global_black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/blue_but_bg"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="@string/sj_shenhe_select"
+                    android:textColor="@color/global_white"
+                    android:id="@+id/select" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fillet_white_bg"
+                android:paddingBottom="5dp"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/sj_law_number"
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="110dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/table_frame_fray"
+                        android:lines="1"
+                        android:paddingTop="10dp"
+                        android:id="@+id/number" />
+                </RelativeLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/sj_law_type"
+                    android:textColor="@color/global_black"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="9dp"
+                    android:layout_height="wrap_content">
+                    <Spinner
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/type">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:text="@string/sj_law_time"
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:layout_marginLeft="9dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/start_time" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        />
+
+                    <EditText
+                        android:layout_width="100dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/end_time" />
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <!--查询条件和查询条件之下的输入框  end-->
+
+
+            <!--体验机构列表 start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/sj_shenhe_menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/sj_lay_list"
+                    android:textColor="@color/global_black"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fillet_white_bg">
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_width="40dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="序号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="1"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="执法编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="11111"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="执法人姓名"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="XXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="执法时间"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="2017-07-03"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="被执法人信息卡编号/许可证编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="111111000000"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="被执法人姓名/企业"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="XXXXXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="执法类型"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="行政许可"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="操作"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="查看"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fillet_white_bg">
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_width="40dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="序号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="1"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="执法编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="11111"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="执法人姓名"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="XXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="执法时间"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="2017-07-03"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="被执法人信息卡编号/许可证编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="111111000000"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="被执法人姓名/企业"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="XXXXXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="执法类型"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="行政许可"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="操作"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="查看"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <!--体验机构列表 end-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
