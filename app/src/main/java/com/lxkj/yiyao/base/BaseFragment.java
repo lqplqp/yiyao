@@ -1,8 +1,9 @@
 package com.lxkj.yiyao.base;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.Toast;
 
@@ -14,15 +15,16 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public abstract class BaseFragment extends Fragment{
+public abstract class BaseFragment extends Fragment {
     protected Activity mActivity;
 
     private View mRootView;
 
-    public BaseFragment(){
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         mActivity = getActivity();
         init();
-
     }
 
     private  void init(){
