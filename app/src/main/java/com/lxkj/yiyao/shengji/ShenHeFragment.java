@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.shengji;
 
 import android.view.View;
 import android.widget.EditText;
@@ -7,8 +7,8 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-
-import org.w3c.dom.Text;
+import com.lxkj.yiyao.base.BaseFragment;
+import com.lxkj.yiyao.shengji.contract.ShenHeContract;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ import java.util.List;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class ShenHe extends BaseFragment implements ShenHeConstract.ShenHeView,View.OnClickListener{
+public class ShenHeFragment extends BaseFragment implements ShenHeContract.ShenHeView,View.OnClickListener{
 
     //查询按钮
     private TextView select;

@@ -1,25 +1,20 @@
-package com.lxkj.yiyao.jg;
+package com.lxkj.yiyao.jianguan;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.sj.BaseFragment;
+import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class LawManager extends BaseFragment {
+public class LawManagerFragment extends BaseFragment {
     @BindView(R.id.select)
     TextView select;
     @BindView(R.id.number)

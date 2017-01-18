@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.base;
 
 import android.app.Activity;
 import android.app.Fragment;
