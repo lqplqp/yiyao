@@ -1,9 +1,5 @@
 package com.lxkj.yiyao.jg;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -11,7 +7,6 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -31,7 +26,7 @@ public class CompanyManagerFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_companyManager;
+        return R.layout.jg_fragment_layout_companymanager;
     }
 
     @OnClick(R.id.select)
