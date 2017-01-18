@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+
+    <!--体验机构列表 start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/sj_shenhe_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:text="监管单位统计列表"
+            android:textColor="@color/global_black"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fillet_white_bg"
+        android:layout_margin="10dp">
+        <TableRow>
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="序号"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="监管单位名称"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="用户名"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/textView2" />
+
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="河南省食品药品监督管理局"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="name"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="郑州市食品药品监督管理局"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="新乡市食品药品监督管理局"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总计："
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <!--体验机构列表 end-->
+</LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
