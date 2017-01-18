@@ -1,7 +1,7 @@
 package com.lxkj.yiyao.base;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
@@ -14,8 +14,8 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public abstract class BaseActivity extends Activity{
-    protected Activity mActivity;
+public abstract class BaseActivity extends AppCompatActivity{
+    protected AppCompatActivity mActivity;
 
     protected View mRootView;
 
