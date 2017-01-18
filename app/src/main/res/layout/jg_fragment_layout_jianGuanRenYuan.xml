@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    android:orientation="vertical">
+
+
+    <!--查询条件和查询条件之下的输入框  start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/sj_shenhe_select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:text="@string/sj_shenhe_selectmsg"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/title_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/blue_but_bg"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/sj_shenhe_select"
+            android:textColor="@color/global_white"
+            android:id="@+id/select" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/yellow_but_bg"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/sj_shenhe_return"
+            android:textColor="@color/global_white"
+            android:id="@+id/back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fillet_white_bg"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="用户姓名："
+            android:textColor="@color/global_black"
+            android:textSize="18sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="100dp"
+            android:hint="用户姓名"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:id="@+id/input_name" />
+    </RelativeLayout>
+    <!--查询条件和查询条件之下的输入框  end-->
+
+
+    <!--体验机构列表 start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/sj_shenhe_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:text="监管单位人员列表"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/title_textsize" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/yellow_but_bg"
+            android:clickable="true"
+            android:paddingBottom="5dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="5dp"
+            android:text="@string/jadw_admin_add"
+            android:textColor="@color/global_white"
+            android:id="@+id/add" />
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fillet_white_bg">
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="序号"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="5dp"
+                    android:text="账号"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    android:paddingTop="5dp"
+                    android:text="姓名"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="1"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+
+                    android:text="2"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+
+                    android:text="3"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView4" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+            <TableRow>
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="35dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+
+                    android:text="4"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+
+                <TextView
+                    android:background="@drawable/table_frame_fray"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="5dp"
+                    android:text="XXXX"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/table_textsize" />
+            </TableRow>
+
+
+        </TableLayout>
+
+    </HorizontalScrollView>
+
+
+    <!--体验机构列表 end-->
+
+</LinearLayout>

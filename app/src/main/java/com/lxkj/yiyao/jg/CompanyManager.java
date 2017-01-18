@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -16,22 +15,14 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by Administrator on 2017/1/18 0018.
+ * Created by Administrator on 2017/1/18.
  */
 
-public class LawManager extends BaseFragment {
-
-
+public class CompanyManager extends BaseFragment {
     @BindView(R.id.select)
     TextView select;
-    @BindView(R.id.number)
-    EditText number;
-    @BindView(R.id.type)
-    Spinner type;
-    @BindView(R.id.start_time)
-    EditText startTime;
-    @BindView(R.id.end_time)
-    EditText endTime;
+    @BindView(R.id.company_name)
+    EditText companyName;
 
     @Override
     protected void initView() {
@@ -40,20 +31,12 @@ public class LawManager extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_law_update;
+        return R.layout.jg_fragment_layout_companyManager;
     }
-
-    public void toSelect() {
-        //// TODO: 2017/1/18 0018 查询按钮
-        toast("查询");
-    }
-
-
-
-
-
 
     @OnClick(R.id.select)
     public void onClick() {
+        toast("查询");
+        // TODO: 2017/1/18  
     }
 }
