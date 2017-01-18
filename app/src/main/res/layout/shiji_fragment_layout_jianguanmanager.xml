@@ -22,10 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="30dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:background="@drawable/blue_but_bg"
+            android:background="@drawable/yellow_but_bg"
             android:clickable="true"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
@@ -44,7 +44,7 @@
             android:id="@+id/select" />
     </RelativeLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -52,83 +52,76 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/fillet_white_bg"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp"
-        android:orientation="vertical"
-        >
-        <RelativeLayout
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_alignRight="@id/tv_register_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/shiji_jianguanmanager_search"
+            android:textColor="@color/global_black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_register_time"
+            android:layout_marginLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/global_black"
+            android:text="@string/sj_admin_register_time"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/start_time"
+            android:layout_alignBottom="@+id/start_time"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/table_frame_fray"
+            android:id="@+id/start_time" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="210dp"
+            android:text="—"
+            android:textSize="20sp"
+            />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="240dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/table_frame_fray"
+            android:id="@+id/end_time" />
+
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="@string/shiji_jianguanmanager_search"
-                android:textColor="@color/global_black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:background="@drawable/table_frame_fray"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="110dp"
-                android:hint="@string/shiji_jianguanmanager_input_key"
-                android:lines="1"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp"
-                android:paddingLeft="10dp"
-                android:id="@+id/input_key" />
-        </RelativeLayout>
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20dp"
-                android:text="@string/shiji_jianguanmanager_register_time"
-                android:textColor="@color/global_black"
-                android:textSize="18sp" />
-
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="110dp"
-                android:background="@drawable/table_frame_fray"
-                android:lines="1"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:textSize="30sp"
-                android:layout_marginLeft="200dp"
-                />
-            <EditText
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="220dp"
-                android:background="@drawable/table_frame_fray"
-                android:lines="1"/>
-        </RelativeLayout>
-
-
-
-    </LinearLayout>
-
-
+            android:layout_marginLeft="100dp"
+            android:hint="用户名"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/table_frame_fray"
+            android:id="@+id/input_username" />
+    </RelativeLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 
     <!--体验机构列表 start-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
@@ -143,34 +136,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:text="@string/shiji_jianguanmanager_list"
+            android:layout_marginLeft="40dp"
+            android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
-            android:layout_marginTop="5dp"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/shiji_jianguanmanager_add"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:paddingBottom="5dp"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
-
-            />
-
-    </LinearLayout>
+            android:paddingTop="5dp"
+            android:text="新增"
+            android:textColor="@color/global_white"
+            android:id="@+id/add" />
+    </RelativeLayout>
 
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <TableLayout
-            android:id="@+id/table"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
@@ -188,38 +180,27 @@
                     android:paddingTop="5dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:paddingTop="5dp"
                     android:text="用户名"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:paddingTop="5dp"
                     android:text="姓名"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
             <TableRow>
@@ -230,10 +211,9 @@
                     android:paddingLeft="35dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
-                    android:layout_gravity="center"
                     android:text="1"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -243,7 +223,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -253,7 +233,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
             <TableRow>
@@ -267,7 +247,7 @@
 
                     android:text="2"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -277,7 +257,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -287,7 +267,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -300,7 +280,7 @@
 
                     android:text="3"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -310,7 +290,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -320,7 +300,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -333,7 +313,7 @@
 
                     android:text="4"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -343,7 +323,8 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView5" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -353,7 +334,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
 
