@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.jg;
+package com.lxkj.yiyao.jianguan;
 
 import android.widget.EditText;
 import android.widget.TextView;
