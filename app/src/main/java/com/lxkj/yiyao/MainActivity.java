@@ -26,5 +26,6 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         viewPager.setAdapter(new VPFAdapter(getSupportFragmentManager(), 0, shengjiTabTitles));
         tab.setupWithViewPager(viewPager);
+        tab.setTabMode(TabLayout.MODE_FIXED);
     }
 }

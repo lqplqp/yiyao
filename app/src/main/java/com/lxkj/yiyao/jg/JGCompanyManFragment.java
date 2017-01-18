@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.sj.BaseFragment;
+import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
