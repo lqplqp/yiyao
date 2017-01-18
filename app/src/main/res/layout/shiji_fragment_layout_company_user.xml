@@ -46,7 +46,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/blue_but_bg"
+                android:background="@drawable/yellow_but_bg"
                 android:clickable="true"
                 android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
@@ -55,6 +55,10 @@
                 android:text="@string/sj_shenhe_select"
                 android:textColor="@color/global_white"
                 android:id="@+id/select" />
+
+
+
+
         </RelativeLayout>
 
         <RelativeLayout
@@ -105,11 +109,26 @@
                 android:layout_toRightOf="@id/tj"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="用户列表"
+                android:text="企业员工列表"
                 android:textSize="@dimen/title_textsize"
                 android:textColor="#333"
                 android:layout_marginLeft="8dp"
                 />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/excel_export"
+                android:layout_marginLeft="270dp"
+                android:layout_marginTop="5dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/global_white"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:background="@drawable/yellow_but_bg"
+                />
+
         </RelativeLayout>
 
         <TableLayout
