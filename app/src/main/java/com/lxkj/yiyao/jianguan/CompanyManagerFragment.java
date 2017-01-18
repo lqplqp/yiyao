@@ -26,7 +26,7 @@ public class CompanyManagerFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_companyManager;
+        return R.layout.jg_fragment_layout_companymanager;
     }
 
     @OnClick(R.id.select)

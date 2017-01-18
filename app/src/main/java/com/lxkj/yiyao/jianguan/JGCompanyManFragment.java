@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.sj.BaseFragment;
+import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,7 +35,7 @@ public class JGCompanyManFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_jianGuanRenYuan;
+        return R.layout.jg_fragment_layout_jianguanrenyuan;
     }
 
     @Override

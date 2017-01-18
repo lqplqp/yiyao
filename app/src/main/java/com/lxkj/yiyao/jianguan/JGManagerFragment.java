@@ -5,7 +5,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.sj.BaseFragment;
+import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -33,7 +33,7 @@ public class JGManagerFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_jianGuanDanWeimanager;
+        return R.layout.jg_fragment_layout_jianguandanweimanager;
     }
 
     @OnClick({R.id.select, R.id.add})
