@@ -1,22 +1,22 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.shengji;
 
-import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.shengji.contract.RegisterContract;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class Register extends BaseActivity implements RegisterConstract.RegisterView {
+public class RegisterActivity extends BaseActivity implements RegisterContract.RegisterView {
     @BindView(R.id.username)
     EditText username;
     @BindView(R.id.password)

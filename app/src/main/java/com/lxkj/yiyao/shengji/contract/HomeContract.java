@@ -1,10 +1,10 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.shengji.contract;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class HomeConstract {
+public class HomeContract {
     public interface HomeView{
         /**
          * 增加监管人员

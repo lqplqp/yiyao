@@ -18,7 +18,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/1/18.
  */
 
-public class JGManager extends BaseFragment {
+public class JGManagerFragment extends BaseFragment {
     @BindView(R.id.select)
     TextView select;
     @BindView(R.id.start_time)

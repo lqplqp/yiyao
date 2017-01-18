@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.sj.BaseFragment;
+import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,7 +18,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/1/18.
  */
 
-public class CompanyManager extends BaseFragment {
+public class CompanyManagerFragment extends BaseFragment {
     @BindView(R.id.select)
     TextView select;
     @BindView(R.id.company_name)
@@ -37,6 +37,6 @@ public class CompanyManager extends BaseFragment {
     @OnClick(R.id.select)
     public void onClick() {
         toast("查询");
-        // TODO: 2017/1/18  
+        // TODO: 2017/1/18
     }
 }

@@ -1,6 +1,5 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.shengji;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -8,16 +7,17 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.shengji.contract.LoginContract;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class LoginActivity extends BaseActivity implements LoginConstract.LoginView {
+public class LoginActivity extends BaseActivity implements LoginContract.LoginView {
     @BindView(R.id.username)
     EditText username;
     @BindView(R.id.password)

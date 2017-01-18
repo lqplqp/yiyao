@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.sj;
+package com.lxkj.yiyao.shengji;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.base.BaseFragment;
+import com.lxkj.yiyao.shengji.contract.HomeContract;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -15,7 +17,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class Home extends BaseFragment implements HomeConstract.HomeView, View.OnClickListener {
+public class HomeFragment extends BaseFragment implements HomeContract.HomeView, View.OnClickListener {
 
     @BindView(R.id.add_people)
     TextView addPeople;
