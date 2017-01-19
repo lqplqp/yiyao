@@ -36,5 +36,5 @@ dependencies {
     //compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.6.2'
     //bili view
     compile 'com.github.Rukey7:IjkPlayerView:v1.0.3'
-
+    compile 'de.hdodenhof:circleimageview:2.1.0'
 }

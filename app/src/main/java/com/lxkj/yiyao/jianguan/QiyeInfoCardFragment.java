@@ -14,10 +14,6 @@ import butterknife.OnClick;
  */
 
 public class QiyeInfoCardFragment extends BaseFragment {
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.company_name)
-    EditText companyName;
 
     @Override
     protected void initView() {
@@ -29,9 +25,4 @@ public class QiyeInfoCardFragment extends BaseFragment {
         return R.layout.qy_fragment_layout_infocard_manage_search;
     }
 
-    @OnClick(R.id.select)
-    public void onClick() {
-        toast("查询");
-        // TODO: 2017/1/18
-    }
 }
