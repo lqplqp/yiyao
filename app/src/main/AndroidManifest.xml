@@ -9,7 +9,7 @@
         android:name=".App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".shengji.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,6 +20,7 @@
         <activity android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
+        <activity android:name=".MainActivity"/>
         <activity android:name=".activity.ExamActivity"/>
     </application>
 

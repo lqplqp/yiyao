@@ -22,20 +22,18 @@ public abstract class BaseActivity extends AppCompatActivity{
 
     public BaseActivity(){
         mActivity = this;
-
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        init();
-    }
-
-    protected void init(){
         mRootView = View.inflate(mActivity,getLayout(),null);
         setContentView(mRootView);
         ButterKnife.bind(mActivity,mRootView);
+        init();
     }
+
+    protected abstract void init();
 
     public View findViewById(int id){
         return mRootView.findViewById(id);

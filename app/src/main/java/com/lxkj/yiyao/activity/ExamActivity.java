@@ -22,7 +22,6 @@ public class ExamActivity extends BaseActivity{
 
     @Override
     protected void init() {
-        super.init();
         Realm realm = MyRealm.getInstance();
 
             final QuestionDBBean bean = new QuestionDBBean();
