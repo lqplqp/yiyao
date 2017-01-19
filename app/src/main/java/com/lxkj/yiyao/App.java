@@ -3,6 +3,8 @@ package com.lxkj.yiyao;
 
 import android.app.Application;
 
+import io.realm.Realm;
+
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
@@ -15,5 +17,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         mApplication = this;
+        Realm.init(getApplicationContext());
     }
 }

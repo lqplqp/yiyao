@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.lxkj.yiyao.db.MyRealm;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.ButterKnife;
@@ -46,5 +47,8 @@ public abstract class BaseActivity extends AppCompatActivity{
         ToastUtil.show(msg);
     }
 
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

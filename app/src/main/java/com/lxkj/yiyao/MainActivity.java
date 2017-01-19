@@ -11,10 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.lxkj.yiyao.activity.PlayerActivity;
+import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
-import com.lxkj.yiyao.db.QuestionBean;
-import com.lxkj.yiyao.utils.ToastUtil;
 
 
 import butterknife.BindView;
@@ -52,18 +50,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         initData();
+//        startActivity(new Intent(MainActivity.this, ExamActivity.class));
     }
 
     private void initData() {
 //
 ////        new MyOpenHelper(this, "info.db").onUpgrade();
 //        QuestionBeanHelper driverHelper = DbUtil.getDriverHelper();
-//        QuestionBean questionBean = new QuestionBean();
+//        QuestionDBBean questionBean = new QuestionDBBean();
 //        questionBean.setType(0);
 //        questionBean.setQuestion("第一题");
 //        questionBean.setAnswer(2);
 //        driverHelper.save(questionBean);
-//        QuestionBean questionBean1 = driverHelper.queryAll().get(0);
+//        QuestionDBBean questionBean1 = driverHelper.queryAll().get(0);
 //        ToastUtil.show(" " + questionBean1.getNum() + ", 题目：" + questionBean1.getQuestion() + "答案：" + questionBean1.getAnswer());
 
     }
