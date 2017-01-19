@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/login_input_username"
+        android:textColorHint="@color/login_hint"
         android:background="@null"
         android:layout_marginTop="280dp"
         android:textColor="@color/login_text"
@@ -27,7 +28,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:background="#83d2fd"
+        android:background="#87cdf5"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginTop="310dp"
@@ -41,12 +42,13 @@
         android:textColor="@color/login_text"
         android:layout_height="wrap_content"
         android:hint="@string/login_input_pwd"
+        android:textColorHint="@color/login_hint"
         android:layout_marginTop="330dp"
         android:id="@+id/password" />
     <View
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:background="#83d2fd"
+        android:background="#87cdf5"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
         android:layout_marginTop="360dp"
@@ -65,6 +67,7 @@
             android:id="@+id/checkcode"
             android:textColor="@color/login_text"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/login_hint"
             android:hint="@string/login_input_code"
             />
 
@@ -82,7 +85,7 @@
     <View
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
-        android:background="#83d2fd"
+        android:background="#87cdf5"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="190dp"
         android:layout_marginTop="410dp"

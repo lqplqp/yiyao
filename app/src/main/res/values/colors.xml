@@ -10,13 +10,14 @@
 
     <color name="global_bg_blue">#0d90d9</color>
     <color name="global_bg_gray">#eaeaea</color>
-    <color name="login_text">#094f76</color>
+    <color name="login_text">#aee1fd</color>
 
-    <color name="login_register">#188dce</color>
-    <color name="login_login">#094f76</color>
+    <color name="login_register">#aee1fd</color>
+    <color name="login_login">#f0f8fd</color>
     <color name="line">@color/global_bg_gray</color>
 
     <color name="gray_bg">#bfbfbf</color>
     <color name="black">#000</color>
     <color name="white">#fff</color>
+    <color name="login_hint">#aee1fd</color>
 </resources>
