@@ -4,7 +4,7 @@
 
 
 
-    <string name="app_name">yiyao</string>
+    <string name="app_name">食药系统</string>
     <string name="sj_admin_actor">监管人员管理</string>
     <string name="sj_admin_msg">对监管单位要参加培训的监管人员进行管理</string>
     <string name="sj_admin_addadmin">增加监管人员</string>

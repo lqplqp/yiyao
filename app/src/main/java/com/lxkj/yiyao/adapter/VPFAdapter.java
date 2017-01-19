@@ -80,26 +80,26 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return homeFragment;
                     case 1:
                         HomeFragment homeFragment1 = new HomeFragment();
-                        return homeFragment;
+                        return homeFragment1;
                     case 2:
                         HomeFragment homeFragment2 = new HomeFragment();
-                        return homeFragment;
+                        return homeFragment2;
                     //1 2
                     case 3:
                         ShenHeFragment shenHeFragment = new ShenHeFragment();
                         return shenHeFragment;
                     case 4:
                         ShenHeFragment shenHeFragment4 = new ShenHeFragment();
-                        return shenHeFragment;
+                        return shenHeFragment4;
                     case 5:
                         ShenHeFragment shenHeFragment5 = new ShenHeFragment();
-                        return shenHeFragment;
+                        return shenHeFragment5;
                     case 6:
                         ShenHeFragment shenHeFragment6 = new ShenHeFragment();
-                        return shenHeFragment;
+                        return shenHeFragment6;
                     case 7:
                         ShenHeFragment shenHeFragment7 = new ShenHeFragment();
-                        return shenHeFragment;
+                        return shenHeFragment7;
 
                 }
                 break;
@@ -110,13 +110,13 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return  sjgrYiBaoPeiXunXiangMuFragment;
                     case 1:
                         SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment1 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment;
+                        return  sjgrYiBaoPeiXunXiangMuFragment1;
                     case 2:
                         SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment2 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment;
+                        return  sjgrYiBaoPeiXunXiangMuFragment2;
                     case 3:
                         SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment3 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment;
+                        return  sjgrYiBaoPeiXunXiangMuFragment3;
                     case 4:
                         SJGRMessageFragment sjgrMessageFragment = new SJGRMessageFragment();
                         return sjgrMessageFragment;
@@ -142,12 +142,13 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return peiXunListFragment;
                     case 4:
                         PeiXunListFragment peiXunListFragment4 = new PeiXunListFragment();
-                        return peiXunListFragment;
+                        return peiXunListFragment4;
                     case 5:
                         PeiXunListFragment peiXunListFragment5 = new PeiXunListFragment();
-                        return peiXunListFragment;
+                        return peiXunListFragment5;
 
                 }
+                break;
             case 4:
                 switch (position){
                     case 0:
@@ -167,8 +168,9 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return qyManagerTongZhiFragment;
                     case 5:
                         QYManagerTongZhiFragment qyManagerTongZhiFragment5 = new QYManagerTongZhiFragment();
-                        return qyManagerTongZhiFragment;
+                        return qyManagerTongZhiFragment5;
                 }
+                break;
             case 5:
                 switch (position){
                     case 0:
@@ -176,7 +178,7 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return qyHomeFragment;
                     case 1:
                         QYHomeFragment qyHomeFragment1 = new QYHomeFragment();
-                        return qyHomeFragment;
+                        return qyHomeFragment1;
                     case 2:
                         QYSignedTrainFragment qySignedTrainFragment = new QYSignedTrainFragment();
                         return qySignedTrainFragment;
@@ -185,10 +187,10 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return qyPwesonManagerAddFragment;
                     case 4:
                         QYPwesonManagerAddFragment qyPwesonManagerAddFragmen4 = new QYPwesonManagerAddFragment();
-                        return qyPwesonManagerAddFragment;
+                        return qyPwesonManagerAddFragmen4;
                     case 5:
                         QYPwesonManagerAddFragment qyPwesonManagerAddFragment5 = new QYPwesonManagerAddFragment();
-                        return qyPwesonManagerAddFragment;
+                        return qyPwesonManagerAddFragment5;
                 }
 
                 break;
