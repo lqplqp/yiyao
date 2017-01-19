@@ -256,8 +256,7 @@
                 android:text="网上培训"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/textView4" />
+                android:background="@drawable/table_border_bg"/>
         </TableRow>
         <TableRow>
             <TextView

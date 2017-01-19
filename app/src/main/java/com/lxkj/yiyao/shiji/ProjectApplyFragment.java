@@ -18,5 +18,6 @@ public class ProjectApplyFragment extends BaseFragment{
     @Override
     public int getLayout() {
         return R.layout.shiji_fragment_layout_select_train;
+//        return R.layout.qymanager_fragment_layout_peixundingdan;
     }
 }

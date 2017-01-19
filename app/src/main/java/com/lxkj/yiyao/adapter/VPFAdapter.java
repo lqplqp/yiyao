@@ -124,7 +124,6 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         SJGRZhiFaSerachFragment sjgrZhiFaSerachFragment = new SJGRZhiFaSerachFragment();
                         return sjgrZhiFaSerachFragment;
                 }
-
                 break;
             case 3:
                 switch (position){
@@ -146,7 +145,6 @@ public class VPFAdapter extends FragmentPagerAdapter {
                     case 5:
                         PeiXunListFragment peiXunListFragment5 = new PeiXunListFragment();
                         return peiXunListFragment5;
-
                 }
                 break;
             case 4:
@@ -192,7 +190,6 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         QYPwesonManagerAddFragment qyPwesonManagerAddFragment5 = new QYPwesonManagerAddFragment();
                         return qyPwesonManagerAddFragment5;
                 }
-
                 break;
         }
         return null;
