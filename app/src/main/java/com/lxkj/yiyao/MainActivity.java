@@ -2,6 +2,7 @@ package com.lxkj.yiyao;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -12,10 +13,9 @@ import android.view.MenuItem;
 
 import com.lxkj.yiyao.activity.PlayerActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
-import com.lxkj.yiyao.db.DbUtil;
 import com.lxkj.yiyao.db.QuestionBean;
-import com.lxkj.yiyao.db.QuestionBeanHelper;
 import com.lxkj.yiyao.utils.ToastUtil;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,14 +57,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        QuestionBeanHelper driverHelper = DbUtil.getDriverHelper();
-        QuestionBean questionBean = new QuestionBean();
-        questionBean.setType(0);
-        questionBean.setQuestion("第一题");
-        questionBean.setAnswer(2);
-        driverHelper.save(questionBean);
-        QuestionBean questionBean1 = driverHelper.queryAll().get(0);
-        ToastUtil.show(" " + questionBean1.getNum() + ", 题目：" + questionBean1.getQuestion() + "答案：" + questionBean1.getAnswer());
+//
+////        new MyOpenHelper(this, "info.db").onUpgrade();
+//        QuestionBeanHelper driverHelper = DbUtil.getDriverHelper();
+//        QuestionBean questionBean = new QuestionBean();
+//        questionBean.setType(0);
+//        questionBean.setQuestion("第一题");
+//        questionBean.setAnswer(2);
+//        driverHelper.save(questionBean);
+//        QuestionBean questionBean1 = driverHelper.queryAll().get(0);
+//        ToastUtil.show(" " + questionBean1.getNum() + ", 题目：" + questionBean1.getQuestion() + "答案：" + questionBean1.getAnswer());
 
     }
 
