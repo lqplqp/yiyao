@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--查询条件和查询条件之下的输入框  start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/sj_shenhe_select" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:text="@string/sj_shenhe_selectmsg"
+                    android:textColor="@color/global_black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/yellow_but_bg"
+                    android:clickable="true"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="5dp"
+                    android:text="查询"
+                    android:textColor="@color/global_white"
+                    android:id="@+id/select" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fillet_white_bg"
+                android:paddingBottom="5dp"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="发起单位："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                         />
+                    <EditText
+                        android:layout_width="50dp"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="wrap_content"
+                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="培训通知类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="行政类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        android:id="@+id/textView8" />
+
+                    <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="培训班类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <!--查询条件和查询条件之下的输入框  end-->
+
+
+            <!--体验机构列表 start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/sj_shenhe_menu" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:text="通知列表"
+                    android:textColor="@color/global_black"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <!--体验机构列表 end-->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fillet_white_bg">
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_width="40dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="序号"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="1"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="通知类型"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="网上培训"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="通知单位"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="河南省食品药品监督管理局"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+
+                            android:text="发布人"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="达主任"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="通知标题"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="食品安全监管队伍继续教育培训班"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="培训地点"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="无"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="培训开始时间"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="2016-09-01"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:paddingTop="5dp"
+                            android:text="操作"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="40dp"
+                            android:paddingRight="55dp"
+                            android:paddingTop="5dp"
+                            android:text="查看"
+                            android:textColor="@color/global_black"
+                            android:textSize="12sp" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>
