@@ -104,7 +104,7 @@
         <item >体检信息</item>
 
     </string-array>
-    <!--省局管理员-->
+    <!--省局个人-->
     <string-array name="ShengJuMan">
         <item >首页</item>
         <item >选购培训项目</item>
@@ -113,7 +113,7 @@
         <item >通知消息</item>
         <item >执法记录管理</item>
     </string-array>
-    <!--省局管理员-->
+    <!--市级个人-->
     <string-array name="ShiJiAdmin">
         <item >首页</item>
         <item >选购培训项目</item>
