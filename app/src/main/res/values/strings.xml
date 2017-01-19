@@ -53,4 +53,23 @@
     <string name="sj_shenhe_return">返回</string>
 
     <string name="jadw_admin_add">新增</string>
+    <string name="shiji_jianguanmanager_search">搜索内容 :</string>
+    <string name="shiji_jianguanmanager_input_key">姓名,用户名,手机号</string>
+    <string name="shiji_jianguanmanager_register_time">注册时间 : </string>
+    <string name="shiji_jianguanmanager_list">监管人员列表</string>
+    <string name="shiji_jianguanmanager_add">新 增</string>
+    <string name="shiji_jianguaninfo_username">用 户 名 :</string>
+    <string name="shiji_jianguaninfo_companyname">公司名称 : </string>
+    <string name="shiji_jianguaninfo_usercount">单位人数 : </string>
+    <string name="shiji_jianguaninfo_admin">管 理 员 : </string>
+    <string name="shiji_jianguaninfo_emial">邮 箱 : </string>
+    <string name="shiji_jianguaninfo_phone">手机号码 :</string>
+    <string name="shiji_jianguaninfo_type">行业领域 :</string>
+    <string name="shiji_jianguaninfo_team">监管队伍</string>
+    <string name="shiji_jianguaninfo_address">单位地址 :</string>
+    <string name="commit">提交</string>
+    <string name="shiji_notifylist_faqi">发起单位 :</string>
+    <string name="shiji_notifylist_time">培训起始时间 : </string>
+    <string name="excel_export">excel导出</string>
+    <string name="back">返回</string>
 </resources>

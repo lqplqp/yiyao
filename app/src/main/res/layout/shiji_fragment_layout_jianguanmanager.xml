@@ -59,20 +59,20 @@
             android:layout_alignRight="@id/tv_register_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="20dp"
-            android:text="@string/sj_admin_username"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="16dp"
+            android:text="@string/shiji_jianguanmanager_search"
             android:textColor="@color/global_black"
-            android:textSize="18sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/tv_register_time"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/global_black"
             android:text="@string/sj_admin_register_time"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:layout_alignBaseline="@+id/start_time"
             android:layout_alignBottom="@+id/start_time"
             android:layout_alignParentLeft="true"
@@ -83,20 +83,26 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/table_frame_fray"
             android:id="@+id/start_time" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
             android:layout_marginLeft="210dp"
             android:text="—"
             android:textSize="20sp"
-        />
+            />
         <EditText
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="240dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@drawable/table_frame_fray"
             android:id="@+id/end_time" />
 
         <EditText
@@ -106,8 +112,9 @@
             android:hint="用户名"
             android:lines="1"
             android:paddingTop="10dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
+            android:paddingLeft="10dp"
+            android:paddingBottom="3dp"
+            android:background="@drawable/table_frame_fray"
             android:id="@+id/input_username" />
     </RelativeLayout>
     <!--查询条件和查询条件之下的输入框  end-->
@@ -129,7 +136,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
             android:textSize="@dimen/title_textsize" />
@@ -181,7 +188,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:paddingTop="5dp"
-                    android:text="登录用户名"
+                    android:text="用户名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
@@ -191,7 +198,7 @@
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:paddingTop="5dp"
-                    android:text="体验机构名称"
+                    android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
             </TableRow>

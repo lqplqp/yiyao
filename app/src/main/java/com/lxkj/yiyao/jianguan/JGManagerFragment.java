@@ -33,7 +33,7 @@ public class JGManagerFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_jianguandanweimanager;
+        return R.layout.jg_fragment_layout_jian_guandanweimanager;
     }
 
     @OnClick({R.id.select, R.id.add})

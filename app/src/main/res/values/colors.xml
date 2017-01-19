@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#29a6eb</color>
+    <color name="colorPrimaryDark">#29a6eb</color>
     <color name="colorAccent">#FF4081</color>
     <color name="global_black">#333</color>
     <color name="global_white">#fff</color>
@@ -15,4 +15,8 @@
     <color name="login_register">#188dce</color>
     <color name="login_login">#094f76</color>
     <color name="line">@color/global_bg_gray</color>
+
+    <color name="gray_bg">#bfbfbf</color>
+    <color name="black">#000</color>
+    <color name="white">#fff</color>
 </resources>
