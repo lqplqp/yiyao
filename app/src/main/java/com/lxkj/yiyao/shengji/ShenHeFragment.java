@@ -66,6 +66,7 @@ public class ShenHeFragment extends BaseFragment implements ShenHeContract.ShenH
 
     //点击了查询按钮
     private void onClickSelect() {
+        toast("查询");
         if(input_key.getText().equals("") || input_key.getText()==null){
             toast("关键字不可以为空");
             return;
