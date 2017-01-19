@@ -113,6 +113,7 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginVi
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("userType",userType);
         startActivity(intent);
+        finish();
     }
 
     private void onClickRegister() {
