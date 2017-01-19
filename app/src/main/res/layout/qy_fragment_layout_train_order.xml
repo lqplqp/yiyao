@@ -32,7 +32,8 @@
                 android:checked="true"
                 android:gravity="center"
                 android:textColor="@color/white"
-                android:text="全部(2)"/>
+                android:text="全部(2)"
+                android:id="@+id/all" />
             <RadioButton
                 android:layout_width="60dp"
                 android:layout_height="30dp"
@@ -41,7 +42,7 @@
                 android:button="@null"
                 android:background="@drawable/radiobut_color"
                 android:gravity="center"
-                android:text="待付款(0)"/>
+                android:text="待付款(0)" />
             <RadioButton
                 android:layout_width="60dp"
                 android:layout_height="30dp"
@@ -50,7 +51,7 @@
                 android:button="@null"
                 android:background="@drawable/radiobut_color"
                 android:gravity="center"
-                android:text="已付款(0)"/>
+                android:text="已付款(0)" />
             <RadioButton
                 android:layout_width="60dp"
                 android:layout_height="30dp"

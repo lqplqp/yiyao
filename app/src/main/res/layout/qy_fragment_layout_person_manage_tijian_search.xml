@@ -40,7 +40,8 @@
             android:paddingRight="20dp"
             android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
-            android:textColor="@color/global_white" />
+            android:textColor="@color/global_white"
+            android:id="@+id/select" />
     </RelativeLayout>
 
     <LinearLayout
@@ -76,7 +77,8 @@
                 android:background="@drawable/edit_border_bg"
                 android:hint="身份证号、体检报告号、医院"
                 android:lines="1"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"
+                android:id="@+id/select_content" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -102,7 +104,8 @@
                 android:paddingBottom="8dp"
                 android:background="@drawable/edit_border_bg"
                 android:lines="1"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"
+                android:id="@+id/start_time" />
             <View
                 android:layout_width="40dp"
                 android:layout_height="1dp"
@@ -119,7 +122,8 @@
                 android:paddingBottom="8dp"
                 android:background="@drawable/edit_border_bg"
                 android:lines="1"
-                android:paddingTop="10dp" />
+                android:paddingTop="10dp"
+                android:id="@+id/end_time" />
         </LinearLayout>
 
     </LinearLayout>
