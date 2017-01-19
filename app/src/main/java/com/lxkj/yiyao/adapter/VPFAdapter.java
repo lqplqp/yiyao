@@ -5,6 +5,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
+import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
+import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
+import com.lxkj.yiyao.jianguan.LawManagerFragment;
+import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
+import com.lxkj.yiyao.jianguan.UserManagerFragment;
 import com.lxkj.yiyao.shengji.HomeFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
 
@@ -38,12 +43,34 @@ public class VPFAdapter extends FragmentPagerAdapter {
                     case 1:
                         ShenHeFragment shenHeFragment = new ShenHeFragment();
                         return shenHeFragment;
+                    case 2:
+                        UserManagerFragment userManagerFragment = new UserManagerFragment();
+                        return userManagerFragment;
+                    case 3:
+                        CompanyManagerFragment companyManagerFragment = new CompanyManagerFragment();
+                        return companyManagerFragment;
+                    case 4:
+                        QiyeInfoCardFragment qiyeInfoCardFragment = new QiyeInfoCardFragment();
+                        return qiyeInfoCardFragment;
+                    case 5:
+                        JGCompanyManFragment jgCompanyManFragment = new JGCompanyManFragment();
+                        return jgCompanyManFragment;
+                    case 6:
+                        LawManagerFragment lawManagerFragment = new LawManagerFragment();
+                        return lawManagerFragment;
                 }
                 break;
             case 1:
-
+                switch (position){
+                    case 0:
+                        HomeFragment homeFragment = new HomeFragment();
+                        return homeFragment;
+                }
                 break;
             case 2:
+
+                break;
+            case 3:
 
                 break;
         }

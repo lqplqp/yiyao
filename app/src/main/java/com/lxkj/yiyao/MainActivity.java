@@ -50,8 +50,6 @@ public class MainActivity extends AppCompatActivity {
         tab.setupWithViewPager(viewPager);
         tab.setTabMode(TabLayout.MODE_FIXED);
 
-        Intent intent = new Intent(this, PlayerActivity.class);
-        startActivity(intent);
 
         initData();
     }
