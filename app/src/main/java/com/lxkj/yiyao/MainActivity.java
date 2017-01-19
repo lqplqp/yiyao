@@ -1,11 +1,13 @@
 package com.lxkj.yiyao;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
+import com.lxkj.yiyao.activity.PlayerActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 
 import butterknife.BindView;
@@ -31,5 +33,9 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(new VPFAdapter(getSupportFragmentManager(), 0, shengjiTabTitles));
         tab.setupWithViewPager(viewPager);
         tab.setTabMode(TabLayout.MODE_FIXED);
+
+        Intent intent = new Intent(this, PlayerActivity.class);
+        startActivity(intent);
+
     }
 }
