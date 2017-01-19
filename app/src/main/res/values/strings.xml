@@ -92,10 +92,10 @@
 
     <!--1 省局管理员-->
     <string-array name="ShengJuAdmin">
-        <item >首页</item>
+        <item >首页</item><!--有-->
         <item >监管单位管理</item>
         <item >培训通知管理</item>
-        <item >体验机构审核</item>
+        <item >体验机构审核</item><!--有-->
         <item >企业管理</item>
         <item >培训报名</item>
         <item >监管统计</item>
@@ -106,35 +106,34 @@
         <item >首页</item>
         <item >选购培训项目</item>
         <item >培训项目订单</item>
-        <item >已报培训项目</item>
-        <item >通知消息</item>
-        <item >执法记录管理</item>
+        <item >已报培训项目</item><!--有-->
+        <item >通知消息</item><!--有-->
+        <item >执法记录管理</item><!--有-->
     </string-array>
     <!--3 市级个人-->
     <string-array name="ShiJiAdmin">
-        <item >首页</item>
-        <item >选购培训项目</item>
-        <item >培训项目订单</item>
-        <item >已报培训项目</item>
+        <item >首页</item><!--有-->
+        <item >选购培训项目</item><!--有-->
+        <item >培训项目订单</item><!--有-->
+        <item >已报培训项目</item><!--有-->
         <item >通知消息</item>
         <item >执法记录管理</item>
     </string-array>
     <!--4 企业管理员-->
     <string-array name="CompanyAdmin">
-        <item >首页</item>
-        <item >选购培训项目</item>
-        <item >培训项目订单</item>
-        <item >已报培训项目</item>
-        <item >通知消息</item>
+        <item >首页</item><!--有-->
+        <item >选购培训项目</item><!--有-->
+        <item >培训项目订单</item><!--有-->
+        <item >已报培训项目</item><!--有-->
+        <item >通知消息</item><!--有-->
         <item >执法记录管理</item>
     </string-array>
     <!--5 县区级管理员-->
     <string-array name="XianAdmin">
-        <item ></item>
-        <item >监管人员首页</item>
+        <item >监管人员首页</item><!--有-->
         <item >监管人员中心</item>
-        <item >培训学习</item>
-        <item >企业管理</item>
+        <item >培训学习</item><!--有-->
+        <item >企业管理</item><!--有-->
         <item >监管统计</item>
         <item >体检信息</item>
     </string-array>
