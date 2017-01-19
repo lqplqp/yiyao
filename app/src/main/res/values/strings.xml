@@ -77,9 +77,14 @@
     <string name="shiji_notifylist_time">培训起始时间 : </string>
     <string name="excel_export">excel导出</string>
     <string name="back">返回</string>
-    
-    
-    
+    <string name="login_addjianguandanwei">增加监管单位</string>
+    <string name="login_shengjuadmin">省局管理员</string>
+    <string name="login_shengjuman">省局个人</string>
+    <string name="login_shijiadmin">市级管理员</string>
+    <string name="login_qiyeadmin">企业管理员</string>
+    <string name="login_xianquAdmin">县区级管理员</string>
+
+
     <!--0 增加监管单位-->
     <string-array name="addJianGuanUnit">
         <item >首页</item>

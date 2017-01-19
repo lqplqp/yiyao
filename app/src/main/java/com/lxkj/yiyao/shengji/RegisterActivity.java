@@ -41,6 +41,11 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     TextView register;
 
     @Override
+    protected void init() {
+
+    }
+
+    @Override
     public int getLayout() {
         return R.layout.register;
     }
