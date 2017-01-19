@@ -90,6 +90,8 @@ public class LoginActivity extends BaseActivity implements LoginContract.LoginVi
 
     }
 
+
+
     @Override
     public int getLayout() {
         return R.layout.login;

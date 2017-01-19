@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.view.ViewGroup;
 
+import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
@@ -35,6 +36,8 @@ public class VPFAdapter extends FragmentPagerAdapter {
     /**
      * 角色端，0是省级端, 1是企业端，3是
      */
+
+    private BaseFragment baseFragment;
 
     private int part;
     public VPFAdapter(FragmentManager fm, int part, String[] pagerTitles) {
@@ -131,7 +134,7 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         com.lxkj.yiyao.shiji.HomeFragment shiJihomeFragment = new com.lxkj.yiyao.shiji.HomeFragment();
                         return shiJihomeFragment;
                     case 1:
-                        PeiXunListFragment peiXunListFragment1 = new PeiXunListFragment();
+                        QYManagerPeiXunDingDanFragment peiXunListFragment1 = new QYManagerPeiXunDingDanFragment();
                         return peiXunListFragment1;
                     case 2:
                         ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();

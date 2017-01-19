@@ -34,14 +34,15 @@ public abstract class BaseFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mRootView = inflater.inflate(getLayout(), container, false);
-        init();
+        //mRootView = inflater.inflate(getLayout(), container, false);
+        mRootView = View.inflate(mActivity,getLayout(),null);
+
+        ButterKnife.bind(this,mRootView);
+        initView();
         return mRootView;
     }
 
-    private  void init(){
-        ButterKnife.bind(this,mRootView);
-    }
+
 
     /**
      * 初始化界面,寻找view,设置监听

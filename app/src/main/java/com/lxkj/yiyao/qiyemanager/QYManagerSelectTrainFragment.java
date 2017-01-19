@@ -17,6 +17,7 @@ public class QYManagerSelectTrainFragment extends BaseFragment {
     @Override
     public int getLayout() {
         return R.layout.qymanager_fragment_layout_select_train;
+
     }
 
 }
