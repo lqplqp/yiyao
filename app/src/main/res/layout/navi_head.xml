@@ -84,8 +84,8 @@
         android:text="河南省食品药品监督管理局"
         />
     <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
         android:src="@mipmap/ic_email"

@@ -26,7 +26,33 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
             android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            />
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/toolbar_head"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="100dp"
+                    android:src="@mipmap/ic_head"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/qyinfo_text_size"
+                    android:textColor="@color/white"
+                    android:text="username"
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 <android.support.design.widget.TabLayout
     android:id="@+id/tab"
