@@ -20,4 +20,10 @@
     <color name="black">#000</color>
     <color name="white">#fff</color>
     <color name="login_hint">#aee1fd</color>
+
+    <color name="blue_but_normal">#29a6eb</color>
+    <color name="blue_but_press">#1f8ecb</color>
+    <color name="yellow_but_normal">#fd9d3d</color>
+    <color name="yellow_but_press">#ee8419</color>
+
 </resources>

@@ -35,12 +35,19 @@ public class MainActivity extends AppCompatActivity {
 
     private String[] shengjiTabTitles = {"首页", "审核"};
     private ActionBarDrawerToggle drawerToggle;
+    private int userType;
+    private VPFAdapter vpfAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        initData();
+        initView();
+    }
+
+    private void initView() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close);
@@ -79,27 +86,33 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
-        viewPager.setAdapter(new VPFAdapter(getSupportFragmentManager(), 0, getResources().getStringArray(R.array.addJianGuanUnit)));
+        viewPager.setAdapter(vpfAdapter);
         tab.setupWithViewPager(viewPager);
         tab.setTabMode(TabLayout.MODE_SCROLLABLE);
-
-
-        initData();
-//        startActivity(new Intent(MainActivity.this, ExamActivity.class));
     }
 
     private void initData() {
-//
-////        new MyOpenHelper(this, "info.db").onUpgrade();
-//        QuestionBeanHelper driverHelper = DbUtil.getDriverHelper();
-//        QuestionDBBean questionBean = new QuestionDBBean();
-//        questionBean.setType(0);
-//        questionBean.setQuestion("第一题");
-//        questionBean.setAnswer(2);
-//        driverHelper.save(questionBean);
-//        QuestionDBBean questionBean1 = driverHelper.queryAll().get(0);
-//        ToastUtil.show(" " + questionBean1.getNum() + ", 题目：" + questionBean1.getQuestion() + "答案：" + questionBean1.getAnswer());
-
+        userType = getIntent().getIntExtra("userType", 0);
+        switch (userType){
+            case 0:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 0, getResources().getStringArray(R.array.addJianGuanUnit));
+                break;
+            case 1:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 1, getResources().getStringArray(R.array.ShengJuAdmin));
+                break;
+            case 2:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 2, getResources().getStringArray(R.array.ShengJuMan));
+                break;
+            case 3:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 3, getResources().getStringArray(R.array.ShiJiAdmin));
+                break;
+            case 4:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 4, getResources().getStringArray(R.array.CompanyAdmin));
+                break;
+            case 5:
+                vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 5, getResources().getStringArray(R.array.XianAdmin));
+                break;
+        }
     }
 
     @Override
