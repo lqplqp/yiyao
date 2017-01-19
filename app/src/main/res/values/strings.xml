@@ -80,7 +80,7 @@
     
     
     
-    <!--14增加监管单位-->
+    <!--0 增加监管单位-->
     <string-array name="addJianGuanUnit">
         <item >首页</item>
         <item >个人用户管理</item>
@@ -88,11 +88,9 @@
         <item >信息卡管理</item>
         <item >监管单位管理</item>
         <item >执法记录管理</item>
-
-
     </string-array>
 
-    <!--省局管理员-->
+    <!--1 省局管理员-->
     <string-array name="ShengJuAdmin">
         <item >首页</item>
         <item >监管单位管理</item>
@@ -102,9 +100,8 @@
         <item >培训报名</item>
         <item >监管统计</item>
         <item >体检信息</item>
-
     </string-array>
-    <!--省局个人-->
+    <!--2 省局个人-->
     <string-array name="ShengJuMan">
         <item >首页</item>
         <item >选购培训项目</item>
@@ -113,7 +110,7 @@
         <item >通知消息</item>
         <item >执法记录管理</item>
     </string-array>
-    <!--市级个人-->
+    <!--3 市级个人-->
     <string-array name="ShiJiAdmin">
         <item >首页</item>
         <item >选购培训项目</item>
@@ -122,7 +119,7 @@
         <item >通知消息</item>
         <item >执法记录管理</item>
     </string-array>
-    <!--14企业管理员-->
+    <!--4 企业管理员-->
     <string-array name="CompanyAdmin">
         <item >首页</item>
         <item >选购培训项目</item>
@@ -131,7 +128,7 @@
         <item >通知消息</item>
         <item >执法记录管理</item>
     </string-array>
-    <!--县区级管理员-->
+    <!--5 县区级管理员-->
     <string-array name="XianAdmin">
         <item ></item>
         <item >监管人员首页</item>
