@@ -5,6 +5,7 @@
         <item
             android:id="@+id/navi_menu_1"
             android:icon="@mipmap/ic_home"
+            android:checked="true"
             android:title="监督人员首页"
             />
         <item
