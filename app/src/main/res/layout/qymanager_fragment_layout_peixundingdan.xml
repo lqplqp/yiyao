@@ -266,7 +266,7 @@
                         android:layout_height="wrap_content"
                         android:text="查看"
                         android:textSize="12sp"
-                        android:textColor="@color/global_bg_blue"
+                        android:textColor="@color/blue_but_normal"
                         />
                     <TextView
                         android:layout_marginLeft="20dp"
@@ -274,7 +274,7 @@
                         android:layout_height="wrap_content"
                         android:text="付款"
                         android:textSize="12sp"
-                        android:textColor="@color/global_bg_blue"
+                        android:textColor="@color/blue_but_normal"
                         />
                     <TextView
                         android:layout_marginLeft="20dp"
@@ -282,7 +282,7 @@
                         android:layout_height="wrap_content"
                         android:text="取消"
                         android:textSize="12sp"
-                        android:textColor="@color/global_bg_blue"
+                        android:textColor="@color/blue_but_normal"
                         />
                 </LinearLayout>
             </TableRow>
