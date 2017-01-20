@@ -162,7 +162,7 @@
                     android:paddingTop="5dp"
                     android:text="企业名称"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -172,7 +172,7 @@
                     android:paddingTop="5dp"
                     android:text="xxx小店"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -183,7 +183,7 @@
                     android:paddingTop="5dp"
                     android:text="体检合格人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -192,7 +192,7 @@
                     android:paddingTop="5dp"
                     android:text="6"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -203,7 +203,7 @@
                     android:paddingTop="5dp"
                     android:text="培训合格人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize"
                     android:id="@+id/textView" />
 
                 <TextView
@@ -213,7 +213,7 @@
                     android:paddingTop="5dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -225,7 +225,7 @@
                     android:paddingTop="5dp"
                     android:text="获取信息卡人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -235,7 +235,7 @@
                     android:paddingTop="5dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
@@ -246,12 +246,12 @@
                     android:paddingTop="5dp"
                     android:text="过期提醒"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize"
                     android:id="@+id/textView2" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_marginTop="3dp"
                     android:src="@mipmap/red_point"
                     />
@@ -265,7 +265,7 @@
                     android:paddingTop="5dp"
                     android:text="备注"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize"
                      />
 
                 <TextView
@@ -276,7 +276,7 @@
                     android:paddingTop="5dp"
                     android:text="xxx"
                     android:textColor="@color/global_red"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize"
                     android:id="@+id/textView3" />
             </TableRow>
         </TableLayout>

@@ -13,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 import com.lxkj.yiyao.activity.ExamActivity;
+import com.lxkj.yiyao.activity.PeiXunActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.utils.ToastUtil;
 
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navi_menu_3:
                         ToastUtil.show("培训学习");
+                        startActivity(new Intent(MainActivity.this, PeiXunActivity.class));
                         break;
                     case R.id.navi_menu_4:
                         ToastUtil.show("企业管理");
@@ -89,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(vpfAdapter);
         tab.setupWithViewPager(viewPager);
         tab.setTabMode(TabLayout.MODE_SCROLLABLE);
+
+
     }
 
     private void initData() {

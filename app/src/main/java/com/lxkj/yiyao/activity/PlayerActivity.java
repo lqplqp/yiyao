@@ -5,6 +5,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
@@ -45,9 +46,15 @@ public class PlayerActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
 
         Intent intent = getIntent();
-        VIDEO_URL = intent.getStringExtra(VIDEO_PATH);
-        VIDEO_HD_URL = intent.getStringExtra(VIEWO_HD_URL);
-        IMAGE_URL = intent.getStringExtra(IMAGE_PATH);
+        if (!TextUtils.isEmpty(intent.getStringExtra(VIDEO_PATH))){
+            VIDEO_URL = intent.getStringExtra(VIDEO_PATH);
+        }
+        if (!TextUtils.isEmpty(intent.getStringExtra(VIEWO_HD_URL))){
+            VIDEO_HD_URL = intent.getStringExtra(VIEWO_HD_URL);
+        }
+        if (!TextUtils.isEmpty(intent.getStringExtra(IMAGE_PATH))){
+            IMAGE_URL = intent.getStringExtra(IMAGE_PATH);
+        }
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.movieplay);

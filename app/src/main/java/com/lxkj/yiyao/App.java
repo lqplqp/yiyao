@@ -2,14 +2,17 @@ package com.lxkj.yiyao;
 
 
 import android.app.Application;
+import android.database.sqlite.SQLiteDatabase;
 
-import io.realm.Realm;
+import org.litepal.LitePalApplication;
+import org.litepal.tablemanager.Connector;
+
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class App extends Application {
+public class App extends LitePalApplication {
 
     public static Application mApplication;
 
@@ -17,6 +20,6 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         mApplication = this;
-        Realm.init(getApplicationContext());
+        SQLiteDatabase db = Connector.getDatabase();
     }
 }
