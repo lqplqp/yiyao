@@ -17,8 +17,8 @@
     <color name="line">@color/global_bg_gray</color>
 
     <color name="gray_bg">#bfbfbf</color>
-    <color name="black">#000</color>
-    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
     <color name="login_hint">#aee1fd</color>
 
     <color name="blue_but_normal">#29a6eb</color>
