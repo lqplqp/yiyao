@@ -118,6 +118,7 @@
         android:layout_marginTop="10dp"
         >
         <Button
+            android:id="@+id/last_but"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
@@ -127,6 +128,7 @@
             android:textColor="@color/white"
             />
         <Button
+            android:id="@+id/next_but"
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"

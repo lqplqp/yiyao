@@ -1,31 +1,52 @@
 package com.lxkj.yiyao.db;
 
 
-import io.realm.RealmObject;
-import io.realm.annotations.PrimaryKey;
+import org.litepal.crud.DataSupport;
 
 /**
  * Created by sun on 2017/1/19.
  */
 
-public class QuestionDBBean extends RealmObject{
-    @PrimaryKey
-    private Long num;
+public class QuestionDBBean extends DataSupport {
+    private int id;
+    private int num;
     private int type;
+    //题干
     private String question;
-    private int key1;
-    private int key2;
-    private int key3;
-    private int key4;
+    private String key1;
+    private String key2;
+    private String key3;
+    private String key4;
+    //考试者选择的答案
     private int answer;
+    //正确答案
+    private int key;
+    //正确性，true为正确
     private boolean right;
+    //题目状态，0 未做， 1 已做
     private int status;
 
-    public Long getNum() {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
+    }
+
+    public int getNum() {
         return num;
     }
 
-    public void setNum(Long num) {
+    public void setNum(int num) {
         this.num = num;
     }
 
@@ -45,35 +66,35 @@ public class QuestionDBBean extends RealmObject{
         this.question = question;
     }
 
-    public int getKey1() {
+    public String getKey1() {
         return key1;
     }
 
-    public void setKey1(int key1) {
+    public void setKey1(String key1) {
         this.key1 = key1;
     }
 
-    public int getKey2() {
+    public String getKey2() {
         return key2;
     }
 
-    public void setKey2(int key2) {
+    public void setKey2(String key2) {
         this.key2 = key2;
     }
 
-    public int getKey3() {
+    public String getKey3() {
         return key3;
     }
 
-    public void setKey3(int key3) {
+    public void setKey3(String key3) {
         this.key3 = key3;
     }
 
-    public int getKey4() {
+    public String getKey4() {
         return key4;
     }
 
-    public void setKey4(int key4) {
+    public void setKey4(String key4) {
         this.key4 = key4;
     }
 

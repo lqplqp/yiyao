@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    >
+<Button
+    android:id="@+id/exam_but"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/blue_but_bg"
+    android:text="在线考试"
+    android:textSize="@dimen/qyinfo_text_size"
+    android:textColor="@color/white"
+    />
+    <Button
+        android:id="@+id/sp_but"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/blue_but_bg"
+        android:text="视频学习"
+        android:textSize="@dimen/qyinfo_text_size"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

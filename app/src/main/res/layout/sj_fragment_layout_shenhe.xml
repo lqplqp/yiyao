@@ -25,7 +25,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <HorizontalScrollView
@@ -121,7 +121,7 @@
                     android:paddingTop="5dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -131,7 +131,7 @@
                     android:paddingTop="5dp"
                     android:text="登录用户名"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -141,7 +141,7 @@
                     android:paddingTop="5dp"
                     android:text="体验机构名称"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
 
             <TableRow>
@@ -155,7 +155,7 @@
                     android:layout_gravity="center"
                     android:text="1"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -165,7 +165,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -175,7 +175,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
 
             <TableRow>
@@ -189,7 +189,7 @@
 
                     android:text="2"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -199,7 +199,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -209,7 +209,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
             <TableRow>
 
@@ -222,7 +222,7 @@
 
                     android:text="3"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -232,7 +232,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -242,7 +242,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
             <TableRow>
 
@@ -255,7 +255,7 @@
 
                     android:text="4"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -265,7 +265,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
@@ -275,7 +275,7 @@
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
 
 

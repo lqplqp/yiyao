@@ -74,7 +74,7 @@
                         android:layout_marginLeft="20dp"
                         android:text="@string/sj_law_number"
                         android:textColor="@color/global_black"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
                     android:layout_marginTop="5dp"
                     android:text="@string/sj_law_type"
                     android:textColor="@color/global_black"
-                    android:textSize="18sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
                 <LinearLayout
                     android:background="@drawable/table_frame_fray"
                     android:layout_width="match_parent"
@@ -138,7 +138,7 @@
                         android:layout_marginLeft="20dp"
                         android:text="@string/sj_law_time"
                         android:textColor="@color/global_black"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
                         android:layout_width="100dp"
@@ -222,7 +222,7 @@
                             android:paddingTop="5dp"
                             android:text="序号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
@@ -232,7 +232,7 @@
                             android:paddingTop="5dp"
                             android:text="1"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
 
@@ -246,7 +246,7 @@
                             android:paddingTop="5dp"
                             android:text="执法编号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -255,7 +255,7 @@
                             android:paddingTop="5dp"
                             android:text="11111"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
 
@@ -270,7 +270,7 @@
 
                             android:text="执法人姓名"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -279,7 +279,7 @@
                             android:paddingTop="5dp"
                             android:text="XXX"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
                     <TableRow>
@@ -293,7 +293,7 @@
 
                             android:text="执法时间"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -302,7 +302,7 @@
                             android:paddingTop="5dp"
                             android:text="2017-07-03"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
                     <TableRow>
@@ -315,7 +315,7 @@
                             android:paddingTop="5dp"
                             android:text="被执法人信息卡编号/许可证编号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -324,7 +324,7 @@
                             android:paddingTop="5dp"
                             android:text="111111000000"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
 
@@ -336,7 +336,7 @@
                             android:paddingTop="5dp"
                             android:text="被执法人姓名/企业"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -345,7 +345,7 @@
                             android:paddingTop="5dp"
                             android:text="XXXXXX"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
                         <TextView
@@ -356,7 +356,7 @@
                             android:paddingTop="5dp"
                             android:text="执法类型"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -365,7 +365,7 @@
                             android:paddingTop="5dp"
                             android:text="行政许可"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
                         <TextView
@@ -376,7 +376,7 @@
                             android:paddingTop="5dp"
                             android:text="操作"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -385,7 +385,7 @@
                             android:paddingTop="5dp"
                             android:text="查看"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
 
 
@@ -417,7 +417,7 @@
                             android:paddingTop="5dp"
                             android:text="序号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
@@ -427,7 +427,7 @@
                             android:paddingTop="5dp"
                             android:text="1"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
 
@@ -441,7 +441,7 @@
                             android:paddingTop="5dp"
                             android:text="执法编号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -450,7 +450,7 @@
                             android:paddingTop="5dp"
                             android:text="11111"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
 
@@ -465,7 +465,7 @@
 
                             android:text="执法人姓名"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -474,7 +474,7 @@
                             android:paddingTop="5dp"
                             android:text="XXX"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
                     <TableRow>
@@ -488,7 +488,7 @@
 
                             android:text="执法时间"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -497,7 +497,7 @@
                             android:paddingTop="5dp"
                             android:text="2017-07-03"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
 
                     </TableRow>
                     <TableRow>
@@ -510,7 +510,7 @@
                             android:paddingTop="5dp"
                             android:text="被执法人信息卡编号/许可证编号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -519,7 +519,7 @@
                             android:paddingTop="5dp"
                             android:text="111111000000"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
 
@@ -531,7 +531,7 @@
                             android:paddingTop="5dp"
                             android:text="被执法人姓名/企业"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -540,7 +540,7 @@
                             android:paddingTop="5dp"
                             android:text="XXXXXX"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
                         <TextView
@@ -551,7 +551,7 @@
                             android:paddingTop="5dp"
                             android:text="执法类型"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -560,7 +560,7 @@
                             android:paddingTop="5dp"
                             android:text="行政许可"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
                     <TableRow>
                         <TextView
@@ -571,7 +571,7 @@
                             android:paddingTop="5dp"
                             android:text="操作"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:paddingBottom="5dp"
@@ -580,7 +580,7 @@
                             android:paddingTop="5dp"
                             android:text="查看"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/qyinfo_text_size" />
                     </TableRow>
 
 
