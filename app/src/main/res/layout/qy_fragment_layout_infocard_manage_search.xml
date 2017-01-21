@@ -49,6 +49,7 @@
         android:background="@drawable/fillet_white_bg"
         android:orientation="vertical"
         android:layout_margin="10dp"
+        android:paddingRight="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp">
         <LinearLayout
@@ -99,7 +100,7 @@
                 android:layout_width="95dp"
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
-                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
                 android:paddingBottom="8dp"
                 android:background="@drawable/edit_border_bg"
@@ -115,7 +116,7 @@
                 android:layout_width="95dp"
                 android:layout_height="40dp"
                 android:layout_centerVertical="true"
-                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
                 android:layout_marginRight="10dp"
                 android:paddingLeft="5dp"
                 android:paddingBottom="8dp"

@@ -6,51 +6,59 @@
     android:background="@color/global_bg_gray"
     >
     <LinearLayout
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fillet_white_bg"
-        >
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/fillet_white_bg">
+        <RadioGroup
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:text="全部（0）"
-            android:background="@drawable/blue_but_bg"
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:text="待付款（0）"
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:text="已付款（0）"
-            android:textSize="16sp"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="6dp"
-            android:text="取消（0）"
-            android:textSize="16sp"
-            />
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/blue_but_bg"
+                android:checked="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="全部(2)"
+                android:id="@+id/all" />
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/radiobut_color"
+                android:gravity="center"
+                android:text="待付款(0)" />
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/radiobut_color"
+                android:gravity="center"
+                android:text="已付款(0)" />
+            <RadioButton
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/radiobut_color"
+                android:gravity="center"
+                android:text="已取消(0)"/>
+        </RadioGroup>
+
     </LinearLayout>
     <RelativeLayout
         android:layout_width="match_parent"

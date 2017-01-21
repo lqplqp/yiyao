@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.navi_menu_3:
                         ToastUtil.show("培训学习");
+                        item.setChecked(false);
                         startActivity(new Intent(MainActivity.this, PeiXunActivity.class));
                         break;
                     case R.id.navi_menu_4:

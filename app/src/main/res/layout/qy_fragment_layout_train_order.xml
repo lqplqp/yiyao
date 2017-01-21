@@ -8,7 +8,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <!--查询条件和查询条件之下的输入框  start-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -65,7 +64,6 @@
 
     </LinearLayout>
 
-    <!--查询条件和查询条件之下的输入框  end-->
 
 
     <!--体验机构列表 start-->

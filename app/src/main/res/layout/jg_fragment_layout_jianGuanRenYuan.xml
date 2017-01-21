@@ -61,27 +61,30 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
+        android:paddingRight="10dp"
         android:background="@drawable/fillet_white_bg"
         android:paddingBottom="5dp"
         android:paddingTop="5dp">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="20dp"
             android:text="用户姓名："
             android:textColor="@color/global_black"
+            android:layout_marginRight="10dp"
             android:textSize="18sp" />
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_centerVertical="true"
+            android:background="@drawable/edit_border_bg"
             android:layout_marginLeft="100dp"
             android:hint="用户姓名"
             android:lines="1"
