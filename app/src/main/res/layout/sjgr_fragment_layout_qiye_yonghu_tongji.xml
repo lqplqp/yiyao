@@ -25,7 +25,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/table_textsize"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,10 +35,10 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
+            
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp"
+            style="@style/table1hight"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white" />
     </RelativeLayout>
@@ -117,170 +117,169 @@
             android:layout_marginLeft="40dp"
             android:text="企业用户统计列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/table_textsize"/>
     </RelativeLayout>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fillet_white_bg">
-            <TableRow>
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="序号"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fillet_white_bg">
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="序号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="地区"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="企业数量"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-            </TableRow>
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="地区"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
 
-            <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="1"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="企业数量"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+        </TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="郑州市"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+        <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="5"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-            </TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-            <TableRow>
+                android:paddingLeft="35dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="1"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                    android:text="2"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="郑州市"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="开封市"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="2"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-            </TableRow>
-            <TableRow>
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="5"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+        </TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+        <TableRow>
 
-                    android:text="3"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                android:paddingLeft="35dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-            </TableRow>
-            <TableRow>
+                android:text="2"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="总计"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="5"
-                    android:textColor="@color/global_black"
-                    android:textSize="20sp" />
-            </TableRow>
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="开封市"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="2"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+
+                android:paddingLeft="35dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+
+                android:text="3"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                style="@style/table1hight"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:background="@drawable/table_frame_fray"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总计"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="5"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"/>
+        </TableRow>
 
 
-        </TableLayout>
-
+    </TableLayout>
 
 
     <!--体验机构列表 end-->

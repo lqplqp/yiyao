@@ -72,13 +72,14 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="企业名称："
                 android:textColor="#333"
                 android:textSize="18sp"
                 />
+
             <EditText
                 android:layout_centerVertical="true"
                 android:layout_marginTop="10dp"
@@ -86,7 +87,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/edit_border_bg"
                 android:layout_width="250dp"
-                android:layout_height="30dp"
+                android:layout_height="25dp"
                 android:id="@+id/company_name" />
         </LinearLayout>
 
@@ -126,18 +127,17 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="60dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="操作"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
                 <LinearLayout
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    style="@style/table1hight"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -149,7 +149,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="15dp"
                         android:text="企业人员"
                         android:textColor="@color/global_bg_blue"
                         android:textSize="@dimen/table_textsize"
@@ -160,19 +160,17 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="50dp"
-                    android:paddingTop="5dp"
+                    android:paddingLeft="45dp"
+                    style="@style/table1hight"
                     android:text="企业名称"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:paddingLeft="60dp"
+                    android:paddingRight="10dp"
+                    style="@style/table1hight"
                     android:text="xxx小店"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -181,18 +179,16 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="体检合格人数"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="80dp"
-                    android:paddingTop="5dp"
+                    android:paddingLeft="85dp"
+                    style="@style/table1hight"
                     android:text="6"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -201,9 +197,8 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="培训合格人数"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -211,42 +206,40 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="80dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView16" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="获取信息卡人数"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="80dp"
                     android:paddingRight="80dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView17" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="50dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="过期提醒"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -255,7 +248,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="8dp"
                     android:src="@mipmap/red_point"
                     />
             </TableRow>
@@ -263,9 +256,8 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="60dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="备注"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -273,10 +265,9 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    style="@style/table1hight"
                     android:paddingLeft="80dp"
                     android:paddingRight="80dp"
-                    android:paddingTop="5dp"
                     android:text="xxx"
                     android:textColor="@color/global_red"
                     android:textSize="@dimen/table_textsize"

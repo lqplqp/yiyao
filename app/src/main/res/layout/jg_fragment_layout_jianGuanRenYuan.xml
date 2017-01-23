@@ -33,7 +33,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="100dp"
-            android:background="@drawable/blue_but_bg"
+            android:background="@drawable/yellow_but_bg"
             android:clickable="true"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
@@ -48,7 +48,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:background="@drawable/yellow_but_bg"
+            android:background="@drawable/blue_but_bg"
             android:clickable="true"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
@@ -70,26 +70,27 @@
         android:paddingBottom="5dp"
         android:paddingTop="5dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:text="用户姓名："
-            android:textColor="@color/global_black"
-            android:layout_marginRight="10dp"
-            android:textSize="18sp" />
-
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:background="@drawable/edit_border_bg"
-            android:layout_marginLeft="100dp"
-            android:hint="用户姓名"
+            android:layout_marginLeft="110dp"
             android:lines="1"
             android:paddingTop="10dp"
             android:id="@+id/input_name" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:text="用户姓名："
+            android:textColor="@color/global_black"
+            android:layout_marginRight="10dp"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView14" />
     </RelativeLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
@@ -148,18 +149,21 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="45dp"
                     android:paddingTop="5dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView12" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
+                    android:paddingLeft="45dp"
+                    android:paddingRight="45dp"
                     android:paddingTop="5dp"
                     android:text="账号"
                     android:textColor="@color/global_black"
@@ -181,7 +185,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
+                    android:paddingLeft="55dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="1"
@@ -191,7 +195,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="40dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -201,7 +205,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -214,7 +218,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
+                    android:paddingLeft="55dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
 
@@ -225,7 +229,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="40dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -235,19 +239,20 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView13" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
+                    android:paddingLeft="55dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
 
@@ -259,7 +264,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="40dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -269,7 +274,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -281,7 +286,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
+                    android:paddingLeft="55dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
 
@@ -292,7 +297,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="40dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"
@@ -302,7 +307,7 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
                     android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
                     android:paddingTop="5dp"
                     android:text="XXXX"

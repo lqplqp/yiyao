@@ -43,10 +43,10 @@
                     android:background="@drawable/yellow_but_bg"
                     android:clickable="true"
                     android:layout_marginLeft="200dp"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="查询"
                     android:textColor="@color/global_white"
                     />
@@ -58,10 +58,10 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/blue_but_bg"
                     android:clickable="true"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="返回"
                     android:textColor="@color/global_white"
                     android:id="@+id/select" />
@@ -74,9 +74,9 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fillet_white_bg"
-                android:paddingBottom="5dp"
+                
                 android:orientation="vertical"
-                android:paddingTop="5dp">
+                style="@style/table1hight">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,13 +118,13 @@
                         android:layout_marginLeft="20dp"
                         android:text="体检时间"
                         android:textColor="@color/global_black"
-                        android:textSize="18sp" />
+                        android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
                         android:layout_width="100dp"
                         android:layout_marginLeft="18dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
+                        style="@style/table1hight"
+                        
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/start_time" />
@@ -138,8 +138,8 @@
 
                     <EditText
                         android:layout_width="100dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
+                        style="@style/table1hight"
+                        
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/end_time" />
@@ -196,30 +196,29 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            style="@style/table1hight"
                             android:paddingLeft="30dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
                             android:text="序号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            style="@style/table1hight"
                             android:text="体检报告编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="40dp"
                             android:paddingRight="40dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="姓名"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -229,30 +228,30 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="35dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="1"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="30dp"
+                            
+                            android:paddingLeft="55dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="30dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -262,10 +261,10 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="35dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="2"
                             android:textColor="@color/global_black"
@@ -273,20 +272,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="30dp"
+
+                            android:paddingLeft="55dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="30dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -295,10 +294,10 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="35dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="3"
                             android:textColor="@color/global_black"
@@ -307,20 +306,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="30dp"
+
+                            android:paddingLeft="55dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="30dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -329,10 +328,10 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="35dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="4"
                             android:textColor="@color/global_black"
@@ -340,20 +339,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
-                            android:paddingLeft="30dp"
+
+                            android:paddingLeft="55dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="30dp"
                             android:paddingRight="30dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />

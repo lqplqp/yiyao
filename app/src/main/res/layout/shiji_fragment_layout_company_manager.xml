@@ -49,10 +49,10 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/yellow_but_bg"
                 android:clickable="true"
-                android:paddingBottom="5dp"
+                
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:paddingTop="5dp"
+                style="@style/table1hight"
                 android:text="@string/sj_shenhe_select"
                 android:textColor="@color/global_white"
                 android:id="@+id/select" />
@@ -123,18 +123,19 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    style="@style/table1hight"
                     android:paddingLeft="60dp"
-                    android:paddingTop="5dp"
                     android:text="操作"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView26" />
+
                 <LinearLayout
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     >
                     <TextView
                         android:layout_width="wrap_content"
@@ -157,101 +158,101 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="50dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="企业名称"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="40dp"
+                    
+                    android:paddingLeft="55dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx小店"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="体检合格人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="80dp"
-                    android:paddingTop="5dp"
+                    
+                    android:paddingLeft="85dp"
+                    style="@style/table1hight"
                     android:text="6"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="培训合格人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize" 
                     android:id="@+id/textView" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="80dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="获取信息卡人数"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="80dp"
                     android:paddingRight="80dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"  />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="50dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="过期提醒"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize" 
                     android:id="@+id/textView2" />
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
                     android:layout_marginTop="3dp"
                     android:src="@mipmap/red_point"
                     />
@@ -260,23 +261,23 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="60dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="备注"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize" 
                      />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="80dp"
                     android:paddingRight="80dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="xxx"
                     android:textColor="@color/global_red"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/table_textsize" 
                     android:id="@+id/textView3" />
             </TableRow>
         </TableLayout>

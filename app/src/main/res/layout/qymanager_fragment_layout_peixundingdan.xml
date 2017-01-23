@@ -96,20 +96,19 @@
                     <TextView
                         android:background="@drawable/table_frame_fray"
                         android:layout_width="40dp"
-                        android:paddingBottom="5dp"
+                       style="@style/table1hight"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
                         android:text="培训项目信息"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="食品安全监管队伍培训班"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -120,20 +119,20 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="培训费用（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="300"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -144,10 +143,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
 
                         android:text="资料费用（元）"
                         android:textColor="@color/global_black"
@@ -155,10 +154,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="20"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -168,10 +167,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
 
                         android:text="学员人数"
                         android:textColor="@color/global_black"
@@ -179,10 +178,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="5"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -192,19 +191,19 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="应付款（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="320"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -213,19 +212,19 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="已付款（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="0"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -233,19 +232,19 @@
                 <TableRow>
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="交易状态"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="已付款"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -253,10 +252,10 @@
                 <TableRow>
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="操作"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -315,20 +314,20 @@
                     <TextView
                         android:background="@drawable/table_frame_fray"
                         android:layout_width="40dp"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="培训项目信息"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="食品安全监管队伍培训班"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -339,20 +338,20 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="培训费用（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="300"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -363,10 +362,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
 
                         android:text="资料费用（元）"
                         android:textColor="@color/global_black"
@@ -374,10 +373,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="20"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -387,10 +386,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
 
                         android:text="学员人数"
                         android:textColor="@color/global_black"
@@ -398,10 +397,10 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="5"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -411,19 +410,19 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="应付款（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="320"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -432,19 +431,19 @@
 
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="已付款（元）"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="0"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -452,19 +451,19 @@
                 <TableRow>
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="交易状态"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="55dp"
                         android:paddingRight="55dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="已付款"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />
@@ -472,10 +471,10 @@
                 <TableRow>
                     <TextView
                         android:background="@drawable/table_frame_fray"
-                        android:paddingBottom="5dp"
+                       
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:paddingTop="5dp"
+                        style="@style/table1hight"
                         android:text="操作"
                         android:textColor="@color/global_black"
                         android:textSize="12sp" />

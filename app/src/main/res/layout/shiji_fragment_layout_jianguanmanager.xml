@@ -35,10 +35,10 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
+            
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp"
+            style="@style/table1hight"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
@@ -51,8 +51,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginTop="10dp"
         android:background="@drawable/fillet_white_bg"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        
+        style="@style/table1hight">
 
         <TextView
             android:id="@+id/tv_username"
@@ -83,8 +83,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="50dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            style="@style/table1hight"
+            
             android:background="@drawable/table_frame_fray"
             android:id="@+id/start_time" />
         <TextView
@@ -100,8 +100,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="240dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            style="@style/table1hight"
+            
             android:background="@drawable/table_frame_fray"
             android:id="@+id/end_time" />
 
@@ -149,10 +149,10 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
+            
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp"
+            style="@style/table1hight"
             android:text="新增"
             android:textColor="@color/global_white"
             android:id="@+id/add" />
@@ -170,34 +170,35 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/fillet_white_bg">
 
-            <TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp"
+
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    style="@style/table1hight"
                     android:text="用户名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp"
+
+                    android:paddingLeft="40dp"
+                    android:paddingRight="40dp"
+                    style="@style/table1hight"
                     android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -207,43 +208,44 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView27" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
 
                     android:text="2"
                     android:textColor="@color/global_black"
@@ -251,20 +253,20 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -273,10 +275,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
 
                     android:text="3"
                     android:textColor="@color/global_black"
@@ -284,20 +286,20 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -306,10 +308,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
 
                     android:text="4"
                     android:textColor="@color/global_black"
@@ -317,10 +319,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -328,10 +330,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
+
+                    android:paddingLeft="35dp"
                     android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />

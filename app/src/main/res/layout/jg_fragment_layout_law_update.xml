@@ -43,10 +43,10 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/blue_but_bg"
                     android:clickable="true"
-                    android:paddingBottom="5dp"
+                    
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="@string/sj_shenhe_select"
                     android:textColor="@color/global_white"
                     android:id="@+id/select" />
@@ -59,9 +59,9 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fillet_white_bg"
-                android:paddingBottom="5dp"
+                
                 android:orientation="vertical"
-                android:paddingTop="5dp">
+                style="@style/table1hight">
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -108,8 +108,8 @@
                     android:background="@drawable/table_frame_fray"
                     android:layout_width="match_parent"
                     android:layout_marginRight="10dp"
-                    android:paddingTop="5dp"
-                    android:paddingBottom="5dp"
+                    style="@style/table1hight"
+                    
                     android:layout_marginLeft="9dp"
                     android:layout_height="wrap_content">
                     <Spinner
@@ -143,8 +143,8 @@
                     <EditText
                         android:layout_width="100dp"
                         android:layout_marginLeft="9dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
+                        style="@style/table1hight"
+                        
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/start_time" />
@@ -158,8 +158,8 @@
 
                     <EditText
                         android:layout_width="100dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
+                        style="@style/table1hight"
+                        
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/end_time" />
@@ -216,20 +216,19 @@
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:layout_width="40dp"
-                            android:paddingBottom="5dp"
+                            style="@style/table1hight"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
                             android:text="序号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="1"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -240,19 +239,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="执法编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="11111"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -263,20 +262,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="执法人姓名"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -286,20 +285,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="执法时间"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="2017-07-03"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -309,19 +308,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="被执法人信息卡编号/许可证编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="111111000000"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -330,19 +329,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="被执法人姓名/企业"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -350,19 +349,19 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="执法类型"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="行政许可"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -370,19 +369,19 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="操作"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="查看"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -411,20 +410,20 @@
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:layout_width="40dp"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="序号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="1"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -435,19 +434,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="执法编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="11111"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -458,20 +457,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="执法人姓名"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -481,20 +480,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="执法时间"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="2017-07-03"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -504,19 +503,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="被执法人信息卡编号/许可证编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="111111000000"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -525,19 +524,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="被执法人姓名/企业"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="XXXXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -545,19 +544,19 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="执法类型"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="行政许可"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -565,19 +564,19 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="操作"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                            
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="查看"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />

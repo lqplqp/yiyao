@@ -43,10 +43,10 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/yellow_but_bg"
                     android:clickable="true"
-                    android:paddingBottom="5dp"
+                   
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
-                    android:paddingTop="5dp"
+                    style="@style/table1hight"
                     android:text="查询"
                     android:textColor="@color/global_white"
                     android:id="@+id/select" />
@@ -59,9 +59,9 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fillet_white_bg"
-                android:paddingBottom="5dp"
+               
                 android:orientation="vertical"
-                android:paddingTop="5dp">
+                style="@style/table1hight">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -79,8 +79,8 @@
                          />
                     <EditText
                         android:layout_width="50dp"
-                        android:paddingTop="5dp"
-                        android:paddingBottom="5dp"
+                        style="@style/table1hight"
+                       
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                          />
@@ -189,23 +189,22 @@
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:layout_width="40dp"
-                            android:paddingBottom="5dp"
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="序号"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="1"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                     </TableRow>
 
@@ -213,23 +212,23 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="通知类型"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="网上培训"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                     </TableRow>
 
@@ -237,133 +236,133 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="通知单位"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="河南省食品药品监督管理局"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                     </TableRow>
                     <TableRow>
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
 
                             android:text="发布人"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="达主任"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                     </TableRow>
                     <TableRow>
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="通知标题"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="食品安全监管队伍继续教育培训班"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                     </TableRow>
                     <TableRow>
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="培训地点"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="无"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                     </TableRow>
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="培训开始时间"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="2016-09-01"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                     </TableRow>
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="操作"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:paddingBottom="5dp"
+                           
                             android:paddingLeft="40dp"
                             android:paddingRight="55dp"
-                            android:paddingTop="5dp"
+                            style="@style/table1hight"
                             android:text="查看"
                             android:textColor="@color/global_black"
-                            android:textSize="12sp" />
+                            android:textSize="@dimen/table_textsize" />
                     </TableRow>
 
 
