@@ -83,6 +83,7 @@
     <string name="login_shijiadmin">市级管理员</string>
     <string name="login_qiyeadmin">企业管理员</string>
     <string name="login_xianquAdmin">县区级管理员</string>
+    <string name="menu">菜单</string>
 
 
     <!--0 增加监管单位-->

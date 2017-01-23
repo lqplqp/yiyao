@@ -5,31 +5,50 @@
     android:background="@color/colorPrimary"
     android:padding="10dp"
     >
-<ImageView
+    <ImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     />
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/user_head"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:src="@mipmap/ic_head"
         />
 
+
+
+
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="10dp"
+        android:id="@+id/emial"
+        android:src="@mipmap/ic_email"
+        />
+
+
+
+
+
+
+
     <TextView
         android:id="@+id/match_username_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/user_head"
-        android:layout_below="@id/user_head"
-        android:layout_marginTop="5dp"
         android:textColor="@color/white"
         android:textSize="@dimen/qyinfo_text_size"
         android:text="用  户  名："
-        />
+        android:layout_below="@+id/user_head"
+        android:layout_alignLeft="@+id/match_name_tv"
+        android:layout_alignStart="@+id/match_name_tv" />
     <TextView
         android:id="@+id/username_tv"
         android:layout_width="wrap_content"
@@ -51,6 +70,7 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:text="姓        名："
         />
+
     <TextView
         android:id="@+id/name_tv"
         android:layout_width="wrap_content"
@@ -61,6 +81,7 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:text="张三"
         />
+
     <TextView
         android:id="@+id/match_unit_name_tv"
         android:layout_width="wrap_content"
@@ -84,10 +105,15 @@
         android:text="河南省食品药品监督管理局"
         />
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:src="@mipmap/ic_email"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@id/email"
+        android:src="@mipmap/menu_jb"
+
         />
+
+
 </RelativeLayout>
