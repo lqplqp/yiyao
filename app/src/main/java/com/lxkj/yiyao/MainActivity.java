@@ -1,6 +1,10 @@
 package com.lxkj.yiyao;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,7 +14,16 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.BackgroundColorSpan;
+import android.text.style.ForegroundColorSpan;
+import android.util.AttributeSet;
+import android.view.InflateException;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.PeiXunActivity;
@@ -48,18 +61,27 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
 
+
+
     private void initView() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close);
         drawerToggle.syncState();
         drawer.setDrawerListener(drawerToggle);
+
+
+
+
+        naviView.setCheckedItem(0);
+
         naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.navi_menu_1:
                         ToastUtil.show("监督人员首页");
+                        item.setTitle(addColor("监督人员首页", Color.WHITE));
                         break;
                     case R.id.navi_menu_2:
                         ToastUtil.show("监管人员中心");
@@ -96,6 +118,17 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private SpannableStringBuilder addColor(CharSequence text, int color) {
+        SpannableStringBuilder builder = new SpannableStringBuilder(text);
+
+        if (color != 0) {
+            builder.setSpan(new ForegroundColorSpan(color), 0, text.length(),
+                    Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        }
+        return builder;
+    }
+
     private void initData() {
         userType = getIntent().getIntExtra("userType", 0);
         switch (userType){
@@ -128,4 +161,7 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
+
 }

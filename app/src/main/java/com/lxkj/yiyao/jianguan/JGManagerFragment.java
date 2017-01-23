@@ -28,7 +28,6 @@ public class JGManagerFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
     }
 
     @Override
