@@ -88,7 +88,7 @@
 
     <!--0 增加监管单位-->
     <string-array name="addJianGuanUnit">
-        <item >首页</item>
+        <item > 首页</item>
         <item >个人用户管理</item>
         <item >企业管理</item>
         <item >信息卡管理</item>

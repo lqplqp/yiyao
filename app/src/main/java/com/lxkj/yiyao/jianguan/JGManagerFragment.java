@@ -15,16 +15,7 @@ import butterknife.OnClick;
  */
 
 public class JGManagerFragment extends BaseFragment {
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.start_time)
-    EditText startTime;
-    @BindView(R.id.end_time)
-    EditText endTime;
-    @BindView(R.id.input_username)
-    EditText inputUsername;
-    @BindView(R.id.add)
-    TextView add;
+
 
     @Override
     protected void initView() {

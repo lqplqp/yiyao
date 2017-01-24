@@ -70,53 +70,122 @@ public class MainActivity extends AppCompatActivity {
         drawerToggle.syncState();
         drawer.setDrawerListener(drawerToggle);
 
+        //naviView.inflateMenu(R.menu.navi_menu);
 
+        switch (userType){
+            case 0:
+                naviView.inflateMenu(R.menu.navi_menu_fenjiguanli);
+                naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        int id = item.getItemId();
+                        switch (id){
+                            case R.id.navi_menu_1:
+                                ToastUtil.show("分级管理");
+                                break;
+                            case R.id.navi_menu_2:
+                                ToastUtil.show("安全管理");
+                                break;
+                            case R.id.navi_menu_3:
+                                ToastUtil.show("退出账户");
+                                break;
+                        }
+                        return true;
+                    }
+                });
+                break;
+            case 1:
+                naviView.inflateMenu(R.menu.navi_menu_qiyeadmin);
+                naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        int id = item.getItemId();
+                        switch (id){
+                            case R.id.navi_menu_1:
+                                //ToastUtil.show("分级管理");
+                                vpfAdapter = new VPFAdapter(getSupportFragmentManager(),userType,new String[]{"首页"});
+                                break;
+                            case R.id.navi_menu_2:
+                               // ToastUtil.show("安全管理");
+                                break;
+                            case R.id.navi_menu_3:
+                               // ToastUtil.show("退出账户");
+                                break;
+                            case R.id.navi_menu_4:
+                                // ToastUtil.show("退出账户");
+                                break;
+                            case R.id.navi_menu_5:
+                                // ToastUtil.show("退出账户");
+                                break;
+                            case R.id.navi_menu_6:
+                                // ToastUtil.show("退出账户");
+                                break;
+                        }
+                        return true;
+                    }
+                });
 
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+        }
 
-        naviView.setCheckedItem(0);
-
-        naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+      /*  naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()){
                     case R.id.navi_menu_1:
                         ToastUtil.show("监督人员首页");
-                        item.setTitle(addColor("监督人员首页", Color.WHITE));
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_2:
                         ToastUtil.show("监管人员中心");
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_3:
                         ToastUtil.show("培训学习");
-                        item.setChecked(false);
+                        item.setChecked(true);
                         startActivity(new Intent(MainActivity.this, PeiXunActivity.class));
                         break;
                     case R.id.navi_menu_4:
                         ToastUtil.show("企业管理");
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_5:
                         ToastUtil.show("监管统计");
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_6:
                         ToastUtil.show("体检信息");
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_7:
                         ToastUtil.show("下载中心");
+                        item.setChecked(true);
                         break;
                     case R.id.navi_menu_8:
                         ToastUtil.show("安全设置");
+                        item.setChecked(true);
                         break;
                 }
-                drawer.closeDrawers();
+                item.setChecked(true);
+                //drawer.closeDrawers();
                 return true;
             }
-        });
+        });*/
         viewPager.setAdapter(vpfAdapter);
         tab.setupWithViewPager(viewPager);
         tab.setTabMode(TabLayout.MODE_SCROLLABLE);
 
 
     }
+
 
     private SpannableStringBuilder addColor(CharSequence text, int color) {
         SpannableStringBuilder builder = new SpannableStringBuilder(text);
@@ -133,9 +202,11 @@ public class MainActivity extends AppCompatActivity {
         userType = getIntent().getIntExtra("userType", 0);
         switch (userType){
             case 0:
+                //naviView.inflateMenu(R.menu.navi_menu_fenjiguanli);
                 vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 0, getResources().getStringArray(R.array.addJianGuanUnit));
                 break;
             case 1:
+                //naviView.inflateMenu(R.menu.navi_menu);
                 vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 1, getResources().getStringArray(R.array.ShengJuAdmin));
                 break;
             case 2:

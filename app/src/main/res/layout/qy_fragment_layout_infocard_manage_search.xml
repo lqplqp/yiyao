@@ -76,11 +76,11 @@
                 android:layout_marginRight="10dp"
                 android:paddingLeft="10dp"
                 android:paddingBottom="8dp"
-                android:background="@drawable/edit_border_bg"
+                android:background="@drawable/table_border_bg"
                 android:hint="姓名、信息卡编号"
                 android:textSize="16sp"
                 android:lines="1"
-                android:paddingTop="10dp" />
+                android:paddingTop="5dp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

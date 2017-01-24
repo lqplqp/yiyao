@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
+import com.lxkj.yiyao.jianguan.JGManagerFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
 import com.lxkj.yiyao.jianguan.UserManagerFragment;
@@ -54,24 +55,21 @@ public class VPFAdapter extends FragmentPagerAdapter {
                 //第position个fragment页面, new 出fragment并返回
                 switch (position){
                     case 0:
-                        HomeFragment homeFragment = new HomeFragment();
+                        com.lxkj.yiyao.jianguan.HomeFragment homeFragment = new com.lxkj.yiyao.jianguan.HomeFragment();
                         return homeFragment;
                     case 1:
-                        ShenHeFragment shenHeFragment = new ShenHeFragment();
-                        return shenHeFragment;
-                    case 2:
                         UserManagerFragment userManagerFragment = new UserManagerFragment();
                         return userManagerFragment;
+                    case 2:
+                        CompanyManagerFragment  qiyeFragment = new CompanyManagerFragment();
+                        return qiyeFragment;
                     case 3:
-                        CompanyManagerFragment companyManagerFragment = new CompanyManagerFragment();
-                        return companyManagerFragment;
-                    case 4:
                         QiyeInfoCardFragment qiyeInfoCardFragment = new QiyeInfoCardFragment();
                         return qiyeInfoCardFragment;
+                    case 4:
+                        JGManagerFragment jgManagerFragment = new JGManagerFragment();
+                        return jgManagerFragment;
                     case 5:
-                        JGCompanyManFragment jgCompanyManFragment = new JGCompanyManFragment();
-                        return jgCompanyManFragment;
-                    case 6:
                         LawManagerFragment lawManagerFragment = new LawManagerFragment();
                         return lawManagerFragment;
                 }

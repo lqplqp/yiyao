@@ -43,7 +43,7 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/blue_but_bg"
                     android:clickable="true"
-                    
+
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     style="@style/table1hight"
@@ -59,7 +59,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fillet_white_bg"
-                
+
                 android:orientation="vertical"
                 style="@style/table1hight">
                 <RelativeLayout
@@ -84,6 +84,7 @@
                         android:background="@drawable/table_frame_fray"
                         android:lines="1"
                         android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
                         android:id="@+id/number"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/textView" />
@@ -93,32 +94,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                 >
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="5dp"
                     android:text="@string/sj_law_type"
+                    android:gravity="center"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
                 <LinearLayout
-                    android:background="@drawable/table_frame_fray"
                     android:layout_width="match_parent"
                     android:layout_marginRight="10dp"
-                    style="@style/table1hight"
-                    
                     android:layout_marginLeft="9dp"
                     android:layout_height="wrap_content">
-                    <Spinner
-
+                    <EditText
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@drawable/table_frame_fray"
                         android:id="@+id/type">
-
-                    </Spinner>
+                    </EditText>
 
                 </LinearLayout>
 
@@ -128,7 +127,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
                     >
 
                     <TextView
@@ -143,8 +141,8 @@
                     <EditText
                         android:layout_width="100dp"
                         android:layout_marginLeft="9dp"
-                        style="@style/table1hight"
-                        
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/start_time" />
@@ -158,8 +156,8 @@
 
                     <EditText
                         android:layout_width="100dp"
-                        style="@style/table1hight"
-                        
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                         android:id="@+id/end_time" />
@@ -225,7 +223,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -239,7 +237,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -248,7 +246,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -262,7 +260,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -272,7 +270,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -285,7 +283,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -295,7 +293,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -308,7 +306,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -317,7 +315,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -329,7 +327,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -338,7 +336,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -349,7 +347,7 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -358,7 +356,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -369,7 +367,7 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -378,7 +376,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -410,7 +408,7 @@
                         <TextView
                             android:background="@drawable/table_frame_fray"
                             android:layout_width="40dp"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -420,7 +418,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -434,7 +432,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -443,7 +441,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -457,7 +455,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -467,7 +465,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -480,7 +478,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -490,7 +488,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -503,7 +501,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -512,7 +510,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -524,7 +522,7 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -533,7 +531,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -544,7 +542,7 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -553,7 +551,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"
@@ -564,7 +562,7 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
                             style="@style/table1hight"
@@ -573,7 +571,7 @@
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            
+
                             android:paddingLeft="55dp"
                             android:paddingRight="55dp"
                             style="@style/table1hight"

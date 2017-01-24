@@ -20,7 +20,7 @@ public class LawManagerFragment extends BaseFragment {
     @BindView(R.id.number)
     EditText number;
     @BindView(R.id.type)
-    Spinner type;
+    EditText type;
     @BindView(R.id.start_time)
     EditText startTime;
     @BindView(R.id.end_time)

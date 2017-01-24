@@ -57,19 +57,19 @@
                 android:id="@+id/select" />
         </RelativeLayout>
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/fillet_white_bg"
             >
             <TextView
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="用户姓名："
@@ -78,13 +78,18 @@
                 />
             <EditText
                 android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:layout_width="250dp"
-                android:layout_height="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/table_border_bg"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/imput_name" />
-        </RelativeLayout>
+        </LinearLayout>
 
         <RelativeLayout
             android:layout_marginLeft="10dp"

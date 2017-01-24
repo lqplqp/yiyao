@@ -86,8 +86,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity = "start"
-        app:menu="@menu/navi_menu"
         android:background="@color/white"
         app:headerLayout="@layout/navi_head"
+        app:itemTextColor="@color/global_black"
         />
 </android.support.v4.widget.DrawerLayout>

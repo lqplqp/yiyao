@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <group
+
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/navi_menu_1"
+            android:icon="@mipmap/ic_home"
+            android:title="分级管理"
+            />
+        <item
+            android:id="@+id/navi_menu_2"
+            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
+            android:title="安全设置"
+            />
+        <item
+            android:id="@+id/navi_menu_3"
+            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
+            android:title="退出账户"
+            />
+
+    </group>
+    <!--<item android:title="设置"
+        android:id="@+id/sub">
+        <menu>
+            <item android:title="First" android:id="@+id/sub_1"/>
+            <item android:title="First" android:id="@+id/sub_2"/>
+        </menu>
+    </item>-->
+</menu>

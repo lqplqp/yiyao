@@ -60,10 +60,8 @@
 
         <LinearLayout
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:paddingBottom="10dp"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/fillet_white_bg"
@@ -71,23 +69,25 @@
             <TextView
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="1dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="企业名称："
                 android:textColor="#333"
+                android:layout_gravity="center_vertical"
                 android:textSize="18sp"
                 />
 
             <EditText
                 android:layout_centerVertical="true"
-                android:layout_marginTop="10dp"
-                android:layout_alignParentRight="true"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/edit_border_bg"
-                android:layout_width="250dp"
-                android:layout_height="25dp"
+                android:background="@drawable/table_border_bg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:id="@+id/company_name" />
         </LinearLayout>
 
