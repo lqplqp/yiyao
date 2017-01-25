@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-
     >
     <group
 
@@ -8,17 +7,28 @@
         <item
             android:id="@+id/navi_menu_1"
             android:icon="@mipmap/ic_home"
-            android:title="分级管理"
+            android:title="企业首页"
             />
         <item
             android:id="@+id/navi_menu_2"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
-            android:title="安全设置"
+            android:title="企业管理"
             />
         <item
             android:id="@+id/navi_menu_3"
-            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
-            android:title="退出账户"
+            android:icon="@mipmap/ic_peixunxuexi"
+            android:title="培训报名"
+            />
+
+        <item
+            android:id="@+id/navi_menu_4"
+            android:icon="@mipmap/ic_xiazaizhongxin"
+            android:title="下载中心"
+            />
+        <item
+            android:id="@+id/navi_menu_5"
+            android:icon="@mipmap/ic_anquanshezhi"
+            android:title="安全设置"
             />
 
     </group>

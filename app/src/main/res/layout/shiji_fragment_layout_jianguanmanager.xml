@@ -29,7 +29,7 @@
             android:layout_marginLeft="30dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -48,81 +48,90 @@
             android:id="@+id/select" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/fillet_white_bg"
-        
-        style="@style/table1hight">
+        >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    >
+    <TextView
+        android:id="@+id/tv_register_time"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/global_black"
+        android:text="搜索内容:"
+        android:textSize="@dimen/qyinfo_text_size"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/table_frame_fray"
+        android:id="@+id/start_time" />
+</LinearLayout>
 
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    >
+    <TextView
+        android:layout_alignRight="@id/tv_register_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="注册时间:"
+        android:textColor="@color/global_black"
+        android:textSize="@dimen/qyinfo_text_size" />
 
-        <TextView
-            android:id="@+id/tv_register_time"
-            android:layout_marginLeft="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/global_black"
-            android:text="@string/sj_admin_register_time"
-            android:textSize="16sp"
-            android:layout_alignBaseline="@+id/start_time"
-            android:layout_alignBottom="@+id/start_time"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp" />
-
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_alignRight="@id/tv_register_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="16dp"
-            android:text="@string/shiji_jianguanmanager_search"
-            android:textColor="@color/global_black"
-            android:textSize="16sp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
         <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="50dp"
-            style="@style/table1hight"
-            
-            android:background="@drawable/table_frame_fray"
-            android:id="@+id/start_time" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="210dp"
-            android:text="—"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="240dp"
-            style="@style/table1hight"
-            
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/edit_height"
             android:background="@drawable/table_frame_fray"
             android:id="@+id/end_time" />
-
+<View
+    android:layout_width="30dp"
+    android:layout_height="0.1dp"
+    android:background="@color/global_black"
+    android:layout_margin="10dp"
+    />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:hint="用户名"
-            android:lines="1"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingBottom="3dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/edit_height"
             android:background="@drawable/table_frame_fray"
             android:id="@+id/input_username" />
-    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+    </LinearLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 
@@ -145,7 +154,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -6,6 +6,9 @@
 
     android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -30,7 +33,7 @@
                     android:layout_marginLeft="40dp"
                     android:text="@string/sj_shenhe_selectmsg"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -38,11 +41,12 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="20dp"
-                    android:background="@drawable/blue_but_bg"
+                    android:background="@drawable/yellow_but_bg"
                     android:clickable="true"
-
+                    android:paddingBottom="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
+                    android:paddingTop="5dp"
                     style="@style/table1hight"
                     android:text="@string/sj_shenhe_select"
                     android:textColor="@color/global_white"
@@ -59,24 +63,26 @@
 
                 android:orientation="vertical"
                 style="@style/table1hight">
-                <RelativeLayout
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
                     >
 
                     <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
                         android:layout_marginLeft="20dp"
+                        android:layout_height="wrap_content"
                         android:text="@string/sj_law_number"
                         android:textColor="@color/global_black"
                         android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="95dp"
+                        android:layout_height="@dimen/edit_height"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/table_frame_fray"
                         android:lines="1"
@@ -85,13 +91,14 @@
                         android:id="@+id/number"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/textView" />
-                </RelativeLayout>
+                </LinearLayout>
 
                 <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
                 >
 
                 <TextView
@@ -109,9 +116,10 @@
                     android:layout_height="wrap_content">
                     <EditText
                         android:paddingTop="10dp"
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:paddingBottom="10dp"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/edit_height"
                         android:background="@drawable/table_frame_fray"
                         android:id="@+id/type">
                     </EditText>
@@ -124,6 +132,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
                     >
 
                     <TextView
@@ -136,12 +146,13 @@
                         android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="100dp"
                         android:layout_marginLeft="9dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:background="@drawable/table_frame_fray"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/edit_height"
                         android:id="@+id/start_time" />
                     <TextView
                         android:layout_width="wrap_content"
@@ -152,11 +163,12 @@
                         />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="100dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:background="@drawable/table_frame_fray"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/edit_height"
                         android:id="@+id/end_time" />
 
                 </LinearLayout>
@@ -191,9 +203,173 @@
                     android:layout_marginLeft="40dp"
                     android:text="@string/sj_lay_list"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </RelativeLayout>
 
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fillet_white_bg">
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="序号"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_width="200dp"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="1"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="执法编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="11111"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="执法人姓名"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="XXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="执法时间"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="2017-07-03"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="被执法人信息卡编号/许可证编号"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="111111000000"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="被执法人姓名/企业"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="XXXXXX"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="执法类型"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="行政许可"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="操作"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
+                            android:text="查看"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/qyinfo_text_size" />
+                    </TableRow>
+
+
+                </TableLayout>
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <TableLayout
                     android:layout_width="match_parent"
@@ -207,20 +383,18 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
+                            android:layout_width="40dp"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="序号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_width="200dp"
+                            android:layout_height="@dimen/table_hight"
                             android:text="1"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -231,19 +405,17 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="执法编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
-                            android:gravity="center"
+
+                            android:paddingLeft="55dp"
+                            android:paddingRight="55dp"
+                            style="@style/table1hight"
                             android:text="11111"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -254,19 +426,15 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="执法人姓名"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="XXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -276,20 +444,15 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
-
+                            android:layout_height="@dimen/table_hight"
                             android:text="执法时间"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="2017-07-03"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -299,19 +462,15 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="2"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="被执法人信息卡编号/许可证编号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="111111000000"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -320,19 +479,15 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="被执法人姓名/企业"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="XXXXXX"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -340,19 +495,15 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="执法类型"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="行政许可"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -360,19 +511,15 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="操作"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_height="@dimen/table_hight"
-                            android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:gravity="center"
+                            android:layout_height="@dimen/table_hight"
                             android:text="查看"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/qyinfo_text_size" />
@@ -381,199 +528,13 @@
 
                 </TableLayout>
 
-
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/fillet_white_bg">
-
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="序号"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="1"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-
-                </TableRow>
-
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="执法编号"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="11111"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-
-                </TableRow>
-
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="执法人姓名"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="XXX"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-
-                        android:text="执法时间"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="2017-07-03"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="2"
-                        android:gravity="center"
-                        android:text="被执法人信息卡编号/许可证编号"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="111111000000"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                </TableRow>
-                <TableRow>
-
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="被执法人姓名/企业"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="XXXXXX"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="执法类型"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="行政许可"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                </TableRow>
-                <TableRow>
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="操作"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                    <TextView
-                        android:background="@drawable/table_frame_fray"
-                        android:layout_height="@dimen/table_hight"
-                        android:layout_width="0dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:text="查看"
-                        android:textColor="@color/global_black"
-                        android:textSize="@dimen/qyinfo_text_size" />
-                </TableRow>
-
-
-            </TableLayout>
-
+            </HorizontalScrollView>
 
             <!--体验机构列表 end-->
 
         </LinearLayout>
 
+    </ScrollView>
 
 
 </LinearLayout>

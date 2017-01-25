@@ -27,7 +27,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,9 +63,9 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:text="发起单位："
+                android:text="发   起  单   位："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -73,7 +73,7 @@
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="10dp"
                 android:paddingLeft="5dp"
                 android:paddingBottom="8dp"
                 android:background="@drawable/table_border_bg"
@@ -94,11 +94,12 @@
                 android:layout_marginLeft="10dp"
                 android:text="培训通知类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
@@ -118,14 +119,14 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:text="行政类型："
+                android:text="行   政  类   型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="36dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
@@ -145,14 +146,14 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:text="培训班类型："
+                android:text="培 训 班 类 型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="18dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
@@ -184,7 +185,7 @@
             android:layout_marginLeft="40dp"
             android:text="通知列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <TableLayout

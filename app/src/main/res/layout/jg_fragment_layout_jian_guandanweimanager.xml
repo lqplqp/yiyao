@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray">
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -26,10 +22,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:id="@+id/select"
@@ -52,7 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingTop="5dp"
+        android:paddingTop="10dp"
         android:paddingBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -64,20 +60,23 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
             >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/jg_username"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:text="用  户  名:"
                 android:textColor="@color/global_black"
                 android:layout_gravity="center_vertical"
                 />
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/table_border_bg"
                 />
@@ -90,19 +89,23 @@
             android:paddingTop="10dp"
             android:layout_marginRight="10dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/shiji_jianguanmanager_register_time"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:text="注册时间:"
                 android:textColor="@color/global_black"
                 android:layout_gravity="center_vertical"
                 />
             <EditText
                 android:layout_width="110dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:paddingBottom="10dp"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/table_border_bg"
@@ -118,9 +121,10 @@
 
             <EditText
                 android:layout_width="100dp"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/table_border_bg"
                 />
@@ -149,10 +153,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:id="@+id/add"
@@ -171,216 +175,212 @@
             android:textColor="@color/global_white" />
     </RelativeLayout>
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/fillet_white_bg">
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fillet_white_bg">
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="序号"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="账号"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="监管单位名称"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="1"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
 
-            <TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="1"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="1"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="1"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="1"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:text="xxxxxxxx"
+                android:background="@drawable/edit_border_bg"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                />
+        </TableRow>
+    </TableLayout>
 
-                <TextView
-                    android:id="@+id/textView18"
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="序号"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="账号"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="监管单位名称"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-
-                    android:text="2"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-
-                    android:text="3"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-
-                    android:text="4"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:id="@+id/textView5"
-
-                   
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                   
-
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-
-        </TableLayout>
-
-
-    <!--体验机构列表 end-->
 
 </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+
 
 
 <!--

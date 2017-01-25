@@ -13,8 +13,12 @@ import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
 import com.lxkj.yiyao.jianguan.UserManagerFragment;
 import com.lxkj.yiyao.qiye.QYHomeFragment;
+import com.lxkj.yiyao.qiye.QYInfoInputFragment;
+import com.lxkj.yiyao.qiye.QYInfocardManagerFragment;
+import com.lxkj.yiyao.qiye.QYPersonManagerFragment;
 import com.lxkj.yiyao.qiye.QYPwesonManagerAddFragment;
 import com.lxkj.yiyao.qiye.QYSignedTrainFragment;
+import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
 import com.lxkj.yiyao.qiyemanager.QYManagerHomeFragment;
 import com.lxkj.yiyao.qiyemanager.QYManagerPeiXunDingDanFragment;
 import com.lxkj.yiyao.qiyemanager.QYManagerSelectTrainFragment;
@@ -22,11 +26,26 @@ import com.lxkj.yiyao.qiyemanager.QYManagerTongZhiFragment;
 import com.lxkj.yiyao.qiyemanager.QYManagerYiBaoPeiXunXiangMuFragment;
 import com.lxkj.yiyao.shengji.HomeFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRBaoMingMessageFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRCompanyInfoListFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRCompanyTongJiFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRDownloadDocFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRJianGuanTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRMessageFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRMessageSearchFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRPersonAnalysisFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRPersonManagerAddFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRTiJianSearchFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRTiJianTongJiFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRUpdatePswFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRYiBaoPeiXunXiangMuFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRZhiFaSerachFragment;
+import com.lxkj.yiyao.shiji.AdminManagerFragment;
+import com.lxkj.yiyao.shiji.CompanyManageyFragment;
+import com.lxkj.yiyao.shiji.MessageSearchFragment;
 import com.lxkj.yiyao.shiji.PeiXunListFragment;
 import com.lxkj.yiyao.shiji.ProjectApplyFragment;
+import com.lxkj.yiyao.shiji.QiYeInfoFragment;
 
 /**
  * Created by sun on 2017/1/18.
@@ -104,28 +123,433 @@ public class VPFAdapter extends FragmentPagerAdapter {
 
                 }
                 break;
-            case 2:
+            /**
+             * 省局管理员
+             */
+            case 10:
                 switch (position){
+                    //首页
                     case 0:
-                        SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment;
-                    case 1:
-                        SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment1 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment1;
-                    case 2:
-                        SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment2 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment2;
-                    case 3:
-                        SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment3 = new SJGRYiBaoPeiXunXiangMuFragment();
-                        return  sjgrYiBaoPeiXunXiangMuFragment3;
-                    case 4:
-                        SJGRMessageFragment sjgrMessageFragment = new SJGRMessageFragment();
-                        return sjgrMessageFragment;
-                    case 5:
-                        SJGRZhiFaSerachFragment sjgrZhiFaSerachFragment = new SJGRZhiFaSerachFragment();
-                        return sjgrZhiFaSerachFragment;
+                        HomeFragment homeFragment = new HomeFragment();
+                        return homeFragment;
                 }
                 break;
+            case 11://监管单位管理
+                switch (position){
+                    case 0:
+                        //监管单位信息
+                        CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
+                        return companyManageyFragment;
+                    case 1:
+                        //监管人员管理
+                        AdminManagerFragment adminManagerFragment = new AdminManagerFragment();
+                        return adminManagerFragment;
+                }
+                break;
+            case 12://培训通知管理
+                switch (position){
+                    case 0:
+                        //培训通知列表
+                        SJGRMessageSearchFragment sjgrMessageSearchFragment = new SJGRMessageSearchFragment();
+                        return sjgrMessageSearchFragment;
+                }
+            case 13://体检机构审核
+                switch (position){
+                    case 0:
+                        ShenHeFragment shenHeFragment = new ShenHeFragment();
+                        return shenHeFragment;
+                }
+                break;
+            case 14://企业管理
+                switch (position){
+                    case 0:
+                        //企业信息列表
+                        SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new SJGRCompanyInfoListFragment();
+                        return sjgrCompanyInfoListFragment;
+                }
+                break;
+            case 15://培训报名
+                switch (position){
+                    case 0:
+                        //培训项目报名
+                        ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
+                        return projectApplyFragment;
+                    case 1:
+                        //已报培训项目
+                        PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                        return peiXunListFragment;
+                    case 2:
+                        //通知消息
+                        MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
+                        return messageSearchFragment;
+                }
+                break;
+            case 16://监管统计
+                switch (position){
+                    case 0:
+                        //监管单位统计分析
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment;
+                    case 1:
+                        //执法记录统计分析 待定
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment1 = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment1;
+                    case 2:
+                        //企业用户统计分析
+                        SJGRCompanyTongJiFragment sjgrCompanyTongJiFragment = new SJGRCompanyTongJiFragment();
+                        return sjgrCompanyTongJiFragment;
+                    case 3:
+                        //个人用户统计分析
+                        SJGRPersonAnalysisFragment sjgrPersonAnalysisFragment = new SJGRPersonAnalysisFragment();
+                        return sjgrPersonAnalysisFragment;
+                }
+                break;
+            case 17://体检信息
+                switch (position){
+                    case 0:
+                        //体检统计
+                        SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
+                        return sjgrTiJianTongJiFragment;
+                    case 1:
+                        //体检查询
+                        SJGRTiJianSearchFragment sjgrTiJianSearchFragment = new SJGRTiJianSearchFragment();
+                        return sjgrTiJianSearchFragment;
+                }
+                break;
+            case 18://下载中心
+                switch (position){
+                    case 0:
+                        //法律法规文档下载
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment;
+                    case 1:
+                        //应用模板下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment1;
+                    case 2:
+                        //应用插件下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment2;
+                    case 3:
+                        //其他相关下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment3;
+                }
+                break;
+            case 19:
+                switch (position){
+                    case 0:
+                        //安全设置
+                        SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                        return sjgrUpdatePswFragment;
+                }
+                break;
+
+            /**
+             * 省局个人相关页面
+             */
+            case 20:
+                switch (position){
+                    case 0:
+                        //省局个人首页
+                        SJGRMessageFragment sjgrMessageFragment = new SJGRMessageFragment();
+                        return sjgrMessageFragment;
+                }
+                break;
+            case 21://监管人员中心
+                switch (position){
+                    case 0:
+                        //监管人员信息
+                        SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment = new SJGRPersonManagerAddFragment();
+                        return sjgrPersonManagerAddFragment;
+                    case 1:
+                        //我的证书  待定
+                        SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment1 = new SJGRPersonManagerAddFragment();
+                        return sjgrPersonManagerAddFragment1;
+                    case 2:
+                        //我的执法
+                        SJGRZhiFaSerachFragment sjgrZhiFaSerachFragment = new SJGRZhiFaSerachFragment();
+                        return sjgrZhiFaSerachFragment;
+                    case 3:
+                        //通知消息 查询
+                        SJGRMessageSearchFragment sjgrMessageSearchFragment = new SJGRMessageSearchFragment();
+                        return sjgrMessageSearchFragment;
+                }
+                break;
+            case 22://培训学习
+                switch (position){
+                    case 0:
+                        //已报培训项目
+                        SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment = new SJGRYiBaoPeiXunXiangMuFragment();
+                        return sjgrYiBaoPeiXunXiangMuFragment;
+                }
+                break;
+            case 23://企业管理
+                switch (position){
+                    case 0:
+                        //企业信息列表
+                        SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new SJGRCompanyInfoListFragment();
+                        return sjgrCompanyInfoListFragment;
+                    case 1:
+                        //企业报名信息
+                        SJGRBaoMingMessageFragment sjgrBaoMingMessageFragment = new SJGRBaoMingMessageFragment();
+                        return sjgrBaoMingMessageFragment;
+                }
+                break;
+            case 24://监管统计
+                switch (position){
+                    case 0:
+                        //监管单位统计分析
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment;
+                    case 1:
+                        //执法记录统计分析 待定
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment1 = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment1;
+                    case 2:
+                        //企业用户统计分析
+                        SJGRCompanyTongJiFragment sjgrCompanyTongJiFragment = new SJGRCompanyTongJiFragment();
+                        return sjgrCompanyTongJiFragment;
+                    case 3:
+                        //个人用户统计分析
+                        SJGRPersonAnalysisFragment sjgrPersonAnalysisFragment = new SJGRPersonAnalysisFragment();
+                        return sjgrPersonAnalysisFragment;
+                }
+                break;
+            case 25://体检信息
+                switch (position){
+                    case 0:
+                        //体检统计
+                        SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
+                        return sjgrTiJianTongJiFragment;
+                    case 1:
+                        //体检查询
+                        SJGRTiJianSearchFragment sjgrTiJianSearchFragment = new SJGRTiJianSearchFragment();
+                        return sjgrTiJianSearchFragment;
+                }
+                break;
+            case 26://下载中心
+                switch (position){
+                    case 0:
+                        //法律法规文档下载
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment;
+                    case 1:
+                        //应用模板下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment1;
+                    case 2:
+                        //应用插件下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment2;
+                    case 3:
+                        //其他相关下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment3;
+                }
+                break;
+            case 27:
+                switch (position){
+                    case 0:
+                        //安全设置
+                        SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                        return sjgrUpdatePswFragment;
+                }
+                break;
+            /**
+             * 市级管理员
+             */
+            case 30://监督单位首页
+                switch (position) {
+                    case 0:
+                        //监管单位首页
+                        com.lxkj.yiyao.shiji.HomeFragment homeFragment = new com.lxkj.yiyao.shiji.HomeFragment();
+                        return homeFragment;
+                }
+                break;
+
+            case 31://监管单位管理
+                switch (position){
+                    case 0:
+                        //监管单位信息
+                        CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
+                        return companyManageyFragment;
+                    case 1:
+                        //监管人员管理
+                        AdminManagerFragment adminManagerFragment = new AdminManagerFragment();
+                        return adminManagerFragment;
+                }
+                break;
+            case 32://培训通知管理
+                switch (position) {
+                    case 0:
+                    PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                    return peiXunListFragment;
+                }
+                break;
+            case 33://企业管理
+                switch (position) {
+                    case 0:
+                        QiYeInfoFragment qiYeInfoFragment = new QiYeInfoFragment();
+                        return qiYeInfoFragment;
+                }
+                break;
+            case 34://培训报名
+                switch (position){
+                    case 0:
+                        //培训项目报名
+                        ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
+                        return projectApplyFragment;
+                    case 1:
+                        //已报培训项目
+                        PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                        return peiXunListFragment;
+                    case 2:
+                        //通知消息
+                        MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
+                        return messageSearchFragment;
+                }
+                break;
+            case 35://监管统计
+                switch (position){
+                    case 0:
+                        //监管单位统计分析
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment;
+                    case 1:
+                        //执法记录统计分析 待定
+                        SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment1 = new SJGRJianGuanTongJiFragment();
+                        return sjgrJianGuanTongJiFragment1;
+                    case 2:
+                        //企业用户统计分析
+                        SJGRCompanyTongJiFragment sjgrCompanyTongJiFragment = new SJGRCompanyTongJiFragment();
+                        return sjgrCompanyTongJiFragment;
+                    case 3:
+                        //个人用户统计分析
+                        SJGRPersonAnalysisFragment sjgrPersonAnalysisFragment = new SJGRPersonAnalysisFragment();
+                        return sjgrPersonAnalysisFragment;
+                }
+                break;
+            case 36://体检信息
+                switch (position){
+                    case 0:
+                        //体检统计
+                        SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
+                        return sjgrTiJianTongJiFragment;
+                    case 1:
+                        //体检查询
+                        SJGRTiJianSearchFragment sjgrTiJianSearchFragment = new SJGRTiJianSearchFragment();
+                        return sjgrTiJianSearchFragment;
+                }
+                break;
+            case 37://下载中心
+                switch (position){
+                    case 0:
+                        //法律法规文档下载
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment;
+                    case 1:
+                        //应用模板下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment1;
+                    case 2:
+                        //应用插件下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment2;
+                    case 3:
+                        //其他相关下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment3;
+                }
+                break;
+            case 38:
+                switch (position){
+                    case 0:
+                        //安全设置
+                        SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                        return sjgrUpdatePswFragment;
+                }
+                break;
+            /**
+             * 企业管理员
+             */
+            case 40:
+                switch (position){
+                    case 0:
+                        //首页
+                        QYHomeFragment qyHomeFragment = new QYHomeFragment();
+                        return qyHomeFragment;
+                }
+                break;
+            case 41://企业管理
+                switch (position){
+                    case 0:
+                        //企业信息
+                        QYInfoInputFragment qyInfoInputFragment = new QYInfoInputFragment();
+                        return qyInfoInputFragment;
+                    case 1:
+                        //员工管理
+                        QYPersonManagerFragment qyPersonManagerFragment = new QYPersonManagerFragment();
+                        return qyPersonManagerFragment;
+                    case 2:
+                        //体检报告管理
+                        QYPersonManagerFragment qyPersonManagerFragment1 = new QYPersonManagerFragment();
+                        return qyPersonManagerFragment1;
+                    case 3:
+                        //信息卡管理
+                        QYInfocardManagerFragment qyInfocardManagerFragment = new QYInfocardManagerFragment();
+                        return qyInfocardManagerFragment;
+                }
+                break;
+            case 42://培训报名
+                switch (position){
+                    case 0:
+                        //选购培训项目
+                        ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
+                        return projectApplyFragment;
+                    case 1:
+                        //培训项目订单
+                        QYTrainOrderFragment qyTrainOrderFragment = new QYTrainOrderFragment();
+                        return qyTrainOrderFragment;
+                    case 2:
+                        //已报培训项目
+                        PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                        return peiXunListFragment;
+                    case 3:
+                        //通知消息
+                        MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
+                        return messageSearchFragment;
+                }
+                break;
+            case 43://下载中心
+                switch (position){
+                    case 0:
+                        //法律法规文档下载
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment;
+                    case 1:
+                        //应用模板下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment1;
+                    case 2:
+                        //应用插件下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment2;
+                    case 3:
+                        //其他相关下载  待定
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                        return sjgrDownloadDocFragment3;
+                }
+                break;
+            case 44:
+                switch (position){
+                    case 0:
+                        //安全设置
+                        SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                        return sjgrUpdatePswFragment;
+                }
+                break;
+
             case 3:
                 switch (position){
                     case 0:
@@ -170,6 +594,7 @@ public class VPFAdapter extends FragmentPagerAdapter {
                         return qyManagerTongZhiFragment5;
                 }
                 break;
+
             case 5:
                 switch (position){
                     case 0:

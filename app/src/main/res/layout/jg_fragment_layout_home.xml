@@ -231,22 +231,18 @@
         <!--首页面的第3个小布局 end-->
 
         <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_margin="10dp"
             android:background="@drawable/fillet_white_bg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="50dp"
             android:orientation="vertical"
+            android:gravity="center"
             >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textSize="16sp"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:text="暂无消息"
                 android:textColor="@color/global_black"
                 android:id="@+id/content" />
