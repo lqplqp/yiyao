@@ -43,8 +43,10 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/yellow_but_bg"
                     android:clickable="true"
+                    android:paddingBottom="5dp"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
+                    android:paddingTop="5dp"
                     style="@style/table1hight"
                     android:text="@string/sj_shenhe_select"
                     android:textColor="@color/global_white"
@@ -77,6 +79,7 @@
                         android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/edit_height"
                         android:layout_marginLeft="10dp"
@@ -113,6 +116,7 @@
                     android:layout_height="wrap_content">
                     <EditText
                         android:paddingTop="10dp"
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/edit_height"
@@ -142,6 +146,7 @@
                         android:textSize="@dimen/qyinfo_text_size" />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="100dp"
                         android:layout_marginLeft="9dp"
                         android:paddingTop="10dp"
@@ -158,6 +163,7 @@
                         />
 
                     <EditText
+                        android:textSize="@dimen/qyinfo_text_size"
                         android:layout_width="100dp"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"

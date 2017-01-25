@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:paddingTop="5dp"
+        android:paddingTop="10dp"
         android:paddingBottom="5dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
@@ -76,6 +76,7 @@
                 android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/table_border_bg"
                 />
@@ -104,6 +105,7 @@
                 android:layout_width="110dp"
                 android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:paddingBottom="10dp"
                 android:layout_marginLeft="5dp"
                 android:background="@drawable/table_border_bg"
@@ -122,6 +124,7 @@
                 android:layout_height="@dimen/edit_height"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/table_border_bg"
                 />
