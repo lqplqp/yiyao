@@ -27,7 +27,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法编号："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
                 android:layout_width="match_parent"
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -121,11 +121,12 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法时间："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
                 <EditText
@@ -174,7 +175,7 @@
             android:layout_marginLeft="40dp"
             android:text="执法记录列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <TableLayout

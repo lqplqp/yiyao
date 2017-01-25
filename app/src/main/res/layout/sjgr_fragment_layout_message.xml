@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/global_black"
-        android:textSize="30sp"
+        android:textSize="@dimen/qyinfo_text_size"
         android:text="通知消息"
         />
 </LinearLayout>
@@ -155,7 +155,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/global_black"
-                android:textSize="30sp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:text="公示公告"
                 />
         </LinearLayout>

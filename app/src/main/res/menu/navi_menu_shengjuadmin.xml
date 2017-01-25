@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <group
+
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/navi_menu_1"
+            android:icon="@mipmap/ic_home"
+            android:title="监管单位首页"
+            />
+        <item
+            android:id="@+id/navi_menu_2"
+            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
+            android:title="监管单位管理"
+            />
+        <item
+            android:id="@+id/navi_menu_3"
+            android:icon="@mipmap/ic_peixunxuexi"
+            android:title="培训通知管理"
+            />
+        <item
+            android:id="@+id/navi_menu_4"
+            android:icon="@mipmap/ic_qiyeguanli"
+            android:title="体检机构审核"
+            />
+        <item
+        android:id="@+id/navi_menu_5"
+            android:icon="@mipmap/ic_jianguantongji"
+        android:title="企业管理"
+        />
+        <item
+            android:id="@+id/navi_menu_6"
+            android:icon="@mipmap/ic_tijianxinxi"
+            android:title="培训报名"
+            />
+        <item
+            android:id="@+id/navi_menu_7"
+            android:icon="@mipmap/ic_xiazaizhongxin"
+            android:title="监管统计"
+            />
+        <item
+            android:id="@+id/navi_menu_8"
+            android:icon="@mipmap/ic_anquanshezhi"
+            android:title="体检信息"
+            />
+        <item
+            android:id="@+id/navi_menu_9"
+            android:icon="@mipmap/ic_xiazaizhongxin"
+            android:title="下载中心"
+            />
+        <item
+            android:id="@+id/navi_menu_10"
+            android:icon="@mipmap/ic_anquanshezhi"
+            android:title="安全设置"
+            />
+    </group>
+    <!--<item android:title="设置"
+        android:id="@+id/sub">
+        <menu>
+            <item android:title="First" android:id="@+id/sub_1"/>
+            <item android:title="First" android:id="@+id/sub_2"/>
+        </menu>
+    </item>-->
+</menu>
