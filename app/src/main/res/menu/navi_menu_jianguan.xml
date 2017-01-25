@@ -12,7 +12,7 @@
             />
         <item
             android:id="@+id/navi_menu_2"
-            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
+            android:icon="@mipmap/ic_anquanshezhi"
             android:title="安全设置"
             />
         <item

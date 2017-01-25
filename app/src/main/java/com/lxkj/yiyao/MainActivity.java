@@ -1,10 +1,5 @@
 package com.lxkj.yiyao;
 
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -16,17 +11,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
-import android.text.style.BackgroundColorSpan;
 import android.text.style.ForegroundColorSpan;
-import android.util.AttributeSet;
-import android.view.InflateException;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
 
-import com.lxkj.yiyao.activity.ExamActivity;
-import com.lxkj.yiyao.activity.PeiXunActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.utils.ToastUtil;
 
@@ -74,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (userType){
             case 0:
-                naviView.inflateMenu(R.menu.navi_menu_fenjiguanli);
+                naviView.inflateMenu(R.menu.navi_menu_jianguan);
                 naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -202,7 +189,7 @@ public class MainActivity extends AppCompatActivity {
         userType = getIntent().getIntExtra("userType", 0);
         switch (userType){
             case 0:
-                //naviView.inflateMenu(R.menu.navi_menu_fenjiguanli);
+                //naviView.inflateMenu(R.menu.navi_menu_jianguan);
                 vpfAdapter = new VPFAdapter(getSupportFragmentManager(), 0, getResources().getStringArray(R.array.addJianGuanUnit));
                 break;
             case 1:
