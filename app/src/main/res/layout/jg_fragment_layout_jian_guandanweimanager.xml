@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -167,9 +171,6 @@
             android:textColor="@color/global_white" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -183,30 +184,31 @@
 
                 <TextView
                     android:id="@+id/textView18"
-                    style="@style/table1hight"
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
-
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="10dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="账号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
-
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="监管单位名称"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -215,30 +217,36 @@
             <TableRow>
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -247,32 +255,38 @@
             <TableRow>
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="2"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -281,32 +295,38 @@
             <TableRow>
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="3"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -315,11 +335,13 @@
             <TableRow>
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="4"
                     android:textColor="@color/global_black"
@@ -328,20 +350,24 @@
                 <TextView
                     android:id="@+id/textView5"
 
-                    style="@style/table1hight"
+                   
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    style="@style/table1hight"
+                   
 
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -350,13 +376,11 @@
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
-
+</android.support.v4.widget.NestedScrollView>
 
 
 <!--
