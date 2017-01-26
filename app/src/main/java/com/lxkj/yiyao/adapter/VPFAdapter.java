@@ -59,11 +59,33 @@ public class VPFAdapter extends FragmentPagerAdapter {
 
     private BaseFragment baseFragment;
 
+    private int mChildCount = 0;
     private int part;
     public VPFAdapter(FragmentManager fm, int part, String[] pagerTitles) {
         super(fm);
         this.part = part;
         this.pagerTitles = pagerTitles;
+    }
+
+
+    public void setData(int part, String[] pagerTitles){
+        this.part = part;
+        this.pagerTitles = pagerTitles;
+    }
+    @Override
+    public void notifyDataSetChanged() {
+        mChildCount = getCount();
+        super.notifyDataSetChanged();
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+        /*if ( mChildCount > 0) {
+            mChildCount --;
+            return POSITION_NONE;
+        }
+        return super.getItemPosition(object);*/
     }
 
     @Override

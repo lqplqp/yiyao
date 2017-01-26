@@ -86,36 +86,21 @@
     <string name="menu">菜单</string>
 
 
-    <!--0 增加监管单位-->
-    <string-array name="addJianGuanUnit">
-        <item > 首页</item>
+
+    <!--增加监管单位0-->
+    <string-array name="zengjiajianguan0">
+        <item >首页</item>
         <item >个人用户管理</item>
         <item >企业管理</item>
         <item >信息卡管理</item>
         <item >监管单位管理</item>
         <item >执法记录管理</item>
     </string-array>
+    <!--增加监管单位1-->
+    <string-array name="zengjiajianguan1">
+        <item >安全设置</item>
+    </string-array>
 
-    <!--1 省局管理员-->
-    <string-array name="ShengJuAdmin">
-        <item >首页</item><!--有-->
-        <item >监管单位管理</item>
-        <item >培训通知管理</item>
-        <item >体验机构审核</item><!--有-->
-        <item >企业管理</item>
-        <item >培训报名</item>
-        <item >监管统计</item>
-        <item >体检信息</item>
-    </string-array>
-    <!--2 省局个人-->
-    <string-array name="ShengJuMan">
-        <item >首页</item>
-        <item >选购培训项目</item>
-        <item >培训项目订单</item>
-        <item >已报培训项目</item><!--有-->
-        <item >通知消息</item><!--有-->
-        <item >执法记录管理</item><!--有-->
-    </string-array>
     <!-- 省局管理员0-->
     <string-array name="shengjiguanliyuan0">
         <item>首页</item>

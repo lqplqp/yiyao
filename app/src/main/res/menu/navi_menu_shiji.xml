@@ -2,7 +2,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     >
     <group
-
         android:checkableBehavior="none">
         <item
             android:id="@+id/navi_menu_1"
@@ -52,11 +51,4 @@
             />
 
     </group>
-    <!--<item android:title="设置"
-        android:id="@+id/sub">
-        <menu>
-            <item android:title="First" android:id="@+id/sub_1"/>
-            <item android:title="First" android:id="@+id/sub_2"/>
-        </menu>
-    </item>-->
 </menu>
