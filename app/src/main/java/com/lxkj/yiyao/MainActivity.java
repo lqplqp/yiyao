@@ -15,12 +15,13 @@ import android.text.Spannable;
 import android.text.SpannableStringBuilder;
 import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
-import com.lxkj.yiyao.jianguan.JGManagerFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
 import com.lxkj.yiyao.jianguan.UserManagerFragment;
@@ -52,14 +53,13 @@ import com.lxkj.yiyao.shiji.MessageSearchFragment;
 import com.lxkj.yiyao.shiji.PeiXunListFragment;
 import com.lxkj.yiyao.shiji.ProjectApplyFragment;
 import com.lxkj.yiyao.shiji.QiYeInfoFragment;
-import com.lxkj.yiyao.utils.ToastUtil;
-
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -73,6 +73,10 @@ public class MainActivity extends AppCompatActivity {
     NavigationView naviView;
     @BindView(R.id.drawer)
     DrawerLayout drawer;
+    @BindView(R.id.sanheng)
+    ImageView sanheng;
+    @BindView(R.id.toolbar_head)
+    CircleImageView toolbarHead;
 
     private String[] shengjiTabTitles = {"首页", "审核"};
     private ActionBarDrawerToggle drawerToggle;
@@ -92,18 +96,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void logOut(){
+    private void logOut() {
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
         finish();
     }
+
     private void initView() {
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         drawerToggle = new ActionBarDrawerToggle(this, drawer, R.string.open, R.string.close);
         drawerToggle.syncState();
         drawer.setDrawerListener(drawerToggle);
+        sanheng.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                drawer.openDrawer(naviView);
+            }
+        });
 
-        switch (userType){
+        switch (userType) {
             /**
              * 增加监管
              */
@@ -150,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
-                            case R.id.navi_menu_3:
+                            case R.id.navi_menu_logout:
                                 logOut();
                                 break;
                         }
@@ -264,6 +275,9 @@ public class MainActivity extends AppCompatActivity {
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
+                            case R.id.navi_menu_logout:
+                                logOut();
+                                break;
                         }
                         vpfAdapter2.setData(fragments, pagerTitles);
                         drawer.closeDrawers();
@@ -325,6 +339,15 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrBaoMingMessageFragment);
                                 break;
                             case R.id.navi_menu_5:
+                                pagerTitles = getResources().getStringArray(R.array.shengjugeren3);
+                                //企业信息列表
+                                SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment2 = new SJGRCompanyInfoListFragment();
+                                //企业报名信息
+                                SJGRBaoMingMessageFragment sjgrBaoMingMessageFragment2 = new SJGRBaoMingMessageFragment();
+                                fragments.add(sjgrCompanyInfoListFragment2);
+                                fragments.add(sjgrBaoMingMessageFragment2);
+                                break;
+                            case R.id.navi_menu_6:
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren4);
                                 //监管单位统计分析
                                 SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
@@ -339,7 +362,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrCompanyTongJiFragment);
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
-                            case R.id.navi_menu_6:
+                            case R.id.navi_menu_7:
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren5);
                                 //体检统计
                                 SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
@@ -348,7 +371,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrTiJianTongJiFragment);
                                 fragments.add(sjgrTiJianSearchFragment);
                                 break;
-                            case R.id.navi_menu_7:
+                            case R.id.navi_menu_8:
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren6);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
@@ -363,11 +386,20 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment2);
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
-                            case R.id.navi_menu_8:
+                            case R.id.navi_menu_9:
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_10:
+                                pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
+                                //安全设置
+                                SJGRUpdatePswFragment sjgrUpdatePswFragment3 = new SJGRUpdatePswFragment();
+                                fragments.add(sjgrUpdatePswFragment3);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
                                 break;
                         }
                         vpfAdapter2.setData(fragments, pagerTitles);
@@ -405,17 +437,17 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(adminManagerFragment);
                                 break;
                             case R.id.navi_menu_3:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji2);
                                 PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
                                 fragments.add(peiXunListFragment);
                                 break;
                             case R.id.navi_menu_4:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji3);
                                 QiYeInfoFragment qiYeInfoFragment = new QiYeInfoFragment();
                                 fragments.add(qiYeInfoFragment);
                                 break;
                             case R.id.navi_menu_5:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji4);
                                 ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
                                 PeiXunListFragment peiXunListFragment1 = new PeiXunListFragment();
                                 MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
@@ -424,7 +456,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_6:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji5);
                                 //监管单位统计分析
                                 SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
                                 //执法记录统计分析 待定
@@ -439,7 +471,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_7:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji6);
                                 //体检统计
                                 SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
                                 //体检查询
@@ -448,7 +480,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrTiJianSearchFragment);
                                 break;
                             case R.id.navi_menu_8:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji7);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
                                 //应用模板下载  待定
@@ -463,10 +495,13 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_9:
-                                pagerTitles = getResources().getStringArray(R.array.shiji1);
+                                pagerTitles = getResources().getStringArray(R.array.shiji8);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
                                 break;
                         }
                         vpfAdapter2.setData(fragments, pagerTitles);
@@ -490,7 +525,7 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         fragments.clear();
                         int id = item.getItemId();
-                        switch (id){
+                        switch (id) {
                             case R.id.navi_menu_1:
                                 pagerTitles = getResources().getStringArray(R.array.qiye0);
                                 QYHomeFragment qyHomeFragment = new QYHomeFragment();
@@ -533,6 +568,9 @@ public class MainActivity extends AppCompatActivity {
                                 pagerTitles = getResources().getStringArray(R.array.qiye4);
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
                                 break;
                         }
                         vpfAdapter2.setData(fragments, pagerTitles);
@@ -556,7 +594,7 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         fragments.clear();
                         int id = item.getItemId();
-                        switch (id){
+                        switch (id) {
                             case R.id.navi_menu_1:
                                 pagerTitles = getResources().getStringArray(R.array.qiye0);
                                 QYHomeFragment qyHomeFragment = new QYHomeFragment();
@@ -599,6 +637,9 @@ public class MainActivity extends AppCompatActivity {
                                 pagerTitles = getResources().getStringArray(R.array.qiye4);
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
                                 break;
                         }
                         vpfAdapter2.setData(fragments, pagerTitles);
@@ -907,13 +948,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (drawerToggle.onOptionsItemSelected(item)){
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
-
 
 
 }

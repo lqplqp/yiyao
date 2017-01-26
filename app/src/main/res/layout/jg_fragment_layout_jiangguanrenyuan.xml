@@ -29,7 +29,7 @@
             android:layout_marginLeft="40dp"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -63,39 +63,34 @@
             android:id="@+id/back" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
-        android:paddingRight="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:background="@drawable/fillet_white_bg"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:background="@drawable/edit_border_bg"
-            android:layout_marginLeft="110dp"
-            android:lines="1"
-            android:paddingTop="10dp"
-            android:id="@+id/input_name" />
-
+        >
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="18dp"
+            android:layout_marginLeft="10dp"
             android:text="用户姓名："
             android:textColor="@color/global_black"
-            android:layout_marginRight="10dp"
-            android:textSize="18sp"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:id="@+id/textView14" />
-    </RelativeLayout>
+            android:textSize="@dimen/qyinfo_text_size"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/edit_border_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:lines="1"
+            android:id="@+id/input_name" />
+
+
+    </LinearLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 
@@ -118,7 +113,7 @@
             android:layout_marginLeft="40dp"
             android:text="监管单位人员列表"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

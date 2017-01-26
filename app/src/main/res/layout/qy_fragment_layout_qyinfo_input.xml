@@ -2,7 +2,7 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_bg"
+    android:background="@color/global_bg_gray"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:text="*用    户    名："/>
         <EditText
             android:id="@+id/username_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -55,7 +55,7 @@
         android:text="*单 位  名 称："/>
     <EditText
         android:id="@+id/unitname_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/qyinfo_text_size"
@@ -81,7 +81,7 @@
             android:text="*从 业  人 数："/>
         <EditText
             android:id="@+id/do_person_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -107,7 +107,7 @@
             android:text="*管 理  人 数："/>
         <EditText
             android:id="@+id/manage_person_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -133,7 +133,7 @@
             android:text="*单位联系人："/>
         <EditText
             android:id="@+id/contact_name_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -159,7 +159,7 @@
             android:text="*邮            箱："/>
         <EditText
             android:id="@+id/email_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -185,7 +185,7 @@
             android:text="*手 机  号 码："/>
         <EditText
             android:id="@+id/phone_tv"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"

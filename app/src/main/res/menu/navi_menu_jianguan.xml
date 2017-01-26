@@ -16,7 +16,7 @@
             android:title="安全设置"
             />
         <item
-            android:id="@+id/navi_menu_3"
+            android:id="@+id/navi_menu_logout"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
             android:title="退出账户"
             />

@@ -34,7 +34,7 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            style="@style/table1hight"
+            style="@style/button_text_view"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             
@@ -63,11 +63,11 @@
                 android:layout_marginLeft="10dp"
                 android:text="统计条件："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
@@ -82,26 +82,23 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:text="体检时间："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
                 android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
+                android:layout_height="@dimen/edit_height"
                 android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:background="@drawable/edit_border_bg"
-                android:lines="1"
-                android:paddingTop="10dp" />
+                android:lines="1" />
             <View
                 android:layout_width="40dp"
                 android:layout_height="1dp"
@@ -110,15 +107,11 @@
                 android:background="@color/black"/>
             <EditText
                 android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
+                android:layout_height="@dimen/edit_height"
                 android:gravity="center_vertical"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
                 android:background="@drawable/edit_border_bg"
                 android:lines="1"
-                android:paddingTop="10dp" />
+                android:textSize="@dimen/qyinfo_text_size"/>
         </LinearLayout>
 
     </LinearLayout>

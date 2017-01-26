@@ -30,7 +30,7 @@
             android:layout_marginLeft="40dp"
             android:text="监管单位统计列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
     </RelativeLayout>
 
     <TableLayout

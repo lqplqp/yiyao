@@ -35,7 +35,7 @@ public class JGCompanyManFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.jg_fragment_layout_jianguanrenyuan;
+        return R.layout.jg_fragment_layout_jiangguanrenyuan;
     }
 
     @OnClick({R.id.select, R.id.back, R.id.add})

@@ -48,15 +48,14 @@
             android:id="@+id/select" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:background="@drawable/fillet_white_bg"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        >
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,19 +64,20 @@
             android:layout_marginLeft="20dp"
             android:text="@string/sj_shenhe_keymsg"
             android:textColor="@color/global_black"
-            android:textSize="18sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:background="@drawable/edit_border_bg"
-            android:layout_marginLeft="100dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"
             android:hint="@string/sj_shenhe_input_key"
             android:lines="1"
             android:id="@+id/input_key" />
-    </RelativeLayout>
+    </LinearLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 

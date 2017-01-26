@@ -173,7 +173,7 @@
             android:layout_marginLeft="40dp"
             android:text="培训班列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <LinearLayout

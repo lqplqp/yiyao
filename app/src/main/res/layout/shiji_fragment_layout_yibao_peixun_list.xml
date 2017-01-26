@@ -28,7 +28,7 @@
             android:layout_marginLeft="40dp"
             android:text="已报培训项目"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
     </RelativeLayout>
 
     <TableLayout

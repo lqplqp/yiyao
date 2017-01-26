@@ -51,9 +51,10 @@
                 android:layout_marginRight="20dp"
                 android:background="@drawable/yellow_but_bg"
                 android:clickable="true"
-                
+                android:paddingBottom="5dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
+                android:paddingTop="5dp"
                 style="@style/table1hight"
                 android:text="@string/sj_shenhe_select"
                 android:textColor="@color/global_white"

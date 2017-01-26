@@ -37,12 +37,9 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:background="@drawable/blue_but_bg"
+            style="@style/button_text_view"
+            android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            style="@style/table1hight"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
@@ -54,8 +51,8 @@
         android:background="@drawable/fillet_white_bg"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:padding="10dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -71,18 +68,16 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:layout_width="245dp"
-                android:layout_height="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
                 android:background="@drawable/edit_border_bg"
                 android:hint="身份证号、体检报告号、医院"
-                android:textSize="16sp"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:lines="1"
-                android:paddingTop="10dp"
                 android:id="@+id/select_content" />
         </LinearLayout>
         <LinearLayout
@@ -90,6 +85,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -101,7 +97,7 @@
                 android:textSize="16sp" />
 
             <EditText
-                android:layout_width="95dp"
+                android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
@@ -118,7 +114,7 @@
                 android:layout_marginRight="12dp"
                 android:background="@color/black"/>
             <EditText
-                android:layout_width="95dp"
+                android:layout_width="80dp"
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
