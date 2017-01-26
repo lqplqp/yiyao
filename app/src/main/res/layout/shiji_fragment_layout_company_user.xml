@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<RelativeLayout
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -141,19 +144,21 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="用户姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -162,20 +167,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="性别"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -184,20 +191,21 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="体检报告号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -206,20 +214,21 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="培训证号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -228,20 +237,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="培训有效期"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -250,20 +261,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="50dp"
-                    android:paddingRight="50dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="消息提醒"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="80dp"
-                    android:paddingRight="80dp"
-                   style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -271,3 +284,4 @@
         </TableLayout>
     </LinearLayout>
 </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

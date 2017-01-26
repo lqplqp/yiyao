@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -26,10 +30,6 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -42,10 +42,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:layout_width="40dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="40dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -53,10 +53,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -67,20 +67,20 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="订单编号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="xxxxx"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -91,10 +91,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="40dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="培训班名称"
                     android:textColor="@color/global_black"
@@ -103,10 +103,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="网上培训"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -116,21 +116,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="20dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="培训班类型"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView38" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="食品安全培训队伍"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -140,19 +141,19 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="20dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="培训时间"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="2016-09-01"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -161,19 +162,19 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="20dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="实报人数"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="30"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -181,19 +182,19 @@
             <TableRow>
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="20dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="购课人数"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="55dp"
-                    android:paddingRight="55dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="已付款"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -202,23 +203,23 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="20dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="操作"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
                     android:id="@+id/textView10" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:orientation="horizontal"
-                    android:layout_marginTop="5dp"
                     >
                     <TextView
-                        android:layout_marginLeft="60dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="查看"
@@ -231,8 +232,6 @@
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
-
 
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

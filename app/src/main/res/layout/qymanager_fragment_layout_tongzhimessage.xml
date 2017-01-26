@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
 
     android:orientation="vertical">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:orientation="vertical"
@@ -43,7 +43,7 @@
                     android:layout_marginRight="20dp"
                     android:background="@drawable/yellow_but_bg"
                     android:clickable="true"
-                   
+
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     style="@style/table1hight"
@@ -59,7 +59,7 @@
                 android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/fillet_white_bg"
-               
+
                 android:orientation="vertical"
                 style="@style/table1hight">
                 <LinearLayout
@@ -80,7 +80,7 @@
                     <EditText
                         android:layout_width="50dp"
                         style="@style/table1hight"
-                       
+
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content"
                          />
@@ -172,10 +172,6 @@
             </RelativeLayout>
 
             <!--体验机构列表 end-->
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
                 <TableLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -188,20 +184,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                            android:layout_width="40dp"
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="序号"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="1"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -212,23 +208,24 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="通知类型"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="网上培训"
                             android:textColor="@color/global_black"
-                            android:textSize="@dimen/table_textsize" />
+                            android:textSize="@dimen/table_textsize"
+                            android:id="@+id/textView39" />
 
                     </TableRow>
 
@@ -236,21 +233,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
-
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="通知单位"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="河南省食品药品监督管理局"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -260,10 +256,10 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
 
                             android:text="发布人"
                             android:textColor="@color/global_black"
@@ -271,10 +267,10 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="达主任"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -284,19 +280,19 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="通知标题"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="食品安全监管队伍继续教育培训班"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -305,20 +301,20 @@
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="培训地点"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="无"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -326,20 +322,20 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="培训开始时间"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
 
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="2016-09-01"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -347,19 +343,19 @@
                     <TableRow>
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="10dp"
-                            android:paddingRight="10dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="操作"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
                         <TextView
                             android:background="@drawable/table_frame_fray"
-                           
-                            android:paddingLeft="40dp"
-                            android:paddingRight="55dp"
-                            style="@style/table1hight"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
                             android:text="查看"
                             android:textColor="@color/global_black"
                             android:textSize="@dimen/table_textsize" />
@@ -368,10 +364,7 @@
 
                 </TableLayout>
 
-            </HorizontalScrollView>
         </LinearLayout>
 
-    </ScrollView>
-
-
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

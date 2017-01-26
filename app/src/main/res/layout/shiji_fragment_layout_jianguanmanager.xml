@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -169,10 +173,6 @@
             android:id="@+id/add" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -187,9 +187,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -197,9 +198,10 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
 
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="用户名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -207,9 +209,10 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
 
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -219,20 +222,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -240,9 +245,10 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
 
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -253,10 +259,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="2"
                     android:textColor="@color/global_black"
@@ -264,10 +271,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -275,9 +283,10 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
 
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -286,10 +295,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="3"
                     android:textColor="@color/global_black"
@@ -297,10 +307,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -308,9 +319,10 @@
                 <TextView
                     android:background="@drawable/table_frame_fray"
 
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -319,10 +331,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="4"
                     android:textColor="@color/global_black"
@@ -330,10 +342,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -341,10 +354,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    style="@style/table1hight"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -353,9 +366,8 @@
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
