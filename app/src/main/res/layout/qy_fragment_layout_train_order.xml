@@ -32,8 +32,9 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:text="全部(2)"
-                android:id="@+id/all" />
+                android:id="@+id/rb_1" />
             <RadioButton
+                android:id="@+id/rb_2"
                 android:layout_width="60dp"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
@@ -43,6 +44,7 @@
                 android:gravity="center"
                 android:text="待付款(0)" />
             <RadioButton
+                android:id="@+id/rb_3"
                 android:layout_width="60dp"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
@@ -52,6 +54,7 @@
                 android:gravity="center"
                 android:text="已付款(0)" />
             <RadioButton
+                android:id="@+id/rb_4"
                 android:layout_width="60dp"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
@@ -89,6 +92,7 @@
     </RelativeLayout>
 
     <TableLayout
+        android:id="@+id/tab1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fillet_white_bg"
@@ -298,6 +302,7 @@
     </TableLayout>
 
     <TableLayout
+        android:id="@+id/tab2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/fillet_white_bg"
