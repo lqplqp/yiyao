@@ -206,7 +206,7 @@
                 android:maxLength="12"
                 android:ellipsize="end"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
+                android:textColor="@color/global_bg_blue"
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
@@ -388,7 +388,7 @@
                 android:maxLength="12"
                 android:ellipsize="end"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
+                android:textColor="@color/global_bg_blue"
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
