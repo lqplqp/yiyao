@@ -17,6 +17,7 @@ import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
@@ -77,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
     ImageView sanheng;
     @BindView(R.id.toolbar_head)
     CircleImageView toolbarHead;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
 
     private String[] shengjiTabTitles = {"首页", "审核"};
     private ActionBarDrawerToggle drawerToggle;
@@ -99,6 +102,10 @@ public class MainActivity extends AppCompatActivity {
     private void logOut() {
         startActivity(new Intent(MainActivity.this, LoginActivity.class));
         finish();
+    }
+
+    private void setTitle(String title) {
+        titleTv.setText(title);
     }
 
     private void initView() {
@@ -142,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.zengjiajianguan0);
                                 com.lxkj.yiyao.jianguan.HomeFragment homeFragment = new com.lxkj.yiyao.jianguan.HomeFragment();
                                 UserManagerFragment userManagerFragment = new UserManagerFragment();
@@ -157,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(lawManagerFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.zengjiajianguan0);
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
@@ -188,11 +197,13 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan0);
                                 com.lxkj.yiyao.shengji.HomeFragment homeFragment = new com.lxkj.yiyao.shengji.HomeFragment();
                                 fragments.add(homeFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("监管单位管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan1);
                                 //监管单位信息
                                 CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
@@ -202,23 +213,27 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(adminManagerFragment);
                                 break;
                             case R.id.navi_menu_3:
+                                setTitle("培训通知管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan2);
                                 //培训通知列表
                                 SJGRMessageSearchFragment sjgrMessageSearchFragment = new SJGRMessageSearchFragment();
                                 fragments.add(sjgrMessageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
+                                setTitle("体检机构审核");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan3);
                                 ShenHeFragment shenHeFragment = new ShenHeFragment();
                                 fragments.add(shenHeFragment);
                                 break;
                             case R.id.navi_menu_5:
+                                setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan4);
                                 //企业信息列表
                                 SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new SJGRCompanyInfoListFragment();
                                 fragments.add(sjgrCompanyInfoListFragment);
                                 break;
                             case R.id.navi_menu_6:
+                                setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan5);
                                 //培训项目报名
                                 ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
@@ -231,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_7:
+                                setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan6);
                                 //监管单位统计分析
                                 SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
@@ -246,6 +262,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_8:
+                                setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan7);
                                 //体检统计
                                 SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
@@ -255,6 +272,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrTiJianSearchFragment);
                                 break;
                             case R.id.navi_menu_9:
+                                setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan8);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
@@ -270,6 +288,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_10:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan9);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
@@ -303,12 +322,14 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren0);
                                 //省局个人首页
                                 SJGRMessageFragment sjgrMessageFragment = new SJGRMessageFragment();
                                 fragments.add(sjgrMessageFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("监管单位管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren1);
                                 //监管人员信息
                                 SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment = new SJGRPersonManagerAddFragment();
@@ -324,12 +345,14 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrMessageSearchFragment);
                                 break;
                             case R.id.navi_menu_3:
+                                setTitle("培训通知管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren2);
                                 //已报培训项目
                                 SJGRYiBaoPeiXunXiangMuFragment sjgrYiBaoPeiXunXiangMuFragment = new SJGRYiBaoPeiXunXiangMuFragment();
                                 fragments.add(sjgrYiBaoPeiXunXiangMuFragment);
                                 break;
                             case R.id.navi_menu_4:
+                                setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren3);
                                 //企业信息列表
                                 SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new SJGRCompanyInfoListFragment();
@@ -339,6 +362,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrBaoMingMessageFragment);
                                 break;
                             case R.id.navi_menu_5:
+                                setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren3);
                                 //企业信息列表
                                 SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment2 = new SJGRCompanyInfoListFragment();
@@ -348,6 +372,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrBaoMingMessageFragment2);
                                 break;
                             case R.id.navi_menu_6:
+                                setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren4);
                                 //监管单位统计分析
                                 SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
@@ -363,6 +388,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_7:
+                                setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren5);
                                 //体检统计
                                 SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
@@ -372,6 +398,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrTiJianSearchFragment);
                                 break;
                             case R.id.navi_menu_8:
+                                setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren6);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
@@ -387,12 +414,14 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_9:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_10:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment3 = new SJGRUpdatePswFragment();
@@ -425,11 +454,13 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.shiji0);
                                 HomeFragment homeFragment = new HomeFragment();
                                 fragments.add(homeFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("监管单位管理");
                                 pagerTitles = getResources().getStringArray(R.array.shiji1);
                                 CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
                                 AdminManagerFragment adminManagerFragment = new AdminManagerFragment();
@@ -437,16 +468,19 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(adminManagerFragment);
                                 break;
                             case R.id.navi_menu_3:
+                                setTitle("培训通知管理");
                                 pagerTitles = getResources().getStringArray(R.array.shiji2);
                                 PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
                                 fragments.add(peiXunListFragment);
                                 break;
                             case R.id.navi_menu_4:
+                                setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shiji3);
                                 QiYeInfoFragment qiYeInfoFragment = new QiYeInfoFragment();
                                 fragments.add(qiYeInfoFragment);
                                 break;
                             case R.id.navi_menu_5:
+                                setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shiji4);
                                 ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
                                 PeiXunListFragment peiXunListFragment1 = new PeiXunListFragment();
@@ -456,6 +490,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_6:
+                                setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shiji5);
                                 //监管单位统计分析
                                 SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
@@ -471,6 +506,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_7:
+                                setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shiji6);
                                 //体检统计
                                 SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
@@ -480,6 +516,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrTiJianSearchFragment);
                                 break;
                             case R.id.navi_menu_8:
+                                setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.shiji7);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
@@ -495,6 +532,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_9:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shiji8);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
@@ -527,11 +565,13 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.qiye0);
                                 QYHomeFragment qyHomeFragment = new QYHomeFragment();
                                 fragments.add(qyHomeFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.qiye1);
                                 QYInfoInputFragment qyInfoInputFragment = new QYInfoInputFragment();
                                 fragments.add(qyInfoInputFragment);
@@ -543,6 +583,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(qyInfocardManagerFragment);
                                 break;
                             case R.id.navi_menu_3:
+                                setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.qiye2);
                                 ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
                                 fragments.add(projectApplyFragment);
@@ -554,6 +595,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
+                                setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.qiye3);
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
@@ -565,6 +607,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_5:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.qiye4);
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
@@ -596,11 +639,13 @@ public class MainActivity extends AppCompatActivity {
                         int id = item.getItemId();
                         switch (id) {
                             case R.id.navi_menu_1:
+                                setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.qiye0);
                                 QYHomeFragment qyHomeFragment = new QYHomeFragment();
                                 fragments.add(qyHomeFragment);
                                 break;
                             case R.id.navi_menu_2:
+                                setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.qiye1);
                                 QYInfoInputFragment qyInfoInputFragment = new QYInfoInputFragment();
                                 fragments.add(qyInfoInputFragment);
@@ -612,6 +657,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(qyInfocardManagerFragment);
                                 break;
                             case R.id.navi_menu_3:
+                                setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.qiye2);
                                 ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
                                 fragments.add(projectApplyFragment);
@@ -623,6 +669,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
+                                setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.qiye3);
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
@@ -634,6 +681,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_5:
+                                setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.qiye4);
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
