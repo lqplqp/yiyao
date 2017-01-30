@@ -15,8 +15,8 @@
     android:gravity="center_vertical"
     >
     <ImageView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:src="@mipmap/sj_admin_laba"
         />
     <TextView
@@ -147,8 +147,8 @@
             android:gravity="center_vertical"
             >
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@mipmap/sj_admin_laba"
                 />
             <TextView

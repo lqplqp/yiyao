@@ -18,6 +18,7 @@
         android:layout_marginTop="10dp">
 
         <ImageView
+            android:layout_centerVertical="true"
            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
@@ -142,6 +143,7 @@
         android:layout_marginTop="10dp">
 
         <ImageView
+            android:layout_centerVertical="true"
             style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
