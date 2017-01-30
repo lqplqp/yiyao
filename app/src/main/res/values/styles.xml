@@ -25,4 +25,8 @@
         <item name="android:paddingRight">20dp</item>
         <item name="android:paddingTop">5dp</item>
     </style>
+    <style name="image_title_view">
+        <item name="android:layout_height">25dp</item>
+        <item name="android:layout_width">25dp</item>
+    </style>
 </resources>

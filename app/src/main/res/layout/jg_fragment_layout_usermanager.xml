@@ -29,14 +29,13 @@
             <ImageView
                 android:id="@+id/cx"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_select"
                 />
             <TextView
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@id/cx"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="查询条件"
@@ -108,8 +107,7 @@
             <ImageView
                 android:id="@+id/tj"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_menu"
                 />
             <TextView
@@ -120,7 +118,7 @@
                 android:text="用户列表"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="#333"
-                android:layout_marginLeft="8dp"
+                android:layout_marginLeft="5dp"
                 />
         </RelativeLayout>
 

@@ -29,20 +29,10 @@
             <ImageView
                 android:id="@+id/cx"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_select"
                 />
-            <TextView
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@id/cx"
-                android:layout_marginLeft="8dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="查询条件"
-                android:textColor="#333"
-                android:textSize="@dimen/title_textsize"
-                />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -59,7 +49,17 @@
                 android:textColor="@color/global_white"
                 android:id="@+id/select" />
 
-
+            <TextView
+                android:layout_marginLeft="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查询条件"
+                android:textColor="#333"
+                android:textSize="@dimen/title_textsize"
+                android:layout_alignBaseline="@+id/select"
+                android:layout_alignBottom="@+id/select"
+                android:layout_toEndOf="@+id/cx"
+                android:id="@+id/textView56" />
 
 
         </RelativeLayout>
@@ -103,8 +103,7 @@
             <ImageView
                 android:id="@+id/tj"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_menu"
                 />
             <TextView

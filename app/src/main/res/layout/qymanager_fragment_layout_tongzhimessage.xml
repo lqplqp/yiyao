@@ -21,19 +21,14 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="10dp">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/sj_shenhe_select" />
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="@dimen/title_left"
                     android:text="@string/sj_shenhe_selectmsg"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -50,6 +45,12 @@
                     android:text="查询"
                     android:textColor="@color/global_white"
                     android:id="@+id/select" />
+
+                <ImageView
+                    style="@style/image_title_view"
+                    android:src="@mipmap/sj_shenhe_select"
+                    android:layout_centerVertical="true"
+                    />
             </RelativeLayout>
 
             <LinearLayout
@@ -157,18 +158,17 @@
                 android:layout_marginTop="10dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    style="@style/image_title_view"
                     android:src="@mipmap/sj_shenhe_menu" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="40dp"
+                    android:layout_marginLeft="@dimen/title_left"
                     android:text="通知列表"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
             </RelativeLayout>
 
             <!--体验机构列表 end-->

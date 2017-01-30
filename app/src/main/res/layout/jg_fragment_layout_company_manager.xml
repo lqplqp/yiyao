@@ -29,8 +29,7 @@
             <ImageView
                 android:id="@+id/cx"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_select"
                 />
             <TextView
@@ -107,8 +106,7 @@
             <ImageView
                 android:id="@+id/tj"
                 android:layout_centerVertical="true"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                style="@style/image_title_view"
                 android:src="@mipmap/sj_shenhe_menu"
                 />
             <TextView

@@ -17,11 +17,6 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_select" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -46,6 +41,12 @@
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
+
+        <ImageView
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_select"
+            android:layout_centerVertical="true"
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -130,16 +131,11 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_menu" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
             android:textSize="@dimen/title_textsize" />
@@ -159,6 +155,12 @@
             android:text="新增"
             android:textColor="@color/global_white"
             android:id="@+id/add" />
+
+        <ImageView
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_menu"
+            android:layout_centerVertical="true"
+             />
     </RelativeLayout>
 
 

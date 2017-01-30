@@ -16,18 +16,9 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_select" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:text="@string/sj_shenhe_selectmsg"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size" />
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_select"
+            android:id="@+id/imageView3" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +33,17 @@
             android:paddingRight="20dp"
             android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
-            android:textColor="@color/global_white" />
+            android:textColor="@color/global_white"
+            android:id="@+id/textView55" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_left"
+            android:text="查询条件"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <LinearLayout
@@ -174,15 +175,14 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="通知列表"
             android:textColor="@color/global_black"
             android:textSize="@dimen/qyinfo_text_size" />

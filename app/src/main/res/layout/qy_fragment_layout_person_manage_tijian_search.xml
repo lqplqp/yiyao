@@ -18,18 +18,9 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_select" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:text="@string/sj_shenhe_selectmsg"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/table_textsize" />
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_select"
+            android:id="@+id/imageView2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,6 +34,15 @@
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_left"
+            android:text="@string/sj_shenhe_selectmsg"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <LinearLayout
@@ -147,15 +147,14 @@
         >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="体检报告列表"
             android:textColor="@color/global_black"
             android:textSize="@dimen/table_textsize" />
