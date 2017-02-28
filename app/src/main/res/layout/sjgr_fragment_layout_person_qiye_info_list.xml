@@ -77,7 +77,7 @@
                 android:layout_marginRight="10dp"
                 android:paddingLeft="5dp"
                 android:background="@drawable/edit_border_bg"
-                android:lines="1"/>
+                android:lines="1" />
         </LinearLayout>
 
     </LinearLayout>

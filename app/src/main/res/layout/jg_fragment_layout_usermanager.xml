@@ -85,16 +85,15 @@
                 android:layout_centerVertical="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:paddingTop="10dp"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:paddingBottom="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:background="@drawable/table_border_bg"
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
-                android:id="@+id/imput_name" />
+                android:id="@+id/imput_name"
+                />
         </LinearLayout>
 
         <RelativeLayout
