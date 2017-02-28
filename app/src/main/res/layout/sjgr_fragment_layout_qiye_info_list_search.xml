@@ -16,18 +16,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -108,18 +107,10 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_menu" />
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_menu"
+            android:id="@+id/imageView4" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:text="企业员工列表"
-            android:textColor="@color/global_black"
-            android:textSize="20sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,6 +125,15 @@
             android:paddingTop="5dp"
             android:text="Excel导出"
             android:textColor="@color/global_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_left"
+            android:text="企业员工列表"
+            android:textColor="@color/global_black"
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <TableLayout
@@ -143,7 +143,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="用户姓名"
@@ -152,7 +152,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="战士"
@@ -163,7 +163,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="性别"
@@ -172,7 +172,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="女"
@@ -183,7 +183,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="体检信息编号"
@@ -192,7 +192,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="123"
@@ -204,7 +204,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="体检信息有效期"
@@ -213,7 +213,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -225,7 +225,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训证号"
@@ -234,7 +234,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -247,7 +247,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训证有效期"
@@ -256,7 +256,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -269,7 +269,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="消息提醒"
@@ -278,7 +278,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="没有体检信息"
@@ -299,7 +299,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="用户姓名"
@@ -308,7 +308,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="战士"
@@ -319,7 +319,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="性别"
@@ -328,7 +328,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="女"
@@ -339,7 +339,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="体检信息编号"
@@ -348,7 +348,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="123"
@@ -360,7 +360,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="体检信息有效期"
@@ -369,7 +369,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -381,7 +381,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训证号"
@@ -390,7 +390,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -403,7 +403,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训证有效期"
@@ -412,7 +412,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text=""
@@ -425,7 +425,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="消息提醒"
@@ -434,7 +434,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="没有体检信息"

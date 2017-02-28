@@ -21,18 +21,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="已报培训项目"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="14sp" />
     </RelativeLayout>
 
     <TableLayout
@@ -42,7 +41,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="序号"
@@ -51,7 +50,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1"
@@ -62,7 +61,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="订单编号"
@@ -71,7 +70,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0011192"
@@ -82,7 +81,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训班名称"
@@ -91,7 +90,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="网上培训"
@@ -103,7 +102,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训班类型"
@@ -112,7 +111,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="食品安全监管队伍继续教育培训班"
@@ -124,7 +123,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训时间"
@@ -133,7 +132,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2016-09-10"
@@ -146,7 +145,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="实报人数"
@@ -155,7 +154,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="30"
@@ -168,7 +167,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="购课人数"
@@ -177,7 +176,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="10"
@@ -190,7 +189,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -199,7 +198,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"
@@ -221,7 +220,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="序号"
@@ -230,7 +229,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1"
@@ -241,7 +240,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="订单编号"
@@ -250,7 +249,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0011192"
@@ -261,7 +260,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训班名称"
@@ -270,7 +269,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="网上培训"
@@ -282,7 +281,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训班类型"
@@ -291,7 +290,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="食品安全监管队伍继续教育培训班"
@@ -303,7 +302,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训时间"
@@ -312,7 +311,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2016-09-10"
@@ -325,7 +324,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="实报人数"
@@ -334,7 +333,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="30"
@@ -347,7 +346,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="购课人数"
@@ -356,7 +355,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="10"
@@ -369,7 +368,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -378,7 +377,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"

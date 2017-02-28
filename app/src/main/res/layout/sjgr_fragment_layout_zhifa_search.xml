@@ -16,18 +16,18 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,11 +65,11 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法编号："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
@@ -94,10 +94,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/table_border_bg"
@@ -121,19 +121,22 @@
                 android:layout_marginLeft="10dp"
                 android:text="执法时间："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
+
                 <EditText
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/edit_height"
                     android:background="@drawable/table_border_bg"
                     android:layout_weight="3"
-                    />
+                    android:id="@+id/editText" />
+
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0.1dp"
@@ -144,7 +147,7 @@
                     />
                 <EditText
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="@dimen/edit_height"
                     android:background="@drawable/table_border_bg"
                     android:layout_weight="3"
                     />
@@ -163,18 +166,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="执法记录列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <TableLayout
@@ -184,7 +186,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="序号"
@@ -193,7 +195,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1"
@@ -204,7 +206,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法编号"
@@ -213,7 +215,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="123"
@@ -224,7 +226,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法人姓名"
@@ -233,7 +235,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="张三"
@@ -245,7 +247,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="被执法人编号"
@@ -254,7 +256,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2017年1月18日"
@@ -266,7 +268,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="被执法人姓名"
@@ -275,7 +277,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="食品安全监管队伍继续教育培训班"
@@ -288,7 +290,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法类型"
@@ -297,7 +299,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="无"
@@ -310,7 +312,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训开始时间"
@@ -319,7 +321,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2016-09-10"
@@ -333,7 +335,7 @@
 
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -342,7 +344,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"
@@ -350,7 +352,7 @@
                 android:maxLength="12"
                 android:ellipsize="end"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
+                android:textColor="@color/global_bg_blue"
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
@@ -364,7 +366,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="序号"
@@ -373,7 +375,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="1"
@@ -384,7 +386,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法编号"
@@ -393,7 +395,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="123"
@@ -404,7 +406,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法人姓名"
@@ -413,7 +415,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="张三"
@@ -425,7 +427,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="被执法人编号"
@@ -434,7 +436,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2017年1月18日"
@@ -446,7 +448,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="被执法人姓名"
@@ -455,7 +457,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="食品安全监管队伍继续教育培训班"
@@ -468,7 +470,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="执法类型"
@@ -477,7 +479,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="无"
@@ -490,7 +492,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="培训开始时间"
@@ -499,7 +501,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="2016-09-10"
@@ -513,7 +515,7 @@
 
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -522,7 +524,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"
@@ -530,7 +532,7 @@
                 android:maxLength="12"
                 android:ellipsize="end"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
+                android:textColor="@color/global_bg_blue"
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>

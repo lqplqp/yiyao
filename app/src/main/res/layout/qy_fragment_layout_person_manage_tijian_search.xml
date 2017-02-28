@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -14,18 +18,10 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/sj_shenhe_select" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
-            android:text="@string/sj_shenhe_selectmsg"
-            android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_select"
+            android:id="@+id/imageView2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,15 +29,21 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:background="@drawable/blue_but_bg"
+            style="@style/button_text_view"
+            android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_left"
+            android:text="@string/sj_shenhe_selectmsg"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
     <LinearLayout
@@ -50,8 +52,8 @@
         android:background="@drawable/fillet_white_bg"
         android:orientation="vertical"
         android:layout_margin="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:padding="10dp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -64,20 +66,20 @@
                 android:layout_marginLeft="10dp"
                 android:text="搜索内容："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:paddingLeft="10dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/edit_border_bg"
                 android:hint="身份证号、体检报告号、医院"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:lines="1"
-                android:paddingTop="10dp"
                 android:id="@+id/select_content" />
         </LinearLayout>
         <LinearLayout
@@ -85,6 +87,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
             android:gravity="center_vertical">
             <TextView
                 android:layout_width="wrap_content"
@@ -93,37 +96,44 @@
                 android:layout_marginLeft="10dp"
                 android:text="体检时间："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginLeft="10dp"
+    >
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/edit_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/edit_border_bg"
+        android:lines="1"
+        android:paddingTop="10dp"
+        android:id="@+id/start_time" />
+    <View
+        android:layout_width="30dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/black"/>
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/edit_height"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingBottom="8dp"
+        android:background="@drawable/edit_border_bg"
+        android:lines="1"
+        android:paddingTop="10dp"
+        android:id="@+id/end_time" />
+</LinearLayout>
 
-            <EditText
-                android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/edit_border_bg"
-                android:lines="1"
-                android:paddingTop="10dp"
-                android:id="@+id/start_time" />
-            <View
-                android:layout_width="40dp"
-                android:layout_height="1dp"
-                android:layout_marginLeft="12dp"
-                android:layout_marginRight="12dp"
-                android:background="@color/black"/>
-            <EditText
-                android:layout_width="95dp"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
-                android:background="@drawable/edit_border_bg"
-                android:lines="1"
-                android:paddingTop="10dp"
-                android:id="@+id/end_time" />
         </LinearLayout>
 
     </LinearLayout>
@@ -135,207 +145,203 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
+        >
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="体检报告列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/table_textsize" />
     </RelativeLayout>
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_margin="10dp"
             android:background="@drawable/fillet_white_bg">
 
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="体检报告编号"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView47" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="姓名"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView23" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="1"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView46" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView22" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="2"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="3"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
-
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="4"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView45" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="20sp" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

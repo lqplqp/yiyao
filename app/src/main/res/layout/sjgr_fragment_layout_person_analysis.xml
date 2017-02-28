@@ -16,18 +16,18 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -65,10 +65,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="市州："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/table_border_bg"
@@ -85,6 +85,7 @@
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
             android:gravity="center_vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -92,10 +93,12 @@
                 android:layout_marginLeft="10dp"
                 android:text="县区："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/textView14" />
+
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/table_border_bg"
@@ -118,18 +121,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="个人用户统计列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
     </RelativeLayout>
 
     <TableLayout
@@ -139,7 +141,7 @@
         android:layout_margin="10dp">
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="市州"
@@ -148,7 +150,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="县区"
@@ -157,7 +159,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="已报名培训人员数"
@@ -168,7 +170,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="郑州市"
@@ -177,7 +179,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="中原区"
@@ -186,7 +188,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -197,7 +199,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="郑州市"
@@ -206,7 +208,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="二七区"
@@ -215,7 +217,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -226,7 +228,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="郑州市"
@@ -235,7 +237,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="管城回族区"
@@ -244,7 +246,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -255,7 +257,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="总计"
@@ -264,7 +266,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"

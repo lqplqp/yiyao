@@ -2,9 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -37,80 +34,113 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/global_black"
         />
-    <TextView
-        android:id="@+id/first_key_tv"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/key1_root"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/question_tv"
+        android:clickable="true"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:text="A.词法分析"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <RadioButton
-        android:id="@+id/first_rb"
-        android:layout_width="wrap_content"
+        >
+        <TextView
+            android:id="@+id/first_key_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="A.词法分析"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            />
+        <RadioButton
+            android:id="@+id/first_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/key2_root"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="85dp"
-        android:layout_alignParentRight="true"
-        />
-    <TextView
-        android:id="@+id/second_key_tv"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/key1_root"
+        android:clickable="true"
+        >
+        <TextView
+            android:id="@+id/second_key_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="B.语法分析"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            />
+        <RadioButton
+            android:id="@+id/second_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/key3_root"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/first_key_tv"
-        android:layout_alignLeft="@id/first_key_tv"
-        android:layout_marginTop="20dp"
-        android:text="B.语法分析"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <RadioButton
-        android:id="@+id/second_rb"
-        android:layout_width="wrap_content"
+        android:layout_below="@id/key2_root"
+        android:clickable="true"
+        >
+        <TextView
+            android:id="@+id/fourth_key_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="D.代码优化"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            />
+        <RadioButton
+            android:id="@+id/third_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/key4_root"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="125dp"
-        android:layout_alignParentRight="true"
-        />
-    <TextView
-        android:id="@+id/third_key_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/second_key_tv"
-        android:layout_alignLeft="@id/first_key_tv"
-        android:layout_marginTop="20dp"
-        android:text="C.语义分析和中间代码生成法分析"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <RadioButton
-        android:id="@+id/third_rb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="165dp"
-        android:layout_alignParentRight="true"
-        />
-    <TextView
-        android:id="@+id/fourth_key_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/third_key_tv"
-        android:layout_alignLeft="@id/first_key_tv"
-        android:layout_marginTop="20dp"
-        android:text="D.代码优化"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <RadioButton
-        android:id="@+id/fourth_rb"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="205dp"
-        android:layout_alignParentRight="true"
-        />
+        android:layout_below="@+id/key3_root"
+        android:clickable="true">
+        <TextView
+            android:id="@+id/third_key_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="C.语义分析和中间代码生成法分析"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            />
+        <RadioButton
+            android:id="@+id/fourth_rb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:clickable="false"
+            />
+
+    </RelativeLayout>
+
 </RelativeLayout>
-    </RadioGroup>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

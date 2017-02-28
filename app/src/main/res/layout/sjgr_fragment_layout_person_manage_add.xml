@@ -2,7 +2,7 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_bg"
+    android:background="@color/global_bg_gray"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,7 +28,7 @@
             android:textColor="@color/global_black"
             android:text="*用  户  名："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -53,7 +53,7 @@
         android:textColor="@color/global_black"
         android:text="*姓        名："/>
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/qyinfo_text_size"
@@ -114,7 +114,7 @@
             android:id="@+id/textView" />
 
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -140,7 +140,7 @@
             android:textColor="@color/global_black"
             android:text="*单位名称："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -165,7 +165,7 @@
             android:textColor="@color/global_black"
             android:text="*邮        箱："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -190,7 +190,7 @@
             android:textColor="@color/global_black"
             android:text="*手机号码："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -215,7 +215,7 @@
             android:textColor="@color/global_black"
             android:text="*职        位："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -240,7 +240,7 @@
             android:textColor="@color/global_black"
             android:text="*出生日期："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
@@ -290,7 +290,7 @@
             android:textColor="@color/global_black"
             android:text="*单位地址："/>
         <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"

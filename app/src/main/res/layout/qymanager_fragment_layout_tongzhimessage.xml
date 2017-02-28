@@ -3,597 +3,368 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <!--查询条件和查询条件之下的输入框  start-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/sj_shenhe_select" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="40dp"
-                android:text="@string/sj_shenhe_selectmsg"
-                android:textColor="@color/global_black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/yellow_but_bg"
-                android:clickable="true"
-                android:paddingBottom="5dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:paddingTop="5dp"
-                android:text="@string/sj_shenhe_select"
-                android:textColor="@color/global_white"
-                android:id="@+id/select" />
-        </RelativeLayout>
+    android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/fillet_white_bg"
             android:orientation="vertical"
-            android:layout_margin="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp">
-            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--查询条件和查询条件之下的输入框  start-->
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="发起单位："
-                    android:textColor="@color/global_black"
-                    android:textSize="18sp" />
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:gravity="center_vertical"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="35dp"
-                    android:paddingLeft="5dp"
-                    android:paddingBottom="8dp"
-                    android:background="@drawable/table_border_bg"
-                    android:hint=""
-                    android:lines="1"
-                    android:paddingTop="10dp"
-                    android:id="@+id/company" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="培训通知类型："
+                    android:layout_marginLeft="@dimen/title_left"
+                    android:text="@string/sj_shenhe_selectmsg"
                     android:textColor="@color/global_black"
-                    android:textSize="18sp" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/table_border_bg"
-                    android:gravity="center">
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/message_type" />
-                </RelativeLayout>
-            </LinearLayout>
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/yellow_but_bg"
+                    android:clickable="true"
+
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    style="@style/table1hight"
+                    android:text="查询"
+                    android:textColor="@color/global_white"
+                    android:id="@+id/select" />
+
+                <ImageView
+                    style="@style/image_title_view"
+                    android:src="@mipmap/sj_shenhe_select"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
+                android:background="@drawable/fillet_white_bg"
+
+                android:orientation="vertical"
+                style="@style/table1hight">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="发起单位："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                         />
+                    <EditText
+                        android:layout_width="50dp"
+                        style="@style/table1hight"
+
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="wrap_content"
+                         />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="培训通知类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="行政类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        android:id="@+id/textView8" />
+
+                    <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </Spinner>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:text="培训班类型："
+                        android:textColor="@color/global_black"
+                        android:textSize="18sp"
+                        />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <!--查询条件和查询条件之下的输入框  end-->
+
+
+            <!--体验机构列表 start-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    style="@style/image_title_view"
+                    android:src="@mipmap/sj_shenhe_menu" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="行政类型："
+                    android:layout_marginLeft="@dimen/title_left"
+                    android:text="通知列表"
                     android:textColor="@color/global_black"
-                    android:textSize="18sp" />
-                <RelativeLayout
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <!--体验机构列表 end-->
+                <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="36dp"
-                    android:background="@drawable/table_border_bg"
-                    android:gravity="center">
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/administrative_type" />
-                </RelativeLayout>
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="10dp"
-                    android:text="培训班类型："
-                    android:textColor="@color/global_black"
-                    android:textSize="18sp" />
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="18dp"
-                    android:background="@drawable/table_border_bg"
-                    android:gravity="center">
-                    <Spinner
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/train_type" />
-                </RelativeLayout>
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/fillet_white_bg">
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="序号"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="1"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="通知类型"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="网上培训"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize"
+                            android:id="@+id/textView39" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="通知单位"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="河南省食品药品监督管理局"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+
+                            android:text="发布人"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="达主任"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="通知标题"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="食品安全监管队伍继续教育培训班"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                    </TableRow>
+                    <TableRow>
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="培训地点"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="无"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="培训开始时间"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="2016-09-01"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                    </TableRow>
+                    <TableRow>
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="操作"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                        <TextView
+                            android:background="@drawable/table_frame_fray"
+                            android:layout_height="@dimen/table_hight"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:text="查看"
+                            android:textColor="@color/global_black"
+                            android:textSize="@dimen/table_textsize" />
+                    </TableRow>
+
+
+                </TableLayout>
 
         </LinearLayout>
-        <!--查询条件和查询条件之下的输入框  end-->
 
-
-        <!--体验机构列表 start-->
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/sj_shenhe_menu" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="40dp"
-                android:text="通知列表"
-                android:textColor="@color/global_black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/fillet_white_bg"
-            android:layout_margin="10dp">
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="序号"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知类型"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="网上培训"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知单位"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="河南省食品药品监督管理局"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="发布人"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="达主任"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知标题"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="食品安全监管队伍继续教育培训班"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训地点"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="无"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训开始时间"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="2016-09-10"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训结束时间"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="2017-01-09"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="操作"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="查看"
-                    android:clickable="true"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-
-        </TableLayout>
-
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/fillet_white_bg"
-            android:layout_margin="10dp">
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="序号"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知类型"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="网上培训"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知单位"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="河南省食品药品监督管理局"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="发布人"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="达主任"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="通知标题"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="食品安全监管队伍继续教育培训班"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训地点"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="无"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训开始时间"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="2016-09-10"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训结束时间"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="2017-01-09"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-            <TableRow>
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="操作"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-                <TextView
-                    android:layout_height="30dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="查看"
-                    android:clickable="true"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
-            </TableRow>
-
-        </TableLayout>
-
-        <!--体验机构列表 end-->
-    </LinearLayout>
-
-
+</LinearLayout>
 </android.support.v4.widget.NestedScrollView>

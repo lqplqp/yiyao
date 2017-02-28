@@ -18,18 +18,18 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -52,12 +52,10 @@
         android:layout_height="wrap_content"
         android:background="@drawable/fillet_white_bg"
         android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
+        android:layout_margin="10dp">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:orientation="horizontal"
             android:gravity="center_vertical">
             <TextView
@@ -67,19 +65,16 @@
                 android:layout_marginLeft="10dp"
                 android:text="企业名称："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_centerVertical="true"
+                android:layout_height="@dimen/edit_height"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
-                android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/edit_border_bg"
-                android:lines="1"
-                android:paddingTop="10dp" />
+                android:lines="1"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -94,18 +89,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="企业列表"
             android:textColor="@color/global_black"
-            android:textSize="20sp" />
+            android:textSize="@dimen/title_textsize" />
     </RelativeLayout>
 
     <TableLayout
@@ -116,7 +110,7 @@
         >
         <TableRow>
         <TextView
-            android:layout_height="30dp"
+            android:layout_height="@dimen/table_hight"
             android:layout_weight="1"
             android:gravity="center"
             android:text="操作"
@@ -125,7 +119,7 @@
             android:background="@drawable/table_border_bg"
             />
         <TextView
-            android:layout_height="30dp"
+            android:layout_height="@dimen/table_hight"
             android:layout_weight="1"
             android:gravity="center"
             android:text="查看"
@@ -136,7 +130,7 @@
     </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="企业名称"
@@ -145,7 +139,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="新乡面对面重庆小店"
@@ -156,7 +150,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="已报培训班数量"
@@ -165,7 +159,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="3"
@@ -176,7 +170,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="总金额"
@@ -185,7 +179,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -204,7 +198,7 @@
         >
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -213,7 +207,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"
@@ -224,7 +218,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="企业名称"
@@ -233,7 +227,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="新乡面对面重庆小店"
@@ -244,7 +238,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="已报培训班数量"
@@ -253,7 +247,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="3"
@@ -264,7 +258,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="总金额"
@@ -273,7 +267,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"
@@ -292,7 +286,7 @@
         >
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="操作"
@@ -301,7 +295,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="查看"
@@ -312,7 +306,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="企业名称"
@@ -321,7 +315,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="新乡面对面重庆小店"
@@ -332,7 +326,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="已报培训班数量"
@@ -341,7 +335,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="3"
@@ -352,7 +346,7 @@
         </TableRow>
         <TableRow>
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="总金额"
@@ -361,7 +355,7 @@
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:layout_height="30dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="0"

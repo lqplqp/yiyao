@@ -83,10 +83,11 @@
     <string name="login_shijiadmin">市级管理员</string>
     <string name="login_qiyeadmin">企业管理员</string>
     <string name="login_xianquAdmin">县区级管理员</string>
+    <string name="menu">菜单</string>
 
 
-    <!--0 增加监管单位-->
-    <string-array name="addJianGuanUnit">
+    <!--增加监管单位0-->
+    <string-array name="zengjiajianguan0">
         <item >首页</item>
         <item >个人用户管理</item>
         <item >企业管理</item>
@@ -94,27 +95,191 @@
         <item >监管单位管理</item>
         <item >执法记录管理</item>
     </string-array>
+    <!--增加监管单位1-->
+    <string-array name="zengjiajianguan1">
+        <item >安全设置</item>
+    </string-array>
 
-    <!--1 省局管理员-->
-    <string-array name="ShengJuAdmin">
-        <item >首页</item><!--有-->
-        <item >监管单位管理</item>
-        <item >培训通知管理</item>
-        <item >体验机构审核</item><!--有-->
-        <item >企业管理</item>
-        <item >培训报名</item>
-        <item >监管统计</item>
-        <item >体检信息</item>
+    <!-- 省局管理员0-->
+    <string-array name="shengjiguanliyuan0">
+        <item>首页</item>
     </string-array>
-    <!--2 省局个人-->
-    <string-array name="ShengJuMan">
-        <item >首页</item>
-        <item >选购培训项目</item>
-        <item >培训项目订单</item>
-        <item >已报培训项目</item><!--有-->
-        <item >通知消息</item><!--有-->
-        <item >执法记录管理</item><!--有-->
+    <!-- 省局管理员1-->
+    <string-array name="shengjiguanliyuan1">
+        <item>监管单位信息</item>
+        <item>监管人员管理</item>
     </string-array>
+    <!-- 省局管理员2-->
+    <string-array name="shengjiguanliyuan2">
+        <item>培训通知列表</item>
+    </string-array>
+    <!-- 省局管理员3-->
+    <string-array name="shengjiguanliyuan3">
+        <item>体检机构审核</item>
+    </string-array>
+    <!-- 省局管理员4-->
+    <string-array name="shengjiguanliyuan4">
+        <item>企业管理</item>
+    </string-array>
+    <!-- 省局管理员5-->
+    <string-array name="shengjiguanliyuan5">
+        <item>培训项目报名</item>
+        <item>已报培训项目</item>
+        <item>通知消息</item>
+    </string-array>
+    <!-- 省局管理员6-->
+    <string-array name="shengjiguanliyuan6">
+        <item>监管单位统计分析</item>
+        <item>执法记录统计分析</item>
+        <item>企业用户统计分析</item>
+        <item>个人用户统计分析</item>
+    </string-array>
+    <!-- 省局管理员7-->
+    <string-array name="shengjiguanliyuan7">
+        <item>体检统计</item>
+        <item>体检查询</item>
+    </string-array>
+    <!-- 省局管理员8-->
+    <string-array name="shengjiguanliyuan8">
+        <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
+    </string-array>
+    <!-- 省局管理员9-->
+    <string-array name="shengjiguanliyuan9">
+        <item>安全设置</item>
+    </string-array>
+
+
+
+    <!-- 省局个人0-->
+    <string-array name="shengjugeren0">
+        <item>首页</item>
+    </string-array>
+    <!-- 省局个人1-->
+    <string-array name="shengjugeren1">
+        <item>监管人员信息</item>
+        <item>我的证书</item>
+        <item>我的执法</item>
+        <item>通知消息</item>
+    </string-array>
+    <!-- 省局个人2-->
+    <string-array name="shengjugeren2">
+        <item>已报培训项目</item>
+    </string-array>
+    <!-- 省局个人3-->
+    <string-array name="shengjugeren3">
+        <item>企业信息列表</item>
+        <item>企业报名信息</item>
+    </string-array>
+    <!-- 省局个人4-->
+    <string-array name="shengjugeren4">
+        <item>监管单位统计分析</item>
+        <item>执法记录统计分析</item>
+        <item>企业用户统计分析</item>
+        <item>个人用户统计分析</item>
+    </string-array>
+    <!-- 省局个人5-->
+    <string-array name="shengjugeren5">
+        <item>体检统计</item>
+        <item>体检查询</item>
+    </string-array>
+    <!-- 省局个人6-->
+    <string-array name="shengjugeren6">
+        <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
+    </string-array>
+    <!-- 省局个人7-->
+    <string-array name="shengjugeren7">
+        <item>安全设置</item>
+    </string-array>
+
+    <!-- 市级管理员0-->
+    <string-array name="shiji0">
+        <item>首页</item>
+    </string-array>
+
+    <!-- 市级管理员1-->
+    <string-array name="shiji1">
+        <item>监管单位信息</item>
+        <item>监管人员管理</item>
+    </string-array>
+
+    <!-- 市级管理员2-->
+    <string-array name="shiji2">
+        <item>培训通知管理</item>
+    </string-array>
+    <!-- 市级管理员3-->
+    <string-array name="shiji3">
+        <item>企业管理</item>
+    </string-array>
+
+    <!-- 市级管理员4-->
+    <string-array name="shiji4">
+        <item>培训项目报名</item>
+        <item>已报培训项目</item>
+        <item>通知消息</item>
+    </string-array>
+
+    <!-- 市级管理员5-->
+    <string-array name="shiji5">
+        <item>监管单位统计分析</item>
+        <item>执法记录统计分析</item>
+        <item>企业用户统计分析</item>
+        <item>个人用户统计分析</item>
+    </string-array>
+    <!-- 市级管理员6-->
+    <string-array name="shiji6">
+        <item>体检统计</item>
+        <item>体检查询</item>
+    </string-array>
+    <!-- 市级管理员7-->
+    <string-array name="shiji7">
+        <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
+    </string-array>
+    <!-- 市级管理员8-->
+    <string-array name="shiji8">
+        <item>安全设置</item>
+    </string-array>
+
+    <!-- 企业管理员0-->
+    <string-array name="qiye0">
+        <item>首页</item>
+    </string-array>
+    <!-- 企业管理员1-->
+    <string-array name="qiye1">
+        <item>企业信息</item>
+        <item>员工管理</item>
+        <item>体检报告管理</item>
+        <item>信息卡管理</item>
+    </string-array>
+
+    <!-- 企业管理员2-->
+    <string-array name="qiye2">
+        <item>选购培训项目</item>
+        <item>培训项目订单</item>
+        <item>已报培训项目</item>
+        <item>通知消息</item>
+    </string-array>
+
+    <!-- 企业管理员3-->
+    <string-array name="qiye3">
+        <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
+    </string-array>
+    <!-- 企业管理员4-->
+    <string-array name="qiye4">
+        <item>安全设置</item>
+    </string-array>
+
     <!--3 市级个人-->
     <string-array name="ShiJiAdmin">
         <item >首页</item><!--有-->

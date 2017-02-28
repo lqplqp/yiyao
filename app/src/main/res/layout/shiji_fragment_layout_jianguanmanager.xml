@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -14,18 +18,18 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+           style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -35,88 +39,99 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
+            
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            android:paddingTop="5dp"
+            style="@style/button_text_view"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         android:background="@drawable/fillet_white_bg"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        >
 
-        <TextView
-            android:id="@+id/tv_username"
-            android:layout_alignRight="@id/tv_register_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:layout_marginLeft="16dp"
-            android:text="@string/shiji_jianguanmanager_search"
-            android:textColor="@color/global_black"
-            android:textSize="16sp" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    >
+    <TextView
+        android:id="@+id/tv_register_time"
+        android:layout_marginLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/global_black"
+        android:text="搜索内容:"
+        android:textSize="@dimen/qyinfo_text_size"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_height"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/table_frame_fray"
+        android:id="@+id/start_time" />
+</LinearLayout>
 
-        <TextView
-            android:id="@+id/tv_register_time"
-            android:layout_marginLeft="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/global_black"
-            android:text="@string/sj_admin_register_time"
-            android:textSize="16sp"
-            android:layout_alignBaseline="@+id/start_time"
-            android:layout_alignBottom="@+id/start_time"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="20dp" />
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    >
+    <TextView
+        android:layout_alignRight="@id/tv_register_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="注册时间:"
+        android:textColor="@color/global_black"
+        android:textSize="@dimen/qyinfo_text_size" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
         <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="50dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:background="@drawable/table_frame_fray"
-            android:id="@+id/start_time" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="210dp"
-            android:text="—"
-            android:textSize="20sp"
-            />
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_marginLeft="240dp"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/edit_height"
             android:background="@drawable/table_frame_fray"
             android:id="@+id/end_time" />
-
+<View
+    android:layout_width="30dp"
+    android:layout_height="0.1dp"
+    android:background="@color/global_black"
+    android:layout_margin="10dp"
+    />
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="100dp"
-            android:hint="用户名"
-            android:lines="1"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingBottom="3dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/edit_height"
             android:background="@drawable/table_frame_fray"
             android:id="@+id/input_username" />
-    </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+    </LinearLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 
@@ -128,18 +143,18 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_tiyan"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -149,55 +164,52 @@
             android:layout_marginRight="20dp"
             android:background="@drawable/yellow_but_bg"
             android:clickable="true"
-            android:paddingBottom="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="5dp"
+            style="@style/button_text_view"
             android:text="新增"
             android:textColor="@color/global_white"
             android:id="@+id/add" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/fillet_white_bg">
 
-            <TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="用户名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -207,43 +219,48 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView27" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="2"
                     android:textColor="@color/global_black"
@@ -251,20 +268,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -273,10 +292,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="3"
                     android:textColor="@color/global_black"
@@ -284,20 +304,22 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -306,10 +328,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
 
                     android:text="4"
                     android:textColor="@color/global_black"
@@ -317,10 +339,11 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize"
@@ -328,10 +351,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -340,9 +363,8 @@
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

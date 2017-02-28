@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -14,18 +18,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_select" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="@string/sj_shenhe_selectmsg"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,7 +36,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="100dp"
-            android:background="@drawable/blue_but_bg"
+            android:background="@drawable/yellow_but_bg"
             android:clickable="true"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
@@ -48,7 +51,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="20dp"
-            android:background="@drawable/yellow_but_bg"
+            android:background="@drawable/blue_but_bg"
             android:clickable="true"
             android:paddingBottom="5dp"
             android:paddingLeft="20dp"
@@ -59,35 +62,34 @@
             android:id="@+id/back" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginTop="10dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         android:background="@drawable/fillet_white_bg"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
-
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:text="用户姓名："
             android:textColor="@color/global_black"
-            android:textSize="18sp" />
-
+            android:textSize="@dimen/qyinfo_text_size"
+            />
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:hint="用户姓名"
+            android:layout_height="@dimen/edit_height"
+            android:background="@drawable/edit_border_bg"
+            android:layout_marginLeft="10dp"
+            android:layout_margin="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
             android:lines="1"
-            android:paddingTop="10dp"
             android:id="@+id/input_name" />
-    </RelativeLayout>
+
+
+    </LinearLayout>
     <!--查询条件和查询条件之下的输入框  end-->
 
 
@@ -99,18 +101,17 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/image_title_view"
             android:src="@mipmap/sj_shenhe_menu" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="40dp"
+            android:layout_marginLeft="@dimen/title_left"
             android:text="监管单位人员列表"
             android:textColor="@color/global_black"
-            android:textSize="@dimen/title_textsize" />
+            android:textSize="@dimen/qyinfo_text_size" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -128,15 +129,11 @@
             android:id="@+id/add" />
     </RelativeLayout>
 
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/fillet_white_bg">
 
@@ -144,30 +141,31 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
                     android:text="序号"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:id="@+id/textView12" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="账号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="40dp"
-                    android:paddingRight="40dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -177,30 +175,30 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -210,10 +208,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="2"
                     android:textColor="@color/global_black"
@@ -221,32 +219,33 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/textView13" />
             </TableRow>
             <TableRow>
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="3"
                     android:textColor="@color/global_black"
@@ -255,20 +254,20 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -277,10 +276,10 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="35dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
 
                     android:text="4"
                     android:textColor="@color/global_black"
@@ -288,20 +287,20 @@
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
                     android:background="@drawable/table_frame_fray"
-                    android:paddingBottom="5dp"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:paddingTop="5dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -310,9 +309,8 @@
 
         </TableLayout>
 
-    </HorizontalScrollView>
-
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

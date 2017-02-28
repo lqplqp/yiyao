@@ -27,8 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sj_admin_actor"
-                    android:textSize="22sp"
-                    android:textStyle="bold|italic"
+                    android:textSize="@dimen/jg_top"
                     android:textColor="@color/global_black"
                     android:gravity="center_horizontal"
                     />
@@ -125,8 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sj_admin_project"
-                    android:textSize="22sp"
-                    android:textStyle="bold|italic"
+                    android:textSize="@dimen/jg_top"
                     android:textColor="@color/global_black"
                     android:gravity="center_horizontal"
                     />
@@ -233,69 +231,22 @@
         <!--首页面的第3个小布局 end-->
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/fillet_white_bg"
             android:layout_margin="10dp"
-            android:padding="10dp"
-            android:orientation="vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:maxLines="2"
-                android:textColor="@color/global_black"
-                android:text="新乡面对面重庆小店"
-                />
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/global_black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/global_gray"
-                android:text="体检报告(无,3,即将过期...)"
-
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:background="@drawable/fillet_white_bg"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:orientation="vertical">
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:maxLines="2"
+                android:textSize="16sp"
+                android:text="暂无消息"
                 android:textColor="@color/global_black"
-                android:text="新乡面对面重庆小店"
-                />
+                android:id="@+id/content" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
-                android:background="@color/global_black"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="14sp"
-                android:textColor="@color/global_gray"
-                android:text="体检报告(无,3,即将过期...)"
-
-                />
         </LinearLayout>
-
 
     </LinearLayout>
 

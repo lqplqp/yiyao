@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-
     >
     <group
 
@@ -8,43 +7,35 @@
         <item
             android:id="@+id/navi_menu_1"
             android:icon="@mipmap/ic_home"
-            android:title="监督人员首页"
+            android:title="企业首页"
             />
         <item
             android:id="@+id/navi_menu_2"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
-            android:title="监管人员中心"
+            android:title="企业管理"
             />
         <item
             android:id="@+id/navi_menu_3"
             android:icon="@mipmap/ic_peixunxuexi"
-            android:title="培训学习"
+            android:title="培训报名"
             />
+
         <item
             android:id="@+id/navi_menu_4"
-            android:icon="@mipmap/ic_qiyeguanli"
-            android:title="企业管理"
-            />
-        <item
-        android:id="@+id/navi_menu_5"
-            android:icon="@mipmap/ic_jianguantongji"
-        android:title="监管统计"
-        />
-        <item
-            android:id="@+id/navi_menu_6"
-            android:icon="@mipmap/ic_tijianxinxi"
-            android:title="体检信息"
-            />
-        <item
-            android:id="@+id/navi_menu_7"
             android:icon="@mipmap/ic_xiazaizhongxin"
             android:title="下载中心"
             />
         <item
-            android:id="@+id/navi_menu_8"
+            android:id="@+id/navi_menu_5"
             android:icon="@mipmap/ic_anquanshezhi"
             android:title="安全设置"
             />
+        <item
+            android:id="@+id/navi_menu_logout"
+            android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
+            android:title="退出账户"
+            />
+
     </group>
     <!--<item android:title="设置"
         android:id="@+id/sub">

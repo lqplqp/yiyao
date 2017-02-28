@@ -27,8 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sj_admin_actor"
-                    android:textSize="22sp"
-                    android:textStyle="bold|italic"
+                    android:textSize="@dimen/jg_top"
                     android:textColor="@color/global_black"
                     android:gravity="center_horizontal"
                     />
@@ -125,8 +124,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/sj_admin_project"
-                    android:textSize="22sp"
-                    android:textStyle="bold|italic"
+                    android:textSize="@dimen/jg_top"
                     android:textColor="@color/global_black"
                     android:gravity="center_horizontal"
                     />
@@ -232,14 +230,28 @@
         </LinearLayout>
         <!--首页面的第3个小布局 end-->
 
-        <TextView
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/fillet_white_bg"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:textSize="24sp"
-            android:text="@string/sj_admin_nomsg"
-            />
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:textSize="16sp"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
 
+                android:text="暂无消息"
+                android:textColor="@color/global_black"
+                android:id="@+id/content" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
