@@ -82,6 +82,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/edit_border_bg"
                 android:layout_height="@dimen/edit_height"
+                android:textColor="@color/global_black"
                 android:id="@+id/company_name" />
         </LinearLayout>
 

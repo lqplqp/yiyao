@@ -8,6 +8,5 @@ public class LoginContract {
     public interface LoginView{
         public void toLogin();
         public void toRegister();
-        public void showCheckCode(String imageUrl);
     }
 }

@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import org.litepal.LitePalApplication;
 import org.litepal.tablemanager.Connector;
+import org.xutils.x;
 
 
 /**
@@ -20,6 +21,7 @@ public class App extends LitePalApplication {
     public void onCreate() {
         super.onCreate();
         mApplication = this;
+        x.Ext.init(this);
         SQLiteDatabase db = Connector.getDatabase();
     }
 }
