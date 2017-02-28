@@ -21,6 +21,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
         <activity android:name=".MainActivity"/>
+        <activity android:name=".shengji.RegisterActivity"/>
         <activity android:name=".activity.ExamActivity"/>
         <activity android:name=".activity.PeiXunActivity"/>
     </application>

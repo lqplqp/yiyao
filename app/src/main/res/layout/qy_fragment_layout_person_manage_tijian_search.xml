@@ -109,10 +109,8 @@
         android:layout_height="@dimen/edit_height"
         android:gravity="center_vertical"
         android:paddingLeft="5dp"
-        android:paddingBottom="8dp"
         android:background="@drawable/edit_border_bg"
         android:lines="1"
-        android:paddingTop="10dp"
         android:id="@+id/start_time" />
     <View
         android:layout_width="30dp"
@@ -127,10 +125,8 @@
         android:layout_height="@dimen/edit_height"
         android:gravity="center_vertical"
         android:paddingLeft="5dp"
-        android:paddingBottom="8dp"
         android:background="@drawable/edit_border_bg"
         android:lines="1"
-        android:paddingTop="10dp"
         android:id="@+id/end_time" />
 </LinearLayout>
 

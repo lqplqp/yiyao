@@ -127,6 +127,7 @@
         <RadioGroup
             android:layout_marginLeft="18dp"
             android:layout_width="match_parent"
+            android:id="@+id/radiogroup"
             android:layout_height="wrap_content">
 
             <LinearLayout

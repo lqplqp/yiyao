@@ -76,10 +76,8 @@
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
                 android:background="@drawable/edit_border_bg"
-                android:lines="1"
-                android:paddingTop="10dp" />
+                android:lines="1"/>
         </LinearLayout>
 
     </LinearLayout>

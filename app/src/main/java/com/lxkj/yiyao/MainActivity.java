@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity {
     CircleImageView toolbarHead;
     @BindView(R.id.title_tv)
     TextView titleTv;
+    @BindView(R.id.user_name)
+    TextView userName;
+
+    private String user_name;
+
 
     private String[] shengjiTabTitles = {"首页", "审核"};
     private ActionBarDrawerToggle drawerToggle;
@@ -94,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+
         initData();
         initView();
     }
@@ -970,6 +977,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void initData() {
         userType = getIntent().getIntExtra("userType", 0);
+        user_name = getIntent().getStringExtra("user_name");
+
+        userName.setText(user_name);
+
+
         /*switch (userType){
             case 0:
                 //naviView.inflateMenu(R.menu.navi_menu_jianguan);

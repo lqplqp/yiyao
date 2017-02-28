@@ -67,6 +67,7 @@
                     android:layout_centerVertical="true"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/white"
+                    android:id="@+id/user_name"
                     android:text="username"
                     />
             </RelativeLayout>

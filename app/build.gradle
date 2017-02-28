@@ -5,7 +5,7 @@ android {
     buildToolsVersion "25.0.1"
     defaultConfig {
         applicationId "com.lxkj.yiyao"
-        minSdkVersion 19
+        minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
@@ -37,4 +37,7 @@ dependencies {
     compile 'com.github.Rukey7:IjkPlayerView:v1.0.3'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'org.litepal.android:core:1.4.1'
+    compile 'org.xutils:xutils:3.3.42'
+    compile 'com.google.code.gson:gson-parent:2.8.0'
+    compile 'com.google.code.gson:gson:2.6.2'
 }
