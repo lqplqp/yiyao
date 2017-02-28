@@ -85,8 +85,6 @@
                         android:layout_marginRight="10dp"
                         android:background="@drawable/table_frame_fray"
                         android:lines="1"
-                        android:paddingTop="10dp"
-                        android:paddingBottom="10dp"
                         android:id="@+id/number"
                         android:layout_alignParentTop="true"
                         android:layout_toEndOf="@+id/textView" />
@@ -114,9 +112,7 @@
                     android:layout_marginLeft="9dp"
                     android:layout_height="wrap_content">
                     <EditText
-                        android:paddingTop="10dp"
                         android:textSize="@dimen/qyinfo_text_size"
-                        android:paddingBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/edit_height"
                         android:background="@drawable/table_frame_fray"

@@ -73,15 +73,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
                 android:background="@drawable/table_border_bg"
                 android:hint=""
-                android:lines="1"
-                android:paddingTop="10dp" />
+                android:lines="1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
