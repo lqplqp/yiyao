@@ -25,22 +25,16 @@ public class JGCompanyManAdapter extends MBaseAdapter<JGCompanyManAdapter.ViewHo
 
         //// TODO: 2017/3/2  在这把数据填充进去就gg
         //序号
-        holder.number.setText(""+result.get("xuhao"));
+        holder.number.setText("" + result.get("xuhao"));
 
         //用户账号
-        holder.username.setText(""+result.get("username"));
+        holder.username.setText("" + result.get("username"));
 
         //用户名
-        holder.userName.setText(""+result.get("user_name"));
-
-
-        // 这个类就结束了 gg
+        holder.userName.setText("" + result.get("user_name"));
 
     }
 
-
-
-    //这个方法就是获取布局id的,获取完了只后 鼠标放到布局id上面右键 选择
     @Override
     protected int getItemLayout() {
         return R.layout.jgcompanyman_item;
@@ -51,8 +45,6 @@ public class JGCompanyManAdapter extends MBaseAdapter<JGCompanyManAdapter.ViewHo
         return new ViewHolder(view);
     }
 
-
-    //然后就生成了这个玩意  把泛型给Adapter
     static class ViewHolder {
         @BindView(R.id.number)
         TextView number;
