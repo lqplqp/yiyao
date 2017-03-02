@@ -49,8 +49,6 @@ public class CompanyManagerFragment extends BaseFragment {
     protected void initView() {
 
 
-        //请求网络获取数据
-        requestData();
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -61,22 +59,40 @@ public class CompanyManagerFragment extends BaseFragment {
                 CompanyManagerFragment.this.adapter.clear();
                 adapter.notifyDataSetChanged();
                 page=1;
+
+
                 requestData();
+
+
             }
 
             @Override
             public void onLoadingMore() {
+
+
                 requestData();
+
+
+
             }
         });
+
+
+    }
+    // ======================== 模板代码=============================
+
+
+    @Override
+    public int getLayout() {
+        return R.layout.jg_fragment_layout_company_manager;
     }
 
-    // ======================== 模板代码=============================
 
     // ======================== 模板代码=============================
     public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
         params.addBodyParameter("page",page+"");
+
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -89,38 +105,43 @@ public class CompanyManagerFragment extends BaseFragment {
                     listView.deferNotifyDataSetChanged();
                 }
                 page++;
+
             }
+
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
                 ex.printStackTrace();
             }
+
             @Override
             public void onCancelled(CancelledException cex) {
+
             }
+
             @Override
             public void onFinished() {
                 listView.onRefreshComplete();
                 listView.loadMoreComplete();
             }
+
             @Override
             public boolean onCache(String result) {
                 return false;
             }
         });
     }
+
+
     // ======================== 模板代码=============================
-
-    @Override
-    public int getLayout() {
-        return R.layout.jg_fragment_layout_company_manager;
-    }
-
 
     @OnClick(R.id.select)
     public void onClick() {
         toast("查询");
         // TODO: 2017/1/18
+
         requestData();
+
+
     }
 
     @Override
