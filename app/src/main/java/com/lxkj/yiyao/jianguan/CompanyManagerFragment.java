@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -13,7 +14,6 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
-import com.lxkj.yiyao.jianguan.bean.CompanyManagerBean;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -40,45 +40,43 @@ public class CompanyManagerFragment extends BaseFragment {
     RefreshListView listView;
 
     CompanyManagerAdapter adapter;
+
+
+    private int page = 1;
+
+
     @Override
     protected void initView() {
 
 
+        // ======================== 模板代码=============================
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
-                listView.onRefreshComplete();
+
+
+                CompanyManagerFragment.this.adapter.clear();
+                adapter.notifyDataSetChanged();
+                page=1;
+
+
+                requestData();
+
+
             }
 
             @Override
             public void onLoadingMore() {
 
 
-                new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(2000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
-
-                        getActivity().runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                listView.loadMoreComplete();
-                            }
-                        });
-
-                    }
-                }).start();
+                requestData();
 
 
 
             }
         });
-
+        // ======================== 模板代码=============================
 
     }
 
@@ -88,22 +86,25 @@ public class CompanyManagerFragment extends BaseFragment {
         return R.layout.jg_fragment_layout_company_manager;
     }
 
-    @OnClick(R.id.select)
-    public void onClick() {
-        toast("查询");
-        // TODO: 2017/1/18
 
+    // ======================== 模板代码=============================
+    public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
-
+        params.addBodyParameter("page",page+"");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                Gson gson = new Gson();
-                CompanyManagerBean bean = gson.fromJson(result, CompanyManagerBean.class);
-                CompanyManagerAdapter adapter = new CompanyManagerAdapter(bean);
-                Log.i(TAG, bean.toString());
+                if(CompanyManagerFragment.this.adapter == null){
+                    CompanyManagerFragment.this.adapter = new CompanyManagerAdapter(result);
+                    listView.setAdapter(CompanyManagerFragment.this.adapter);
+                }else{
+                    CompanyManagerFragment.this.adapter.addData(result);
+                    listView.deferNotifyDataSetChanged();
+                }
+                page++;
+
             }
 
             @Override
@@ -118,7 +119,8 @@ public class CompanyManagerFragment extends BaseFragment {
 
             @Override
             public void onFinished() {
-
+                listView.onRefreshComplete();
+                listView.loadMoreComplete();
             }
 
             @Override
@@ -126,6 +128,18 @@ public class CompanyManagerFragment extends BaseFragment {
                 return false;
             }
         });
+    }
+
+
+    // ======================== 模板代码=============================
+
+    @OnClick(R.id.select)
+    public void onClick() {
+        toast("查询");
+        // TODO: 2017/1/18
+
+        requestData();
+
 
     }
 

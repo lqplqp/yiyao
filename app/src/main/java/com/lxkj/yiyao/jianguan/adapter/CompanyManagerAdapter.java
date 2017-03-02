@@ -6,8 +6,13 @@ import android.widget.BaseAdapter;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
+import com.google.gson.Gson;
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.jianguan.bean.CompanyManagerBean;
+import com.lxkj.yiyao.utils.ToastUtil;
+
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,61 +21,40 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/2 0002.
  */
 
-public class CompanyManagerAdapter extends BaseAdapter {
+public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.ViewHolder> {
 
-    CompanyManagerBean bean;
+    public CompanyManagerAdapter(String bean) {
+        super(bean);
+    }
 
-    public CompanyManagerAdapter(CompanyManagerBean bean) {
-        this.bean = bean;
+    protected void fillData(int i, ViewHolder holder , com.alibaba.fastjson.JSONObject result) {
+
+        //企业名称
+        holder.qiyeName.setText(result.get("qymc").toString());
+        //体检合格人数
+        holder.tijianhegePeople.setText(result.get("tjhgrs").toString());
+
+        //培训合格人数
+        holder.peixunhegeRenshu.setText(result.get("pxhgrs").toString());
+        //获取信息卡人数
+        holder.infocardRenshu.setText(result.get("hdxxkrs").toString());
+        // TODO: 2017/3/2 0002  true和false
+        //备注
+        holder.beizhu.setText(result.get("bz").toString());
+
     }
 
     @Override
-    public int getCount() {
-        if(bean.getData() == null || bean.getData().size() ==0){
-            return 0;
-        }
-        return bean.getData().size();
+    protected int getItemLayout() {
+        return R.layout.qiyeguanli_table_item;
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
-    }
+    protected ViewHolder getHolder(View view) {
+        return new ViewHolder(view);
+}
 
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        ViewHolder holder;
-        if (view == null) {
-            holder = new ViewHolder(View.inflate(viewGroup.getContext(), R.layout.qiyeguanli_table_item, null));
-            view.setTag(holder);
-        } else {
-            holder = (ViewHolder) view.getTag();
-        }
-        CompanyManagerBean.Data data = bean.getData().get(i);
-        holder.beizhu.setText(data.getBz());
-        holder.qiyeName.setText(data.getQymc());
-        holder.tijianhegePeople.setText(data.getTjhgrs());
-        holder.peixunhegeRenshu.setText(data.getPxhgrs());
-        holder.infocardRenshu.setText(data.getHdxxkrs());
-        //holder.guoqitixing.set
-
-
-
-
-
-
-
-        return view;
-    }
-
-
-
-    static class ViewHolder {
+    static class ViewHolder extends BaseHolder{
         @BindView(R.id.chakan)
         TextView chakan;
         @BindView(R.id.qiyerenyuan)
@@ -87,7 +71,6 @@ public class CompanyManagerAdapter extends BaseAdapter {
         LinearLayout guoqitixing;
         @BindView(R.id.beizhu)
         TextView beizhu;
-
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }
