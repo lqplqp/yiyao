@@ -4,6 +4,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 
 /**
@@ -18,9 +19,10 @@ public class JGCompanyManAdapter extends MBaseAdapter {
     }
 
     @Override
-    protected void fillData(int i, Object holder, String result) {
+    protected void fillData(int i, Object holder, JSONObject result) {
 
     }
+
 
     @Override
     protected int getItemLayout() {
