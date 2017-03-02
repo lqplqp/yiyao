@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
-<RelativeLayout
-    android:id="@+id/activity_main"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:theme="@android:style/Theme.NoTitleBar"
 
-    >
 
     <LinearLayout
         android:background="#eaeaea"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -119,196 +112,22 @@
                 />
         </RelativeLayout>
 
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/fillet_white_bg">
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="操作"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView34" />
 
-                <LinearLayout
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
 
-                    >
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="查看"
-                        android:textColor="@color/global_bg_blue"
-                        android:textSize="@dimen/table_textsize"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="15dp"
-                        android:text="企业人员"
-                        android:textColor="@color/global_bg_blue"
-                        android:textSize="@dimen/table_textsize"
-                        />
-                </LinearLayout>
-            </TableRow>
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="企业名称"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView33" />
+            <com.lxkj.yiyao.view.RefreshListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.lxkj.yiyao.view.RefreshListView>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx小店"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView32" />
-            </TableRow>
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="体检合格人数"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="6"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="培训合格人数"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView" />
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView16" />
-            </TableRow>
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="获取信息卡人数"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView17" />
-            </TableRow>
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="过期提醒"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView2" />
-
-                <LinearLayout
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    >
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@mipmap/red_point"
-                    />
-                </LinearLayout>
-            </TableRow>
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="备注"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                     />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:textColor="@color/global_red"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView3" />
-            </TableRow>
-        </TableLayout>
     </LinearLayout>
-</RelativeLayout>
-</android.support.v4.widget.NestedScrollView>
+
+
+</LinearLayout>

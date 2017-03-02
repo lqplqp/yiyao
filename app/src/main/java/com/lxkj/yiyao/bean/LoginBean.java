@@ -12,5 +12,7 @@ public class LoginBean {
     public int code;
     public String message;
     public String user_name;
+    public String user_dep;
+    public String user_img;
 
 }

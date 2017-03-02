@@ -19,8 +19,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
+import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
@@ -54,6 +56,9 @@ import com.lxkj.yiyao.shiji.MessageSearchFragment;
 import com.lxkj.yiyao.shiji.PeiXunListFragment;
 import com.lxkj.yiyao.shiji.ProjectApplyFragment;
 import com.lxkj.yiyao.shiji.QiYeInfoFragment;
+
+import org.w3c.dom.Text;
+import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -975,11 +980,31 @@ public class MainActivity extends AppCompatActivity {
         return builder;
     }
 
+
+
+    String user_dep;
+    String user_img;
+
     private void initData() {
         userType = getIntent().getIntExtra("userType", 0);
         user_name = getIntent().getStringExtra("user_name");
+        user_dep = getIntent().getStringExtra("user_dep");
+        user_img = getIntent().getStringExtra("user_img");
 
+
+        View mRootView = naviView.getHeaderView(0);
+        CircleImageView circleImageView = (CircleImageView) mRootView.findViewById(R.id.user_head);
+        TextView username_tv = (TextView) mRootView.findViewById(R.id.username_tv);
+        TextView name_tv = (TextView) mRootView.findViewById(R.id.name_tv);
+        TextView unit_name_tv = (TextView) mRootView.findViewById(R.id.unit_name_tv);
+
+        username_tv.setText(user_name);
+        name_tv.setText(user_name);
+        unit_name_tv.setText(user_dep);
+
+        Glide.with(this).load(user_img).into(circleImageView);
         userName.setText(user_name);
+        Glide.with(this).load(user_img).into(toolbarHead);
 
 
         /*switch (userType){

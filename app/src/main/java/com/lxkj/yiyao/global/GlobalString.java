@@ -15,4 +15,7 @@ public interface GlobalString {
 
     public static final String login = "/admin/jiekou/";
 
+
+    public static final String fenji = "/admin/fenji/qygl/";
+
 }

@@ -135,6 +135,8 @@ public class LoginActivity extends BaseActivity  {
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     intent.putExtra("userType",userType);
                     intent.putExtra("user_name",loginBean.user_name);
+                    intent.putExtra("user_dep",loginBean.user_dep);
+                    intent.putExtra("user_img",loginBean.user_img);
                     startActivity(intent);
                     finish();
                 }else{

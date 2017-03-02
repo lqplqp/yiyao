@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/fillet_white_bg">
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/textView34" />
+
+            <LinearLayout
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看"
+                    android:textColor="@color/global_bg_blue"
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/chakan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="企业人员"
+                    android:textColor="@color/global_bg_blue"
+                    android:textSize="@dimen/table_textsize"
+                    android:id="@+id/qiyerenyuan" />
+            </LinearLayout>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="企业名称"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/textView33" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx小店"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/qiye_name" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="体检合格人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="6"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/tijianhege_people" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="培训合格人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/textView" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/peixunhege_renshu" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="获取信息卡人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/infocard_renshu" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="过期提醒"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/textView2" />
+
+            <LinearLayout
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:id="@+id/guoqitixing">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/red_point"
+                    />
+            </LinearLayout>
+        </TableRow>
+        <TableRow
+            >
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="备注"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx"
+                android:textColor="@color/global_red"
+
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/beizhu" />
+        </TableRow>
+    </TableLayout>
+
+
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+
+        android:layout_height="10dp"/>
+
+
+</LinearLayout>
