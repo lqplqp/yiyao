@@ -3,172 +3,173 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray"
-    android:orientation="vertical">
-
-
-    <!--查询条件和查询条件之下的输入框  start-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_centerVertical="true"
-           style="@style/image_title_view"
-            android:src="@mipmap/sj_shenhe_select" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/title_left"
-            android:text="@string/sj_shenhe_selectmsg"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/yellow_but_bg"
-            android:clickable="true"
-            
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            style="@style/button_text_view"
-            android:text="@string/sj_shenhe_select"
-            android:textColor="@color/global_white"
-            android:id="@+id/select" />
-    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/fillet_white_bg"
-        >
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    >
-    <TextView
-        android:id="@+id/tv_register_time"
-        android:layout_marginLeft="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/global_black"
-        android:text="搜索内容:"
-        android:textSize="@dimen/qyinfo_text_size"
-        />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/edit_height"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:background="@drawable/table_frame_fray"
-        android:id="@+id/start_time" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@color/global_bg_gray"
+        android:orientation="vertical">
 
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:gravity="center_vertical"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="10dp"
-    >
-    <TextView
-        android:layout_alignRight="@id/tv_register_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:text="注册时间:"
-        android:textColor="@color/global_black"
-        android:textSize="@dimen/qyinfo_text_size" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        >
-        <EditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="@dimen/edit_height"
-            android:background="@drawable/table_frame_fray"
-            android:id="@+id/end_time" />
-<View
-    android:layout_width="30dp"
-    android:layout_height="0.1dp"
-    android:background="@color/global_black"
-    android:layout_margin="10dp"
-    />
-        <EditText
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="@dimen/edit_height"
-            android:background="@drawable/table_frame_fray"
-            android:id="@+id/input_username" />
-    </LinearLayout>
-
-</LinearLayout>
-
-    </LinearLayout>
-    <!--查询条件和查询条件之下的输入框  end-->
-
-
-    <!--体验机构列表 start-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_centerVertical="true"
-            style="@style/image_title_view"
-            android:src="@mipmap/sj_shenhe_menu" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!--查询条件和查询条件之下的输入框  start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/title_left"
-            android:text="@string/sj_shenhe_tiyan"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size" />
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
+            <ImageView
+                style="@style/image_title_view"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/sj_shenhe_select" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_left"
+                android:text="@string/sj_shenhe_selectmsg"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:id="@+id/select"
+                style="@style/button_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+
+                android:background="@drawable/yellow_but_bg"
+                android:clickable="true"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/sj_shenhe_select"
+                android:textColor="@color/global_white" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/yellow_but_bg"
-            android:clickable="true"
-            style="@style/button_text_view"
-            android:text="新增"
-            android:textColor="@color/global_white"
-            android:id="@+id/add" />
-    </RelativeLayout>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fillet_white_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_register_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="搜索内容:"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <EditText
+                    android:id="@+id/start_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/table_frame_fray" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/tv_register_time"
+                    android:layout_marginLeft="10dp"
+                    android:text="注册时间:"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/end_time"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_frame_fray" />
+
+                    <View
+                        android:layout_width="30dp"
+                        android:layout_height="0.1dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/global_black" />
+
+                    <EditText
+                        android:id="@+id/input_username"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/edit_height"
+                        android:layout_weight="1"
+                        android:background="@drawable/table_frame_fray" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!--查询条件和查询条件之下的输入框  end-->
+
+
+        <!--体验机构列表 start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                style="@style/image_title_view"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/sj_shenhe_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_left"
+                android:text="@string/sj_shenhe_tiyan"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:id="@+id/add"
+                style="@style/button_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/yellow_but_bg"
+                android:clickable="true"
+                android:text="新增"
+                android:textColor="@color/global_white" />
+        </RelativeLayout>
 
         <TableLayout
             android:layout_width="match_parent"
@@ -183,33 +184,33 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="序号"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="用户名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="姓名"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -218,143 +219,145 @@
             <TableRow>
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="1"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:id="@+id/textView27"
 
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView27" />
+                    android:textSize="@dimen/table_textsize" />
             </TableRow>
 
             <TableRow>
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
 
                     android:text="2"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
 
                     android:text="3"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:layout_width="0dp"
 
                     android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
                     android:layout_weight="1"
-                    android:layout_width="0dp"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
 
                     android:text="4"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
+                    android:id="@+id/textView5"
 
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView5" />
+                    android:textSize="@dimen/table_textsize" />
 
                 <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_frame_fray"
+                    android:gravity="center"
                     android:text="XXXX"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/table_textsize" />
@@ -364,7 +367,7 @@
         </TableLayout>
 
 
-    <!--体验机构列表 end-->
+        <!--体验机构列表 end-->
 
-</LinearLayout>
+    </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

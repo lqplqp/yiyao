@@ -22,7 +22,8 @@
                 android:gravity="center"
                 android:text="1"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/number" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -32,7 +33,8 @@
                 android:gravity="center"
                 android:text="XXXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/username" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -42,7 +44,8 @@
                 android:gravity="center"
                 android:text="XXXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/user_name" />
         </TableRow>
 
 

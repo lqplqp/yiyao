@@ -44,12 +44,12 @@ public class CompanyManagerFragment extends BaseFragment {
 
     private int page = 1;
 
-
+    // ======================== 模板代码=============================
     @Override
     protected void initView() {
 
 
-        // ======================== 模板代码=============================
+
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -76,9 +76,10 @@ public class CompanyManagerFragment extends BaseFragment {
 
             }
         });
-        // ======================== 模板代码=============================
+
 
     }
+    // ======================== 模板代码=============================
 
 
     @Override
