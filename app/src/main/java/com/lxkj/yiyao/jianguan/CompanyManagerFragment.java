@@ -14,6 +14,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -39,9 +40,9 @@ public class CompanyManagerFragment extends BaseFragment {
     @BindView(R.id.list_view)
     RefreshListView listView;
 
-    CompanyManagerAdapter adapter;
+    // ======================== 模板代码=============================
 
-
+    MBaseAdapter adapter;
     private int page = 1;
 
 
@@ -49,14 +50,14 @@ public class CompanyManagerFragment extends BaseFragment {
     protected void initView() {
 
 
-        // ======================== 模板代码=============================
+
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
 
 
-                CompanyManagerFragment.this.adapter.clear();
+                adapter.clear();
                 adapter.notifyDataSetChanged();
                 page=1;
 
@@ -76,15 +77,13 @@ public class CompanyManagerFragment extends BaseFragment {
 
             }
         });
-        // ======================== 模板代码=============================
+
 
     }
+    // ======================== 模板代码=============================
 
 
-    @Override
-    public int getLayout() {
-        return R.layout.jg_fragment_layout_company_manager;
-    }
+
 
 
     // ======================== 模板代码=============================
@@ -96,11 +95,11 @@ public class CompanyManagerFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                if(CompanyManagerFragment.this.adapter == null){
-                    CompanyManagerFragment.this.adapter = new CompanyManagerAdapter(result);
-                    listView.setAdapter(CompanyManagerFragment.this.adapter);
+                if(adapter == null){
+                    adapter = new CompanyManagerAdapter(result);
+                    listView.setAdapter(adapter);
                 }else{
-                    CompanyManagerFragment.this.adapter.addData(result);
+                    adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
                 page++;
@@ -132,6 +131,12 @@ public class CompanyManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
+
+
+    @Override
+    public int getLayout() {
+        return R.layout.jg_fragment_layout_company_manager;
+    }
 
     @OnClick(R.id.select)
     public void onClick() {
