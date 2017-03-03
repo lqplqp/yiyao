@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
@@ -198,146 +198,20 @@
                     android:id="@+id/textView23" />
             </TableRow>
 
-            <TableRow>
 
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="1"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView46" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView22" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-
-                    android:text="2"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-
-                    android:text="3"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="4"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize"
-                    android:id="@+id/textView45" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="XXXX"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/table_textsize" />
-            </TableRow>
 
 
         </TableLayout>
+
+        <com.lxkj.yiyao.view.RefreshListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.lxkj.yiyao.view.RefreshListView>
 
 
     <!--体验机构列表 end-->
 
 </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
