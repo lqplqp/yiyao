@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:background="@drawable/table_frame_fray"
+            android:layout_height="@dimen/table_hight"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+
+            android:text="4"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:id="@+id/xuhao" />
+
+        <TextView
+            android:background="@drawable/table_frame_fray"
+            android:layout_height="@dimen/table_hight"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="XXXX"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:id="@+id/xingming" />
+
+        <TextView
+            android:background="@drawable/table_frame_fray"
+            android:layout_height="@dimen/table_hight"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="XXXX"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:id="@+id/xinxikabianhao" />
+    </TableRow>
+
+</LinearLayout>

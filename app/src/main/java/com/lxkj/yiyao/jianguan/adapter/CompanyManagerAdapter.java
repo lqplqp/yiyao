@@ -54,7 +54,7 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         return new ViewHolder(view);
 }
 
-    static class ViewHolder extends BaseHolder{
+    static class ViewHolder {
         @BindView(R.id.chakan)
         TextView chakan;
         @BindView(R.id.qiyerenyuan)
