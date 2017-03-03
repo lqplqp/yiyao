@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fillet_white_bg">
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="培训项目信息"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="食品安全监管队伍培训班"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/peixunxiangmuxinxi" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="培训费用（元）"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="300"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/peixunfeiyong" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+
+                android:text="资料费用（元）"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="20"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/ziliaofeiyong" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+
+                android:text="学员人数"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="5"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/xueyuanrenshu" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="应付款（元）"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="320"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/yingfukuan" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="已付款（元）"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="0"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/yifukuan" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="交易状态"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:text="已付款"
+                android:textColor="@color/global_black"
+                android:textSize="12sp"
+                android:id="@+id/jiaoyizhuangtai" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:text="操作"
+                android:textColor="@color/global_black"
+                android:textSize="12sp" />
+            <LinearLayout
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue_but_normal"
+                    android:id="@+id/chakan" />
+                <TextView
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="付款"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue_but_normal"
+                    android:id="@+id/fukuan" />
+                <TextView
+                    android:id="@+id/quxiao"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="取消"
+                    android:textSize="12sp"
+                    android:textColor="@color/blue_but_normal"
+                    />
+            </LinearLayout>
+        </TableRow>
+
+
+    </TableLayout>
+
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+
+        android:layout_height="10dp"/>
+</LinearLayout>

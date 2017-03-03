@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_white_bg"
+        android:layout_margin="10dp">
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="郑州市"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/shiqu" />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="中原区"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/xianqu" />
+            <TextView
+                android:id="@+id/yibaomingpeixunrenshu"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+        </TableRow>
+
+
+    </TableLayout>
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+
+        android:layout_height="10dp"/>
+</LinearLayout>
