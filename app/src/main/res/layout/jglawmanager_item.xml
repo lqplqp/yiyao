@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fillet_white_bg">
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="序号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xuhao" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法编号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="11111"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/zhifabianhao" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法人姓名"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/textView18" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/zhifarenxingming" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法时间"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2017-07-03"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/zhifashijian" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="被执法人信息卡编号\n许可证编号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/textView49" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="50dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="111111000\n0002343224"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xukezhengbianhao" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="被执法人姓名/企业"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/textView48" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/beizhifaren" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法类型"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="行政许可"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/zhifaleixing" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="查看"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/chakan" />
+        </TableRow>
+
+
+    </TableLayout>
+    <!--体验机构列表 end-->
+
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+
+        android:layout_height="10dp"/>
+
+</LinearLayout>
