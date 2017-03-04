@@ -17,11 +17,17 @@ public interface GlobalString {
 
     public static final String fenji = "/admin/fenji/qygl/";
 
+
     public static final String jg_qygl = "/admin/fenji/qygl/";
 
     public static final String jg_gryhgl = "admin/fenji/gryhgl/";
 
     public static final String jg_jgdwgl = "admin/fenji/jgdwgl/";
+
+
+
+
+
 
 
 }
