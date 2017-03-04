@@ -29,8 +29,8 @@ public class QYTrainOrderFragment extends BaseFragment {
     RadioButton rb4;
     @BindView(R.id.tab1)
     TableLayout tab1;
-    @BindView(R.id.tab2)
-    TableLayout tab2;
+    /*@BindView(R.id.tab2)
+    TableLayout tab2;*/
 
     @Override
     protected void initView() {
