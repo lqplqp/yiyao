@@ -12,6 +12,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
+import com.lxkj.yiyao.jianguan.adapter.LawManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -92,7 +93,7 @@ public class LawManagerFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new CompanyManagerAdapter(result);
+                    adapter = new LawManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);

@@ -49,7 +49,7 @@ public class JGCompanyManFragment extends BaseFragment {
     protected void initView() {
 
 
-
+        requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -84,7 +84,7 @@ public class JGCompanyManFragment extends BaseFragment {
     // ======================== 模板代码=============================
     public void requestData(){
         // TODO 修改接口地址和参数
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_jgdwgl);
         params.addBodyParameter("page",page+"");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -139,7 +139,8 @@ public class JGCompanyManFragment extends BaseFragment {
         switch (view.getId()) {
             case R.id.select:
                 toast("查询");
-                // TODO: 2017/1/18 完善查询 
+                // TODO: 2017/1/18 完善查询
+                requestData();
                 break;
             case R.id.back:
                 toast("返回");

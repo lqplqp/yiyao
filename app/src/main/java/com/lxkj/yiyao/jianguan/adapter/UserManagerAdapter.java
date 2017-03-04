@@ -22,17 +22,17 @@ public class UserManagerAdapter extends MBaseAdapter<UserManagerAdapter.ViewHold
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //用户姓名
-        holder.userName.setText("" + result.get("user_name"));
+        holder.userName.setText("" + result.get("username"));
         //性别
-        holder.userSex.setText("" + result.get("user_sex"));
+        holder.userSex.setText("" + result.get("sex"));
         //体检报告号
-        holder.tijianbaogaohao.setText("" + result.get("tjbgh"));
+        holder.tijianbaogaohao.setText("" + result.get("tjbgyxq"));
         //培训证号
         holder.peixunzhenghao.setText("" + result.get("pxzh"));
         //培训有效期
-        holder.peixunyouxiaoqi.setText("" + result.get("pxyxq"));
+        holder.peixunyouxiaoqi.setText("" + result.get("pxzyxq"));
         //消息提醒
-        holder.xiaoxitixing.setText(""+result.get("xxtx"));
+        holder.xiaoxitixing.setText(""+result.get("gqtx"));
     }
 
 

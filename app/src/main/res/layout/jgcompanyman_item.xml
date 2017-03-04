@@ -8,7 +8,6 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/fillet_white_bg">
 
 
@@ -52,11 +51,7 @@
 
     </TableLayout>
 
-    <View
-        android:background="@color/global_bg_gray"
-        android:layout_width="match_parent"
 
-        android:layout_height="10dp"/>
 
 
 </LinearLayout>
