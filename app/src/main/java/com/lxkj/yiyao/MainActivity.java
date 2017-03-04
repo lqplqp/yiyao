@@ -88,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.user_name)
     TextView userName;
 
+
     private String user_name;
 
 
