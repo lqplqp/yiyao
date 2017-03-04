@@ -25,13 +25,13 @@ public class JGCompanyManAdapter extends MBaseAdapter<JGCompanyManAdapter.ViewHo
 
         //// TODO: 2017/3/2  在这把数据填充进去就gg
         //序号
-        holder.number.setText("" + result.get("xuhao"));
+        holder.number.setText("" + result.get("id"));
 
         //用户账号
-        holder.username.setText("" + result.get("username"));
+        holder.username.setText("" + result.get("zh"));
 
         //用户名
-        holder.userName.setText("" + result.get("user_name"));
+        holder.userName.setText("" + result.get("xm"));
 
     }
 

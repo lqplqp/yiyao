@@ -13,6 +13,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.jianguan.adapter.UserManagerAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -45,6 +46,8 @@ public class UserManagerFragment extends BaseFragment {
 
     @Override
     protected void initView() {
+
+        requestData();
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -79,7 +82,7 @@ public class UserManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_gryhgl);
         params.addBodyParameter("page", page + "");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -87,7 +90,7 @@ public class UserManagerFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new CompanyManagerAdapter(result);
+                    adapter = new UserManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);
@@ -134,11 +137,5 @@ public class UserManagerFragment extends BaseFragment {
         toast("查询");
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
+
 }

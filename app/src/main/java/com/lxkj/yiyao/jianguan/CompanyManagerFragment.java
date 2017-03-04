@@ -88,7 +88,7 @@ public class CompanyManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_qygl);
         params.addBodyParameter("page",page+"");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
