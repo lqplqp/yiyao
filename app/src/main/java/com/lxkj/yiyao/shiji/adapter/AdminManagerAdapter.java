@@ -29,7 +29,7 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
 
     protected void fillData(int i, AdminManagerAdapter.ViewHolder holder, JSONObject result) {
         //序号
-        holder.number.setText("" + result.get("xuhao"));
+        holder.number.setText("" + result.get("number"));
 
         //用户名
         holder.username.setText("" + result.get("username"));

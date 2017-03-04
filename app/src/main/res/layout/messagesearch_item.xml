@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/fillet_white_bg">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="序号"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="通知类型"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/wangshangpeixun"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="网上培训"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="通知单位"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/tongzhidanwei"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="河南省食品药品监督管理局"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="发布人"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/faburen"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="达主任"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="通知标题"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/tongzhibiaoti"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="食品安全监管队伍继续教育培训班"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="培训地点"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/peixundidian"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="无"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="培训开始时间"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/peixunDate"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="2016-09-10"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="培训结束时间"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:id="@+id/peixunOver"
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="2017-01-09"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:gravity="center"
+                    android:text="操作"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
+                    android:layout_height="@dimen/table_hight"
+                    android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="查看"
+                    android:textColor="@color/global_bg_blue"
+                    android:textSize="@dimen/qyinfo_text_size" />
+            </TableRow>
+
+        </TableLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_white_bg"
+        android:layout_margin="10dp"
+        >
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="查看"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_bg_blue"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/chakan" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="企业名称"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="新乡面对面重庆小店"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/qiyemingcheng" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="已报培训班数量"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="3"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/yibaopeixungbanshuliang" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="总金额"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/zongjine" />
+        </TableRow>
+
+
+    </TableLayout>
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+
+        android:layout_height="10dp"/>
+</LinearLayout>

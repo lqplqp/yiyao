@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray">
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@android:style/Theme.NoTitleBar"
+
+        >
+
+        <LinearLayout
+            android:background="#eaeaea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/fillet_white_bg">
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="操作"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"
+                        android:id="@+id/textView26" />
+
+                    <LinearLayout
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看"
+                            android:textColor="@color/global_bg_blue"
+                            android:textSize="@dimen/table_textsize"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="企业人员"
+                            android:textColor="@color/global_bg_blue"
+                            android:textSize="@dimen/table_textsize"
+                            />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="企业名称"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize" />
+
+                    <TextView
+                        android:id="@+id/enterpriseName"
+                        android:background="@drawable/table_frame_fray"
+
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="xxx小店"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="体检合格人数"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+
+                    <TextView
+                        android:id="@+id/tijianhege_people"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="6"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="培训合格人数"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"
+                        android:id="@+id/textView" />
+
+                    <TextView
+                        android:id="@+id/peixunhege_renshu"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="xxx"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="获取信息卡人数"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+
+                    <TextView
+                        android:id="@+id/getInfoPeople"
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="xxx"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"  />
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="过期提醒"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"
+                        android:id="@+id/textView2" />
+                    <LinearLayout
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        >
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/red_point"
+                            />
+                    </LinearLayout>
+                </TableRow>
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="备注"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/table_textsize"
+                        />
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="xxx"
+                        android:textColor="@color/global_red"
+                        android:textSize="@dimen/table_textsize"
+                        android:id="@+id/textView3" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>

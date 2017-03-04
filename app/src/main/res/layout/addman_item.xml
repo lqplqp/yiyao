@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+
+    android:background="@color/global_bg_gray"
+    android:layout_height="match_parent">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/fillet_white_bg"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训发起单位 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunfaqidanwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="新乡市食品药品监督管理局"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="科室(处室) : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/keshi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="财务规划处"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训通知标题 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixuntongzhibiaoti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="请输入培训标题"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="通知人员 : "
+                        android:textColor="@color/global_black"
+                        android:layout_marginTop="5dp"
+                        android:textSize="16sp"
+                        />
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人用户"
+                            android:textColor="@color/global_gray"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="企业管理"
+                            android:textColor="@color/global_gray"
+                            />
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="监督管理"
+                            android:textColor="@color/global_gray"
+                            />
+
+
+                    </RadioGroup>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="通知地区: "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/tongzhidiqu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="xxx 省 xxx市"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="通知岗位 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/tongzhigangwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="食品 餐饮领域 服务人员"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训类型 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunleixing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="集中培训"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="行业类型 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/hangyeleixing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="食品"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训班类型 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunbanleixing"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="食品安全管理员生产领域"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="证书模板 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/zhengshumoban"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="郑州食品企业培训班"
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训起始时间: "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunkaishi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="2017-08-08 "
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训结束时间 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunjieshu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="2017-08-08"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训地点 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixundidian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint="请输入培训地点"
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:paddingTop="3dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingBottom="3dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="培训内容 : "
+                        android:textColor="@color/global_black"
+                        android:textSize="16sp"
+                        />
+                    <EditText
+                        android:id="@+id/peixunneirong"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:hint=" "
+
+                        android:textSize="14sp"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="@color/global_gray"
+                    android:paddingBottom="5dp"
+                    ></View>
+
+                <EditText
+                    android:id="@+id/qitapeixun"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:hint="其他培训介绍"
+                    android:background="@drawable/table_frame_fray"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+
+
+</LinearLayout>
