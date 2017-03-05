@@ -32,8 +32,6 @@ public class JGCompanyManFragment extends BaseFragment {
     private  final String TAG = this.getClass().getSimpleName();
     @BindView(R.id.select)
     TextView select;
-    @BindView(R.id.back)
-    TextView back;
     @BindView(R.id.input_name)
     EditText inputName;
     @BindView(R.id.add)
@@ -49,7 +47,7 @@ public class JGCompanyManFragment extends BaseFragment {
     protected void initView() {
 
 
-        requestData();
+        requestData(null);
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -61,7 +59,7 @@ public class JGCompanyManFragment extends BaseFragment {
                 page=1;
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -70,7 +68,7 @@ public class JGCompanyManFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null);
 
 
 
@@ -82,10 +80,13 @@ public class JGCompanyManFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
     // ======================== 模板代码=============================
-    public void requestData(){
+    public void requestData(String s){
         // TODO 修改接口地址和参数
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_jgdwgl);
         params.addBodyParameter("page",page+"");
+        if(s!=null){
+            params.addBodyParameter("cx",s);
+        }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -134,17 +135,18 @@ public class JGCompanyManFragment extends BaseFragment {
         return R.layout.jg_fragment_layout_jiangguanrenyuan;
     }
 
-    @OnClick({R.id.select, R.id.back, R.id.add})
+    @OnClick({R.id.select, R.id.add})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.select:
                 toast("查询");
                 // TODO: 2017/1/18 完善查询
-                requestData();
-                break;
-            case R.id.back:
-                toast("返回");
-                // TODO: 2017/1/18  
+                if(adapter!=null){
+                    adapter.clear();
+                    adapter.notifyDataSetChanged();
+                    page=1;
+                }
+                requestData(inputName.getText().toString());
                 break;
             case R.id.add:
                 toast("添加");

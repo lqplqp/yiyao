@@ -13,19 +13,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/qy_admin"
-            android:textColor="@color/global_white"
+            android:textColor="@color/global_black"
             android:layout_marginLeft="40dp"
             android:textSize="16sp"
             android:padding="5dp"
             android:clickable="true"
-            android:background="@drawable/fillet_blue_bg"
             android:id="@+id/company_a_btn" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/qy_user"
-            android:textColor="@color/global_black"
+            android:textColor="@color/global_white"
+
+            android:background="@drawable/fillet_blue_bg"
             android:layout_marginLeft="40dp"
             android:textSize="16sp"
             android:padding="5dp"
@@ -41,7 +42,7 @@
             android:textSize="16sp"
             android:padding="5dp"
             android:clickable="true"
-            android:id="@+id/company_2_btn" />
+            android:id="@+id/company" />
 
     </LinearLayout>
 
@@ -87,7 +88,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/register_input_pwd"
+            android:hint="请输入本人真实姓名"
             android:textColorHint="@color/global_gray"
             android:textSize="18sp"
             android:background="@null"
@@ -109,7 +110,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="@string/register_input_repwd"
+            android:hint="请输入本人身份证号"
             android:textColorHint="@color/global_gray"
             android:textSize="18sp"
             android:background="@null"
@@ -124,6 +125,48 @@
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
             />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="设置密码,6-20字符"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="请再次确认密码"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+
         <RadioGroup
             android:layout_marginLeft="18dp"
             android:layout_width="match_parent"

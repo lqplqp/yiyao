@@ -5,20 +5,23 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.LawManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
+
+import java.util.Calendar;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -36,22 +39,23 @@ public class LawManagerFragment extends BaseFragment {
     EditText number;
     @BindView(R.id.type)
     EditText type;
-    @BindView(R.id.start_time)
-    EditText startTime;
-    @BindView(R.id.end_time)
-    EditText endTime;
 
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.start_time)
+    TextView startTime;
+    @BindView(R.id.end_time)
+    TextView endTime;
     private int page = 1;
 
 
     @Override
     protected void initView() {
 
+        requestData(null);
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -63,7 +67,7 @@ public class LawManagerFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -72,7 +76,7 @@ public class LawManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -84,9 +88,14 @@ public class LawManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
+    public void requestData(String s) {
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_zfjlgl);
         params.addBodyParameter("page", page + "");
+
+        if (s != null) {
+            params.addBodyParameter("cx", s);
+        }
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -134,21 +143,62 @@ public class LawManagerFragment extends BaseFragment {
         return R.layout.jg_fragment_layout_law_update;
     }
 
-    public void toSelect() {
-        //// TODO: 2017/1/18 0018 查询按钮
-        toast("查询");
-    }
-
 
     @OnClick(R.id.select)
     public void onClick() {
+
+        if (adapter != null) {
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page = 1;
+        }
+        requestData(null);
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+
+
+
+    @OnClick({R.id.start_time, R.id.end_time})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.start_time:
+                startTime.setOnClickListener(new View.OnClickListener() {
+                    Calendar c = Calendar.getInstance();
+                    @Override
+                    public void onClick(View view) {
+                        // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
+                        new DoubleDatePickerDialog(getContext(), 0, new DoubleDatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker startDatePicker, int startYear, int startMonthOfYear,
+                                                  int startDayOfMonth) {
+                                String textString = String.format("%d-%d-%d", startYear,
+                                        startMonthOfYear + 1, startDayOfMonth);
+                                startTime.setText(textString);
+                            }
+                        }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE), true).show();
+                    }
+                });
+                break;
+            case R.id.end_time:
+                endTime.setOnClickListener(new View.OnClickListener() {
+                    Calendar c = Calendar.getInstance();
+                    @Override
+                    public void onClick(View view) {
+                        // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
+                        new DoubleDatePickerDialog(getContext(), 0, new DoubleDatePickerDialog.OnDateSetListener() {
+
+                            @Override
+                            public void onDateSet(DatePicker startDatePicker, int startYear, int startMonthOfYear,
+                                                  int startDayOfMonth) {
+                                String textString = String.format("%d-%d-%d", startYear,
+                                        startMonthOfYear + 1, startDayOfMonth);
+                                endTime.setText(textString);
+                            }
+                        }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE), true).show();
+                    }
+                });
+                break;
+        }
     }
 }

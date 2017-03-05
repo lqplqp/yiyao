@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -34,20 +35,24 @@ public class UserManagerFragment extends BaseFragment {
     TextView select;
     @BindView(R.id.imput_name)
     EditText imputName;
+    ImageView cx;
+    @BindView(R.id.tj)
+    ImageView tj;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
 
 
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
+
     private int page = 1;
 
 
     @Override
     protected void initView() {
 
-        requestData();
+        requestData(null);
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -60,7 +65,7 @@ public class UserManagerFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -69,7 +74,7 @@ public class UserManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -81,9 +86,12 @@ public class UserManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
+    public void requestData(String s) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_gryhgl);
         params.addBodyParameter("page", page + "");
+        if (s != null) {
+            params.addBodyParameter("cx", s);
+        }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -124,9 +132,6 @@ public class UserManagerFragment extends BaseFragment {
     }
 
 
-    // ======================== 模板代码=============================
-
-
     @Override
     public int getLayout() {
         return R.layout.jg_fragment_layout_usermanager;
@@ -135,7 +140,13 @@ public class UserManagerFragment extends BaseFragment {
     @OnClick(R.id.select)
     public void onClick() {
         toast("查询");
-    }
+        if(adapter!=null){
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page=1;
+        }
+        requestData(imputName.getText().toString());
 
+    }
 
 }

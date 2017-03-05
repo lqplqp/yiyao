@@ -13,12 +13,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/qy_admin"
-            android:textColor="@color/global_white"
+            android:textColor="@color/global_black"
             android:layout_marginLeft="40dp"
             android:textSize="16sp"
             android:padding="5dp"
             android:clickable="true"
-            android:background="@drawable/fillet_blue_bg"
             android:id="@+id/company_a_btn" />
 
         <TextView
@@ -26,6 +25,7 @@
             android:layout_height="wrap_content"
             android:text="@string/qy_user"
             android:textColor="@color/global_black"
+
             android:layout_marginLeft="40dp"
             android:textSize="16sp"
             android:padding="5dp"
@@ -36,7 +36,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/qy_gongsi"
-            android:textColor="@color/global_black"
+            android:textColor="@color/global_white"
+
+            android:background="@drawable/fillet_blue_bg"
             android:layout_marginLeft="40dp"
             android:textSize="16sp"
             android:padding="5dp"
@@ -124,50 +126,6 @@
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
             />
-        <RadioGroup
-            android:layout_marginLeft="18dp"
-            android:layout_width="match_parent"
-            android:id="@+id/radiogroup"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></LinearLayout>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="食品"
-                android:id="@+id/eat" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="药品"
-                android:id="@+id/yao" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="化妆品"
-                android:id="@+id/huazhuang" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="保健品"
-                android:id="@+id/baojian" />
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="医疗器械"
-                android:id="@+id/yiliao" />
-        </RadioGroup>
 
 
         <TextView
