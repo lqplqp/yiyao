@@ -22,6 +22,7 @@
         />
         <activity android:name=".MainActivity"/>
         <activity android:name=".shengji.RegisterActivity"/>
+        <activity android:name=".shengji.Register1Activity"/>
         <activity android:name=".activity.ExamActivity"/>
         <activity android:name=".activity.PeiXunActivity"/>
     </application>

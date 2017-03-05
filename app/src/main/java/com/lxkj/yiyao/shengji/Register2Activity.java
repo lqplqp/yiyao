@@ -1,9 +1,6 @@
 package com.lxkj.yiyao.shengji;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -20,14 +17,13 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class RegisterActivity extends BaseActivity implements RegisterContract.RegisterView {
+public class Register2Activity extends BaseActivity implements RegisterContract.RegisterView {
     @BindView(R.id.username)
     EditText username;
     @BindView(R.id.password)
@@ -44,17 +40,15 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     RadioButton baojian;
     @BindView(R.id.yiliao)
     RadioButton yiliao;
+    @BindView(R.id.image)
+    ImageView image;
     @BindView(R.id.register)
     TextView register;
     @BindView(R.id.radiogroup)
     RadioGroup radiogroup;
-    @BindView(R.id.user_btn)
-    TextView userBtn;
-    @BindView(R.id.company_2_btn)
-    TextView company2Btn;
 
 
-    private String TAG = "RegisterActivity";
+    private  String TAG = "RegisterActivity";
 
     @Override
     protected void init() {
@@ -65,26 +59,24 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     public int getLayout() {
         return R.layout.register;
     }
-
     @Override
-    public void toRegister() {
+    public void toRegister(){
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg);
+        RequestParams params = new RequestParams(GlobalString.BaseURL+GlobalString.reg);
 
-        params.addBodyParameter("username", username.getText().toString());
-        params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("type", radiogroup.getCheckedRadioButtonId() + "");
+        params.addBodyParameter("username",username.getText().toString());
+        params.addBodyParameter("password",password.getText().toString());
+        params.addBodyParameter("type",radiogroup.getCheckedRadioButtonId()+"");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG, result);
+                Log.i(TAG,result);
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-                ex.printStackTrace();
-                ;
+                ex.printStackTrace();;
             }
 
             @Override
@@ -94,7 +86,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
             @Override
             public void onFinished() {
-                Log.i(TAG, "finish");
+                Log.i(TAG,"finish");
             }
         });
 
@@ -104,24 +96,5 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     @OnClick(R.id.register)
     public void onClick() {
         toRegister();
-    }
-
-
-
-
-    @OnClick({R.id.user_btn, R.id.company_2_btn})
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.user_btn:
-                Intent intent = new Intent(this,Register1Activity.class);
-                startActivity(intent);
-                finish();
-                break;
-            case R.id.company_2_btn:
-                Intent intent2 = new Intent(this,Register2Activity.class);
-                startActivity(intent2);
-                finish();
-                break;
-        }
     }
 }
