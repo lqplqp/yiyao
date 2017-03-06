@@ -20,6 +20,8 @@
         <activity android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
+
+        <activity android:name=".jianguan.AddAdminActivity"/>
         <activity android:name=".MainActivity"/>
         <activity android:name=".activity.RegisterActivity"/>
         <activity android:name=".activity.Register1Activity"/>

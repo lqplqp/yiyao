@@ -50,7 +50,7 @@ public class HomeFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.add_people:
-                Intent intent = new Intent(getActivity(),RegisterActivity.class);
+                Intent intent = new Intent(getActivity(),AddAdminActivity.class);
                 startActivity(intent);
                 break;
             case R.id.select_project:
