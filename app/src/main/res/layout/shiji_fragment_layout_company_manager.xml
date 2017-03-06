@@ -301,6 +301,10 @@
                         android:textSize="@dimen/table_textsize" />
                 </TableRow>
             </TableLayout>
+            <com.lxkj.yiyao.view.RefreshListView
+                android:id="@+id/list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></com.lxkj.yiyao.view.RefreshListView>
         </LinearLayout>
     </RelativeLayout>
 </android.support.v4.widget.NestedScrollView>
