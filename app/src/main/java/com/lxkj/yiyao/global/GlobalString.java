@@ -9,7 +9,7 @@ public interface GlobalString {
     public static final String BaseURL = "http://af.0101hr.com/";
 
 
-
+    public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";
 
 

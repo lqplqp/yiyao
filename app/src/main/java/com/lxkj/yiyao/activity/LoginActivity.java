@@ -1,26 +1,20 @@
-package com.lxkj.yiyao.shengji;
+package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 
-import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 import com.lxkj.yiyao.MainActivity;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.bean.LoginBean;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.contract.LoginContract;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -31,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -119,6 +112,10 @@ public class LoginActivity extends BaseActivity  {
     }
 
     private void onClickLogin() {
+        if(username.getText().toString().equals("")){
+            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(intent);
+        }
 
 
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.login);
@@ -128,7 +125,6 @@ public class LoginActivity extends BaseActivity  {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-
                 Gson gson = new Gson();
                 LoginBean loginBean = gson.fromJson(result, LoginBean.class);
                 if(loginBean.code == 111111){

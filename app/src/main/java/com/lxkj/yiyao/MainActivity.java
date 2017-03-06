@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.lxkj.yiyao.activity.LoginActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
@@ -36,7 +37,6 @@ import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
 import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
 import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
-import com.lxkj.yiyao.shengji.LoginActivity;
 import com.lxkj.yiyao.shengji.PersonAnalysisFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
 import com.lxkj.yiyao.shengji.TiJianSearchFragment;
