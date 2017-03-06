@@ -46,6 +46,7 @@
 
             <TextView
                 android:background="@drawable/table_frame_fray"
+                android:id="@+id/xuhao"
                 android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -56,6 +57,7 @@
 
             <TextView
                 android:background="@drawable/table_frame_fray"
+
                 android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -63,10 +65,11 @@
                 android:text="河南省中医院"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/textView31" />
+                android:id="@+id/tijaindanwei" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
+                android:id="@+id/renshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
                 android:layout_weight="1"
@@ -76,70 +79,7 @@
                 android:textSize="@dimen/table_textsize" />
         </TableRow>
 
-        <TableRow>
 
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="2"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="XXXX"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="XXXX"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-        </TableRow>
-        <TableRow>
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="3"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="XXXX"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="XXXX"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-        </TableRow>
         <TableRow>
 
             <TextView
