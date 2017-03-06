@@ -9,7 +9,7 @@
         android:name=".App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".shengji.LoginActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,8 +21,8 @@
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
         <activity android:name=".MainActivity"/>
-        <activity android:name=".shengji.RegisterActivity"/>
-        <activity android:name=".shengji.Register1Activity"/>
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.Register1Activity"/>
         <activity android:name=".activity.ExamActivity"/>
         <activity android:name=".activity.PeiXunActivity"/>
     </application>

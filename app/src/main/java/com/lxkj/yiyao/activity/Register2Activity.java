@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.shengji;
+package com.lxkj.yiyao.activity;
 
 import android.util.Log;
 import android.widget.EditText;
