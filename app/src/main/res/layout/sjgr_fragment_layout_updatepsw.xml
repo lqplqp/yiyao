@@ -31,7 +31,7 @@
                 android:textColor="@color/global_gray"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:hint="输入当前密码"
-                />
+                android:id="@+id/old_pwd" />
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -65,7 +65,7 @@
                 android:textColor="@color/global_gray"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:hint="输入不少于6位的新密码"
-                />
+                android:id="@+id/new_pwd" />
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -92,6 +92,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:text="*重复密码："
                 />
+
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -99,7 +100,8 @@
                 android:textColor="@color/global_gray"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:hint="请再次输入新密码"
-                />
+                android:id="@+id/new_pwd2" />
+
             <ImageView
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -118,5 +120,5 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/white"
         android:text="提交"
-        />
+        android:id="@+id/commit" />
 </LinearLayout>

@@ -118,7 +118,8 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="被执法人信息卡编号\n许可证编号"
+                android:text="被执法人信息卡编号许可证编号"
+
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:id="@+id/textView49" />
@@ -206,11 +207,5 @@
 
     </TableLayout>
     <!--体验机构列表 end-->
-
-    <View
-        android:background="@color/global_bg_gray"
-        android:layout_width="match_parent"
-
-        android:layout_height="10dp"/>
 
 </LinearLayout>

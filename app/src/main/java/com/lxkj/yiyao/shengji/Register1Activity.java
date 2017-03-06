@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -27,7 +26,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class RegisterActivity extends BaseActivity implements RegisterContract.RegisterView {
+public class Register1Activity extends BaseActivity implements RegisterContract.RegisterView {
     @BindView(R.id.username)
     EditText username;
     @BindView(R.id.password)
@@ -48,10 +47,8 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     TextView register;
     @BindView(R.id.radiogroup)
     RadioGroup radiogroup;
-    @BindView(R.id.user_btn)
-    TextView userBtn;
-    @BindView(R.id.company_2_btn)
-    TextView company2Btn;
+    @BindView(R.id.company_a_btn)
+    TextView companyABtn;
 
 
     private String TAG = "RegisterActivity";
@@ -63,7 +60,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
     @Override
     public int getLayout() {
-        return R.layout.register;
+        return R.layout.register_user;
     }
 
     @Override
@@ -101,26 +98,17 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
     }
 
-    @OnClick(R.id.register)
-    public void onClick() {
-        toRegister();
-    }
 
 
-
-
-    @OnClick({R.id.user_btn, R.id.company_2_btn})
+    @OnClick({R.id.company_a_btn, R.id.register})
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.user_btn:
-                Intent intent = new Intent(this,Register1Activity.class);
+            case R.id.company_a_btn:
+                Intent intent = new Intent(this,RegisterActivity.class);
                 startActivity(intent);
                 finish();
                 break;
-            case R.id.company_2_btn:
-                Intent intent2 = new Intent(this,Register2Activity.class);
-                startActivity(intent2);
-                finish();
+            case R.id.register:
                 break;
         }
     }

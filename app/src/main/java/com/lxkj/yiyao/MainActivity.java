@@ -24,6 +24,7 @@ import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
+import com.lxkj.yiyao.jianguan.JGUpdatePswFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
 import com.lxkj.yiyao.jianguan.UserManagerFragment;
@@ -183,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_2:
                                 setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.zengjiajianguan0);
-                                SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                                JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_logout:

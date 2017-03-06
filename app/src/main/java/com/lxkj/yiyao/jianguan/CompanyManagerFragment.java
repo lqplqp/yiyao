@@ -49,7 +49,7 @@ public class CompanyManagerFragment extends BaseFragment {
     @Override
     protected void initView() {
 
-
+        requestData(null);
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -62,7 +62,7 @@ public class CompanyManagerFragment extends BaseFragment {
                 page=1;
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -71,7 +71,7 @@ public class CompanyManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null);
 
 
 
@@ -87,9 +87,12 @@ public class CompanyManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData(){
+    public void requestData(String s){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_qygl);
         params.addBodyParameter("page",page+"");
+        if(s!=null){
+            params.addBodyParameter("cx",s);
+        }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -142,17 +145,14 @@ public class CompanyManagerFragment extends BaseFragment {
     public void onClick() {
         toast("查询");
         // TODO: 2017/1/18
-
-        requestData();
+        if(adapter!=null){
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page=1;
+        }
+        requestData(companyName.getText().toString());
 
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 }
