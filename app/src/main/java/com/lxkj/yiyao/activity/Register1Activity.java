@@ -8,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
@@ -78,15 +79,39 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
         params.addBodyParameter("xm",xingming.getText().toString());
+        params.addBodyParameter("qrmm",repassword.getText().toString());
         params.addBodyParameter("sfzh",shenfenzheng.getText().toString());
-        params.addBodyParameter("lx",radiogroup.getCheckedRadioButtonId()+"");
-
-        params.addBodyParameter("type", radiogroup.getCheckedRadioButtonId() + "");
+        int a = 0;
+        switch (radiogroup.getCheckedRadioButtonId()){
+            case R.id.eat :
+                a=1;
+                break;
+            case R.id.yao:
+                a=2;
+                break;
+            case R.id.huazhuang:
+                a=3;
+                break;
+            case R.id.baojian:
+                a=4;
+                break;
+            case R.id.yiliao:
+                a=5;
+                break;
+        }
+        params.addBodyParameter("lx", a+"");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG, result);
+                JSONObject object = JSONObject.parseObject(result);
+                int code = Integer.parseInt(object.get("code").toString());
+                if(code == 111111){
+                    ToastUtil.show("注册成功");
+                }else{
+                    ToastUtil.show(object.get("message").toString());
+                }
+
             }
 
             @Override

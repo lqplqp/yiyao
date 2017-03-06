@@ -8,10 +8,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.contract.RegisterContract;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -66,22 +68,48 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     @Override
     public void toRegister() {
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg1);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg);
 
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("type", radiogroup.getCheckedRadioButtonId() + "");
+        int a = 0;
+        switch (radiogroup.getCheckedRadioButtonId()){
+            case R.id.eat :
+                a=1;
+                break;
+            case R.id.yao:
+                a=2;
+                break;
+            case R.id.huazhuang:
+                a=3;
+                break;
+            case R.id.baojian:
+                a=4;
+                break;
+            case R.id.yiliao:
+                a=5;
+                break;
+        }
+        params.addBodyParameter("lx", a+"");
+        params.addBodyParameter("qrmm",repassword.getText().toString());
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG, result);
+                JSONObject object = JSONObject.parseObject(result);
+                int code = Integer.parseInt(object.get("code").toString());
+                if(code == 111111){
+                    ToastUtil.show("注册成功");
+                }else {
+                    ToastUtil.show("" + object.get("message"));
+                }
+
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
                 ex.printStackTrace();
-                ;
+
             }
 
             @Override

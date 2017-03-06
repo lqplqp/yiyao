@@ -22,9 +22,9 @@ public class TiJianTongJiAdapter extends MBaseAdapter <TiJianTongJiAdapter.ViewH
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //人数
-        holder.renshu.setText(""+result.getString("renshu"));
+        /*holder.renshu.setText(""+result.getString("renshu"));
         //体检单位
-        holder.tijaindanwei.setText(""+result.getString("tijiandanwei"));
+        holder.tijaindanwei.setText(""+result.getString("tijiandanwei"));*/
         //序号
         holder.xuhao.setText(""+result.getString("xuhao"));
     }
@@ -42,10 +42,6 @@ public class TiJianTongJiAdapter extends MBaseAdapter <TiJianTongJiAdapter.ViewH
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tijaindanwei)
-        TextView tijaindanwei;
-        @BindView(R.id.renshu)
-        TextView renshu;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
