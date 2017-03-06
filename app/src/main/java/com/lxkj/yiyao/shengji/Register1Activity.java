@@ -13,6 +13,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.contract.RegisterContract;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -27,8 +28,20 @@ import butterknife.OnClick;
  */
 
 public class Register1Activity extends BaseActivity implements RegisterContract.RegisterView {
+
+
+    @BindView(R.id.company_a_btn)
+    TextView companyABtn;
+    @BindView(R.id.user_btn)
+    TextView userBtn;
+    @BindView(R.id.company)
+    TextView company;
     @BindView(R.id.username)
     EditText username;
+    @BindView(R.id.xingming)
+    EditText xingming;
+    @BindView(R.id.shenfenzheng)
+    EditText shenfenzheng;
     @BindView(R.id.password)
     EditText password;
     @BindView(R.id.repassword)
@@ -43,14 +56,10 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
     RadioButton baojian;
     @BindView(R.id.yiliao)
     RadioButton yiliao;
-    @BindView(R.id.register)
-    TextView register;
     @BindView(R.id.radiogroup)
     RadioGroup radiogroup;
-    @BindView(R.id.company_a_btn)
-    TextView companyABtn;
-
-
+    @BindView(R.id.register)
+    TextView register;
     private String TAG = "RegisterActivity";
 
     @Override
@@ -66,10 +75,14 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
     @Override
     public void toRegister() {
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg1);
 
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
+        params.addBodyParameter("xm",xingming.getText().toString());
+        params.addBodyParameter("sfzh",shenfenzheng.getText().toString());
+        params.addBodyParameter("lx",radiogroup.getCheckedRadioButtonId()+"");
+
         params.addBodyParameter("type", radiogroup.getCheckedRadioButtonId() + "");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
@@ -81,7 +94,6 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
                 ex.printStackTrace();
-                ;
             }
 
             @Override
@@ -99,17 +111,20 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
     }
 
 
-
     @OnClick({R.id.company_a_btn, R.id.register})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.company_a_btn:
-                Intent intent = new Intent(this,RegisterActivity.class);
+                Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.register:
+                ToastUtil.show("213");
+                toRegister();
                 break;
         }
     }
+
+
 }

@@ -62,7 +62,7 @@ public class Register2Activity extends BaseActivity implements RegisterContract.
     @Override
     public void toRegister(){
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL+GlobalString.reg);
+        RequestParams params = new RequestParams(GlobalString.BaseURL+GlobalString.reg1);
 
         params.addBodyParameter("username",username.getText().toString());
         params.addBodyParameter("password",password.getText().toString());

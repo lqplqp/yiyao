@@ -10,10 +10,10 @@ public interface GlobalString {
 
 
 
+    public static final String reg1 = "/admin/denglu/zc1";
 
-    public static final String reg = "/admin/jiekou/reg/";
 
-    public static final String login = "/admin/jiekou/";
+    public static final String login = "/admin/denglu/login/";
 
     public static final String fenji = "/admin/fenji/qygl/";
 
@@ -27,7 +27,10 @@ public interface GlobalString {
     public static final String jg_jgdwgl = "admin/fenji/jgdwgl/";
 
     //执法记录管理
-    public static final String jg_zfjlgl = "admin/fenji/zfjlgl/";
+    public static final String jg_zfjlgl = "admin/fenji1/zfjlgl/";
+
+
+
 
 
 
