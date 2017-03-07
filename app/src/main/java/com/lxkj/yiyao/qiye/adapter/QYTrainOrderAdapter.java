@@ -34,15 +34,15 @@ public class QYTrainOrderAdapter extends MBaseAdapter<QYTrainOrderAdapter.ViewHo
         //已付款
         holder.yifukuan.setText("" + result.get("yfk"));
         //应付款
-        holder.yingfukuan.setText("" + result.get("yingfukuan"));
+        holder.yingfukuan.setText("" + result.get("yfk2"));
         //交易状态
-        holder.jiaoyizhuangtai.setText("" + result.get("jyzt"));
+        holder.jiaoyizhuangtai.setText("" + result.get("status"));
         //查看
-        holder.chakan.setText("" + result.get("chakan"));
+        /*holder.chakan.setText("" + result.get("chakan"));
         //付款
         holder.fukuan.setText("" + result.get("fukuan"));
         //取消
-        holder.quxiao.setText("" + result.get("quxiao"));
+        holder.quxiao.setText("" + result.get("quxiao"));*/
 
     }
 

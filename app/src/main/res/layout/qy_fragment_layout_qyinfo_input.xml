@@ -33,8 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="username"
+            android:hint="username"
             />
     </LinearLayout>
     <View
@@ -59,8 +58,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_gray"
-        android:text="新乡面对面重庆小店"
+        android:hint="新乡面对面重庆小店"
         />
 </LinearLayout>
     <View
@@ -85,8 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="3"
+            android:hint="3"
             />
     </LinearLayout>
     <View
@@ -111,8 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="1"
+            android:hint="1"
             />
     </LinearLayout>
     <View
@@ -137,8 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="username"
+            android:hint="username"
             />
     </LinearLayout>
     <View
@@ -163,8 +158,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="username@163.com"
+            android:hint="username@163.com"
             />
     </LinearLayout>
     <View
@@ -189,8 +183,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="13343434567"
+            android:hint="13343434567"
             />
     </LinearLayout>
     <View
@@ -210,6 +203,7 @@
             android:textColor="@color/global_black"
             android:text="*行 业  领 域："/>
         <RadioGroup
+            android:id="@+id/radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp">
@@ -261,8 +255,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:maxWidth="220dp"
             android:maxLines="3"
-            android:text="牧野区河南省新乡市牧野区河南省新乡市牧野区"
-            android:textColor="@color/global_gray"
+            android:hint="牧野区河南省新乡市牧野区河南省新乡市牧野区"
             />
     </LinearLayout>
     <View

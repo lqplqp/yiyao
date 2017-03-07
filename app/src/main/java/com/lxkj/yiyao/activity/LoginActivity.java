@@ -120,6 +120,7 @@ public class LoginActivity extends BaseActivity  {
 
 
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.login);
+
         params.addBodyParameter("username",username.getText().toString());
         params.addBodyParameter("password",password.getText().toString());
         params.addBodyParameter("access",userType + "");
