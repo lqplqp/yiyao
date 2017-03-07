@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.shengji.adapter;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,16 +17,24 @@ import butterknife.ButterKnife;
  */
 
 public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.ViewHolder> {
+
+
     public CompanyManagerAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.enterpriseName.setText(""+result.get("jgdwmc"));
-        holder.getInfoPeople.setText(""+result.get("getInfoPeople"));
-        holder.tijianhegePeople.setText(""+result.get("tijianhegePeople"));
-        holder.peixunhegeRenshu.setText(""+result.get("peixunhegeRenshu"));
+        holder.enterpriseName.setText("" + result.get("qymc"));
+        holder.getInfoPeople.setText("" + result.get("hqxxkrs"));
+        holder.tijianhegePeople.setText("" + result.get("tjhgrs"));
+        holder.peixunhegeRenshu.setText("" + result.get("pxhgrs"));
+        holder.beizhu.setText("" + result.get("bz"));
+        /*if ((Boolean) result.get("gqtx")){
+            holder.gqtx.setImageResource(R.mipmap.green_ture);
+        }else {
+            holder.gqtx.setImageResource(R.mipmap.red_point);
+        }*/
 
     }
 
@@ -56,10 +65,10 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         TextView getInfoPeople;
         @BindView(R.id.textView2)
         TextView textView2;
-        @BindView(R.id.textView3)
-        TextView textView3;
-        @BindView(R.id.activity_main)
-        RelativeLayout activityMain;
+        @BindView(R.id.gqtx)
+        ImageView gqtx;
+        @BindView(R.id.beizhu)
+        TextView beizhu;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

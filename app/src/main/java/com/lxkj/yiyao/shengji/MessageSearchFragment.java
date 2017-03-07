@@ -38,7 +38,7 @@ public class MessageSearchFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override

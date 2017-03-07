@@ -8,7 +8,6 @@
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
         android:background="@drawable/fillet_white_bg">
 
 
@@ -34,7 +33,7 @@
                 android:text="XXXX"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/username" />
+                android:id="@+id/yhm" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -45,18 +44,13 @@
                 android:text="XXXX"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/user_name" />
+                android:id="@+id/xm" />
         </TableRow>
 
 
 
     </TableLayout>
 
-    <View
-        android:background="@color/global_bg_gray"
-        android:layout_width="match_parent"
-
-        android:layout_height="10dp"/>
 
 
 </LinearLayout>

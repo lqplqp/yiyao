@@ -22,11 +22,11 @@ public class ShenHeAapter extends MBaseAdapter <ShenHeAapter.ViewHolder>{
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //登录用户名
-        holder.dengluyonghuming.setText(""+result.getString("dengluyonghuming"));
+        holder.dengluyonghuming.setText(""+result.getString("dlyhm"));
         //体检机构名
-        holder.tijianjigouming.setText(""+result.getString("tijianjigouming"));
+        holder.tijianjigouming.setText(""+result.getString("tjglmc"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
     }
 
     @Override

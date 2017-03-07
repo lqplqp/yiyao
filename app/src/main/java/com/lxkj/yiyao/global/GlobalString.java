@@ -43,12 +43,15 @@ public interface GlobalString {
     public static final String fenji1_jgrygl = "/admin/fenji1/jgrygl";
 
 
-    //培训通知列表接口没有
+
+    //培训通知列表接
+    public static final String fenji1_pxtzgl = "/admin/fenji1/pxtzgl";
 
     //体检机构审核
     public static final String fenji1_tjjgsh = "/admin/fenji1/tjjgsh";
 
-    //企业管理接口没有
+    //企业管理接口
+    public static final String fenji1_qygl = "/admin/fenji1/qygl";
 
     //培训报名
     //已报培训项目

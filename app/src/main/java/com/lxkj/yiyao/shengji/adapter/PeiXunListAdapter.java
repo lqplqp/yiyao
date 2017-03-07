@@ -21,14 +21,14 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.caozuo.setText("" + result.get("caozuo"));
-        holder.goumaishijian.setText("" + result.get("goumaishijian"));
-        holder.number.setText("" + result.get("number"));
-        holder.peixunbanleixing.setText("" + result.get("peixunbanleixing"));
-        holder.peixunbanmingci.setText("" + result.get("peixunbanmingci"));
-        holder.peixuntime.setText("" + result.get("peixuntime"));
-        holder.xuexijindu.setText("" + result.get("xuexijindu"));
-        holder.zhengshumingcheng.setText("" + result.get("zhengshumingcheng"));
+//        holder.caozuo.setText("" + result.get("caozuo"));
+        holder.goumaishijian.setText("" + result.get("cjsj"));
+        holder.number.setText("" + result.get("id"));
+        holder.peixunbanleixing.setText("" + result.get(" pxlx"));
+        holder.peixunbanmingci.setText("" + result.get("pxbmc"));
+        holder.peixuntime.setText("" + result.get("pxkssj"));
+        holder.xuexijindu.setText("" + result.get("xxjd"));
+        holder.zhengshumingcheng.setText("" + result.get("pxbt"));
     }
 
 

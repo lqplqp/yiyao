@@ -114,6 +114,7 @@ public class LoginActivity extends BaseActivity  {
     private void onClickLogin() {
         if(username.getText().toString().equals("")){
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra("userType",userType);
             startActivity(intent);
         }
 

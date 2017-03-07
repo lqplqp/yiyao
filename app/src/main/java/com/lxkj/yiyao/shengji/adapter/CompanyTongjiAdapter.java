@@ -22,11 +22,11 @@ public class CompanyTongjiAdapter extends MBaseAdapter <CompanyTongjiAdapter.Vie
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //企业数量
-        holder.qiyeshuliang.setText(""+result.getString("qiyeshuliang"));
+        holder.qiyeshuliang.setText(""+result.getString("qysl"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
         //地区
-        holder.diqu.setText(""+result.getString("diqu"));
+        holder.diqu.setText(""+result.getString("dq"));
     }
 
     @Override

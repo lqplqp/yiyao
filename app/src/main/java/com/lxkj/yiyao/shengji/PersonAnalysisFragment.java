@@ -27,13 +27,13 @@ import butterknife.BindView;
         RefreshListView listView;
         private int page = 1;
 
-        private String TAG = "CompanyManageyFragment";
+        private String TAG = "PersonAnalysisFragment";
 
 
         @Override
         protected void initView() {
 
-
+requestData();
             listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
                 @Override
                 public void onDownPullRefresh() {
