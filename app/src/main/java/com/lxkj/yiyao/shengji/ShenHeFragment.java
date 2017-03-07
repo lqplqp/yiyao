@@ -1,76 +1,132 @@
 package com.lxkj.yiyao.shengji;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TableLayout;
-import android.widget.TableRow;
-import android.widget.TextView;
+import android.view.ViewGroup;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.shengji.contract.ShenHeContract;
+import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.shengji.adapter.ShenHeAapter;
+import com.lxkj.yiyao.view.RefreshListView;
 
-import java.util.List;
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class ShenHeFragment extends BaseFragment implements ShenHeContract.ShenHeView,View.OnClickListener{
+public class ShenHeFragment extends BaseFragment {
 
-    //查询按钮
-    private TextView select;
-    //输入关键字框
-    private EditText input_key;
-    //表格布局
-    private TableLayout tableLayout;
+    // ======================== 模板代码=============================
+
+    ShenHeAapter adapter;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
+    private int page = 1;
+
+    private String TAG = "CompanyManageyFragment";
 
 
     @Override
     protected void initView() {
-        select = (TextView) findViewById(R.id.select);
-        input_key = (EditText) findViewById(R.id.input_key);
-        tableLayout = (TableLayout) findViewById(R.id.table);
 
-        select.setOnClickListener(this);
+
+        listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+            @Override
+            public void onDownPullRefresh() {
+
+
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
+
+
+                requestData();
+
+
+            }
+
+            @Override
+            public void onLoadingMore() {
+
+
+                requestData();
+
+
+            }
+        });
+
+
     }
+    // ======================== 模板代码=============================
+
+
+    // ======================== 模板代码=============================
+    public void requestData() {
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tjjgsh);
+        params.addBodyParameter("page", page + "");
+
+        x.http().get(params, new Callback.CacheCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Log.i(TAG, result);
+                if (adapter == null) {
+                    adapter = new ShenHeAapter(result);
+                    listView.setAdapter(adapter);
+                } else {
+                    adapter.addData(result);
+                    listView.deferNotifyDataSetChanged();
+                }
+                page++;
+
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+                ex.printStackTrace();
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+                listView.onRefreshComplete();
+                listView.loadMoreComplete();
+            }
+
+            @Override
+            public boolean onCache(String result) {
+                return false;
+            }
+        });
+    }
+
+
+    // ======================== 模板代码=============================
 
     @Override
     public int getLayout() {
         return R.layout.sj_fragment_layout_shenhe;
     }
 
-    @Override
-    public void addRow(TableRow row) {
-        // TODO: 2017/1/18 0018 需要加入参数信息
-        tableLayout.addView(row,null);
-    }
 
     @Override
-    public void addRows(List<TableRow> rows) {
-        for(TableRow row : rows){
-            addRow(row);
-        }
-    }
-
-    @Override
-    public void onClick(View view) {
-        int id = view.getId();
-        switch (id){
-            case R.id.select:
-                onClickSelect();
-                break;
-        }
-    }
-
-    //点击了查询按钮
-    private void onClickSelect() {
-        toast("查询");
-        if(input_key.getText().equals("") || input_key.getText()==null){
-            toast("关键字不可以为空");
-            return;
-        }
-        // TODO: 2017/1/18 0018 搜索 
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 }

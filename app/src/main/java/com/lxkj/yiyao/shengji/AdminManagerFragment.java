@@ -75,7 +75,7 @@ public class AdminManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_qygl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgrygl);
         params.addBodyParameter("page", page + "");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
