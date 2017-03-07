@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray">
-
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/global_bg_gray">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -91,10 +88,12 @@
     </RelativeLayout>
 
 
+    <com.lxkj.yiyao.view.RefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list_view"
+        ></com.lxkj.yiyao.view.RefreshListView>
 
 
     <!--体验机构列表 end-->
 </LinearLayout>
-
-
-</android.support.v4.widget.NestedScrollView>

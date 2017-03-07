@@ -44,7 +44,8 @@
             android:paddingRight="20dp"
             android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
-            android:textColor="@color/global_white" />
+            android:textColor="@color/global_white"
+            android:id="@+id/select" />
     </RelativeLayout>
 
     <LinearLayout
@@ -82,7 +83,8 @@
                 android:background="@drawable/table_border_bg"
                 android:hint="姓名、信息卡编号"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:lines="1"/>
+                android:lines="1"
+                android:id="@+id/content" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,7 +114,8 @@
                     android:layout_height="@dimen/edit_height"
                     android:background="@drawable/table_border_bg"
                     android:gravity="center">
-                    <Spinner
+                    <TextView
+                        android:id="@+id/start_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         />
@@ -130,7 +133,8 @@
                     android:layout_height="@dimen/edit_height"
                     android:background="@drawable/table_border_bg"
                     android:gravity="center">
-                    <Spinner
+                    <TextView
+                        android:id="@+id/end_time"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         />
