@@ -77,6 +77,17 @@ public interface GlobalString {
     //-----------分级1 接口
     //--------------------------------------
 
+    // ---------------------------企业管理员-------------------------
+    public static final String qiye_info = "/admin/fenji5/qyxx";
+    public static final String qiye_person_manager = "/admin/fenji5/qyglqyry";
+
+    public static final String qiye_xxk = "/admin/fenji5/xxk";
+    public static final String qiye_quanbudingdan = "/admin/fenji5/allorder";
+
+    public static final String qiye_daifukuan = "/admin/fenji5/dfkorder";
+    public static final String qiye_yifukuan = "/admin/fenji5/yfkorder";
+    public static final String qiye_yiquxiao = "/admin/fenji5/yqxorder";
+// ---------------------------市级管理员-------------------------
 
 
 

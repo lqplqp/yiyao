@@ -114,11 +114,13 @@ public class LoginActivity extends BaseActivity  {
     private void onClickLogin() {
         if(username.getText().toString().equals("")){
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+            intent.putExtra("userType",userType);
             startActivity(intent);
         }
 
 
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.login);
+
         params.addBodyParameter("username",username.getText().toString());
         params.addBodyParameter("password",password.getText().toString());
         params.addBodyParameter("access",userType + "");
