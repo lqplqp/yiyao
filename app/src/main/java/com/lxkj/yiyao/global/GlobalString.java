@@ -29,6 +29,13 @@ public interface GlobalString {
     //执法记录管理
     public static final String jg_zfjlgl = "admin/fenji1/zfjlgl/";
 
+    //shiji_监管人员管理
+    public static final String shiji_jgrygl = "admin/fenji3/jgrygl/";
+    //shiji_培训通知管理
+    public static final String shiji_pxtzgl = "admin/fenji3/pxtzgl/";
+    //shiji_企业管理
+    public static final String shiji_qygl = "admin/fenji3/qygl/";
+
 
 
 

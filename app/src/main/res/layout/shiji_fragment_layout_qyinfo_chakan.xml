@@ -28,7 +28,7 @@
             android:textColor="@color/global_black"
             android:text="用    户    名："/>
         <TextView
-            android:id="@+id/username_tv"
+            android:id="@+id/username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -54,7 +54,7 @@
         android:textColor="@color/global_black"
         android:text="单 位  名 称："/>
     <TextView
-        android:id="@+id/unitname_tv"
+        android:id="@+id/danweimingcheng"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -80,7 +80,7 @@
             android:textColor="@color/global_black"
             android:text="从 业  人 数："/>
         <TextView
-            android:id="@+id/do_person_tv"
+            android:id="@+id/congyerenshu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -106,7 +106,7 @@
             android:textColor="@color/global_black"
             android:text="管理人员数："/>
         <TextView
-            android:id="@+id/manage_person_tv"
+            android:id="@+id/guanliyuanrenshu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -132,7 +132,7 @@
             android:textColor="@color/global_black"
             android:text="管    理    员："/>
         <TextView
-            android:id="@+id/contact_name_tv"
+            android:id="@+id/guanliyuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -158,7 +158,7 @@
             android:textColor="@color/global_black"
             android:text="电            话："/>
         <TextView
-            android:id="@+id/email_tv"
+            android:id="@+id/dianhuan"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -184,7 +184,7 @@
             android:textColor="@color/global_black"
             android:text="职            务："/>
         <TextView
-            android:id="@+id/phone_tv"
+            android:id="@+id/zhiwu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -210,6 +210,7 @@
             android:textColor="@color/global_black"
             android:text="邮            箱："/>
         <TextView
+            android:id="@+id/youxiang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -235,6 +236,7 @@
             android:textColor="@color/global_black"
             android:text="行 业  领 域："/>
         <TextView
+            android:id="@+id/hangyelingyu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -260,6 +262,7 @@
             android:textColor="@color/global_black"
             android:text="所 在  地 区："/>
         <TextView
+            android:id="@+id/suozaidiqu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -286,7 +289,7 @@
             android:textColor="@color/global_black"
             android:text="单 位  地 址："/>
         <TextView
-            android:id="@+id/adress_tv"
+            android:id="@+id/danweidizhi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

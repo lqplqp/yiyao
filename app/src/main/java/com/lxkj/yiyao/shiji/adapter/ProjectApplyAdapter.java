@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,7 +15,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/3.
  */
 
-public class ProjectApplyAdapter extends MBaseAdapter<ProjectApplyAdapter.ViewHolder>{
+public class ProjectApplyAdapter extends MBaseAdapter<ProjectApplyAdapter.ViewHolder> {
     public ProjectApplyAdapter(String bean) {
         super(bean);
     }
