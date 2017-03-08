@@ -41,7 +41,7 @@ public class QYUpdatePswFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_updatepsw;
+        return R.layout.qy_updatepwd;
     }
 
 
