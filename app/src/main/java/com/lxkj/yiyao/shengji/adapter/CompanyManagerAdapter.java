@@ -41,7 +41,7 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
 
     @Override
     protected int getItemLayout() {
-        return R.layout.companymanager_item;
+        return R.layout.shengji_companymanager_item;
     }
 
     @Override

@@ -14,7 +14,9 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/2.
  */
 
-public class TiJianTongJiAdapter extends MBaseAdapter <TiJianTongJiAdapter.ViewHolder>{
+public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHolder> {
+
+
     public TiJianTongJiAdapter(String bean) {
         super(bean);
     }
@@ -22,11 +24,12 @@ public class TiJianTongJiAdapter extends MBaseAdapter <TiJianTongJiAdapter.ViewH
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //人数
-        /*holder.renshu.setText(""+result.getString("renshu"));
+        holder.renshu.setText(""+result.getString(" tjrs"));
         //体检单位
-        holder.tijaindanwei.setText(""+result.getString("tijiandanwei"));*/
+        holder.tijaindanwei.setText(""+result.getString("tjdw"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText("" + result.getString("id"));
+        holder.zongji.setText("" + result.getString("tj"));
     }
 
     @Override
@@ -42,7 +45,12 @@ public class TiJianTongJiAdapter extends MBaseAdapter <TiJianTongJiAdapter.ViewH
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-
+        @BindView(R.id.tijaindanwei)
+        TextView tijaindanwei;
+        @BindView(R.id.renshu)
+        TextView renshu;
+        @BindView(R.id.zongji)
+        TextView zongji;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

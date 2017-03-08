@@ -32,7 +32,7 @@ public class PersonAnalysisAdapter extends MBaseAdapter <PersonAnalysisAdapter.V
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_person_analysis_item;
+        return R.layout.shengji_person_analysis_item;
     }
 
     @Override

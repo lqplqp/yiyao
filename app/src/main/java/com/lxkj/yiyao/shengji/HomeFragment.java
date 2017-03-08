@@ -52,8 +52,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.HomeView,
 
     @Override
     protected void initView() {
-        addPeople.setOnClickListener(this);
-        selectProject.setOnClickListener(this);
     }
 
     @Override

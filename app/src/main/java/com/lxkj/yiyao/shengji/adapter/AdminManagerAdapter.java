@@ -37,7 +37,7 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
     }
 
     protected int getItemLayout() {
-        return R.layout.adminmanager_item;
+        return R.layout.shengji_adminmanager_item;
     }
 
     protected ViewHolder getHolder(View view) {

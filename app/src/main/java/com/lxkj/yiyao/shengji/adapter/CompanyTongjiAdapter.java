@@ -31,7 +31,7 @@ public class CompanyTongjiAdapter extends MBaseAdapter <CompanyTongjiAdapter.Vie
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_qiye_yonghu_tongji_item;
+        return R.layout.shengji_qiye_yonghu_tongji_item;
     }
 
     @Override

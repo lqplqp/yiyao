@@ -42,7 +42,7 @@ public class AdminManagerFragment extends BaseFragment {
     TextView startTime;
     @BindView(R.id.end_time)
     TextView endTime;
-    @BindView(R.id.select)
+    @BindView(R.id.chaxun)
     TextView select;
     @BindView(R.id.souguoneirong)
     EditText souguoneirong;
