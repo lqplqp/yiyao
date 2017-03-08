@@ -127,7 +127,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="管理员姓名,必填"
+            android:hint="确认密码"
             android:textColorHint="@color/global_gray"
             android:textSize="18sp"
             android:background="@null"
@@ -141,13 +141,15 @@
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
             />
+
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="电话,必填"
+            android:hint="管理员姓名,必填"
             android:textColorHint="@color/global_gray"
             android:textSize="18sp"
             android:background="@null"
@@ -167,11 +169,31 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="5dp"
-            android:hint="职务,必填"
+            android:hint="电话,必填"
             android:textColorHint="@color/global_gray"
             android:textSize="18sp"
             android:background="@null"
             android:id="@+id/phone" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:background="@color/global_gray"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:hint="职务,必填"
+            android:textColorHint="@color/global_gray"
+            android:textSize="18sp"
+            android:background="@null"
+            android:id="@+id/zhiwu" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
@@ -190,7 +212,7 @@
         android:textColorHint="@color/global_gray"
         android:textSize="18sp"
         android:background="@null"
-        android:id="@+id/zhiwu" />
+        android:id="@+id/email" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1.5dp"

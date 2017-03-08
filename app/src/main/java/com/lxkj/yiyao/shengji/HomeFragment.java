@@ -1,57 +1,39 @@
 package com.lxkj.yiyao.shengji;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.shengji.contract.HomeContract;
+import com.lxkj.yiyao.jianguan.*;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class HomeFragment extends BaseFragment implements HomeContract.HomeView, View.OnClickListener {
+public class HomeFragment extends BaseFragment {
 
-    @BindView(R.id.add_people)
-    TextView addPeople;
     @BindView(R.id.learning)
     TextView learning;
     @BindView(R.id.none)
     TextView none;
     @BindView(R.id.select_project)
     TextView selectProject;
+    @BindView(R.id.add_people)
+    TextView addPeople;
 
-
-    @Override
-    public void addPeople() {
-
-    }
-
-    @Override
-    public void selectProject() {
-
-    }
-
-    @Override
-    public void changeLearningCount(int count) {
-        learning.setText("" + count);
-    }
-
-    @Override
-    public void changeNoneCount(int count) {
-        none.setText("" + count);
-    }
 
     @Override
     protected void initView() {
+
     }
 
     @Override
@@ -59,25 +41,6 @@ public class HomeFragment extends BaseFragment implements HomeContract.HomeView,
         return R.layout.sj_fragment_layout_home;
     }
 
-    @Override
-    public void onClick(View view) {
-        int id = view.getId();
-        switch (id) {
-            case R.id.add_people:
-                clickAddPeople();
-                break;
-            case R.id.select_project:
-                clickSelectProject();
-                break;
-        }
-    }
-
-    /**
-     * 点击添加人员
-     */
-    private void clickAddPeople() {
-        toast("添加人员");
-    }
 
     /**
      * 点击选择项目
@@ -87,4 +50,11 @@ public class HomeFragment extends BaseFragment implements HomeContract.HomeView,
     }
 
 
+
+
+    @OnClick(R.id.add_people)
+    public void onClick() {
+        Intent intent = new Intent(getActivity(), AddAdminActivity.class);
+        startActivity(intent);
+    }
 }

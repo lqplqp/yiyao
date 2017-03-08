@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.RegisterActivity;
+import com.lxkj.yiyao.activity.SelectTrainActivity;
 import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
@@ -48,12 +49,15 @@ public class HomeFragment extends BaseFragment {
 
     @OnClick({R.id.add_people, R.id.select_project})
     public void onClick(View view) {
+        Intent intent ;
         switch (view.getId()) {
             case R.id.add_people:
-                Intent intent = new Intent(getActivity(),AddAdminActivity.class);
+                intent = new Intent(getActivity(),AddAdminActivity.class);
                 startActivity(intent);
                 break;
             case R.id.select_project:
+                intent = new Intent(getActivity(),SelectTrainActivity.class);
+                startActivity(intent);
                 break;
         }
     }

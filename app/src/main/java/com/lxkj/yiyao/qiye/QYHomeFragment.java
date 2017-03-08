@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.qiye;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
+import com.lxkj.yiyao.jianguan.*;
+import com.lxkj.yiyao.jianguan.AddAdminActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +41,8 @@ public class QYHomeFragment extends BaseFragment {
         switch (view.getId()) {
             case R.id.add:
                 toast("增加");// TODO: 2017/1/19 增加
+                Intent intent = new Intent(getActivity(), AddAdminActivity.class);
+                startActivity(intent);
                 break;
             case R.id.select:
                 toast("选择");// TODO: 2017/1/19 选择

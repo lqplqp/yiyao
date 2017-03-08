@@ -2,6 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lxkj.yiyao">
 
+
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAG"></uses-permission>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/icon"
@@ -20,6 +26,16 @@
         <activity android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
+
+        <activity android:name=".activity.SelectTrainActivity"/>
+
+        <activity android:name=".shengjugeren.AddAdminActivity"/>
+        <activity android:name=".shiji.AddAdminActivity"/>
+
+
+        <activity android:name=".qiye.AddAdminActivity"/>
+        <activity android:name=".qiyemanager.AddAdminActivity"/>
+        <activity android:name=".shengji.AddAdminActivity"/>
 
         <activity android:name=".jianguan.AddAdminActivity"/>
         <activity android:name=".MainActivity"/>

@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.jianguan;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -151,7 +152,9 @@ public class JGCompanyManFragment extends BaseFragment {
                 break;
             case R.id.add:
                 toast("添加");
-                // TODO: 2017/1/18  
+                // TODO: 2017/1/18
+                Intent intent = new Intent(getActivity(),AddAdminActivity.class);
+                startActivity(intent);
                 break;
         }
     }
