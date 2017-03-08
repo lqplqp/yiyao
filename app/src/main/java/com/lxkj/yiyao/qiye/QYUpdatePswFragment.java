@@ -1,9 +1,6 @@
-package com.lxkj.yiyao.jianguan;
+package com.lxkj.yiyao.qiye;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,16 +15,16 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/19.
  */
 
-public class JGUpdatePswFragment extends BaseFragment {
+public class QYUpdatePswFragment extends BaseFragment {
 
 
+    private static final String TAG = "QYUpdatePswFragment";
     @BindView(R.id.old_pwd)
     EditText oldPwd;
     @BindView(R.id.new_pwd)
@@ -51,7 +48,10 @@ public class JGUpdatePswFragment extends BaseFragment {
 
     @OnClick(R.id.commit)
     public void onClick() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_aqsz);
+
+        Log.i(TAG,"onclick");
+
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_aqsz);
         params.addBodyParameter("ymm",oldPwd.getText().toString());
         params.addBodyParameter("xmm",newPwd.getText().toString());
         params.addBodyParameter("qrmm",newPwd2.getText().toString());
@@ -68,7 +68,7 @@ public class JGUpdatePswFragment extends BaseFragment {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ex.printStackTrace();
             }
 
             @Override

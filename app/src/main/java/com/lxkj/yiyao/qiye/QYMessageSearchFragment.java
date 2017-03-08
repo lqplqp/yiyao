@@ -57,6 +57,7 @@ public class QYMessageSearchFragment extends BaseFragment {
     @Override
     protected void initView() {
 
+        requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -90,8 +91,11 @@ public class QYMessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_tongzhixiaoxi);
         params.addBodyParameter("page", page + "");
+
+
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -101,6 +105,7 @@ public class QYMessageSearchFragment extends BaseFragment {
                     adapter = new QYMessageSearchAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -143,13 +148,8 @@ public class QYMessageSearchFragment extends BaseFragment {
     @OnClick(R.id.select)
     public void onClick() {
         toast("查询");// TODO: 2017/1/19
+        requestData();
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
+
 }

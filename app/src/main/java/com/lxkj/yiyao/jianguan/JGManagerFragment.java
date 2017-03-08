@@ -84,6 +84,7 @@ public class JGManagerFragment extends BaseFragment {
                     adapter = new CompanyManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -134,11 +135,5 @@ public class JGManagerFragment extends BaseFragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
+
 }

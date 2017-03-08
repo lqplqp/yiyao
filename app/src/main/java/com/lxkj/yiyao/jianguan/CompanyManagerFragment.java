@@ -102,6 +102,7 @@ public class CompanyManagerFragment extends BaseFragment {
                     adapter = new CompanyManagerAdapter(result);
                     listView.setAdapter(adapter);
                 }else{
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

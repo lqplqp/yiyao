@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/global_bg_gray">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
     <!--查询条件和查询条件之下的输入框  start-->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,6 +30,7 @@
             android:paddingRight="20dp"
             android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
+            android:textSize="14sp"
             android:textColor="@color/global_white"
             android:id="@+id/select" />
 
@@ -65,12 +63,13 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:text="发起单位："
+
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
 
             <EditText
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
@@ -96,10 +95,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="培训通知类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
@@ -122,10 +121,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="行政类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="36dp"
                 android:background="@drawable/table_border_bg"
@@ -149,10 +148,10 @@
                 android:layout_marginLeft="10dp"
                 android:text="培训班类型："
                 android:textColor="@color/global_black"
-                android:textSize="18sp" />
+                android:textSize="16sp" />
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="18dp"
                 android:background="@drawable/table_border_bg"
@@ -199,7 +198,6 @@
     </com.lxkj.yiyao.view.RefreshListView>
 
     <!--体验机构列表 end-->
+
+
 </LinearLayout>
-
-
-</android.support.v4.widget.NestedScrollView>

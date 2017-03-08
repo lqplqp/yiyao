@@ -112,6 +112,7 @@ public class QYTrainOrderFragment extends BaseFragment {
                     adapter = new QYTrainOrderAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

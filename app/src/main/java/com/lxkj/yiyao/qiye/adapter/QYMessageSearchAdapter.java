@@ -39,7 +39,7 @@ public class QYMessageSearchAdapter extends MBaseAdapter<QYMessageSearchAdapter.
         //结束时间
         holder.jieshushijian.setText(""+result.get("pxjssj"));
         //查看
-        holder.chakan.setText("" + result.get("chakan"));
+        //holder.chakan.setText("" + result.get("chakan"));
 
     }
 

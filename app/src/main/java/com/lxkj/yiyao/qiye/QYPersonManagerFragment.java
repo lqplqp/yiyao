@@ -102,6 +102,7 @@ public class QYPersonManagerFragment extends BaseFragment {
                     adapter = new QYPersonManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

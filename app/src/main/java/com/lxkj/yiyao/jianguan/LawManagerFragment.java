@@ -55,7 +55,10 @@ public class LawManagerFragment extends BaseFragment {
     @Override
     protected void initView() {
 
+
+        Log.i("BaseFragment" , "initView");
         requestData(null);
+
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -105,6 +108,7 @@ public class LawManagerFragment extends BaseFragment {
                     adapter = new LawManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

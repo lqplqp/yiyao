@@ -32,6 +32,7 @@ import com.lxkj.yiyao.jianguan.UserManagerFragment;
 import com.lxkj.yiyao.qiye.QYHomeFragment;
 import com.lxkj.yiyao.qiye.QYInfoInputFragment;
 import com.lxkj.yiyao.qiye.QYInfocardManagerFragment;
+import com.lxkj.yiyao.qiye.QYMessageSearchFragment;
 import com.lxkj.yiyao.qiye.QYPersonManagerFragment;
 import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
 import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
@@ -608,7 +609,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(qyTrainOrderFragment);
                                 PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
                                 fragments.add(peiXunListFragment);
-                                MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
+                                QYMessageSearchFragment messageSearchFragment = new QYMessageSearchFragment();
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
@@ -626,7 +627,8 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_5:
                                 setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.qiye4);
-                                SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                                com.lxkj.yiyao.qiye.QYUpdatePswFragment sjgrUpdatePswFragment = new com.lxkj.yiyao.qiye.QYUpdatePswFragment();
+
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_logout:

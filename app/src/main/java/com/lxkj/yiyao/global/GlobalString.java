@@ -26,9 +26,13 @@ public interface GlobalString {
     //监管单位管理
     public static final String jg_jgdwgl = "admin/fenji/jgdwgl/";
 
-    //执法记录管理
-    public static final String jg_zfjlgl = "admin/fenji1/zfjlgl/";
+    public static final String jg_xinxika = "admin/fenji/xxkgl";
 
+    //执法记录管理
+
+    public static final String jg_zfjlgl = "admin/fenji/zfjlgl/";
+
+    public static final String jg_aqsz = "admin/fenji/aqsz/";
 
 
 
@@ -87,6 +91,10 @@ public interface GlobalString {
     public static final String qiye_daifukuan = "/admin/fenji5/dfkorder";
     public static final String qiye_yifukuan = "/admin/fenji5/yfkorder";
     public static final String qiye_yiquxiao = "/admin/fenji5/yqxorder";
+
+    public static final String qiye_tongzhixiaoxi = "/admin/fenji5/tzxx";
+
+    public static final String qiye_aqsz = "admin/fenji5/aqsz/";
 // ---------------------------市级管理员-------------------------
 
 

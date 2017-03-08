@@ -104,6 +104,7 @@ public class QYInfocardManagerFragment extends BaseFragment {
                     adapter = new QiyeInfoCardManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
