@@ -23,16 +23,16 @@ public class PersonAnalysisAdapter extends MBaseAdapter <PersonAnalysisAdapter.V
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //市区
-        holder.shiqu.setText(""+result.getString("shiqu"));
+        holder.shiqu.setText(""+result.getString("sq"));
         //县区
-        holder.xianqu.setText(""+result.getString("xianqu"));
+        holder.xianqu.setText(""+result.getString("xq"));
         //已报名培训人数
-        holder.yibaomingpeixunrenshu.setText(""+result.getString("yibaomingpeixunrenshu"));
+        holder.yibaomingpeixunrenshu.setText(""+result.getString("ybmpxrys"));
     }
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_person_analysis_item;
+        return R.layout.shengji_person_analysis_item;
     }
 
     @Override

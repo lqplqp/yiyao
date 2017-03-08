@@ -5,11 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.AdminManagerAdapter;
 import com.lxkj.yiyao.shengji.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -31,6 +32,10 @@ public class CompanyManageyFragment extends BaseFragment {
     CompanyManagerAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.company_name)
+    EditText companyName;
+    @BindView(R.id.select)
+    TextView select;
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
@@ -38,7 +43,7 @@ public class CompanyManageyFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+        requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -65,6 +70,13 @@ public class CompanyManageyFragment extends BaseFragment {
             }
         });
 
+        select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestData();
+            }
+        });
+
 
     }
     // ======================== 模板代码=============================
@@ -74,6 +86,8 @@ public class CompanyManageyFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
         params.addBodyParameter("page", page + "");
+        params.addBodyParameter("xx", companyName.getText() + "");
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

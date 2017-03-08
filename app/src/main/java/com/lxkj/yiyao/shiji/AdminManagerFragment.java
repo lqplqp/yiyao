@@ -41,7 +41,7 @@ public class AdminManagerFragment extends BaseFragment {
     MBaseAdapter adapter;
     @BindView(R.id.chaxun)
     TextView chaxun;
-    @BindView(R.id.sousuoneirong)
+    @BindView(R.id.souguoneirong)
     EditText sousuoneirong;
     @BindView(R.id.start_time)
     EditText startTime;
