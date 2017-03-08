@@ -39,7 +39,7 @@ public class PeiXunListFragment extends BaseFragment {
     @Override
     protected void initView() {
 
-
+requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {

@@ -9,8 +9,8 @@ import android.view.ViewGroup;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.shiji.adapter.PeiXunListAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -19,20 +19,23 @@ import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
 public class PeiXunListFragment extends BaseFragment {
-    private static final String TAG = "PeiXunListFragment";
 
+    public String TAG = this.getClass().getSimpleName();
+
+    @BindView(R.id.list_view)
+    RefreshListView listView;
+    Unbinder unbinder;
 
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
     private int page = 1;
 
 
@@ -49,7 +52,7 @@ public class PeiXunListFragment extends BaseFragment {
 
                 adapter.clear();
                 adapter.notifyDataSetChanged();
-                page = 1;
+                page=1;
 
 
                 requestData(null);
@@ -64,6 +67,7 @@ public class PeiXunListFragment extends BaseFragment {
                 requestData(null);
 
 
+
             }
         });
 
@@ -72,22 +76,25 @@ public class PeiXunListFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
 
+
+
+
     // ======================== 模板代码=============================
-    public void requestData(String s) {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_qygl);
-        params.addBodyParameter("page", page + "");
-        if (s != null) {
-            params.addBodyParameter("cx", s);
+    public void requestData(String s){
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
+        params.addBodyParameter("page",page+"");
+        if(s!=null){
+            params.addBodyParameter("cx",s);
         }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                if (adapter == null) {
-                    adapter = new CompanyManagerAdapter(result);
+                if(adapter == null){
+                    adapter = new PeiXunListAdapter(result);
                     listView.setAdapter(adapter);
-                } else {
+                }else{
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -127,11 +134,4 @@ public class PeiXunListFragment extends BaseFragment {
 //        return R.layout.qymanager_fragment_layout_select_train;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 }

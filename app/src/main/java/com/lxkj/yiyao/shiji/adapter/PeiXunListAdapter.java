@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,14 +21,22 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
+        //操作
         holder.caozuo.setText("" + result.get("caozuo"));
-        holder.goumaishijian.setText("" + result.get("goumaishijian"));
+        //购买时间
+        holder.goumaishijian.setText("" + result.get("cjsj"));
+        //序号
         holder.number.setText("" + result.get("number"));
-        holder.peixunbanleixing.setText("" + result.get("peixunbanleixing"));
-        holder.peixunbanmingci.setText("" + result.get("peixunbanmingci"));
-        holder.peixuntime.setText("" + result.get("peixuntime"));
-        holder.xuexijindu.setText("" + result.get("xuexijindu"));
-        holder.zhengshumingcheng.setText("" + result.get("zhengshumingcheng"));
+        //培训班类型
+        holder.peixunbanleixing.setText("" + result.get(" pxlx"));
+        //培训班名次
+        holder.peixunbanmingci.setText("" + result.get("pxbmc"));
+        //培训时间
+        holder.peixuntime.setText("" + result.get("pxkssj"));
+        //学习进度
+        holder.xuexijindu.setText("" + result.get("xxjd"));
+        //证书名称
+        holder.zhengshumingcheng.setText("" + result.get("pxbt"));
     }
 
 

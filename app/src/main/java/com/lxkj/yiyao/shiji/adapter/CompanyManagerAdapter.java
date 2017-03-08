@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

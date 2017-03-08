@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
@@ -136,9 +136,12 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/fillet_white_bg"
-        android:layout_margin="10dp">
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
         <TableRow>
             <TextView
                 android:layout_height="@dimen/table_hight"
@@ -168,120 +171,17 @@
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="中原区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="二七区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="管城回族区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="总计"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
+
 
 
     </TableLayout>
 
-
+<com.lxkj.yiyao.view.RefreshListView
+    android:id="@+id/list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></com.lxkj.yiyao.view.RefreshListView>
     <!--体验机构列表 end-->
 </LinearLayout>
 
 
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

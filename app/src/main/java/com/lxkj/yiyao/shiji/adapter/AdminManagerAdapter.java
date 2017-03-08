@@ -5,6 +5,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,10 +33,10 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
         holder.number.setText("" + result.get("number"));
 
         //用户名
-        holder.username.setText("" + result.get("username"));
+        holder.username.setText("" + result.get("zh"));
 
         //姓名
-        holder.name.setText("" + result.get("name"));
+        holder.name.setText("" + result.get("xm"));
 
 
     }

@@ -1,12 +1,13 @@
 package com.lxkj.yiyao.shengji.adapter;
 
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.shiji.adapter.MBaseAdapter;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,23 +17,31 @@ import butterknife.ButterKnife;
  */
 
 public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.ViewHolder> {
+
+
     public CompanyManagerAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.enterpriseName.setText(""+result.get("jgdwmc"));
-        holder.getInfoPeople.setText(""+result.get("getInfoPeople"));
-        holder.tijianhegePeople.setText(""+result.get("tijianhegePeople"));
-        holder.peixunhegeRenshu.setText(""+result.get("peixunhegeRenshu"));
+        holder.enterpriseName.setText("" + result.get("qymc"));
+        holder.getInfoPeople.setText("" + result.get("hqxxkrs"));
+        holder.tijianhegePeople.setText("" + result.get("tjhgrs"));
+        holder.peixunhegeRenshu.setText("" + result.get("pxhgrs"));
+        holder.beizhu.setText("" + result.get("bz"));
+        /*if ((Boolean) result.get("gqtx")){
+            holder.gqtx.setImageResource(R.mipmap.green_ture);
+        }else {
+            holder.gqtx.setImageResource(R.mipmap.red_point);
+        }*/
 
     }
 
 
     @Override
     protected int getItemLayout() {
-        return R.layout.companymanager_item;
+        return R.layout.shengji_companymanager_item;
     }
 
     @Override
@@ -56,10 +65,10 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         TextView getInfoPeople;
         @BindView(R.id.textView2)
         TextView textView2;
-        @BindView(R.id.textView3)
-        TextView textView3;
-        @BindView(R.id.activity_main)
-        RelativeLayout activityMain;
+        @BindView(R.id.gqtx)
+        ImageView gqtx;
+        @BindView(R.id.beizhu)
+        TextView beizhu;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

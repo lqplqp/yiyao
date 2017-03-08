@@ -178,7 +178,10 @@
 
 
     </TableLayout>
-
+<com.lxkj.yiyao.view.RefreshListView
+    android:id="@+id/list_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></com.lxkj.yiyao.view.RefreshListView>
 
     <!--体验机构列表 end-->
 </LinearLayout>

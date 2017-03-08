@@ -37,7 +37,7 @@
             style="@style/button_text_view"
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
-            
+            android:id="@+id/select"
             android:text="查询"
             android:textColor="@color/global_white" />
 
@@ -97,7 +97,8 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:orientation="horizontal">
-            <EditText
+            <TextView
+                android:id="@+id/start_time"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/edit_height"
@@ -112,7 +113,8 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@color/black"/>
-            <EditText
+            <TextView
+                android:id="@+id/end_time"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="@dimen/edit_height"

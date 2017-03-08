@@ -3,52 +3,40 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TableLayout
-        android:id="@+id/table"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/fillet_white_bg">
-
-
         <TableRow>
-
             <TextView
-                android:background="@drawable/table_frame_fray"
                 android:layout_height="@dimen/table_hight"
-                android:gravity="center"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-
-
-                android:text="1"
-                android:textColor="@color/global_black"
+                android:gravity="center"
+                android:text="郑州市"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xuhao" />
-
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/shiqu" />
             <TextView
-                android:background="@drawable/table_frame_fray"
-
                 android:layout_height="@dimen/table_hight"
-                android:gravity="center"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-                android:text="XXXX"
-                android:textColor="@color/global_black"
+                android:gravity="center"
+                android:text="中原区"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/dengluyonghuming" />
-
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/xianqu" />
             <TextView
-                android:background="@drawable/table_frame_fray"
+                android:id="@+id/yibaomingpeixunrenshu"
                 android:layout_height="@dimen/table_hight"
-                android:gravity="center"
                 android:layout_weight="1"
-                android:layout_width="0dp"
-
-                android:text="XXXX"
-                android:textColor="@color/global_black"
+                android:gravity="center"
+                android:text="0"
                 android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/tijianjigouming" />
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
         </TableRow>
 
 

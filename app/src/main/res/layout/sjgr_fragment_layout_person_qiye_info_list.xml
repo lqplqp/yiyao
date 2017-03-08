@@ -39,6 +39,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:paddingTop="5dp"
+            android:id="@+id/select"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white" />
     </RelativeLayout>
@@ -66,6 +67,7 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/sousuoxinxi"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"

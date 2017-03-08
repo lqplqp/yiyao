@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
@@ -31,14 +33,18 @@ public class ShenHeFragment extends BaseFragment {
     ShenHeAapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.select)
+    TextView select;
+    @BindView(R.id.input_key)
+    EditText inputKey;
     private int page = 1;
 
-    private String TAG = "CompanyManageyFragment";
+    private String TAG = "ShenHeFragment";
 
 
     @Override
     protected void initView() {
-
+requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -64,7 +70,12 @@ public class ShenHeFragment extends BaseFragment {
 
             }
         });
-
+select.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        requestData();
+    }
+});
 
     }
     // ======================== 模板代码=============================
@@ -74,6 +85,8 @@ public class ShenHeFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tjjgsh);
         params.addBodyParameter("page", page + "");
+        params.addBodyParameter("xx", inputKey.getText() + "");
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

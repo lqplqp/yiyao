@@ -30,7 +30,7 @@
             style="@style/button_text_view"
             android:text="查询"
             android:textColor="@color/global_white"
-            android:id="@+id/textView57" />
+            android:id="@+id/select" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,6 +74,7 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/sousuoneirong"
                 android:paddingLeft="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
@@ -103,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <EditText
+                <TextView
+                    android:id="@+id/start_time"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="@dimen/edit_height"
@@ -118,7 +120,8 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/black"/>
-                <EditText
+                <TextView
+                    android:id="@+id/end_time"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="@dimen/edit_height"
@@ -160,7 +163,9 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/fillet_white_bg">
 
             <TableRow>

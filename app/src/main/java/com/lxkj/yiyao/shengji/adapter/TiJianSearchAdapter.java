@@ -22,16 +22,16 @@ public class TiJianSearchAdapter extends MBaseAdapter <TiJianSearchAdapter.ViewH
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //姓名
-        holder.name.setText(""+result.getString("name"));
+        holder.name.setText(""+result.getString("xm"));
         //体检报告编号
-        holder.tijianbaogaobianhao.setText(""+result.getString("tijianbaogaobianhao"));
+        holder.tijianbaogaobianhao.setText(""+result.getString("tjbgh"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
     }
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_tijian_search_item;
+        return R.layout.shengji_tijian_search_item;
     }
 
     @Override

@@ -33,7 +33,7 @@ public class SJGRMessageSearchFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -67,7 +67,7 @@ public class SJGRMessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_pxtzgl);
         params.addBodyParameter("page", page + "");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
