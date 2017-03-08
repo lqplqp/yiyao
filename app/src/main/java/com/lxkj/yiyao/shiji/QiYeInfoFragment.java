@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -56,17 +59,27 @@ public class QiYeInfoFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        requestData(null);
+
     }
 
-    public void requestData(String s){
+    public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qygl);
+        params.addBodyParameter("yhm",username.getText().toString());
+        params.addBodyParameter("dwmc",danweimingcheng.getText().toString());
+        params.addBodyParameter("cyrs",congyerenshu.getText().toString());
+        params.addBodyParameter("glyrs",guanliyuanrenshu.getText().toString());
+        params.addBodyParameter("gliy",guanliyuan.getText().toString());
+        params.addBodyParameter("dh",dianhuan.getText().toString());
+        params.addBodyParameter("zw",zhiwu.getText().toString());
+        params.addBodyParameter("yx",youxiang.getText().toString());
+        params.addBodyParameter("hyly",hangyelingyu.getText().toString());
+        params.addBodyParameter("szdq",suozaidiqu.getText().toString());
+        params.addBodyParameter("dwdz",danweidizhi.getText().toString());
 
-        if(s!=null){
-            params.addBodyParameter("cx",s);
-        }
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
+
             @Override
             public boolean onCache(String result) {
                 return false;
@@ -75,6 +88,9 @@ public class QiYeInfoFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
+                JSONObject jsonObject = JSONObject.parseObject(result);
+
+                ToastUtil.show(jsonObject.get("data").toString());
 
             }
 
@@ -109,7 +125,7 @@ public class QiYeInfoFragment extends BaseFragment {
     public void onClick() {
         toast("查询");
 
-        requestData(null);
+        requestData();
 
     }
 }

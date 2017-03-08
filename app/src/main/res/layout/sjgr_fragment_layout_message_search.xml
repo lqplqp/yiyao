@@ -33,7 +33,7 @@
             android:paddingTop="5dp"
             android:text="@string/sj_shenhe_select"
             android:textColor="@color/global_white"
-            android:id="@+id/textView55" />
+            android:id="@+id/chaxun" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -68,6 +68,7 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/faqidanwei"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
@@ -102,6 +103,7 @@
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
+                    android:id="@+id/peixuntongzhileixing"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     />
@@ -129,6 +131,7 @@
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
+                    android:id="@+id/xingzhengleixing"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     />
@@ -156,6 +159,7 @@
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
+                    android:id="@+id/peixunbanleixing"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </RelativeLayout>

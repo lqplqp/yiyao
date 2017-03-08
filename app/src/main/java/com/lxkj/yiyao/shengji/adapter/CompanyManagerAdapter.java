@@ -1,7 +1,7 @@
 package com.lxkj.yiyao.shengji.adapter;
 
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -16,17 +16,24 @@ import butterknife.ButterKnife;
  */
 
 public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.ViewHolder> {
+
+
     public CompanyManagerAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.enterpriseName.setText(""+result.get("jgdwmc"));
-        holder.getInfoPeople.setText(""+result.get("getInfoPeople"));
-        holder.tijianhegePeople.setText(""+result.get("tijianhegePeople"));
-        holder.peixunhegeRenshu.setText(""+result.get("peixunhegeRenshu"));
-
+        //备注
+        holder.beizhu.setText(""+result.get("bz"));
+        //获取信息卡人数
+        holder.huoquxinxikarenshu.setText(""+result.get("hqxxkrs"));
+        //培训合格人数
+        holder.peixunhegerenshu.setText(""+result.get("pxhgrs"));
+        //企业名称
+        holder.qiyemingcheng.setText(""+result.get("qymc"));
+        //体检合格人数
+        holder.tijianhegerenshu.setText(""+result.get("tjhgrs"));
     }
 
 
@@ -42,24 +49,18 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
 
 
     static class ViewHolder {
-        @BindView(R.id.textView26)
-        TextView textView26;
-        @BindView(R.id.enterpriseName)
-        TextView enterpriseName;
-        @BindView(R.id.tijianhege_people)
-        TextView tijianhegePeople;
-        @BindView(R.id.textView)
-        TextView textView;
-        @BindView(R.id.peixunhege_renshu)
-        TextView peixunhegeRenshu;
-        @BindView(R.id.getInfoPeople)
-        TextView getInfoPeople;
-        @BindView(R.id.textView2)
-        TextView textView2;
-        @BindView(R.id.textView3)
-        TextView textView3;
-        @BindView(R.id.activity_main)
-        RelativeLayout activityMain;
+        @BindView(R.id.qiyemingcheng)
+        TextView qiyemingcheng;
+        @BindView(R.id.tijianhegerenshu)
+        TextView tijianhegerenshu;
+        @BindView(R.id.peixunhegerenshu)
+        TextView peixunhegerenshu;
+        @BindView(R.id.huoquxinxikarenshu)
+        TextView huoquxinxikarenshu;
+        @BindView(R.id.guoqitixing)
+        ImageView guoqitixing;
+        @BindView(R.id.beizhu)
+        TextView beizhu;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

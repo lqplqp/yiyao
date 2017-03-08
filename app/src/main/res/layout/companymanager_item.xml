@@ -77,7 +77,7 @@
                         android:textSize="@dimen/table_textsize" />
 
                     <TextView
-                        android:id="@+id/enterpriseName"
+                        android:id="@+id/qiyemingcheng"
                         android:background="@drawable/table_frame_fray"
 
                         android:layout_height="@dimen/table_hight"
@@ -101,7 +101,7 @@
                         android:textSize="@dimen/table_textsize"  />
 
                     <TextView
-                        android:id="@+id/tijianhege_people"
+                        android:id="@+id/tijianhegerenshu"
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="@dimen/table_hight"
                         android:gravity="center"
@@ -125,7 +125,7 @@
                         android:id="@+id/textView" />
 
                     <TextView
-                        android:id="@+id/peixunhege_renshu"
+                        android:id="@+id/peixunhegerenshu"
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="@dimen/table_hight"
                         android:gravity="center"
@@ -148,7 +148,7 @@
                         android:textSize="@dimen/table_textsize"  />
 
                     <TextView
-                        android:id="@+id/getInfoPeople"
+                        android:id="@+id/huoquxinxikarenshu"
                         android:background="@drawable/table_frame_fray"
                         android:layout_height="@dimen/table_hight"
                         android:gravity="center"
@@ -177,6 +177,7 @@
                         android:layout_width="0dp"
                         >
                         <ImageView
+                            android:id="@+id/guoqitixing"
                             android:layout_width="20dp"
                             android:layout_height="20dp"
                             android:src="@mipmap/red_point"
@@ -205,7 +206,7 @@
                         android:text="xxx"
                         android:textColor="@color/global_red"
                         android:textSize="@dimen/table_textsize"
-                        android:id="@+id/textView3" />
+                        android:id="@+id/beizhu" />
                 </TableRow>
             </TableLayout>
         </LinearLayout>

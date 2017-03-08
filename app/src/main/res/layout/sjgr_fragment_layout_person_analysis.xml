@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray">
 
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/global_bg_gray"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
     <!--查询条件和查询条件之下的输入框  start-->
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,6 +29,7 @@
             android:textSize="@dimen/title_textsize" />
 
         <TextView
+            android:id="@+id/chaxun"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -74,6 +74,7 @@
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
+                    android:id="@+id/shiqu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     />
@@ -104,6 +105,7 @@
                 android:background="@drawable/table_border_bg"
                 android:gravity="center">
                 <Spinner
+                    android:id="@+id/xianqu"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </RelativeLayout>
@@ -136,7 +138,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/fillet_white_bg"
         android:layout_margin="10dp">
         <TableRow>
@@ -168,120 +170,15 @@
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="中原区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="二七区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="管城回族区"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="总计"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
+
 
 
     </TableLayout>
-
+    <com.lxkj.yiyao.view.RefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.lxkj.yiyao.view.RefreshListView>
 
     <!--体验机构列表 end-->
 </LinearLayout>
-
-
-</android.support.v4.widget.NestedScrollView>

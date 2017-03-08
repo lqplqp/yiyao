@@ -50,7 +50,7 @@
                     android:textSize="@dimen/qyinfo_text_size" />
 
                 <TextView
-                    android:id="@+id/wangshangpeixun"
+                    android:id="@+id/tongzhileixing"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
                     android:background="@drawable/table_border_bg"

@@ -21,14 +21,22 @@ public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.View
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.faburen.setText(""+result.get("faburen"));
+        //发布人
+        holder.faburen.setText(""+result.get("fbr"));
+        //序号
         holder.number.setText(""+result.get("number"));
-        holder.peixunDate.setText(""+result.get("peixunDate"));
+        //培训开始时间
+        holder.peixunDate.setText(""+result.get("pxkssj"));
+        //培训地点
         holder.peixundidian.setText(""+result.get("peixundidian"));
-        holder.peixunOver.setText(""+result.get("peixunOver"));
-        holder.tongzhibiaoti.setText(""+result.get("tongzhibiaoti"));
-        holder.tongzhidanwei.setText(""+result.get("tongzhidanwei"));
-        holder.wangshangpeixun.setText(""+result.get("wangshangpeixun"));
+        //培训结束时间
+        holder.peixunOver.setText(""+result.get("pxjssj"));
+        //通知标题
+        holder.tongzhibiaoti.setText(""+result.get("tzbt"));
+        //通知单位
+        holder.tongzhidanwei.setText(""+result.get("tzdw"));
+        //通知类型
+        holder.tongzhileixing.setText(""+result.get("tzlx"));
     }
 
 
@@ -45,8 +53,8 @@ public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.View
     static class ViewHolder {
         @BindView(R.id.number)
         TextView number;
-        @BindView(R.id.wangshangpeixun)
-        TextView wangshangpeixun;
+        @BindView(R.id.tongzhileixing)
+        TextView tongzhileixing;
         @BindView(R.id.tongzhidanwei)
         TextView tongzhidanwei;
         @BindView(R.id.faburen)
