@@ -74,6 +74,7 @@
                 android:layout_marginRight="10dp"
                 android:background="@drawable/edit_border_bg" >
                 <Spinner
+                    android:id="@+id/tongjitiaojian"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
             </RelativeLayout>

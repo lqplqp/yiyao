@@ -23,19 +23,19 @@ public class SJGRZhiFaSearch extends MBaseAdapter<SJGRZhiFaSearch.ViewHolder> {
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //被指法人编号
-        holder.beizhifarenbianhao.setText("" + result.getString("beizhifarenbianhao"));
+        holder.beizhifarenbianhao.setText("" + result.getString("bzfrxxkbh"));
         //被指法人姓名
-        holder.bzhifarenxingm.setText("" + result.getString("biezhifarenxingming"));
+        holder.bzhifarenxingm.setText("" + result.getString("bzfrxm"));
         //序号
         holder.xuhao.setText("" + result.getString("xuhao"));
         //培训开始时间
-        holder.peixunkaishishijian.setText("" + result.getString("peixunkaoshishijian"));
+        holder.peixunkaishishijian.setText("" + result.getString("zfsj"));
         //执法编号
-        holder.zhifabianhao.setText("" + result.getString("zhifabianhao"));
+        holder.zhifabianhao.setText("" + result.getString("zfbh"));
         //执法类型
-        holder.zhifaleixing.setText("" + result.getString("zhifaleixing"));
+        holder.zhifaleixing.setText("" + result.getString("zflx"));
         //执法人姓名
-        holder.zhifarenxingming.setText("" + result.getString("zhifarenxingming"));
+        holder.zhifarenxingming.setText("" + result.getString("zfexm"));
     }
 
     @Override

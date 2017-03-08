@@ -17,26 +17,21 @@ import butterknife.ButterKnife;
 public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHolder> {
 
 
-    @BindView(R.id.number)
-    TextView number;
-    @BindView(R.id.username)
-    TextView username;
-    @BindView(R.id.user_name)
-    TextView user_name;
+
 
     public AdminManagerAdapter(String bean) {
         super(bean);
     }
 
-    protected void fillData(int i, AdminManagerAdapter.ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
         holder.number.setText("" + result.get("number"));
 
         //用户名
-        holder.username.setText("" + result.get("zh"));
+        holder.yhm.setText("" + result.get("zh"));
 
         //姓名
-        holder.name.setText("" + result.get("xm"));
+        holder.xm.setText("" + result.get("xm"));
 
 
     }
@@ -52,10 +47,10 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
     static class ViewHolder {
         @BindView(R.id.number)
         TextView number;
-        @BindView(R.id.username)
-        TextView username;
-        @BindView(R.id.name)
-        TextView name;
+        @BindView(R.id.yhm)
+        TextView yhm;
+        @BindView(R.id.xm)
+        TextView xm;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

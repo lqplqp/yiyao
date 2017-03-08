@@ -2,57 +2,49 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:background="@drawable/fillet_white_bg">
+        android:background="@drawable/fillet_white_bg"
+        android:layout_margin="10dp">
 
         <TableRow>
-
             <TextView
-                android:background="@drawable/table_frame_fray"
                 android:id="@+id/xuhao"
                 android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="1"
+                android:text="3"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
-
+                android:background="@drawable/table_border_bg"
+                />
             <TextView
-                android:background="@drawable/table_frame_fray"
-
+                android:id="@+id/jianguandanweimingcheng"
                 android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="河南省中医院"
+                android:text="新乡市食品药品监督管理局"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/tijaindanwei" />
-
+                android:background="@drawable/table_border_bg"
+                />
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:id="@+id/renshu"
+                android:id="@+id/yonghuming"
                 android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="5"
+                android:text="0"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize" />
+                android:background="@drawable/table_border_bg"
+                />
         </TableRow>
 
+        <View
+            android:background="@color/global_bg_gray"
+            android:layout_width="match_parent"
 
-
+            android:layout_height="10dp"/>
     </TableLayout>
-    <View
-        android:background="@color/global_bg_gray"
-        android:layout_width="match_parent"
-
-        android:layout_height="10dp"/>
-
 </LinearLayout>

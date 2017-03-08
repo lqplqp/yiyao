@@ -27,17 +27,17 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         //序号
         holder.xuhao.setText(""+result.getString("as"));
         //培训名次
-        holder.peixunleixing.setText(""+result.getString("123"));
+        holder.peixunleixing.setText(""+result.getString("pxbmc"));
         //培训类型
-        holder.peixunleixing.setText(""+result.getString("555"));
+        holder.peixunleixing.setText(""+result.getString(" pxlx"));
         //培训时间
-        holder.peixunshijian.setText(""+result.getString("5555555"));
+        holder.peixunshijian.setText(""+result.getString("pxkssj"));
         //证书名称
-        holder.zhengshumingcheng.setText(""+result.getString("5797987"));
+        holder.zhengshumingcheng.setText(""+result.getString("pxbt"));
         //购买时间
-        holder.goumaishijian.setText(""+result.getString("qweqeqwe"));
+        holder.goumaishijian.setText(""+result.getString("cjsj"));
         //学习进度
-        holder.xuexijindu.setText(""+result.getString("xuexijindu"));
+        holder.xuexijindu.setText(""+result.getString("xxjd"));
         //查看
     }
 

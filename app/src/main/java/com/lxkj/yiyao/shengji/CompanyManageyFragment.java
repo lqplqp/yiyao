@@ -32,10 +32,12 @@ public class CompanyManageyFragment extends BaseFragment {
     CompanyManagerAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
-    @BindView(R.id.company_name)
-    EditText companyName;
+
     @BindView(R.id.select)
     TextView select;
+    @BindView(R.id.sousuoneirong)
+    EditText sousuoneirong;
+
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
@@ -86,7 +88,7 @@ public class CompanyManageyFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("xx", companyName.getText() + "");
+        params.addBodyParameter("xx", sousuoneirong.getText() + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -142,5 +144,11 @@ public class CompanyManageyFragment extends BaseFragment {
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
         ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+
     }
 }

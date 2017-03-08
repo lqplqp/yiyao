@@ -53,9 +53,25 @@ public interface GlobalString {
     public static final String shiji_qyhtjfx = "admin/fenji3/qyyhtjfx/";
     //shiji_监管单位信息
     public static final String shiji_jgdwxx  = "admin/fenji3/jgdwxx/";
+    //shiji_体检统计
+    public static final String shiji_tjtj  = "admin/fenji3/tjtj/";
 
-
-
+    //-------------------------------
+    //省局个人fenji2
+    //shengjugeren_监管人员信息
+    public static final String sjgr_jgryxx  = "admin/fenji2/jgryxx/";
+    //shengjugeren_我的执法
+    public static final String sjgr_wdzf = "admin/fenji2/wdzf/";
+    //shengjugeren_通知消息
+    public static final String sjgr_tzxx = "admin/fenji2/tzxx/";
+    //shengjugeren_医保培训项目
+    public static final String sjgr_ybpxxm = "admin/fenji2/ybpxxm/";
+    //shengjugeren_企业信息列表
+    public static final String sjgr_qyxxlb = "admin/fenji2/qyxxlb/";
+    //shengjugeren_企业信息列表
+    public static final String sjgr_qybmxx = "admin/fenji2/qybmxx/";
+    //shengjugeren_监管单位统计信息
+    public static final String sjgr_jgdwtjfx = "admin/fenji2/jgdwtjfx/";
 
 
     //--------------------------------------

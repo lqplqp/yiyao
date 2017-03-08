@@ -27,6 +27,7 @@
             android:textSize="@dimen/title_textsize" />
 
         <TextView
+            android:id="@+id/select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -63,6 +64,7 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/qiyemingcheng"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/edit_height"
                 android:gravity="center_vertical"
