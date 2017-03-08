@@ -30,6 +30,8 @@ public interface GlobalString {
 
     //执法记录管理
 
+    //-------------------------------
+    //fenji3
     public static final String jg_zfjlgl = "admin/fenji/zfjlgl/";
 
     public static final String jg_aqsz = "admin/fenji/aqsz/";
@@ -39,7 +41,18 @@ public interface GlobalString {
     public static final String shiji_pxtzgl = "admin/fenji3/pxtzgl/";
     //shiji_企业管理
     public static final String shiji_qygl = "admin/fenji3/qygl/";
-
+    //shiji_通知消息
+    public static final String shiji_tzxx = "admin/fenji3/tzxx/";
+    //shiji_通知消息
+    public static final String shiji_gryhtjfx = "admin/fenji3/gryhtjfx/";
+    //shiji_体检search
+    public static final String shiji_tijiansearch = "admin/fenji3/tjcx/";
+    //shiji_安全设置
+    public static final String shiji_anquanshezhi = "admin/fenji3/aqsz/";
+    //shiji_企业用户分析
+    public static final String shiji_qyhtjfx = "admin/fenji3/qyyhtjfx/";
+    //shiji_监管单位信息
+    public static final String shiji_jgdwxx  = "admin/fenji3/jgdwxx/";
 
 
 

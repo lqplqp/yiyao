@@ -22,11 +22,11 @@ public class SJGRTiJianSearchAdapter extends MBaseAdapter <SJGRTiJianSearchAdapt
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //姓名
-        holder.name.setText(""+result.getString("name"));
+        holder.name.setText(""+result.getString("xm"));
         //体检报告编号
-        holder.tijianbaogaobianhao.setText(""+result.getString("tijianbaogaobianhao"));
+        holder.tijianbaogaobianhao.setText(""+result.getString("tjbgh"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("tj"));
     }
 
     @Override

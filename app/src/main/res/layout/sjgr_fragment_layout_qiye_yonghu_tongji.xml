@@ -28,7 +28,6 @@
             android:textSize="@dimen/table_textsize"/>
 
         <TextView
-            android:id="@+id/select"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -38,6 +37,7 @@
             android:clickable="true"
             style="@style/button_text_view"
             android:text="@string/sj_shenhe_select"
+            android:id="@+id/chaxun"
             android:textColor="@color/global_white" />
     </RelativeLayout>
 
@@ -63,7 +63,8 @@
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
-            <TextView
+            <EditText
+                android:id="@+id/star_time"
                 android:layout_width="95dp"
                 android:layout_height="@dimen/edit_height"
                 android:textSize="@dimen/qyinfo_text_size"
@@ -77,7 +78,8 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:background="@color/black"/>
-            <TextView
+            <EditText
+                android:id="@+id/end_time"
                 android:layout_width="95dp"
                 android:layout_height="@dimen/edit_height"
                 android:textSize="@dimen/qyinfo_text_size"

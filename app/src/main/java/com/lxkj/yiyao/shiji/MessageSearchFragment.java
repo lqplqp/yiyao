@@ -5,6 +5,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
@@ -19,26 +22,40 @@ import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
  */
 
 public class MessageSearchFragment extends BaseFragment {
-    private static final String TAG = "MessageSearchFragment";
+    public String TAG = this.getClass().getSimpleName();
+
+    @BindView(R.id.chaxun)
+    TextView chaxun;
+    @BindView(R.id.faqidanwei)
+    EditText faqidanwei;
+    @BindView(R.id.peixuntongzhileixing)
+    Spinner peixuntongzhileixing;
+    @BindView(R.id.xingzhengleixing)
+    Spinner xingzhengleixing;
+    @BindView(R.id.peixunbanleixing)
+    Spinner peixunbanleixing;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
+    Unbinder unbinder;
 
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
     private int page = 1;
 
 
     @Override
     protected void initView() {
 
-        requestData(null);
+        requestData(faqidanwei.getText().toString(),"","","");
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -48,10 +65,10 @@ public class MessageSearchFragment extends BaseFragment {
 
                 adapter.clear();
                 adapter.notifyDataSetChanged();
-                page = 1;
+                page=1;
 
 
-                requestData(null);
+                requestData(faqidanwei.getText().toString(),"","","");
 
 
             }
@@ -60,7 +77,8 @@ public class MessageSearchFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData(null);
+                requestData(faqidanwei.getText().toString(),"","","");
+
 
 
             }
@@ -71,24 +89,29 @@ public class MessageSearchFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
 
+
+
+
     // ======================== 模板代码=============================
-    public void requestData(String s) {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_qygl);
-        params.addBodyParameter("page", page + "");
-        if (s != null) {
-            params.addBodyParameter("cx", s);
+    public void requestData(String faqidanwei,String peixuntongzhileixing,String xingzhengleixing,String peixunbanleixing){
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_tzxx);
+        params.addBodyParameter("page",page+"");
+        if(faqidanwei!=null){
+            params.addBodyParameter("fqdw",faqidanwei);
+            params.addBodyParameter("pxtzlx",peixuntongzhileixing);
+            params.addBodyParameter("pxblx",peixunbanleixing);
+            params.addBodyParameter("xzlx",xingzhengleixing);
+
         }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                if (adapter == null) {
-
+                if(adapter == null){
                     adapter = new MessageSearchAdapter(result);
                     listView.setAdapter(adapter);
-                } else {
-                    listView.setAdapter(adapter);
+                }else{
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -122,11 +145,21 @@ public class MessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-
     @Override
     public int getLayout() {
         return R.layout.sjgr_fragment_layout_message_search;
     }
 
 
+    @OnClick(R.id.chaxun)
+    public void onClick() {
+        toast("查询");
+        // TODO: 2017/1/18
+        if(adapter!=null){
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page=1;
+        }
+        requestData(faqidanwei.getText().toString(),"","","");
+    }
 }
