@@ -27,6 +27,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*用  户  名："/>
+
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -34,7 +35,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
             android:hint="username"
-            />
+            android:id="@+id/yonghuming" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -53,6 +54,7 @@
         android:textColor="@color/global_black"
         android:text="*姓        名："/>
     <EditText
+        android:id="@+id/xingming"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -83,11 +85,13 @@
             android:orientation="horizontal"
             android:layout_marginLeft="10dp">
             <RadioButton
+                android:id="@+id/nan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="男"/>
             <RadioButton
+                android:id="@+id/nu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -114,6 +118,7 @@
             android:id="@+id/textView" />
 
         <EditText
+            android:id="@+id/shenfenzhenghao"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -140,6 +145,7 @@
             android:textColor="@color/global_black"
             android:text="*单位名称："/>
         <EditText
+            android:id="@+id/danweimingcheng"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -165,6 +171,7 @@
             android:textColor="@color/global_black"
             android:text="*邮        箱："/>
         <EditText
+            android:id="@+id/youxiang"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -190,6 +197,7 @@
             android:textColor="@color/global_black"
             android:text="*手机号码："/>
         <EditText
+            android:id="@+id/shoujihaoma"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -214,6 +222,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*职        位："/>
+
         <EditText
             android:layout_width="200dp"
             android:layout_height="wrap_content"
@@ -221,7 +230,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
             android:text="监管队伍"
-            />
+            android:id="@+id/zhiwei" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -240,6 +249,7 @@
             android:textColor="@color/global_black"
             android:text="*出生日期："/>
         <EditText
+            android:id="@+id/chushengriqi"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -271,6 +281,7 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
             android:text="本科"
+            android:id="@+id/xueli"
             />
     </LinearLayout>
     <View
@@ -290,6 +301,7 @@
             android:textColor="@color/global_black"
             android:text="*单位地址："/>
         <EditText
+            android:id="@+id/danweidizhi"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

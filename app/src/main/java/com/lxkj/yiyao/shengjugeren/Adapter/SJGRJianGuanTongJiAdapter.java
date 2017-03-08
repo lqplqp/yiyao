@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.shengji.adapter;
+package com.lxkj.yiyao.shengjugeren.Adapter;
 
 import android.view.View;
 import android.widget.TextView;
@@ -9,32 +9,28 @@ import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import master.flame.danmaku.danmaku.model.android.ViewCacheStuffer;
 
 /**
- * Created by Administrator on 2017/3/2.
+ * Created by Administrator on 2017/3/8.
  */
 
-public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHolder> {
-
-
-    public TiJianTongJiAdapter(String bean) {
+public class SJGRJianGuanTongJiAdapter extends MBaseAdapter<SJGRJianGuanTongJiAdapter.ViewHolder> {
+    public SJGRJianGuanTongJiAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //人数
-        holder.renshu.setText(""+result.getString(" tjrs"));
-        //体检单位
-        holder.tijaindanwei.setText(""+result.getString("tjdw"));
-        //序号
-        holder.xuhao.setText("" + result.getString("id"));
-
+        holder.jianguandanweimingcheng.setText(""+result.get("jgdwmc"));
+        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.yonghuming.setText(""+result.get("yhm"));
     }
+
 
     @Override
     protected int getItemLayout() {
-        return R.layout.tijian_tonghi_item;
+        return R.layout.sjgr_jianguantongji_item;
     }
 
     @Override
@@ -45,10 +41,10 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tijaindanwei)
-        TextView tijaindanwei;
-        @BindView(R.id.renshu)
-        TextView renshu;
+        @BindView(R.id.jianguandanweimingcheng)
+        TextView jianguandanweimingcheng;
+        @BindView(R.id.yonghuming)
+        TextView yonghuming;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

@@ -26,11 +26,11 @@ public class SJGRBaoMingMessageAdapter extends MBaseAdapter<SJGRBaoMingMessageAd
         //查看
 
         //企业名称
-        holder.qiyemingcheng.setText("" + result.getString("qiyemingcheng"));
+        holder.qiyemingcheng.setText("" + result.getString("qymc"));
         //已报培训班数量
-        holder.yibaopeixungbanshuliang.setText(""+result.getString("yibaopeixunbanshuliang"));
+        holder.yibaopeixungbanshuliang.setText(""+result.getString("ybpxbsl"));
         //总金额
-        holder.zongjine.setText(""+result.getString("zongjine"));
+        holder.zongjine.setText(""+result.getString("zje"));
     }
 
 

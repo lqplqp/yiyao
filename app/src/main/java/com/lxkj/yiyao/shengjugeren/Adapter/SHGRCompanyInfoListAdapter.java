@@ -16,6 +16,8 @@ import butterknife.ButterKnife;
  */
 
 public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoListAdapter.ViewHolder> {
+
+
     public SHGRCompanyInfoListAdapter(String bean) {
         super(bean);
     }
@@ -25,14 +27,19 @@ public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoList
         //查看
 
         //企业名称
-        holder.qiyemingcheng.setText(""+result.getString("qiyemingcheng"));
+        holder.qiyemingcheng.setText("" + result.getString("qymc"));
         //从业人数
-        holder.congyerenshu.setText(""+result.getString("congyerenshu"));
+        holder.congyerenshu.setText("" + result.getString("cyrs"));
         //培训合格人数
-        holder.peixunhegerenshu.setText(""+result.getString("peixunhegerenshu"));
+        holder.peixunhegerenshu.setText("" + result.getString("pxhgrs"));
         //获得信息卡人数
-        holder.huodexinxikarenshu.setText(""+result.getString("huodexinxikarenshu"));
+        holder.huodexinxikarenshu.setText("" + result.getString("hdxxkrs"));
         //过期提醒(image)
+
+        //备注
+        holder.beizhu.setText(""+result.getString("bz"));
+        //体检合格人数
+        holder.tijianhegerenshu.setText("" + result.getString("tjhgrs"));
     }
 
 
@@ -62,6 +69,9 @@ public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoList
         TextView huodexinxikarenshu;
         @BindView(R.id.guoqitixin)
         ImageView guoqitixin;
+        @BindView(R.id.beizhu)
+        TextView beizhu;
+
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

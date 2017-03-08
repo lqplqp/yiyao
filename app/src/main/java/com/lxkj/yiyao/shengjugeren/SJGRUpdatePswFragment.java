@@ -93,6 +93,7 @@ public class SJGRUpdatePswFragment extends BaseFragment {
 
     @OnClick(R.id.tijiao)
     public void onClick() {
+
         requestData();
     }
 }

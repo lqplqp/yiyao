@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray">
 
 <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
     android:orientation="vertical">
 
 
@@ -34,7 +32,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/fillet_white_bg"
         android:layout_margin="10dp">
         <TableRow>
@@ -66,125 +64,14 @@
                 android:background="@drawable/table_border_bg"
                 />
         </TableRow>
-        <TableRow>
-
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="1"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/textView2" />
-
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="河南省食品药品监督管理局"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="name"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="2"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="郑州市食品药品监督管理局"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="3"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="新乡市食品药品监督管理局"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="总计："
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-        </TableRow>
 
 
     </TableLayout>
-<com.lxkj.yiyao.view.RefreshListView
-    android:id="@+id/list_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"></com.lxkj.yiyao.view.RefreshListView>
+    <com.lxkj.yiyao.view.RefreshListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.lxkj.yiyao.view.RefreshListView>
 
     <!--体验机构列表 end-->
 </LinearLayout>
-
-
-</android.support.v4.widget.NestedScrollView>
