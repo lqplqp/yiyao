@@ -101,6 +101,7 @@ public class UserManagerFragment extends BaseFragment {
                     adapter = new UserManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

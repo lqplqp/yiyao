@@ -1,9 +1,6 @@
-package com.lxkj.yiyao.jianguan;
+package com.lxkj.yiyao.qiye;
 
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -18,26 +15,24 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
  */
 
-public class JGUpdatePswFragment extends BaseFragment {
+public class QYUpdatePswFragment extends BaseFragment {
 
 
+    private static final String TAG = "QYUpdatePswFragment";
+    @BindView(R.id.old_pwd)
+    EditText oldPwd;
+    @BindView(R.id.new_pwd)
+    EditText newPwd;
+    @BindView(R.id.new_pwd2)
+    EditText newPwd2;
     @BindView(R.id.commit)
     Button commit;
-    @BindView(R.id.yuanmima)
-    EditText yuanmima;
-    @BindView(R.id.xinmima)
-    EditText xinmima;
-    @BindView(R.id.chongfumima)
-    EditText chongfumima;
-    Unbinder unbinder;
 
     @Override
     protected void initView() {
@@ -50,9 +45,13 @@ public class JGUpdatePswFragment extends BaseFragment {
     }
 
 
+
     @OnClick(R.id.commit)
     public void onClick() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_aqsz);
+
+        Log.i(TAG,"onclick");
+
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_aqsz);
         params.addBodyParameter("ymm",oldPwd.getText().toString());
         params.addBodyParameter("xmm",newPwd.getText().toString());
         params.addBodyParameter("qrmm",newPwd2.getText().toString());
@@ -69,7 +68,7 @@ public class JGUpdatePswFragment extends BaseFragment {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ex.printStackTrace();
             }
 
             @Override
@@ -83,19 +82,5 @@ public class JGUpdatePswFragment extends BaseFragment {
             }
         });
 
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
     }
 }

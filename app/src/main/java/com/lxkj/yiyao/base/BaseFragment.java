@@ -3,6 +3,7 @@ package com.lxkj.yiyao.base;
 import android.app.Activity;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.os.Bundle;
 import android.view.View;
@@ -25,6 +26,7 @@ public abstract class BaseFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mActivity = getActivity();
+        Log.i("BaseFragment" , "onCreate");
     }
 
     @Nullable
@@ -32,6 +34,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //mRootView = inflater.inflate(getLayout(), container, false);
         mRootView = View.inflate(mActivity,getLayout(),null);
+        Log.i("BaseFragment" , "onCreateView");
 
         ButterKnife.bind(this,mRootView);
         initView();
@@ -58,5 +61,6 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onDestroy() {
         super.onDestroy();
+        Log.i("BaseFragment" , "onDestroy");
     }
 }

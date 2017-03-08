@@ -29,7 +29,6 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
         holder.tijaindanwei.setText(""+result.getString("tjdw"));
         //序号
         holder.xuhao.setText("" + result.getString("id"));
-        holder.zongji.setText("" + result.getString("tj"));
     }
 
     @Override
@@ -49,8 +48,6 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
         TextView tijaindanwei;
         @BindView(R.id.renshu)
         TextView renshu;
-        @BindView(R.id.zongji)
-        TextView zongji;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

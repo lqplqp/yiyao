@@ -5,7 +5,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.jianguan.adapter.*;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/2.
  */
 
-public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.ViewHolder> {
+public class MessageSearchAdapter extends com.lxkj.yiyao.jianguan.adapter.MBaseAdapter<MessageSearchAdapter.ViewHolder> {
     public MessageSearchAdapter(String bean) {
         super(bean);
     }

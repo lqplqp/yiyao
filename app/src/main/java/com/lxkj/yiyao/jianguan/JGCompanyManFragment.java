@@ -96,6 +96,7 @@ public class JGCompanyManFragment extends BaseFragment {
                     adapter = new JGCompanyManAdapter(result);
                     listView.setAdapter(adapter);
                 }else{
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

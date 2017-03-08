@@ -1,231 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray"
-    android:orientation="vertical">
 
 
-    <!--查询条件和查询条件之下的输入框  start-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            android:layout_centerVertical="true"
-            style="@style/image_title_view"
-            android:src="@mipmap/sj_shenhe_select" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/title_left"
-            android:text="@string/sj_shenhe_selectmsg"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/yellow_but_bg"
-            android:clickable="true"
-            android:paddingBottom="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
-            android:paddingTop="5dp"
-            android:text="@string/sj_shenhe_select"
-            android:textColor="@color/global_white"
-            android:id="@+id/select" />
-    </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/fillet_white_bg"
-        android:orientation="vertical"
-        android:layout_margin="10dp"
-        android:paddingRight="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp">
-        <LinearLayout
+        <!--查询条件和查询条件之下的输入框  start-->
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_centerVertical="true"
+                style="@style/image_title_view"
+                android:src="@mipmap/sj_shenhe_select" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:text="搜索内容："
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/textView11" />
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:layout_centerVertical="true"
-                android:gravity="center_vertical"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/table_border_bg"
-                android:hint="姓名、信息卡编号"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:lines="1"
-                android:id="@+id/content" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:text="注册时间："
+                android:layout_marginLeft="@dimen/title_left"
+                android:text="@string/sj_shenhe_selectmsg"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/yellow_but_bg"
+                android:clickable="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="5dp"
+                android:text="@string/sj_shenhe_select"
+                android:textColor="@color/global_white"
+                android:id="@+id/select" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fillet_white_bg"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                >
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="搜索内容："
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size"
+                    android:id="@+id/textView11" />
+
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="@dimen/edit_height"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
                     android:background="@drawable/table_border_bg"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/start_time"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        />
-                </RelativeLayout>
-                <View
-                    android:layout_width="15dp"
-                    android:layout_height="1dp"
-                    android:layout_gravity="center_vertical"
+                    android:hint="姓名、信息卡编号"
+                    android:textSize="@dimen/qyinfo_text_size"
+                    android:lines="1"
+                    android:id="@+id/content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="注册时间："
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:background="@color/black"/>
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="@dimen/edit_height"
-                    android:background="@drawable/table_border_bg"
-                    android:gravity="center">
-                    <TextView
-                        android:id="@+id/end_time"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        />
-                </RelativeLayout>
+                    >
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/edit_height"
+                        android:background="@drawable/table_border_bg"
+                        android:gravity="center">
+                        <TextView
+                            android:clickable="true"
+                            android:id="@+id/start_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </RelativeLayout>
+                    <View
+                        android:layout_width="15dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/edit_height"
+                        android:background="@drawable/table_border_bg"
+                        android:gravity="center">
+                        <TextView
+                            android:clickable="true"
+                            android:id="@+id/end_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+
             </LinearLayout>
 
         </LinearLayout>
-
-    </LinearLayout>
-    <!--查询条件和查询条件之下的输入框  end-->
+        <!--查询条件和查询条件之下的输入框  end-->
 
 
-    <!--体验机构列表 start-->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
-
-        <ImageView
-            style="@style/image_title_view"
-            android:src="@mipmap/sj_shenhe_menu" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <!--体验机构列表 start-->
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="@dimen/title_left"
-            android:text="信息卡列表"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size" />
-    </RelativeLayout>
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp">
 
-        <TableLayout
+            <ImageView
+                style="@style/image_title_view"
+                android:src="@mipmap/sj_shenhe_menu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/title_left"
+                android:text="信息卡列表"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+        </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/fillet_white_bg">
+
+                <TableRow>
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="序号"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/qyinfo_text_size" />
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+
+                        android:text="姓名"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/qyinfo_text_size" />
+
+                    <TextView
+                        android:background="@drawable/table_frame_fray"
+                        android:layout_height="@dimen/table_hight"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:text="信息卡编号"
+                        android:textColor="@color/global_black"
+                        android:textSize="@dimen/qyinfo_text_size" />
+                </TableRow>
+
+
+
+
+
+            </TableLayout>
+
+        <!--体验机构列表 end-->
+
+        <com.lxkj.yiyao.view.RefreshListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fillet_white_bg">
+            android:id="@+id/list_view"
+            >
 
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="序号"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-
-                    android:text="姓名"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="信息卡编号"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-            </TableRow>
+        </com.lxkj.yiyao.view.RefreshListView>
 
 
-
-
-
-        </TableLayout>
-
-    <!--体验机构列表 end-->
-
-    <com.lxkj.yiyao.view.RefreshListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/list_view"
-        >
-
-    </com.lxkj.yiyao.view.RefreshListView>
-
-
-</LinearLayout>
-</LinearLayout>
+    </LinearLayout>
