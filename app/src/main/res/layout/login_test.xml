@@ -5,8 +5,6 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/guohui"
-        android:clickable="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/login_icon"
@@ -15,6 +13,26 @@
         android:layout_marginRight="25dp"
         />
 
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="225dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:id="@+id/spinner"
+
+        >
+
+
+    </Spinner>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="#87cdf5"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="270dp"
+        />
 
 
     <EditText
@@ -23,7 +41,7 @@
         android:hint="@string/login_input_username"
         android:textColorHint="@color/login_hint"
         android:background="@null"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="280dp"
         android:textColor="@color/login_text"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
@@ -35,7 +53,7 @@
         android:background="#87cdf5"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginTop="280dp"
+        android:layout_marginTop="310dp"
         />
 
     <EditText
@@ -47,7 +65,7 @@
         android:layout_height="wrap_content"
         android:hint="@string/login_input_pwd"
         android:textColorHint="@color/login_hint"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="330dp"
         android:id="@+id/password" />
     <View
         android:layout_width="match_parent"
@@ -55,7 +73,7 @@
         android:background="#87cdf5"
         android:layout_marginLeft="28dp"
         android:layout_marginRight="28dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="360dp"
         />
 
    <!-- <LinearLayout
@@ -104,7 +122,7 @@
         android:text="@string/login_register"
         android:textSize="18sp"
         android:textColor="@color/login_register"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="460dp"
         android:layout_marginLeft="50dp"
         android:background="@drawable/login_blue_solid"
         android:paddingLeft="25dp"
@@ -119,7 +137,7 @@
         android:layout_height="wrap_content"
         android:text="@string/login_login"
         android:textColor="@color/login_login"
-        android:layout_marginTop="430dp"
+        android:layout_marginTop="460dp"
         android:layout_marginLeft="220dp"
         android:textSize="18sp"
         android:background="@drawable/login_login_blue_solid"

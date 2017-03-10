@@ -1,20 +1,15 @@
 package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.Spinner;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.lxkj.yiyao.MainActivity;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
@@ -30,14 +25,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class LoginActivity extends BaseActivity {
+public class LoginTestActivity extends BaseActivity  {
     @BindView(R.id.username)
     EditText username;
     @BindView(R.id.password)
@@ -46,8 +40,8 @@ public class LoginActivity extends BaseActivity {
     Button register;
     @BindView(R.id.login)
     Button login;
-    @BindView(R.id.guohui)
-    ImageView guohui;
+    @BindView(R.id.spinner)
+    Spinner spinner;
 
 
     private String TAG = "LoginActivity";
@@ -63,18 +57,11 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void init() {
-//        initSpinner();
-        guohui.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, LoginTestActivity.class));
-                finish();
-            }
-        });
+        initSpinner();
 
     }
 
-    /*private void initSpinner() {
+    private void initSpinner() {
 
         selects.add("增加监管单位");
         selects.add("省局管理员");
@@ -83,32 +70,32 @@ public class LoginActivity extends BaseActivity {
         selects.add("企业管理员");
         selects.add("县区级管理员");
 
-        adapter = new ArrayAdapter<String>(this, R.layout.spinner_item, selects);
+        adapter = new ArrayAdapter<String>(this,R.layout.spinner_item,selects);
         //第三步：为适配器设置下拉列表下拉时的菜单样式。
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //第四步：将适配器添加到下拉列表上
         spinner.setAdapter(adapter);
         //第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
-        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+        spinner.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 // TODO Auto-generated method stub
                 userType = (int) arg3;
-                *//* 将mySpinner 显示*//*
+                /* 将mySpinner 显示*/
                 arg0.setVisibility(View.VISIBLE);
             }
-
             public void onNothingSelected(AdapterView<?> arg0) {
                 // TODO Auto-generated method stub
                 arg0.setVisibility(View.VISIBLE);
             }
         });
 
-    }*/
+    }
+
 
 
     @Override
     public int getLayout() {
-        return R.layout.login;
+        return R.layout.login_test;
     }
 
 
@@ -125,41 +112,32 @@ public class LoginActivity extends BaseActivity {
     }
 
     private void onClickLogin() {
-        if (username.getText().toString().equals("")) {
-            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-            intent.putExtra("userType", userType);
+        if(username.getText().toString().equals("")){
+            Intent intent = new Intent(LoginTestActivity.this, MainActivity.class);
+            intent.putExtra("userType",userType);
             startActivity(intent);
         }
 
 
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.login);
 
-        params.addBodyParameter("username", username.getText().toString());
-        params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("access", userType + "");
+        params.addBodyParameter("username",username.getText().toString());
+        params.addBodyParameter("password",password.getText().toString());
+        params.addBodyParameter("access",userType + "");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Gson gson = new Gson();
                 LoginBean loginBean = gson.fromJson(result, LoginBean.class);
-                JSONObject parse = JSONObject.parseObject(result);
-                int loginCode = Integer.parseInt (parse.get("code").toString());
-                if (loginCode == 111111) {
-                    JSONObject data = parse.getJSONObject("data");
-                    if (data != null){
-                        String username = (String) data.get("username");
-                        String txdz = (String) data.get("txdz");
-                        int fl = ((int) data.get("fl")) - 1;
-                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                        intent.putExtra("userType", fl);
-                        intent.putExtra("user_name", username);
-                        intent.putExtra("user_dep", loginBean.user_dep);
-                        intent.putExtra("user_img", txdz);
-                        startActivity(intent);
-                        finish();
-                    }
-
-                } else {
+                if(loginBean.code == 111111){
+                    Intent intent = new Intent(LoginTestActivity.this, MainActivity.class);
+                    intent.putExtra("userType",userType);
+                    intent.putExtra("user_name",loginBean.user_name);
+                    intent.putExtra("user_dep",loginBean.user_dep);
+                    intent.putExtra("user_img",loginBean.user_img);
+                    startActivity(intent);
+                    finish();
+                }else{
                     ToastUtil.show(loginBean.message);
                 }
 
@@ -178,7 +156,7 @@ public class LoginActivity extends BaseActivity {
 
             @Override
             public void onFinished() {
-                Log.i(TAG, "finished");
+                Log.i(TAG,"finished");
             }
         });
 
@@ -187,15 +165,13 @@ public class LoginActivity extends BaseActivity {
 
     private void onClickRegister() {
         toast("注册");
-        Intent intent = new Intent(this, RegisterActivity.class);
+        Intent intent = new Intent(this,RegisterActivity.class);
         startActivity(intent);
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
+
+
+
 }

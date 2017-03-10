@@ -27,6 +27,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
 
+        <activity android:name=".activity.LoginTestActivity"/>
         <activity android:name=".activity.SelectTrainActivity"/>
 
         <activity android:name=".shengjugeren.AddAdminActivity"/>
