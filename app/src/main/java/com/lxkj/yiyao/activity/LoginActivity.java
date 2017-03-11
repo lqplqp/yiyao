@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -149,7 +150,12 @@ public class LoginActivity extends BaseActivity {
                     if (data != null){
                         String username = (String) data.get("username");
                         String txdz = (String) data.get("txdz");
+                        int id = (int) data.get("id");
                         int fl = ((int) data.get("fl")) - 1;
+                        SharedPreferences sp = getSharedPreferences("shiyao", 0);
+                        SharedPreferences.Editor edit = sp.edit();
+                        edit.putInt("id", id);
+                        edit.commit();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("userType", fl);
                         intent.putExtra("user_name", username);

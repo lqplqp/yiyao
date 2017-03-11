@@ -107,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
-                <EditText
+                <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="@dimen/edit_height"
@@ -115,7 +115,7 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:background="@drawable/edit_border_bg"
                     android:lines="1"
-                    android:id="@+id/star_time" />
+                    android:id="@+id/start_time" />
                 <View
                     android:layout_width="40dp"
                     android:layout_height="1dp"
@@ -123,7 +123,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@color/black"/>
-                <EditText
+                <TextView
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="@dimen/edit_height"
@@ -166,7 +166,9 @@
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/fillet_white_bg">
 
             <TableRow>

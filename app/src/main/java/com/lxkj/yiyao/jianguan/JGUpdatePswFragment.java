@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.jianguan;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,24 +51,29 @@ public class JGUpdatePswFragment extends BaseFragment {
 
     @OnClick(R.id.commit)
     public void onClick() {
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", 0);
+        int id = sp.getInt("id", 0);
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_aqsz);
         params.addBodyParameter("ymm", oldPwd.getText().toString());
         params.addBodyParameter("xmm", newPwd.getText().toString());
         params.addBodyParameter("qrmm", newPwd2.getText().toString());
+        params.addBodyParameter("id", id + "");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 String code = jsonObject.get("code").toString();
                 if (code.equals("111111")) {
-
+                    ToastUtil.show("修改成功");
+                }else {
+                    ToastUtil.show("" + jsonObject.get("message"));
                 }
-                ToastUtil.show(jsonObject.get("message").toString() + "");
+
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ToastUtil.show("修改失败");
             }
 
             @Override

@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
@@ -30,6 +31,8 @@ public class CompanyTongJiFragment extends BaseFragment {
     CompanyTongjiAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.chaxun)
+    TextView chaxun;
     private int page = 1;
 
     private String TAG = "CompanyTongjiAdapter";
@@ -38,7 +41,7 @@ public class CompanyTongJiFragment extends BaseFragment {
     @Override
     protected void initView() {
 
-requestData();
+        requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -61,6 +64,12 @@ requestData();
                 requestData();
 
 
+            }
+        });
+        chaxun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestData();
             }
         });
 
