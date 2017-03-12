@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -29,13 +30,22 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
     }
 
     @Override
-    protected void fillData(int i, ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
 
         Glide.with(mActivity).load(GlobalString.BaseURL + "/"+result.get("tpdz")).into(holder.img1);
 
         holder.title.setText( "" + result.get("bt").toString());
         holder.time.setText("" + result.get("pxsj").toString());
+
+        holder.img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mActivity,LearningActivity.class);
+                intent.putExtra("pxid",result.get("id").toString());
+                mActivity.startActivity(intent);
+            }
+        });
 
     }
 
