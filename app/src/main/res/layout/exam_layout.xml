@@ -36,7 +36,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="1.编译原理一般分为哪几个阶段？编译原理一般分为哪几个阶段？ (1分)"
         android:textSize="@dimen/exam_text_size"
         android:textColor="@color/global_black"
         />
@@ -56,7 +55,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/global_black"
-                android:text="A.词法分析"
                 />
             <RadioButton
                 android:id="@+id/rb_b"
@@ -64,7 +62,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/global_black"
-                android:text="B.语法分析"
                 />
             <RadioButton
                 android:id="@+id/rb_c"
@@ -72,7 +69,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/global_black"
-                android:text="C.语义分析"
                 />
             <RadioButton
                 android:id="@+id/rb_d"
@@ -80,7 +76,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/global_black"
-                android:text="D.没有分析"
                 />
 
         </RadioGroup>
