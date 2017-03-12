@@ -309,7 +309,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan9);
                                 //安全设置
-                                UpdatePswFragment sjgrUpdatePswFragment = new UpdatePswFragment();
+                                JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_logout:
@@ -435,7 +435,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
                                 //安全设置
-                                SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                                JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_10:
@@ -553,7 +553,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("安全设置");
                                 pagerTitles = getResources().getStringArray(R.array.shiji8);
                                 //安全设置
-                                SJGRUpdatePswFragment sjgrUpdatePswFragment = new SJGRUpdatePswFragment();
+                                JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_logout:
@@ -708,7 +708,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navi_menu_5:
                         setTitle("安全设置");
                         pagerTitles = getResources().getStringArray(R.array.qiye4);
-                        com.lxkj.yiyao.qiye.QYUpdatePswFragment sjgrUpdatePswFragment = new com.lxkj.yiyao.qiye.QYUpdatePswFragment();
+                        JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
 
                         fragments.add(sjgrUpdatePswFragment);
                         break;
