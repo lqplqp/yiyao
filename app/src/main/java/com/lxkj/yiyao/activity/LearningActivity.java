@@ -1,6 +1,8 @@
 package com.lxkj.yiyao.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -67,6 +69,7 @@ public class LearningActivity extends BaseActivity {
 
     @Override
     protected void init() {
+
         index = Integer.parseInt(getIntent().getStringExtra("pxid"));
         requestDate();
     }
@@ -86,24 +89,24 @@ public class LearningActivity extends BaseActivity {
                 JSONObject object = JSONObject.parseObject(a);
 
                 Glide.with(LearningActivity.this).load(object.get("tpdz")).into(image);
-                if(object.get("tpjs") != null){
-                    title.setText(""+object.get("tpjs").toString());
+                if (object.get("tpjs") != null) {
+                    title.setText("" + object.get("tpjs").toString());
                 }
-                if(object.get("sydq") != null)
-                    shiyingdiqu.setText(""+object.get("sydq").toString());
-                if(object.get("sshy") != null)
-                    suoshuhangye.setText(""+object.get("sshy").toString());
-                if(object.get("pxsj") != null && object.get("pxsj1")!=null)
-                    peixunshijian.setText(""+object.get("pxsj").toString() + "到" + object.get("pxsj1").toString());
-                if(object.get("pxblb") !=null)
-                    peixunbanleibie.setText(""+object.get("pxblb").toString());
-                if(object.get("zsmc")!=null)
-                    zhengshumingcheng.setText(""+object.get("zsmc").toString());
-                if(object.get("jytj")!=null)
-                    jieyetiaojian.setText(""+object.get("jytj").toString());
-                if(object.get("ts") !=null)
-                    jieguo.setText(""+object.get("ts").toString());
-                if(object.get("jysj") != null && object.get("jysj1")!=null)
+                if (object.get("sydq") != null)
+                    shiyingdiqu.setText("" + object.get("sydq").toString());
+                if (object.get("sshy") != null)
+                    suoshuhangye.setText("" + object.get("sshy").toString());
+                if (object.get("pxsj") != null && object.get("pxsj1") != null)
+                    peixunshijian.setText("" + object.get("pxsj").toString() + "到" + object.get("pxsj1").toString());
+                if (object.get("pxblb") != null)
+                    peixunbanleibie.setText("" + object.get("pxblb").toString());
+                if (object.get("zsmc") != null)
+                    zhengshumingcheng.setText("" + object.get("zsmc").toString());
+                if (object.get("jytj") != null)
+                    jieyetiaojian.setText("" + object.get("jytj").toString());
+                if (object.get("ts") != null)
+                    jieguo.setText("" + object.get("ts").toString());
+                if (object.get("jysj") != null && object.get("jysj1") != null)
                     jieshushijian.setText("" + object.get("jysj").toString() + "到" + object.get("jysj1").toString());
 
 
@@ -119,7 +122,6 @@ public class LearningActivity extends BaseActivity {
 
                 jieYeZhengShuAdapter = new JieYeZhengShuAdapter(e);
                 jieyezhengshuListview.setAdapter(jieYeZhengShuAdapter);
-
 
 
             }
@@ -149,5 +151,24 @@ public class LearningActivity extends BaseActivity {
     }
 
 
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+        Toolbar toolbar =  (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("在线学习");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setHomeButtonEnabled(true);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }

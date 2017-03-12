@@ -103,7 +103,7 @@
                         android:layout_marginRight="70dp"
                         android:padding="8dp"
                         android:layout_marginBottom="10dp"
-                        android:id="@+id/add" />
+                        android:id="@+id/add_people" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>
@@ -200,7 +200,7 @@
                         android:layout_marginRight="70dp"
                         android:padding="8dp"
                         android:layout_marginBottom="10dp"
-                        android:id="@+id/select" />
+                        android:id="@+id/select_project" />
                 </RelativeLayout>
             </LinearLayout>
         </RelativeLayout>

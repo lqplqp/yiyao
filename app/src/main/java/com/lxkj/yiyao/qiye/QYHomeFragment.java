@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.SelectTrainActivity;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.jianguan.*;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
@@ -21,9 +22,9 @@ import butterknife.OnClick;
  */
 
 public class QYHomeFragment extends BaseFragment {
-    @BindView(R.id.add)
+    @BindView(R.id.add_people)
     TextView add;
-    @BindView(R.id.select)
+    @BindView(R.id.select_project)
     TextView select;
 
     @Override
@@ -36,16 +37,17 @@ public class QYHomeFragment extends BaseFragment {
         return R.layout.qy_fragment_layout_home;
     }
 
-    @OnClick({R.id.add, R.id.select})
+    @OnClick({R.id.add_people, R.id.select_project})
     public void onClick(View view) {
+        Intent intent ;
         switch (view.getId()) {
-            case R.id.add:
-                toast("增加");// TODO: 2017/1/19 增加
-                Intent intent = new Intent(getActivity(), AddAdminActivity.class);
+            case R.id.add_people:
+                intent = new Intent(getActivity(),AddAdminActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.select:
-                toast("选择");// TODO: 2017/1/19 选择
+            case R.id.select_project:
+                intent = new Intent(getActivity(),SelectTrainActivity.class);
+                startActivity(intent);
                 break;
         }
     }

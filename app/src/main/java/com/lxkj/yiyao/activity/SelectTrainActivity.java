@@ -1,6 +1,8 @@
 package com.lxkj.yiyao.activity;
 
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.RadioButton;
@@ -64,7 +66,11 @@ public class SelectTrainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("培训项目");
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         requestDate();
 
 
@@ -180,5 +186,13 @@ public class SelectTrainActivity extends BaseActivity {
         return R.layout.shiji_fragment_layout_select_train;
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
