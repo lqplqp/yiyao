@@ -37,14 +37,14 @@ public class TiJianSearchFragment extends BaseFragment {
     TiJianSearchAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.chaxun)
+    TextView select;
+    @BindView(R.id.sousuoneirong)
+    EditText sousuoneirong;
     @BindView(R.id.start_time)
     TextView startTime;
     @BindView(R.id.end_time)
     TextView endTime;
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.sousuoneirong)
-    EditText sousuoneirong;
     private int page = 1;
 
     private String TAG = "TiJianSearchFragment";

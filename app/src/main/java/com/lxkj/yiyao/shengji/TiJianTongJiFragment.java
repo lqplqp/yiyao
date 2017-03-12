@@ -40,6 +40,8 @@ public class TiJianTongJiFragment extends BaseFragment {
     TextView startTime;
     @BindView(R.id.end_time)
     TextView endTime;
+    @BindView(R.id.select)
+    TextView select;
     private int page = 1;
 
     private String TAG = "TiJianTongJiFragment";
@@ -71,6 +73,12 @@ public class TiJianTongJiFragment extends BaseFragment {
                 requestData();
 
 
+            }
+        });
+        select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestData();
             }
         });
 

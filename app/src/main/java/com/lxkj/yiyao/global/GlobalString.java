@@ -34,7 +34,7 @@ public interface GlobalString {
     //fenji3
     public static final String jg_zfjlgl = "admin/fenji/zfjlgl/";
 
-    public static final String jg_aqsz = "admin/fenji/aqsz/";
+    public static final String jg_aqsz = "admin/fenji4/aqsz/";
     //shiji_监管人员管理
     public static final String shiji_jgrygl = "admin/fenji3/jgrygl/";
     //shiji_培训通知管理

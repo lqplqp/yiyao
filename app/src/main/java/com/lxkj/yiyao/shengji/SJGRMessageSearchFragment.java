@@ -1,11 +1,15 @@
 package com.lxkj.yiyao.shengji;
 
+import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -14,6 +18,7 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -26,6 +31,8 @@ public class SJGRMessageSearchFragment extends BaseFragment {
     MessageSearchAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.chaxun)
+    TextView chaxun;
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
@@ -33,7 +40,7 @@ public class SJGRMessageSearchFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-requestData();
+        requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -57,6 +64,12 @@ requestData();
                 requestData();
 
 
+            }
+        });
+        chaxun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                requestData();
             }
         });
 
@@ -116,4 +129,11 @@ requestData();
         return R.layout.sjgr_fragment_layout_message_search;
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
+    }
 }

@@ -14,7 +14,6 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRTiJianSearchAdapter;
-import com.lxkj.yiyao.shiji.adapter.AdminManagerAdapter;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -50,11 +49,11 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
     TextView chaxun;
     @BindView(R.id.fanhui)
     TextView fanhui;
-    @BindView(R.id.star_time)
-    EditText starTime;
-    @BindView(R.id.end_time)
-    EditText endTime;
     Unbinder unbinder1;
+    @BindView(R.id.start_time)
+    TextView startTime;
+    @BindView(R.id.end_time)
+    TextView endTime;
     private int page = 1;
 
 
@@ -62,7 +61,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
     protected void initView() {
 
         requestData(sousuoneirong.getText().toString(),
-                starTime.getText().toString(),
+                startTime.getText().toString(),
                 endTime.getText().toString());
 
 
@@ -77,7 +76,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
 
 
                 requestData(sousuoneirong.getText().toString(),
-                        starTime.getText().toString(),
+                        startTime.getText().toString(),
                         endTime.getText().toString());
 
 
@@ -88,7 +87,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
 
 
                 requestData(sousuoneirong.getText().toString(),
-                        starTime.getText().toString(),
+                        startTime.getText().toString(),
                         endTime.getText().toString());
 
 
@@ -156,11 +155,11 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
         return R.layout.sjgr_fragment_layout_tijian_search;
     }
 
-    @OnClick({R.id.chaxun, R.id.fanhui, R.id.star_time, R.id.end_time})
+    @OnClick({R.id.chaxun, R.id.fanhui, R.id.start_time, R.id.end_time})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.start_time:
-                starTime.setOnClickListener(new View.OnClickListener() {
+                startTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
                     @Override
                     public void onClick(View view) {
@@ -172,7 +171,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
                                                   int startDayOfMonth) {
                                 String textString = String.format("%d-%d-%d", startYear,
                                         startMonthOfYear + 1, startDayOfMonth);
-                                starTime.setText(textString);
+                                startTime.setText(textString);
                             }
                         }, c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.get(Calendar.DATE), true).show();
                     }
@@ -181,6 +180,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
             case R.id.end_time:
                 endTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
+
                     @Override
                     public void onClick(View view) {
                         // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
@@ -206,7 +206,7 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
                     page = 1;
                 }
                 requestData(sousuoneirong.getText().toString(),
-                        starTime.getText().toString(),
+                        startTime.getText().toString(),
                         endTime.getText().toString());
 
                 break;
@@ -214,5 +214,13 @@ public class SJGRTiJianSearchFragment extends BaseFragment {
                 toast("新增");
                 break;
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 }

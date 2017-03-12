@@ -18,8 +18,6 @@ import butterknife.ButterKnife;
  */
 
 public class ProjectApplyFragment extends BaseFragment {
-
-
     @BindView(R.id.rb_1_1)
     RadioButton rb11;
     @BindView(R.id.rb_1_2)
