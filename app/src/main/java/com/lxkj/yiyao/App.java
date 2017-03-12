@@ -22,6 +22,6 @@ public class App extends LitePalApplication {
         super.onCreate();
         mApplication = this;
         x.Ext.init(this);
-        SQLiteDatabase db = Connector.getDatabase();
+//        SQLiteDatabase db = Connector.getDatabase();
     }
 }

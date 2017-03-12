@@ -1,146 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
     android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="在线考试"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
     >
     <TextView
-        android:id="@+id/num_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1."
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <TextView
-        android:id="@+id/type_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/num_tv"
-        android:text="【选择题】"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/global_black"
-        />
-    <TextView
         android:id="@+id/question_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/num_tv"
         android:layout_marginTop="10dp"
-        android:text="编译原理一般分为哪几个阶段？编译原理一般分为哪几个阶段？"
-        android:textSize="@dimen/qyinfo_text_size"
+        android:text="1.编译原理一般分为哪几个阶段？编译原理一般分为哪几个阶段？ (1分)"
+        android:textSize="@dimen/exam_text_size"
         android:textColor="@color/global_black"
         />
-    <RelativeLayout
-        android:id="@+id/key1_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/question_tv"
-        android:clickable="true"
-        android:layout_marginTop="20dp"
-        >
-        <TextView
-            android:id="@+id/first_key_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="A.词法分析"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            />
-        <RadioButton
-            android:id="@+id/first_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:clickable="false"
-            />
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/key2_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/key1_root"
-        android:clickable="true"
-        >
-        <TextView
-            android:id="@+id/second_key_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="B.语法分析"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            />
-        <RadioButton
-            android:id="@+id/second_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:clickable="false"
-            />
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/key3_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/key2_root"
-        android:clickable="true"
-        >
-        <TextView
-            android:id="@+id/fourth_key_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="D.代码优化"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            />
-        <RadioButton
-            android:id="@+id/third_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:clickable="false"
-            />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/key4_root"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/key3_root"
-        android:clickable="true">
-        <TextView
-            android:id="@+id/third_key_tv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:text="C.语义分析和中间代码生成法分析"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            />
-        <RadioButton
-            android:id="@+id/fourth_rb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_alignParentRight="true"
-            android:clickable="false"
-            />
-
-    </RelativeLayout>
 
 </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <RadioButton
+                android:id="@+id/rb_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/global_black"
+                android:text="A.词法分析"
+                />
+            <RadioButton
+                android:id="@+id/rb_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/global_black"
+                android:text="B.语法分析"
+                />
+            <RadioButton
+                android:id="@+id/rb_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/global_black"
+                android:text="C.语义分析"
+                />
+            <RadioButton
+                android:id="@+id/rb_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/global_black"
+                android:text="D.没有分析"
+                />
+
+        </RadioGroup>
+    </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -152,7 +96,9 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_margin="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/yellow_but_bg"
             android:text="上一题"
             android:textColor="@color/white"
@@ -162,10 +108,23 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:layout_margin="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/blue_but_bg"
             android:text="下一题"
             android:textColor="@color/white"
             />
     </LinearLayout>
+    <Button
+        android:id="@+id/ok_but"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blue_but_bg"
+        android:text="提交"
+        android:textColor="@color/white"
+        />
 </LinearLayout>

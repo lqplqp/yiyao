@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <litepal>
-    <dbname value="ques" ></dbname>
+    <dbname value="exam" ></dbname>
 
-    <version value="4" ></version>
+    <version value="1" ></version>
 
     <list>
-        <mapping class="com.lxkj.yiyao.db.QuestionDBBean"></mapping>
+        <mapping class="com.lxkj.yiyao.db.ExamDataBean"></mapping>
     </list>
 </litepal>

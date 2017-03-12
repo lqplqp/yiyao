@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
@@ -136,6 +137,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 drawer.openDrawer(naviView);
+            }
+        });
+
+        /**
+         * 测试考试用
+         */
+        titleTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ExamActivity.class);
+                startActivity(intent);
             }
         });
 

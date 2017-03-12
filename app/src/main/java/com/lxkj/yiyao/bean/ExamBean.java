@@ -1,5 +1,7 @@
 package com.lxkj.yiyao.bean;
 
+import com.lxkj.yiyao.db.ExamDataBean;
+
 import java.util.List;
 
 /**
@@ -7,9 +9,17 @@ import java.util.List;
  */
 
 public class ExamBean {
-    public List<Data> data;
+    public List<ExamDataBean> data;
     public int code;
     public String message;
+
+    public List<ExamDataBean> getData() {
+        return data;
+    }
+
+    public void setData(List<ExamDataBean> data) {
+        this.data = data;
+    }
 
     public int getCode() {
         return code;
@@ -27,41 +37,4 @@ public class ExamBean {
         this.message = message;
     }
 
-    public List<Data> getData() {
-        return data;
-    }
-
-    public void setData(List<Data> data) {
-        this.data = data;
-    }
-
-    public static class Data{
-        /**
-         * kmid			科目id 判断对应题库
-
-         tm			题目
-         a			A
-         b			B
-         c			C
-         d			D
-         da			答案
-         fs			分数
-         zf			总分
-         jgfs			及格分数
-
-         */
-        public String tm;
-        public String a;
-        public String b;
-        public String c;
-        public String d;
-        public String da;
-        public String fs;
-        public int zf;
-        public int jgfs;
-        public int kmid;
-        public int id;
-
-
-    }
 }

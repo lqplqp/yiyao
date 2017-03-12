@@ -8,6 +8,12 @@ public interface GlobalString {
 
     public static final String BaseURL = "http://af.0101hr.com/";
 
+    //在线考试
+    public static final String examUrl = "/admin/stk/stk";
+    //考试提交
+    public static final String examOkUrl = "/admin/stk/stjg";
+
+
 
     public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";

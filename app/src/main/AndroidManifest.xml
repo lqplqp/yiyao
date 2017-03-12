@@ -26,6 +26,7 @@
         <activity android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>
         />
+        <activity android:name=".activity.ExamResultActivity"/>
 
         <activity android:name=".activity.LoginTestActivity"/>
         <activity android:name=".activity.SelectTrainActivity"/>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="考试成绩"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:text="您本次考试的成绩"
+        />
+    <TextView
+        android:id="@+id/exam_fs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textColor="#f00"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="60"
+        />
+    <Button
+        android:id="@+id/ok_but"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/blue_but_bg"
+        android:text="完成"
+        android:textColor="@color/white"
+        />
+</LinearLayout>

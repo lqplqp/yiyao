@@ -10,4 +10,6 @@
     <dimen name="edit_height">30dp</dimen>
     <dimen name="jg_top">18sp</dimen>
     <dimen name="title_left">30dp</dimen>
+    <dimen name="exam_text_size">16dp</dimen>
+
 </resources>
