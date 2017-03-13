@@ -33,7 +33,7 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
 
-        Glide.with(mActivity).load(GlobalString.BaseURL + "/"+result.get("tpdz")).into(holder.img1);
+        Glide.with(mActivity).load(result.get("tpdz")).into(holder.img1);
 
         holder.title.setText( "" + result.get("bt").toString());
         holder.time.setText("" + result.get("pxsj").toString());
