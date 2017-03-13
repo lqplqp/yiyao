@@ -9,12 +9,14 @@
         android:gravity="center"
         android:layout_height="wrap_content"
         android:text="XXXX"
+        android:textColor="@color/global_black"
         android:id="@+id/kaochang" />
 
     <TextView
         android:gravity="center"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:textColor="@color/global_black"
         android:layout_height="wrap_content"
         android:text="未通过"
         android:id="@+id/shifoutongguo" />
@@ -24,6 +26,7 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
+        android:textColor="@color/global_bg_blue"
         android:text="进入考场"
         android:id="@+id/jinrukaochang" />
 

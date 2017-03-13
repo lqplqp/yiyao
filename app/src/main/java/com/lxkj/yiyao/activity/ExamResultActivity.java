@@ -3,6 +3,7 @@ package com.lxkj.yiyao.activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -20,12 +21,22 @@ public class ExamResultActivity extends BaseActivity {
     TextView examFs;
     @BindView(R.id.ok_but)
     Button okBut;
+    @BindView(R.id.back_img)
+    ImageView backImg;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
 
     @Override
     protected void init() {
         int fs = getIntent().getIntExtra("fs", 0);
         examFs.setText(fs + "");
         okBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        backImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();

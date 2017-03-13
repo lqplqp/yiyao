@@ -1,11 +1,11 @@
 package com.lxkj.yiyao.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
@@ -39,6 +39,10 @@ public class SelectTrainActivity extends BaseActivity {
     RadioButton rb32;
     @BindView(R.id.grid_view)
     GridView gridView;
+    @BindView(R.id.back_img)
+    ImageView backImg;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
 
 
     private void hide1() {
@@ -66,11 +70,12 @@ public class SelectTrainActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("培训项目");
-        getSupportActionBar().setHomeButtonEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         requestDate();
 
 
@@ -187,12 +192,9 @@ public class SelectTrainActivity extends BaseActivity {
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }
