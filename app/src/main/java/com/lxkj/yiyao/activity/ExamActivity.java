@@ -165,8 +165,7 @@ public class ExamActivity extends BaseActivity {
                 if ((current + 1) == examData.size()) {
                     ToastUtil.show("没有更多题目了");
                 } else {
-                    ++current;
-                    noChecked();
+                    current = current + 1;
                     exam();
                     checkIsSelect();
                 }
@@ -178,8 +177,7 @@ public class ExamActivity extends BaseActivity {
                 if (current == 0) {
                     ToastUtil.show("已经是第一题了");
                 } else {
-                    --current;
-                    noChecked();
+                    current = current - 1;
                     exam();
                     checkIsSelect();
                 }
@@ -261,19 +259,32 @@ public class ExamActivity extends BaseActivity {
         });*/
     }
 
+    private void noChecked() {
+        rbA.setChecked(false);
+        rbB.setChecked(false);
+        rbC.setChecked(false);
+        rbD.setChecked(false);
+    }
+
     private void checkIsSelect() {
+        noChecked();
         if (examData.size() > 0) {
             String da = examData.get(current).getDa();
-            if (da == "0") {
+            if (da.equals("0")) {
                 rbA.setChecked(true);
-            } else if (da == "1") {
+                ToastUtil.show("A");
+            } else if (da.equals("1")) {
                 rbB.setChecked(true);
-            } else if (da == "2") {
+                ToastUtil.show("B");
+            } else if (da.equals("2")) {
                 rbC.setChecked(true);
-            } else if (da == "3") {
+                ToastUtil.show("C");
+            } else if (da.equals("3")) {
                 rbD.setChecked(true);
+                ToastUtil.show("D");
             } else {
                 noChecked();
+                ToastUtil.show("0");
             }
         }
     }
@@ -317,12 +328,7 @@ public class ExamActivity extends BaseActivity {
         });
     }
 
-    private void noChecked() {
-        rbA.setChecked(false);
-        rbB.setChecked(false);
-        rbC.setChecked(false);
-        rbD.setChecked(false);
-    }
+
 
     /*private void checkData() {
         all = DataSupport.findAll(QuestionDBBean.class);
