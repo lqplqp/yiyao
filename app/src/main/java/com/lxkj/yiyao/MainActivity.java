@@ -143,13 +143,13 @@ public class MainActivity extends AppCompatActivity {
         /**
          * 测试考试用
          */
-        titleTv.setOnClickListener(new View.OnClickListener() {
+        /*titleTv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, ExamActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         switch (userType) {
             /**

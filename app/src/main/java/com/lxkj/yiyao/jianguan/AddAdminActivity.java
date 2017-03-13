@@ -1,7 +1,9 @@
 package com.lxkj.yiyao.jianguan;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -47,11 +49,20 @@ public class AddAdminActivity extends BaseActivity {
     EditText email;
     @BindView(R.id.repassword)
     EditText repassword;
+    @BindView(R.id.back_img)
+    ImageView backImg;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
 
     @Override
     protected void init() {
 
-
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
     private void requestDate() {
@@ -68,7 +79,7 @@ public class AddAdminActivity extends BaseActivity {
 
         params.addBodyParameter("mm", password.getText().toString());
 
-        params.addBodyParameter("qrmm",repassword.getText().toString());
+        params.addBodyParameter("qrmm", repassword.getText().toString());
 
         params.addBodyParameter("glyxm", adminname.getText().toString());
 

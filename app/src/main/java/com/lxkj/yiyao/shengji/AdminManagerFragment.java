@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shengji;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.jianguan.*;
 import com.lxkj.yiyao.shengji.adapter.AdminManagerAdapter;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
@@ -46,6 +48,8 @@ public class AdminManagerFragment extends BaseFragment {
     TextView select;
     @BindView(R.id.souguoneirong)
     EditText souguoneirong;
+    @BindView(R.id.add)
+    TextView add;
     private int page = 1;
 
     private String TAG = "AdminManagerFragment";
@@ -85,6 +89,13 @@ public class AdminManagerFragment extends BaseFragment {
                 requestData();
             }
         });
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), com.lxkj.yiyao.jianguan.AddAdminActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -95,7 +106,7 @@ public class AdminManagerFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgrygl);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("page", souguoneirong.getText() +"");
+        params.addBodyParameter("page", souguoneirong.getText() + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

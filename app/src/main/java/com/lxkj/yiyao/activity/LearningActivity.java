@@ -1,8 +1,8 @@
 package com.lxkj.yiyao.activity;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -59,6 +59,10 @@ public class LearningActivity extends BaseActivity {
     TextView jieguo;
     @BindView(R.id.jieshushijian)
     TextView jieshushijian;
+    @BindView(R.id.back_img)
+    ImageView backImg;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
     private int index = 1;
 
 
@@ -69,7 +73,12 @@ public class LearningActivity extends BaseActivity {
 
     @Override
     protected void init() {
-
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         index = Integer.parseInt(getIntent().getStringExtra("pxid"));
         requestDate();
     }
@@ -156,12 +165,8 @@ public class LearningActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
-        Toolbar toolbar =  (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("在线学习");
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setHomeButtonEnabled(true);
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

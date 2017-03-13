@@ -2,10 +2,10 @@ package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -43,8 +43,6 @@ public class ExamActivity extends BaseActivity {
     Button nextBut;
     @BindView(R.id.title_tv)
     TextView titleTv;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
     @BindView(R.id.rb_a)
     RadioButton rbA;
     @BindView(R.id.rb_b)
@@ -55,6 +53,8 @@ public class ExamActivity extends BaseActivity {
     RadioButton rbD;
     @BindView(R.id.ok_but)
     Button okBut;
+    @BindView(R.id.back_img)
+    ImageView backImg;
 
 
     private int current = 0;
@@ -120,7 +120,12 @@ public class ExamActivity extends BaseActivity {
     }
 
     private void initView() {
-
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
         checkIsSelect();
         rbA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -257,17 +262,17 @@ public class ExamActivity extends BaseActivity {
     }
 
     private void checkIsSelect() {
-        if (examData.size() > 0){
+        if (examData.size() > 0) {
             String da = examData.get(current).getDa();
-            if (da == "0"){
+            if (da == "0") {
                 rbA.setChecked(true);
-            }else if (da == "1"){
+            } else if (da == "1") {
                 rbB.setChecked(true);
-            }else if (da == "2"){
+            } else if (da == "2") {
                 rbC.setChecked(true);
-            }else if (da == "3"){
+            } else if (da == "3") {
                 rbD.setChecked(true);
-            }else {
+            } else {
                 noChecked();
             }
         }
@@ -286,7 +291,7 @@ public class ExamActivity extends BaseActivity {
                 String data = jsonObject.get("data").toString();
                 JSONObject jsonObject1 = JSONObject.parseObject(data);
                 int fs = (int) jsonObject1.get("fs");
-                if (code.equals("11111")){
+                if (code.equals("11111")) {
                     Log.d("", fs + "");
                     Intent intent = new Intent(ExamActivity.this, ExamResultActivity.class);
                     intent.putExtra("fs", fs);
