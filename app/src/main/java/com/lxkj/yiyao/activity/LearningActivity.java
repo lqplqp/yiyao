@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +24,7 @@ import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by liqinpeng on 2017/3/11 0011.
@@ -63,6 +65,8 @@ public class LearningActivity extends BaseActivity {
     ImageView backImg;
     @BindView(R.id.title_tv)
     TextView titleTv;
+    @BindView(R.id.chakanmoban)
+    TextView chakanmoban;
     private int index = 1;
 
 
@@ -160,12 +164,7 @@ public class LearningActivity extends BaseActivity {
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -175,5 +174,13 @@ public class LearningActivity extends BaseActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @OnClick(R.id.chakanmoban)
+    public void onClick() {
+
+        Intent intent = new Intent(this,MuBanActivity.class);
+        startActivity(intent);
+
     }
 }

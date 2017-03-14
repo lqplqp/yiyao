@@ -1,5 +1,7 @@
 package com.lxkj.yiyao.shengjugeren.Adapter;
 
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -45,21 +47,24 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
 
+        holder.title.setText(result.get("wj").toString());
 
-        holder.title.setText(result.get("title").toString());
-
-        holder.time.setText(result.get("sendtime").toString());
+        holder.time.setText(result.get("sj").toString());
 
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("url").toString());
-                params.setSaveFilePath( "/mnt/sdcard"+ result.get("url").toString());
+                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("url").toString().replace("/",""));
+                String s = result.get("url").toString();
+                params.setAutoRename(true);
+                params.setAutoResume(true);//设置是否在下载是自动断点续传
+                params.setSaveFilePath("/mnt/sdcard/" + result.get("url").toString());
                 x.http().get(params, new Callback.CommonCallback<File>() {
                     @Override
                     public void onSuccess(File result2) {
 
                         ToastUtil.show("下载完成,请到系统文件夹进行查看 ");
+                        Log.i("123","下载完成");
                     }
 
                     @Override

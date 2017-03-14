@@ -29,6 +29,7 @@ import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.JGUpdatePswFragment;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
+import com.lxkj.yiyao.jianguan.SelectTrainFragment;
 import com.lxkj.yiyao.jianguan.UserManagerFragment;
 import com.lxkj.yiyao.qiye.QYHomeFragment;
 import com.lxkj.yiyao.qiye.QYInfoInputFragment;
@@ -48,6 +49,9 @@ import com.lxkj.yiyao.shengjugeren.SJGRBaoMingMessageFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyInfoListFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRDownloadDocFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRDownloadDocFragment2;
+import com.lxkj.yiyao.shengjugeren.SJGRDownloadDocFragment3;
+import com.lxkj.yiyao.shengjugeren.SJGRDownloadDocFragment4;
 import com.lxkj.yiyao.shengjugeren.SJGRJianGuanTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRMessageFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRMessageSearchFragment;
@@ -78,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.tab)
     TabLayout tab;
     @BindView(R.id.view_pager)
-    ViewPager viewPager;
+    ViewPager  viewPager;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
     @BindView(R.id.navi_view)
@@ -111,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
 
         initData();
         initView();
@@ -266,7 +269,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan5);
                                 //培训项目报名
-                                com.lxkj.yiyao.shengji.ProjectApplyFragment projectApplyFragment = new com.lxkj.yiyao.shengji.ProjectApplyFragment();
+                                SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
                                 //已报培训项目
                                 com.lxkj.yiyao.shengji.PeiXunListFragment peiXunListFragment = new com.lxkj.yiyao.shengji.PeiXunListFragment();
                                 //通知消息
@@ -304,14 +307,11 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_9:
                                 setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan8);
-                                //法律法规文档下载
-                                DownloadDocFragment sjgrDownloadDocFragment = new DownloadDocFragment();
                                 //应用模板下载  待定
-                                DownloadDocFragment sjgrDownloadDocFragment1 = new DownloadDocFragment();
-                                //应用插件下载  待定
-                                DownloadDocFragment sjgrDownloadDocFragment2 = new DownloadDocFragment();
-                                //其他相关下载  待定
-                                DownloadDocFragment sjgrDownloadDocFragment3 = new DownloadDocFragment();
+                                SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                                SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                                SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                                SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                                 fragments.add(sjgrDownloadDocFragment);
                                 fragments.add(sjgrDownloadDocFragment1);
                                 fragments.add(sjgrDownloadDocFragment2);
@@ -432,12 +432,9 @@ public class MainActivity extends AppCompatActivity {
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren6);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
-                                //应用模板下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
-                                //应用插件下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
-                                //其他相关下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                                SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                                SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                                SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                                 fragments.add(sjgrDownloadDocFragment);
                                 fragments.add(sjgrDownloadDocFragment1);
                                 fragments.add(sjgrDownloadDocFragment2);
@@ -512,7 +509,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_5:
                                 setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shiji4);
-                                ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
+                                SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
                                 PeiXunListFragment peiXunListFragment1 = new PeiXunListFragment();
                                 MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
                                 fragments.add(projectApplyFragment);
@@ -550,12 +547,9 @@ public class MainActivity extends AppCompatActivity {
                                 pagerTitles = getResources().getStringArray(R.array.shiji7);
                                 //法律法规文档下载
                                 SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
-                                //应用模板下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
-                                //应用插件下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
-                                //其他相关下载  待定
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                                SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                                SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                                SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                                 fragments.add(sjgrDownloadDocFragment);
                                 fragments.add(sjgrDownloadDocFragment1);
                                 fragments.add(sjgrDownloadDocFragment2);
@@ -696,7 +690,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navi_menu_3:
                         setTitle("培训报名");
                         pagerTitles = getResources().getStringArray(R.array.qiye2);
-                        ProjectApplyFragment projectApplyFragment = new ProjectApplyFragment();
+                        SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
                         fragments.add(projectApplyFragment);
                         QYTrainOrderFragment qyTrainOrderFragment = new QYTrainOrderFragment();
                         fragments.add(qyTrainOrderFragment);
@@ -709,9 +703,9 @@ public class MainActivity extends AppCompatActivity {
                         setTitle("下载中心");
                         pagerTitles = getResources().getStringArray(R.array.qiye3);
                         SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
-                        SJGRDownloadDocFragment sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment();
-                        SJGRDownloadDocFragment sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment();
-                        SJGRDownloadDocFragment sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment();
+                        SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                        SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                        SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                         fragments.add(sjgrDownloadDocFragment);
                         fragments.add(sjgrDownloadDocFragment1);
                         fragments.add(sjgrDownloadDocFragment2);
@@ -812,6 +806,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void setIndexFragement(int indexFragement){
+        viewPager.setCurrentItem(indexFragement);
     }
 
 

@@ -8,6 +8,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.utils.FileDownload;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -60,7 +61,7 @@ public class XiangGuanZiLiaoAdapter extends BaseAdapter {
         holder.download.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ToastUtil.show("下载" + object.get("url").toString());
+                FileDownload.downloadFile(object.get("url").toString());
             }
         });
 
