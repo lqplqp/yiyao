@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.jianguan.adapter;
 
+import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.google.gson.Gson;
+import com.lxkj.yiyao.MainActivity;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.utils.ToastUtil;
 
@@ -23,8 +25,11 @@ import butterknife.ButterKnife;
 
 public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.ViewHolder> {
 
-    public CompanyManagerAdapter(String bean) {
+    private Activity mActivity;
+
+    public CompanyManagerAdapter(String bean , Activity activity) {
         super(bean);
+        mActivity = activity;
     }
 
     protected void fillData(int i, ViewHolder holder , com.alibaba.fastjson.JSONObject result) {
@@ -41,6 +46,12 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         // TODO: 2017/3/2 0002  true和false
         //备注
         holder.beizhu.setText(result.get("bz").toString());
+        holder.chakan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ((MainActivity)mActivity).setIndexFragement(1);
+            }
+        });
 
     }
 

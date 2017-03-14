@@ -1,14 +1,18 @@
-package com.lxkj.yiyao.activity;
+package com.lxkj.yiyao.jianguan;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.activity.SelectTrainAdapter;
+import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 
 import org.xutils.common.Callback;
@@ -19,10 +23,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by liqinpeng on 2017/3/8 0008.
+ * Created by liqinpeng on 2017/3/13 0013.
  */
 
-public class SelectTrainActivity extends BaseActivity {
+public class SelectTrainFragment extends BaseFragment {
     @BindView(R.id.rb_1_1)
     RadioButton rb11;
     @BindView(R.id.rb_1_2)
@@ -43,6 +47,8 @@ public class SelectTrainActivity extends BaseActivity {
     ImageView backImg;
     @BindView(R.id.title_tv)
     TextView titleTv;
+    @BindView(R.id.top)
+    RelativeLayout top;
 
 
     private void hide1() {
@@ -68,14 +74,7 @@ public class SelectTrainActivity extends BaseActivity {
         rb32.setBackgroundResource(R.drawable.fillet_white_bg);
     }
 
-    @Override
     protected void init() {
-        backImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
         requestDate();
 
 
@@ -162,7 +161,7 @@ public class SelectTrainActivity extends BaseActivity {
                 String s = result;
                 s = "123";
 
-                SelectTrainAdapter adapter = new SelectTrainAdapter(result, SelectTrainActivity.this);
+                SelectTrainAdapter adapter = new SelectTrainAdapter(result, getActivity());
                 gridView.setAdapter(adapter);
 
 
@@ -184,6 +183,12 @@ public class SelectTrainActivity extends BaseActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void initView() {
+        top.setVisibility(View.GONE);
+        init();
     }
 
     @Override

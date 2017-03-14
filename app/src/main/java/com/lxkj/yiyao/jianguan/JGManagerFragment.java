@@ -81,7 +81,7 @@ public class JGManagerFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new CompanyManagerAdapter(result);
+                    adapter = new CompanyManagerAdapter(result,getActivity());
                     listView.setAdapter(adapter);
                 } else {
                     listView.setAdapter(adapter);

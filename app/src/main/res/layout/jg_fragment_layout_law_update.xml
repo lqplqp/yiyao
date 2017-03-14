@@ -112,14 +112,17 @@
                         android:layout_width="match_parent"
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="9dp"
+
+                        android:background="@drawable/table_frame_fray"
                         android:layout_height="wrap_content">
-                        <EditText
+                        <Spinner
+
+                            android:clickable="true"
                             android:textSize="@dimen/qyinfo_text_size"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/edit_height"
-                            android:background="@drawable/table_frame_fray"
                             android:id="@+id/type">
-                        </EditText>
+                        </Spinner>
 
                     </LinearLayout>
 

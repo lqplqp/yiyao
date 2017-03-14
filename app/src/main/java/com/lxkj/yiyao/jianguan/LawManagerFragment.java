@@ -5,8 +5,12 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -14,6 +18,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.LawManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.utils.ToastUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -21,7 +26,9 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,7 +45,7 @@ public class LawManagerFragment extends BaseFragment {
     @BindView(R.id.number)
     EditText number;
     @BindView(R.id.type)
-    EditText type;
+    Spinner type;
 
     // ======================== 模板代码=============================
 
@@ -51,9 +58,15 @@ public class LawManagerFragment extends BaseFragment {
     TextView endTime;
     private int page = 1;
 
+    private ArrayAdapter<String> mSpinnerAdapter;
+    private int userType;
+
 
     @Override
     protected void initView() {
+
+
+        initSpinner();
 
 
         Log.i("BaseFragment" , "initView");
@@ -94,6 +107,8 @@ public class LawManagerFragment extends BaseFragment {
     public void requestData(String s) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_zfjlgl);
         params.addBodyParameter("page", page + "");
+        // TODO: 2017/3/14 0014 传递下拉参数 
+        params.addBodyParameter("","");
 
         if (s != null) {
             params.addBodyParameter("cx", s);
@@ -204,5 +219,41 @@ public class LawManagerFragment extends BaseFragment {
                 });
                 break;
         }
+    }
+
+
+    private List<String> selects = new ArrayList<String>();
+
+
+    private void initSpinner() {
+
+        selects.add("行政许可");
+        selects.add("行政处罚");
+        selects.add("行政强制");
+        selects.add("行政确认");
+        selects.add("行政奖励");
+        selects.add("其他行政权力");
+
+        mSpinnerAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_item,selects);
+        //第三步：为适配器设置下拉列表下拉时的菜单样式。
+        mSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //第四步：将适配器添加到下拉列表上
+        type.setAdapter(mSpinnerAdapter);
+        //第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
+        type.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                // TODO Auto-generated method stub
+                userType = (int) arg3;
+                /* 将mySpinner 显示*/
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("  " + userType);
+            }
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("12332");
+            }
+        });
+
     }
 }

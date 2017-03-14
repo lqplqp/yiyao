@@ -498,17 +498,17 @@
 
 
             <TextView
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginBottom="20dp"
-                android:padding="10dp"
-                android:background="@drawable/yellow_but_bg"
-                android:textColor="@color/white"
-
+                android:id="@+id/chakanmoban"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+
+                android:background="@drawable/yellow_but_bg"
+                android:padding="10dp"
                 android:text="查看证书模板"
-                />
+                android:textColor="@color/white" />
 
 
 

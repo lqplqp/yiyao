@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
     defaultConfig {
         applicationId "com.lxkj.yiyao"
         minSdkVersion 17
-        targetSdkVersion 25
+        targetSdkVersion 17
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -37,7 +37,7 @@ dependencies {
     compile 'com.github.Rukey7:IjkPlayerView:v1.0.3'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'org.litepal.android:core:1.4.1'
-    compile 'org.xutils:xutils:3.3.42'
+    compile 'org.xutils:xutils:3.3.32'
     compile 'com.google.code.gson:gson-parent:2.8.0'
     compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
