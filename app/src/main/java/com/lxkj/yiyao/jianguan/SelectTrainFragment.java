@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.jianguan;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,11 @@ public class SelectTrainFragment extends BaseFragment {
     @BindView(R.id.top)
     RelativeLayout top;
 
+    private String lingyu = "";
+    private String leibie = "";
+    private String guize = "1";
+    private ProgressDialog progressDialog;
+
 
     private void hide1() {
         rb11.setChecked(false);
@@ -75,6 +81,9 @@ public class SelectTrainFragment extends BaseFragment {
     }
 
     protected void init() {
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("正在加载...");
+        progressDialog.setCanceledOnTouchOutside(false);
         requestDate();
 
 
@@ -86,6 +95,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb11.setBackgroundResource(R.drawable.blue_but_bg);
                     rb11.setTextColor(getResources().getColor(R.color.white));
                     rb12.setTextColor(getResources().getColor(R.color.global_black));
+                    lingyu = "";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
             rb12.setOnClickListener(new View.OnClickListener() {
@@ -95,6 +107,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb12.setBackgroundResource(R.drawable.blue_but_bg);
                     rb12.setTextColor(getResources().getColor(R.color.white));
                     rb11.setTextColor(getResources().getColor(R.color.global_black));
+                    lingyu = "1";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
 
@@ -106,6 +121,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb21.setTextColor(getResources().getColor(R.color.white));
                     rb22.setTextColor(getResources().getColor(R.color.global_black));
                     rb23.setTextColor(getResources().getColor(R.color.global_black));
+                    leibie = "";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
             rb22.setOnClickListener(new View.OnClickListener() {
@@ -116,6 +134,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb22.setTextColor(getResources().getColor(R.color.white));
                     rb21.setTextColor(getResources().getColor(R.color.global_black));
                     rb23.setTextColor(getResources().getColor(R.color.global_black));
+                    leibie = "1";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
             rb23.setOnClickListener(new View.OnClickListener() {
@@ -126,6 +147,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb23.setTextColor(getResources().getColor(R.color.white));
                     rb21.setTextColor(getResources().getColor(R.color.global_black));
                     rb22.setTextColor(getResources().getColor(R.color.global_black));
+                    leibie = "2";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
 
@@ -136,6 +160,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb31.setBackgroundResource(R.drawable.blue_but_bg);
                     rb31.setTextColor(getResources().getColor(R.color.white));
                     rb32.setTextColor(getResources().getColor(R.color.global_black));
+                    guize = "1";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
             rb32.setOnClickListener(new View.OnClickListener() {
@@ -145,6 +172,9 @@ public class SelectTrainFragment extends BaseFragment {
                     rb32.setBackgroundResource(R.drawable.blue_but_bg);
                     rb32.setTextColor(getResources().getColor(R.color.white));
                     rb31.setTextColor(getResources().getColor(R.color.global_black));
+                    guize = "2";
+                    progressDialog.show();
+                    requestDate();
                 }
             });
         }
@@ -154,32 +184,32 @@ public class SelectTrainFragment extends BaseFragment {
 
     private void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji5/pxbm");
-
+        params.addBodyParameter("lingyu", lingyu);
+        params.addBodyParameter("leibie", leibie);
+        params.addBodyParameter("guize", guize);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                String s = result;
-                s = "123";
-
                 SelectTrainAdapter adapter = new SelectTrainAdapter(result, getActivity());
                 gridView.setAdapter(adapter);
-
+                progressDialog.dismiss();
 
             }
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
                 ex.printStackTrace();
+                progressDialog.dismiss();
             }
 
             @Override
             public void onCancelled(CancelledException cex) {
-
+                progressDialog.dismiss();
             }
 
             @Override
             public void onFinished() {
-
+                progressDialog.dismiss();
             }
         });
 

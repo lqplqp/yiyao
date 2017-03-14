@@ -50,10 +50,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb11.setBackgroundResource(R.drawable.blue_but_bg);
                 rb11.setTextColor(getResources().getColor(R.color.white));
                 rb12.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.colorAccent);
-                img2.setBackgroundResource(R.color.colorAccent);
-                img3.setBackgroundResource(R.color.colorAccent);
-                img4.setBackgroundResource(R.color.colorAccent);
             }
         });
         rb12.setOnClickListener(new View.OnClickListener() {
@@ -63,10 +59,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb12.setBackgroundResource(R.drawable.blue_but_bg);
                 rb12.setTextColor(getResources().getColor(R.color.white));
                 rb11.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.global_bg_blue);
-                img2.setBackgroundResource(R.color.global_red);
-                img3.setBackgroundResource(R.color.global_red);
-                img4.setBackgroundResource(R.color.global_bg_blue);
             }
         });
 
@@ -78,10 +70,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb21.setTextColor(getResources().getColor(R.color.white));
                 rb22.setTextColor(getResources().getColor(R.color.global_black));
                 rb23.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.colorAccent);
-                img2.setBackgroundResource(R.color.colorAccent);
-                img3.setBackgroundResource(R.color.colorAccent);
-                img4.setBackgroundResource(R.color.colorAccent);
             }
         });
         rb22.setOnClickListener(new View.OnClickListener() {
@@ -92,10 +80,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb22.setTextColor(getResources().getColor(R.color.white));
                 rb21.setTextColor(getResources().getColor(R.color.global_black));
                 rb23.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.global_bg_blue);
-                img2.setBackgroundResource(R.color.global_red);
-                img3.setBackgroundResource(R.color.global_red);
-                img4.setBackgroundResource(R.color.global_bg_blue);
             }
         });
         rb23.setOnClickListener(new View.OnClickListener() {
@@ -116,10 +100,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb31.setBackgroundResource(R.drawable.blue_but_bg);
                 rb31.setTextColor(getResources().getColor(R.color.white));
                 rb32.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.colorAccent);
-                img2.setBackgroundResource(R.color.colorAccent);
-                img3.setBackgroundResource(R.color.colorAccent);
-                img4.setBackgroundResource(R.color.colorAccent);
             }
         });
         rb32.setOnClickListener(new View.OnClickListener() {
@@ -129,10 +109,6 @@ public class ProjectApplyFragment extends BaseFragment {
                 rb32.setBackgroundResource(R.drawable.blue_but_bg);
                 rb32.setTextColor(getResources().getColor(R.color.white));
                 rb31.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.global_bg_blue);
-                img2.setBackgroundResource(R.color.global_red);
-                img3.setBackgroundResource(R.color.global_red);
-                img4.setBackgroundResource(R.color.global_bg_blue);
             }
         });
     }
