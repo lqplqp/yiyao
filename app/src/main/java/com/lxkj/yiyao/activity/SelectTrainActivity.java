@@ -191,7 +191,6 @@ public class SelectTrainActivity extends BaseActivity {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                String s = result;
                 SelectTrainAdapter adapter = new SelectTrainAdapter(result, SelectTrainActivity.this);
                 gridView.setAdapter(adapter);
                 progressDialog.dismiss();
