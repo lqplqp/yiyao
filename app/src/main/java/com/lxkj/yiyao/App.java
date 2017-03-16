@@ -4,6 +4,8 @@ package com.lxkj.yiyao;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.uuzuche.lib_zxing.activity.ZXingLibrary;
+
 import org.litepal.LitePalApplication;
 import org.litepal.tablemanager.Connector;
 import org.xutils.x;
@@ -22,6 +24,7 @@ public class App extends LitePalApplication {
         super.onCreate();
         mApplication = this;
         x.Ext.init(this);
+        ZXingLibrary.initDisplayOpinion(this);
 //        SQLiteDatabase db = Connector.getDatabase();
     }
 }

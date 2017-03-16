@@ -10,7 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -69,7 +68,7 @@ public class LawManagerFragment extends BaseFragment {
         initSpinner();
 
 
-        Log.i("BaseFragment" , "initView");
+        Log.i("BaseFragment", "initView");
         requestData(null);
 
 
@@ -107,8 +106,11 @@ public class LawManagerFragment extends BaseFragment {
     public void requestData(String s) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_zfjlgl);
         params.addBodyParameter("page", page + "");
-        // TODO: 2017/3/14 0014 传递下拉参数 
-        params.addBodyParameter("","");
+        // TODO: 2017/3/14 0014 传递下拉参数
+        params.addBodyParameter("id", "" + number.getText().toString());
+        params.addBodyParameter("type", "" + userType);
+        params.addBodyParameter("start_time", "" + startTime.getText().toString());
+        params.addBodyParameter("end_time", "" + endTime.getText().toString());
 
         if (s != null) {
             params.addBodyParameter("cx", s);
@@ -175,14 +177,13 @@ public class LawManagerFragment extends BaseFragment {
     }
 
 
-
-
     @OnClick({R.id.start_time, R.id.end_time})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.start_time:
                 startTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
+
                     @Override
                     public void onClick(View view) {
                         // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
@@ -202,6 +203,7 @@ public class LawManagerFragment extends BaseFragment {
             case R.id.end_time:
                 endTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
+
                     @Override
                     public void onClick(View view) {
                         // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
@@ -234,13 +236,13 @@ public class LawManagerFragment extends BaseFragment {
         selects.add("行政奖励");
         selects.add("其他行政权力");
 
-        mSpinnerAdapter = new ArrayAdapter<String>(getActivity(),R.layout.spinner_item,selects);
+        mSpinnerAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, selects);
         //第三步：为适配器设置下拉列表下拉时的菜单样式。
         mSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         //第四步：将适配器添加到下拉列表上
         type.setAdapter(mSpinnerAdapter);
         //第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
-        type.setOnItemSelectedListener(new Spinner.OnItemSelectedListener(){
+        type.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 // TODO Auto-generated method stub
                 userType = (int) arg3;
@@ -248,6 +250,7 @@ public class LawManagerFragment extends BaseFragment {
                 //arg0.setVisibility(View.VISIBLE);
                 ToastUtil.show("  " + userType);
             }
+
             public void onNothingSelected(AdapterView<?> arg0) {
                 // TODO Auto-generated method stub
                 //arg0.setVisibility(View.VISIBLE);
@@ -255,5 +258,13 @@ public class LawManagerFragment extends BaseFragment {
             }
         });
 
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 }
