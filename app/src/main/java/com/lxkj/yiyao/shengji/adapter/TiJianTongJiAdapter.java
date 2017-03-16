@@ -23,12 +23,18 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //人数
-        holder.renshu.setText(""+result.getString(" tjrs"));
+        //不合格人数
+        holder.buhegerenshu.setText(""+result.get("buhegerenshu"));
+        //合格人数
+        holder.hegerenshu.setText(""+result.get("buhegerenshu"));
         //体检单位
-        holder.tijaindanwei.setText(""+result.getString("tjdw"));
+        holder.tijiandanwei.setText(""+result.get("tijiandanwei"));
+        //体检合格率
+        holder.tijianhegelv.setText(""+result.get("tijianhegelv"));
+        //体检人数
+        holder.tijianrenshu.setText(""+result.get("tijianrenshu"));
         //序号
-        holder.xuhao.setText("" + result.getString("id"));
+        holder.xuhao.setText(""+result.get("xuhao"));
 
     }
 
@@ -42,13 +48,20 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
         return new ViewHolder(view);
     }
 
+
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tijaindanwei)
-        TextView tijaindanwei;
-        @BindView(R.id.renshu)
-        TextView renshu;
+        @BindView(R.id.tijiandanwei)
+        TextView tijiandanwei;
+        @BindView(R.id.tijianrenshu)
+        TextView tijianrenshu;
+        @BindView(R.id.hegerenshu)
+        TextView hegerenshu;
+        @BindView(R.id.buhegerenshu)
+        TextView buhegerenshu;
+        @BindView(R.id.tijianhegelv)
+        TextView tijianhegelv;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

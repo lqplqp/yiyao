@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shiji;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -83,7 +84,6 @@ public class AdminManagerFragment extends BaseFragment {
 
             }
         });
-
 
     }
     // ======================== 模板代码=============================
@@ -170,6 +170,8 @@ public class AdminManagerFragment extends BaseFragment {
             case R.id.end_time:
                 break;
             case R.id.add:
+                Intent intent = new Intent(getActivity(), com.lxkj.yiyao.jianguan.AddAdminActivity.class);
+                startActivity(intent);
                 break;
         }
     }

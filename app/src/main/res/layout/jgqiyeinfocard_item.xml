@@ -3,46 +3,247 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableRow
+
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        >
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fillet_white_bg">
 
-        <TextView
-            android:background="@drawable/table_frame_fray"
-            android:layout_height="@dimen/table_hight"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
+        <TableRow>
 
-            android:text="4"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:id="@+id/xuhao" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="序号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
 
-        <TextView
-            android:background="@drawable/table_frame_fray"
-            android:layout_height="@dimen/table_hight"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:text="XXXX"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:id="@+id/xingming" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="11111"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xuhao" />
 
-        <TextView
-            android:background="@drawable/table_frame_fray"
-            android:layout_height="@dimen/table_hight"
-            android:gravity="center"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:text="XXXX"
-            android:textColor="@color/global_black"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:id="@+id/xinxikabianhao" />
-    </TableRow>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xingming" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:text="信息卡编号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xinxikabianhao" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:text="身份证号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/shenfenzhenghao" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="性别"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="156132156"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/shoujihao" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="岗位"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/gangwei" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发卡日期"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/fakariqi" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="过期日期"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/guoqiriqi" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发卡单位"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/fakadanwei" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="发卡状态"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/fakazhuangtai" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
 
 </LinearLayout>

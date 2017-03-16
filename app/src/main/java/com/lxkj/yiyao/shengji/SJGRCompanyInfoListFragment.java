@@ -73,6 +73,9 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
                 requestData();
             }
         });
@@ -91,7 +94,6 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG, result);
                 if (adapter == null) {
                     adapter = new CompanyInfoListAdapter(result);
                     listView.setAdapter(adapter);

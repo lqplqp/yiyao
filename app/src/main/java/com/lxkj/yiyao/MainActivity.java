@@ -37,6 +37,7 @@ import com.lxkj.yiyao.qiye.QYInfocardManagerFragment;
 import com.lxkj.yiyao.qiye.QYMessageSearchFragment;
 import com.lxkj.yiyao.qiye.QYPersonManagerFragment;
 import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
+import com.lxkj.yiyao.qiyemanager.QYManagerTiJianBaoGaoFragment;
 import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
 import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
@@ -682,8 +683,8 @@ public class MainActivity extends AppCompatActivity {
                         fragments.add(qyInfoInputFragment);
                         QYPersonManagerFragment qyPersonManagerFragment = new QYPersonManagerFragment();
                         fragments.add(qyPersonManagerFragment);
-                        QYPersonManagerFragment qyPersonManagerFragment1 = new QYPersonManagerFragment();
-                        fragments.add(qyPersonManagerFragment1);
+                        QYManagerTiJianBaoGaoFragment qyManagerTiJianBaoGaoFragment = new QYManagerTiJianBaoGaoFragment();
+                        fragments.add(qyManagerTiJianBaoGaoFragment);
                         QYInfocardManagerFragment qyInfocardManagerFragment = new QYInfocardManagerFragment();
                         fragments.add(qyInfocardManagerFragment);
                         break;

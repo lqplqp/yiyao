@@ -28,7 +28,7 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
         holder.number.setText("" + result.get("id"));
 
         //用户名
-        holder.yhm.setText("" + result.get("yhm"));
+        holder.yhm.setText("" + result.get("zh"));
 
         //姓名
         holder.xm.setText("" + result.get("xm"));

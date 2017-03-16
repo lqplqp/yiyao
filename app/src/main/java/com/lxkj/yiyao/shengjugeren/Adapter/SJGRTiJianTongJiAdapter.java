@@ -33,7 +33,7 @@ public class SJGRTiJianTongJiAdapter extends MBaseAdapter<SJGRTiJianTongJiAdapte
 
     @Override
     protected int getItemLayout() {
-        return R.layout.tijian_tonghi_item;
+        return R.layout.sjgr_tijian_tongji_item;
     }
 
     @Override

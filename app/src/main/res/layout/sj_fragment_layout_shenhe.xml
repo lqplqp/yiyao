@@ -100,51 +100,6 @@
             android:textSize="@dimen/qyinfo_text_size" />
     </RelativeLayout>
 
-        <TableLayout
-            android:id="@+id/table"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/fillet_white_bg">
-
-            <TableRow>
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="序号"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:text="登录用户名"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-
-                <TextView
-                    android:background="@drawable/table_frame_fray"
-                    android:layout_height="@dimen/table_hight"
-                    android:gravity="center"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-
-                    android:text="体验机构名称"
-                    android:textColor="@color/global_black"
-                    android:textSize="@dimen/qyinfo_text_size" />
-            </TableRow>
-        </TableLayout>
-
-
     <!--体验机构列表 end-->
     <com.lxkj.yiyao.view.RefreshListView
         android:id="@id/list_view"
