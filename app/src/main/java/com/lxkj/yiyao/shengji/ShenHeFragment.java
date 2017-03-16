@@ -44,7 +44,7 @@ public class ShenHeFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-requestData();
+        requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -70,9 +70,12 @@ requestData();
 
             }
         });
-select.setOnClickListener(new View.OnClickListener() {
+        select.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
+        adapter.clear();
+        adapter.notifyDataSetChanged();
+        page = 1;
         requestData();
     }
 });

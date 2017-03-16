@@ -75,6 +75,9 @@ public class CompanyManageyFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
                 requestData();
             }
         });
@@ -87,8 +90,9 @@ public class CompanyManageyFragment extends BaseFragment {
     // ======================== 模板代码=============================
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
-        params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", sousuoneirong.getText() + "");
+        params.addBodyParameter("page", page + "");
+
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

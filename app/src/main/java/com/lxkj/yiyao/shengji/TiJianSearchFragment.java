@@ -82,6 +82,9 @@ public class TiJianSearchFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
                 requestData();
             }
         });
@@ -95,7 +98,7 @@ public class TiJianSearchFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tjcx);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("tjtj", sousuoneirong.getText() + "");
+        params.addBodyParameter("xx", sousuoneirong.getText() + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

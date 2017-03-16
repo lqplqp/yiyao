@@ -78,6 +78,10 @@ public class TiJianTongJiFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
                 requestData();
             }
         });

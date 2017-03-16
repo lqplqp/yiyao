@@ -22,17 +22,27 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-
-        //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        //发卡单位
+        holder.fakadanwei.setText(""+result.get("fakadanwei"));
+        //发卡日期
+        holder.fakariqi.setText(""+result.get("fakariqi"));
+        //发卡状态
+        holder.fakazhuangtai.setText(""+result.get("fakazhuangtai"));
+        //岗位
+        holder.gangwei.setText(""+result.get("gangwei"));
+        //过期日期
+        holder.guoqiriqi.setText(""+result.get("guoqiriqi"));
+        //身份证号
+        holder.shenfenzhenghao.setText(""+result.get("shenfenzhenghao"));
+        //手机号
+        holder.shoujihao.setText(""+result.get("shoujihao"));
         //姓名
-        holder.xingming.setText("" + result.get("name"));
+        holder.xingming.setText(""+result.get("xingming"));
         //信息卡编号
-        holder.xinxikabianhao.setText("" + result.get("xxlbh"));
-
-
+        holder.xinxikabianhao.setText(""+result.get("xinxikabianhao"));
+        //序号
+        holder.xuhao.setText(""+result.get("xuhao"));
     }
-
 
 
     @Override
@@ -53,6 +63,20 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
         TextView xingming;
         @BindView(R.id.xinxikabianhao)
         TextView xinxikabianhao;
+        @BindView(R.id.shenfenzhenghao)
+        TextView shenfenzhenghao;
+        @BindView(R.id.shoujihao)
+        TextView shoujihao;
+        @BindView(R.id.gangwei)
+        TextView gangwei;
+        @BindView(R.id.fakariqi)
+        TextView fakariqi;
+        @BindView(R.id.guoqiriqi)
+        TextView guoqiriqi;
+        @BindView(R.id.fakadanwei)
+        TextView fakadanwei;
+        @BindView(R.id.fakazhuangtai)
+        TextView fakazhuangtai;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

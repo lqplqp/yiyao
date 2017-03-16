@@ -14,7 +14,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/3.
  */
 
-public class ShenHeAapter extends MBaseAdapter <ShenHeAapter.ViewHolder>{
+public class ShenHeAapter extends MBaseAdapter<ShenHeAapter.ViewHolder> {
     public ShenHeAapter(String bean) {
         super(bean);
     }
@@ -22,11 +22,21 @@ public class ShenHeAapter extends MBaseAdapter <ShenHeAapter.ViewHolder>{
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //登录用户名
-        holder.dengluyonghuming.setText(""+result.getString("dlyhm"));
-        //体检机构名
-        holder.tijianjigouming.setText(""+result.getString("tjglmc"));
+        holder.dengluyonghuming.setText(""+result.get("dengluyonghuming"));
+        //法人
+        holder.faren.setText(""+result.get("faren"));
+        //服务对象
+        holder.fuwuduixiang.setText(""+result.get("fuwuduixiang"));
+        //联系电话
+        holder.lianxidianhua.setText(""+result.get("lianxidianhua"));
+        //审核状态
+        holder.shenhezhuangtai.setText(""+result.get("shenhezhuangtai"));
+        //体检机构地址
+        holder.tijianjigoudizhi.setText(""+result.get("tijianjigoudizhi"));
+        //体检机构名称
+        holder.tijianjigoumingcheng.setText(""+result.get("tijianjigoudizhi"));
         //序号
-        holder.xuhao.setText(""+result.getString("id"));
+        holder.xuhao.setText(""+result.get("tijianjigoudizhi"));
     }
 
     @Override
@@ -45,8 +55,18 @@ public class ShenHeAapter extends MBaseAdapter <ShenHeAapter.ViewHolder>{
         TextView xuhao;
         @BindView(R.id.dengluyonghuming)
         TextView dengluyonghuming;
-        @BindView(R.id.tijianjigouming)
-        TextView tijianjigouming;
+        @BindView(R.id.tijianjigoumingcheng)
+        TextView tijianjigoumingcheng;
+        @BindView(R.id.tijianjigoudizhi)
+        TextView tijianjigoudizhi;
+        @BindView(R.id.fuwuduixiang)
+        TextView fuwuduixiang;
+        @BindView(R.id.faren)
+        TextView faren;
+        @BindView(R.id.lianxidianhua)
+        TextView lianxidianhua;
+        @BindView(R.id.shenhezhuangtai)
+        TextView shenhezhuangtai;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

@@ -88,6 +88,13 @@
     <string name="start_time">开始时间</string>
     <string name="end_time">结束时间</string>
 
+    <string-array name="xueli">
+        <item>高中</item>
+        <item>专科</item>
+        <item>本科</item>
+        <item>研究生</item>
+        <item>博士</item>
+    </string-array>
 
     <!--增加监管单位0-->
     <string-array name="zengjiajianguan0">

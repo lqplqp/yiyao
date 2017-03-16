@@ -23,12 +23,18 @@ public class QYPersonManagerAdapter extends MBaseAdapter<QYPersonManagerAdapter.
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
-        //体检报告编号
-        holder.tijianbaogaobianhao.setText("" + result.get("tjbgbh"));
+       //手机号
+        holder.shoujihao.setText(""+result.get("shoujihao"));
+        //性别
+        holder.xingbie.setText(""+result.get("xingb"));
         //姓名
-        holder.xingming.setText("" + result.get("xm"));
+        holder.xingming.setText(""+result.get("xingming"));
+        //序号
+        holder.xuhao.setText(""+result.get("xuhao"));
+        //用户名
+        holder.yonghuming.setText(""+result.get("yonghuming"));
+        //邮箱
+        holder.youxiang.setText(""+result.get("youxiang"));
     }
 
     @Override
@@ -45,10 +51,16 @@ public class QYPersonManagerAdapter extends MBaseAdapter<QYPersonManagerAdapter.
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tijianbaogaobianhao)
-        TextView tijianbaogaobianhao;
+        @BindView(R.id.yonghuming)
+        TextView yonghuming;
         @BindView(R.id.xingming)
         TextView xingming;
+        @BindView(R.id.xingbie)
+        TextView xingbie;
+        @BindView(R.id.shoujihao)
+        TextView shoujihao;
+        @BindView(R.id.youxiang)
+        TextView youxiang;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

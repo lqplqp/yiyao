@@ -86,6 +86,9 @@ public class AdminManagerFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
                 requestData();
             }
         });
@@ -106,7 +109,9 @@ public class AdminManagerFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgrygl);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("page", souguoneirong.getText() + "");
+        params.addBodyParameter("xx", souguoneirong.getText() + "");
+        params.addBodyParameter("sj1", startTime.getText() + "");
+        params.addBodyParameter("sj2", endTime.getText() + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {
