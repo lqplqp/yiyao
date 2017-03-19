@@ -1,6 +1,5 @@
 package com.lxkj.yiyao.activity;
 
-import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 
 /**
@@ -10,7 +9,7 @@ import com.lxkj.yiyao.base.BaseActivity;
  *         -------------------------------
  */
 
-public class XuanGouKeChengActivity extends BaseActivity {
+public class FuKuanActivity extends BaseActivity {
     @Override
     protected void init() {
 
@@ -18,6 +17,6 @@ public class XuanGouKeChengActivity extends BaseActivity {
 
     @Override
     public int getLayout() {
-        return R.layout.xuangou_kecheng_yibaopeixun;
+        return 0;
     }
 }

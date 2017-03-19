@@ -58,7 +58,9 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
                     intent.putExtra("pxid",result.get("id").toString());
                     mActivity.startActivity(intent);
                 }else{
-
+                    Intent intent = new Intent(mActivity,XuanGouKeChengActivity.class);
+                    intent.putExtra("pxid",result.get("id").toString());
+                    mActivity.startActivity(intent);
                 }
             }
         });
