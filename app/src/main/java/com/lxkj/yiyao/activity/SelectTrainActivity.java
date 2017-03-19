@@ -184,7 +184,7 @@ public class SelectTrainActivity extends BaseActivity {
     }
 
     private void requestDate() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji5/pxbm");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji4/pxbm");
         params.addBodyParameter("lingyu", lingyu);
         params.addBodyParameter("leibie", leibie);
         params.addBodyParameter("guize", guize);

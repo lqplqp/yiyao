@@ -127,19 +127,19 @@ public interface GlobalString {
     //--------------------------------------
 
     // ---------------------------企业管理员-------------------------
-    public static final String qiye_info = "/admin/fenji5/qyxx";
-    public static final String qiye_person_manager = "/admin/fenji5/qyglqyry";
+    public static final String qiye_info = "/admin/fenji4/qyxx";
+    public static final String qiye_person_manager = "/admin/fenji4/qyglqyry";
 
-    public static final String qiye_xxk = "/admin/fenji5/xxk";
-    public static final String qiye_quanbudingdan = "/admin/fenji5/allorder";
+    public static final String qiye_xxk = "/admin/fenji4/xxk";
+    public static final String qiye_quanbudingdan = "/admin/fenji4/allorder";
 
-    public static final String qiye_daifukuan = "/admin/fenji5/dfkorder";
-    public static final String qiye_yifukuan = "/admin/fenji5/yfkorder";
-    public static final String qiye_yiquxiao = "/admin/fenji5/yqxorder";
+    public static final String qiye_daifukuan = "/admin/fenji4/dfkorder";
+    public static final String qiye_yifukuan = "/admin/fenji4/yfkorder";
+    public static final String qiye_yiquxiao = "/admin/fenji4/yqxorder";
 
-    public static final String qiye_tongzhixiaoxi = "/admin/fenji5/tzxx";
+    public static final String qiye_tongzhixiaoxi = "/admin/fenji4/tzxx";
 
-    public static final String qiye_aqsz = "admin/fenji5/aqsz/";
+    public static final String qiye_aqsz = "admin/fenji4/aqsz/";
 // ---------------------------市级管理员-------------------------
 
 

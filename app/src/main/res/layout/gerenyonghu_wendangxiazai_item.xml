@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_white_bg"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:id="@+id/line1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:maxLines="2"
+            android:textColor="@color/global_black"
+            android:id="@+id/wendangming"
+            android:text="《中华人民共和国药品管理法实施条例》（国务院令第360号）"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/global_black"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_gray"
+            android:id="@+id/time"
+            android:text="发布时间：2017年1月18日16:58:45"
+            />
+    </LinearLayout>
+</LinearLayout>
