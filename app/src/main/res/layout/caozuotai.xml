@@ -162,7 +162,7 @@
                 android:layout_alignTop="@id/match_shipin"
                 android:layout_toRightOf="@id/match_shipin"
                 android:textSize="@dimen/title_big_textsize"
-                android:textColor="@color/global_black"
+                android:textColor="#f00"
                 android:text="已注册"
                 />
 
