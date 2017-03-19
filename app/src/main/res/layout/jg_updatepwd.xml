@@ -1,127 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/global_bg_gray">
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@color/global_bg_gray">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:background="@drawable/fillet_white_bg">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:orientation="vertical"
-        android:background="@drawable/fillet_white_bg">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:text="*原  密  码："
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:textColor="@color/global_gray"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:hint="输入当前密码"
-                android:id="@+id/old_pwd" />
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-                android:src="@mipmap/ic_input_error"
-                android:visibility="gone"
-                />
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:background="@color/global_bg_gray"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:text="*新  密  码："
-                />
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:textColor="@color/global_gray"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:hint="输入不少于6位的新密码"
-                android:id="@+id/new_pwd" />
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-                android:src="@mipmap/ic_input_error"
-                android:visibility="gone"
-                />
-        </LinearLayout>
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.1dp"
-            android:background="@color/global_bg_gray"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            >
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:layout_marginLeft="10dp"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:text="*重复密码："
-                />
-
-            <EditText
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
-                android:textColor="@color/global_gray"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:hint="请再次输入新密码"
-                android:id="@+id/new_pwd2" />
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_marginRight="10dp"
-                android:src="@mipmap/ic_input_error"
-                android:visibility="gone"
-                />
-        </LinearLayout>
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:text="*原  密  码："
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@color/global_gray"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:hint="输入当前密码"
+            android:id="@+id/old_pwd" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_input_error"
+            android:visibility="gone"
+            />
     </LinearLayout>
-    <Button
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/global_bg_gray"/>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="80dp"
-        android:layout_marginRight="80dp"
-        android:background="@drawable/yellow_but_bg"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:textColor="@color/white"
-        android:text="提交"
-        android:id="@+id/commit" />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:text="*新  密  码："
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@color/global_gray"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:hint="输入不少于6位的新密码"
+            android:id="@+id/new_pwd" />
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_input_error"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/global_bg_gray"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:text="*重复密码："
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:textColor="@color/global_gray"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:hint="请再次输入新密码"
+            android:id="@+id/new_pwd2" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_input_error"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</LinearLayout>
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="80dp"
+    android:layout_marginRight="80dp"
+    android:background="@drawable/yellow_but_bg"
+    android:textSize="@dimen/qyinfo_text_size"
+    android:textColor="@color/white"
+    android:text="提交"
+    android:id="@+id/commit" />
 </LinearLayout>
