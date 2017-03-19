@@ -45,6 +45,8 @@ public class SelectTrainActivity extends BaseActivity {
     @BindView(R.id.title_tv)
     TextView titleTv;
 
+    private boolean qiye_admin;
+
     private String lingyu = "";
     private String leibie = "";
     private String guize = "1";
@@ -76,6 +78,9 @@ public class SelectTrainActivity extends BaseActivity {
 
     @Override
     protected void init() {
+
+        initDate();
+
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("正在加载...");
         progressDialog.setCanceledOnTouchOutside(false);
@@ -183,8 +188,13 @@ public class SelectTrainActivity extends BaseActivity {
 
     }
 
+
+    private void initDate() {
+        qiye_admin = getIntent().getBooleanExtra("qiye_admin",false);
+    }
+
     private void requestDate() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji5/pxbm");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji4/pxbm");
         params.addBodyParameter("lingyu", lingyu);
         params.addBodyParameter("leibie", leibie);
         params.addBodyParameter("guize", guize);
@@ -192,9 +202,9 @@ public class SelectTrainActivity extends BaseActivity {
             @Override
             public void onSuccess(String result) {
                 SelectTrainAdapter adapter = new SelectTrainAdapter(result, SelectTrainActivity.this);
+                adapter.setQiye_admin(qiye_admin);
                 gridView.setAdapter(adapter);
                 progressDialog.dismiss();
-
             }
 
             @Override

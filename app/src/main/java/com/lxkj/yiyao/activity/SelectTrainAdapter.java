@@ -29,6 +29,16 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
 
     }
 
+    public boolean isQiye_admin() {
+        return qiye_admin;
+    }
+
+    public void setQiye_admin(boolean qiye_admin) {
+        this.qiye_admin = qiye_admin;
+    }
+
+    public boolean qiye_admin;
+
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
@@ -41,9 +51,15 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
         holder.img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(mActivity,LearningActivity.class);
-                intent.putExtra("pxid",result.get("id").toString());
-                mActivity.startActivity(intent);
+
+                if(!qiye_admin){
+
+                    Intent intent = new Intent(mActivity,LearningActivity.class);
+                    intent.putExtra("pxid",result.get("id").toString());
+                    mActivity.startActivity(intent);
+                }else{
+
+                }
             }
         });
 
