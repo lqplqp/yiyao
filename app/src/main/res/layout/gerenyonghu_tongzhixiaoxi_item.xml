@@ -40,14 +40,14 @@
                 />
 
             <TextView
+                android:id="@+id/tongzhileixing"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
                 android:text="网上培训"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/tongzhileixing" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView

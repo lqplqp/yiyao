@@ -70,6 +70,8 @@ public class LoginTestActivity extends BaseActivity  {
         selects.add("企业管理员");
         selects.add("县区级管理员");
 
+        selects.add("个人用户");
+
         adapter = new ArrayAdapter<String>(this,R.layout.spinner_item,selects);
         //第三步：为适配器设置下拉列表下拉时的菜单样式。
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

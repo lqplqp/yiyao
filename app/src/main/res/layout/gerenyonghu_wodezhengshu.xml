@@ -43,63 +43,10 @@
         </RadioGroup>
 
     </LinearLayout>
-    <LinearLayout
-        android:orientation="vertical"
+    <com.lxkj.yiyao.view.RefreshListView
+        android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:background="@drawable/fillet_white_bg"
-            android:text="xxx"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:textSize="16sp"
-            android:textColor="@color/global_black"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
+        android:layout_height="match_parent">
+    </com.lxkj.yiyao.view.RefreshListView>
+
 </LinearLayout>

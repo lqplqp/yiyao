@@ -24,6 +24,15 @@ import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuAnQuanSheZhiFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuShouYeFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuTiJianBaoGaoFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuTongZhiFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuWenDangXiaZaiFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuXinXiKaFargment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuYiBaoFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuYongHuXinXiFragment;
+import com.lxkj.yiyao.gerenyonghu.GeRenYongHuZhengShuFragment;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.JGUpdatePswFragment;
@@ -653,6 +662,81 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     }
                 });*/
+                break;
+            case 6:
+                fragments.clear();
+                pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
+                GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
+                fragments.add(geRenYongHuShouYeFragment);
+                setVP();
+                naviView.inflateMenu(R.menu.navi_menu_gerenyonghu);
+                naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        fragments.clear();
+                        int id = item.getItemId();
+                        switch (id){
+                            case R.id.navi_menu_1:
+                                setTitle("个人用户首页");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
+                                //首页
+                                GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
+                                fragments.add(geRenYongHuShouYeFragment);
+                            break;
+                            case R.id.navi_menu_2:
+                                setTitle("个人中心");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu2);
+                                //用户信息
+                                GeRenYongHuYongHuXinXiFragment geRenYongHuYongHuXinXiFragment = new GeRenYongHuYongHuXinXiFragment();
+                                fragments.add(geRenYongHuYongHuXinXiFragment);
+                                //我的信息卡
+                                GeRenYongHuXinXiKaFargment geRenYongHuXinXiKaFargment = new GeRenYongHuXinXiKaFargment();
+                                fragments.add(geRenYongHuXinXiKaFargment);
+                                //我的证书
+                                GeRenYongHuZhengShuFragment geRenYongHuZhengShuFragment = new GeRenYongHuZhengShuFragment();
+                                fragments.add(geRenYongHuZhengShuFragment);
+                                break;
+                            case R.id.navi_menu_3:
+                                setTitle("培训学习");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu3);
+                                //通知消息
+                                GeRenYongHuTongZhiFragment geRenYongHuTongZhiFragment = new GeRenYongHuTongZhiFragment();
+                                fragments.add(geRenYongHuTongZhiFragment);
+                                //网上培训
+                                GeRenYongHuYiBaoFragment geRenYongHuYiBaoFragment = new GeRenYongHuYiBaoFragment();
+                                fragments.add(geRenYongHuYiBaoFragment);
+                                break;
+                            case R.id.navi_menu_4:
+                                setTitle("体检信息");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu4);
+                                //我的体检报告
+                                GeRenYongHuTiJianBaoGaoFragment geRenYongHuTiJianBaoGaoFragment = new GeRenYongHuTiJianBaoGaoFragment();
+                                fragments.add(geRenYongHuTiJianBaoGaoFragment);
+                                break;
+                            case R.id.navi_menu_5:
+                                setTitle("下载中心");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu5);
+                                //法律法规文档下载
+                                GeRenYongHuWenDangXiaZaiFragment geRenYongHuWenDangXiaZaiFragment = new GeRenYongHuWenDangXiaZaiFragment();
+                                fragments.add(geRenYongHuWenDangXiaZaiFragment);
+                                break;
+                            case R.id.navi_menu_6:
+                                setTitle("安全设置");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu6);
+                                //重置密码
+                                GeRenYongHuAnQuanSheZhiFragment geRenYongHuAnQuanSheZhiFragment = new GeRenYongHuAnQuanSheZhiFragment();
+                                fragments.add(geRenYongHuAnQuanSheZhiFragment);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
+                                break;
+                        }
+
+                        vpfAdapter2.setData(fragments, pagerTitles);
+                        drawer.closeDrawers();
+                        return true;
+                    }
+                });
                 break;
 
         }

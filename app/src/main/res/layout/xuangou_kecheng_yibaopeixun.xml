@@ -35,218 +35,222 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
+            android:layout_height="match_parent"
             android:background="@color/global_bg_gray"
-            android:layout_height="match_parent">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:background="@color/white"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
+
                     <ImageView
-                        android:layout_margin="10dp"
+                        android:id="@+id/image"
                         android:layout_width="160dp"
                         android:layout_height="100dp"
-                        android:background="#000000"
-                        android:id="@+id/image" />
+                        android:layout_margin="10dp"
+                        android:background="#000000" />
 
                     <TextView
+                        android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="食品安全监管队伍培训班(生产领域)"
                         android:layout_marginTop="30dp"
-                        android:textColor="@color/global_black"
-                        android:id="@+id/title" />
+                        android:text="食品安全监管队伍培训班(生产领域)"
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp">
 
                     <TextView
-                        android:textColor="@color/global_black"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="适应地区 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/global_black" />
 
                     <TextView
+                        android:id="@+id/shiyingdiqu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
                         android:text="河南省"
-                        android:id="@+id/shiyingdiqu" />
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
 
 
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
-                        android:textColor="@color/global_black"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="所属行业 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/global_black" />
 
                     <TextView
+                        android:id="@+id/suoshuhangye"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
                         android:text="监管队伍"
-                        android:id="@+id/suoshuhangye" />
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
-                        android:textColor="@color/global_black"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="培训时间 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/global_black" />
 
                     <TextView
+                        android:id="@+id/peixunshijian"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
                         android:text="2016-03-01到2016-09-09"
-                        android:id="@+id/peixunshijian" />
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
-                        android:textColor="@color/global_black"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="培训班类别 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/global_black" />
 
                     <TextView
+                        android:id="@+id/peixunbanleibie"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
                         android:text="食品(保健品)安全监管队伍生产领域"
-                        android:id="@+id/peixunbanleibie" />
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
+
                 <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
-                        android:textColor="@color/global_black"
                         android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
                         android:text="证书名称 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                        android:textColor="@color/global_black" />
 
                     <TextView
+                        android:id="@+id/zhengshumingcheng"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
                         android:text="监管队伍培训合格证书"
-                        android:id="@+id/zhengshumingcheng" />
+                        android:textColor="@color/global_black" />
 
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_marginTop="5dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
 
-                    <TextView
-                        android:textColor="@color/global_black"
-                        android:layout_width="wrap_content"
-                        android:text="结业条件 : "
-                        android:layout_marginRight="10dp"
-                        android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
+                        android:layout_marginRight="10dp"
+                        android:text="结业条件 : "
+                        android:textColor="@color/global_black" />
+
+                    <TextView
+                        android:id="@+id/jieyetiaojian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="基础课程35学分,专业课程26学分"
-                        android:id="@+id/jieyetiaojian" />
+                        android:textColor="@color/global_black" />
 
-                </LinearLayout><LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                </LinearLayout>
 
-                <TextView
-                    android:textColor="@color/global_black"
-                    android:layout_width="wrap_content"
-                    android:text="恭喜您已报名成功,可以开始学习啦 "
-                    android:layout_marginRight="10dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/jieguo" />
-
-
-
-            </LinearLayout><LinearLayout
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
-                android:paddingBottom="10dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:textColor="@color/global_black"
-                    android:layout_width="wrap_content"
-                    android:text="结业考时间限制 : "
-                    android:layout_marginRight="10dp"
-                    android:layout_height="wrap_content" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/global_black"
-                    android:text="2016-03-01到2016-12-31"
-                    android:id="@+id/jieshushijian" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/jieguo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="恭喜您已报名成功,可以开始学习啦 "
+                        android:textColor="@color/global_black" />
 
 
+                </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:paddingBottom="10dp">
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:text="结业考时间限制 : "
+                        android:textColor="@color/global_black" />
+
+                    <TextView
+                        android:id="@+id/jieshushijian"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2016-03-01到2016-12-31"
+                        android:textColor="@color/global_black" />
+
+                </LinearLayout>
 
 
             </LinearLayout>
 
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:orientation="vertical"
                 android:background="@color/global_white"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/textView4"
@@ -260,16 +264,15 @@
                     android:textColor="@color/global_black" />
 
                 <View
-                    android:background="@color/line"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
 
                 <ListView
+                    android:id="@+id/jichukecheng_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:id="@+id/jichukecheng_listview">
-                </ListView>
+                    android:layout_margin="10dp"></ListView>
             </LinearLayout>
 
 
@@ -297,26 +300,25 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:background="@drawable/fillet_white_bg"
-                android:layout_margin="10dp"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/fillet_white_bg"
+                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
                     <TextView
-                        android:gravity="center"
                         android:layout_width="0dp"
-                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/global_black"
+                        android:layout_weight="1"
+                        android:gravity="center"
                         android:text="员工名字"
-                        />
+                        android:textColor="@color/global_black" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -331,15 +333,15 @@
 
 
                 <View
-                    android:background="@color/line"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"/>
+                    android:layout_height="1dp"
+                    android:background="@color/line" />
 
                 <ListView
+                    android:id="@+id/qiyerenyuanleibiao_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:id="@+id/qiyerenyuanleibiao_listview">
+                    android:layout_margin="10dp">
 
                 </ListView>
 
@@ -348,16 +350,15 @@
             <TextView
                 android:id="@+id/chakanmoban"
                 android:layout_width="100dp"
-                android:gravity="center"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:layout_marginBottom="20dp"
                 android:layout_marginTop="10dp"
-                android:layout_gravity="center"
                 android:background="@drawable/yellow_but_bg"
+                android:gravity="center"
                 android:padding="10dp"
                 android:text="提交"
                 android:textColor="@color/white" />
-
 
 
         </LinearLayout>
