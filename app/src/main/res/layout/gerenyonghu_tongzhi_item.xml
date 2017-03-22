@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/fillet_white_bg"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/fabushijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:maxLines="2"
+            android:textColor="@color/global_black"
+            android:text="网上培训通知  发布时间：2016-01-09"
+            />
+        <TextView
+            android:id="@+id/zhuangtai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            android:text="状态：已结束"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@color/global_black"/>
+        <TextView
+            android:id="@+id/tongzhineirong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_gray"
+            android:text="河南省食品药品监督管理局 达主任 给您报名参加了“食品安全监督队伍继续教育培训班”"
+            />
+    </LinearLayout>

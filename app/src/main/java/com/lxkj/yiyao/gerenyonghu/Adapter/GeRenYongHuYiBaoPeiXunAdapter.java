@@ -22,21 +22,21 @@ public class GeRenYongHuYiBaoPeiXunAdapter extends MBaseAdapter<GeRenYongHuYiBao
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //查看
-        holder.chakan.setText(""+result.get("chalan"));
+        holder.chakan.setText(""+result.get("chakan"));
         //购买时间
-        holder.goumaishijian.setText(""+result.get("goumaishijian"));
+        holder.goumaishijian.setText(""+result.get("cjsj"));
         //培训类型
-        holder.peixunleixing.setText(""+result.get("peixunleixing"));
+        holder.peixunleixing.setText(""+result.get(" pxlx"));
         //培训时间
-        holder.peixunshijian.setText(""+result.get("peixunshijian"));
+        holder.peixunshijian.setText(""+result.get("pxkssj"));
         //培训名次
-        holder.peixunmingci.setText(""+result.get("peixunmingcheng"));
+        holder.peixunmingci.setText(""+result.get("pxbmc"));
         //培训进度
-        holder.xuexijindu.setText(""+result.get("peixunjingdu"));
+        holder.xuexijindu.setText(""+result.get("xxjd"));
         //序号
         holder.xuhao.setText(""+result.get("xuhao"));
         //证书名称
-        holder.zhengshumingcheng.setText(""+result.get("zhengshumingcheng"));
+        holder.zhengshumingcheng.setText(""+result.get("pxbt"));
     }
 
 

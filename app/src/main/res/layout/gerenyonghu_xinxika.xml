@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray">
@@ -25,6 +29,7 @@
                 android:text="编        号："
                 />
             <EditText
+                android:id="@+id/bianhao"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -60,6 +65,7 @@
                 android:text="姓        名："
                 />
             <EditText
+                android:id="@+id/xingming"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -91,6 +97,7 @@
                 android:text="性        别："
                 />
             <EditText
+                android:id="@+id/xingbie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -127,13 +134,13 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/gangwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
-                android:textColor="@color/global_gray"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:hint="管理岗位"
-                />
+                android:textColor="@color/global_gray"
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <ImageView
                 android:layout_width="20dp"
@@ -160,6 +167,7 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <EditText
+                android:id="@+id/dianhuahaoma"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -193,6 +201,7 @@
                 />
 
             <EditText
+                android:id="@+id/gongzuodanwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -226,7 +235,7 @@
                 />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/youxiaoqi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -259,6 +268,7 @@
                 />
 
             <EditText
+                android:id="@+id/shengchangangwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="5"
@@ -294,5 +304,6 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/white"
         android:text="返回"
-        android:id="@+id/commit" />
+        android:id="@+id/fanhui" />
 </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

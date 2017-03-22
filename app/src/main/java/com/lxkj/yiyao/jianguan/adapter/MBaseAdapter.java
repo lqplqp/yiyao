@@ -15,9 +15,9 @@ import com.lxkj.yiyao.utils.ToastUtil;
 
 public abstract class MBaseAdapter<T> extends BaseAdapter {
 
-    com.alibaba.fastjson.JSONObject json;
-    JSONArray datas;
-    com.alibaba.fastjson.JSONObject jsonObject;
+    public com.alibaba.fastjson.JSONObject json;
+    public JSONArray datas;
+    public com.alibaba.fastjson.JSONObject jsonObject;
 
 
     public MBaseAdapter(String bean) {
@@ -25,7 +25,9 @@ public abstract class MBaseAdapter<T> extends BaseAdapter {
         jsonObject = json.getJSONObject("data");
         datas = jsonObject.getJSONArray("data");
     }
+    public MBaseAdapter(){
 
+    }
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {

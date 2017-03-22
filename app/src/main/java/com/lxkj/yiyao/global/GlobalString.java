@@ -143,6 +143,11 @@ public interface GlobalString {
 // ---------------------------市级管理员-------------------------
 
 
+//个人用户——————————————————————————
 
+    public static final String gerenyonghu_yibao = "admin/fenji6/ybpxxm/";
+    public static final String gerenyonghu_anquanshezhi = "admin/fenji6/aqsz/";
+
+//个人用户——————————————————————————
 
 }
