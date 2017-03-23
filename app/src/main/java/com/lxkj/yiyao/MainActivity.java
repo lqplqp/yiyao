@@ -22,6 +22,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
+import com.lxkj.yiyao.activity.ScannerQrCodeActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongHuAnQuanSheZhiFragment;
@@ -345,7 +346,7 @@ public class MainActivity extends AppCompatActivity {
                 });
                 break;
             /**
-             * 省局个人
+             * 省局个人  添加执法
              */
             case 2:
                 fragments.clear();
@@ -354,7 +355,7 @@ public class MainActivity extends AppCompatActivity {
                 SJGRMessageFragment sjgrMessageFragment = new SJGRMessageFragment();
                 fragments.add(sjgrMessageFragment);
                 setVP();
-                naviView.inflateMenu(R.menu.navi_menu_shiji);
+                naviView.inflateMenu(R.menu.navi_menu_shengjugeren);
                 naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -458,11 +459,15 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrUpdatePswFragment);
                                 break;
                             case R.id.navi_menu_10:
-                                setTitle("安全设置");
+                                /*setTitle("执法");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren7);
                                 //安全设置
                                 SJGRUpdatePswFragment sjgrUpdatePswFragment3 = new SJGRUpdatePswFragment();
-                                fragments.add(sjgrUpdatePswFragment3);
+                                fragments.add(sjgrUpdatePswFragment3);*/
+                                Intent intent = new Intent(MainActivity.this, ScannerQrCodeActivity.class);
+                                startActivity(intent);
+
+
                                 break;
                             case R.id.navi_menu_logout:
                                 logOut();
@@ -726,6 +731,15 @@ public class MainActivity extends AppCompatActivity {
                                 //重置密码
                                 GeRenYongHuAnQuanSheZhiFragment geRenYongHuAnQuanSheZhiFragment = new GeRenYongHuAnQuanSheZhiFragment();
                                 fragments.add(geRenYongHuAnQuanSheZhiFragment);
+                                break;
+                            case R.id.navi_menu_7:
+                                /*setTitle("安全设置");
+                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu6);
+                                //重置密码
+                                GeRenYongHuAnQuanSheZhiFragment geRenYongHuAnQuanSheZhiFragment = new GeRenYongHuAnQuanSheZhiFragment();
+                                fragments.add(geRenYongHuAnQuanSheZhiFragment);*/
+                                Intent intent = new Intent(MainActivity.this,ScannerQrCodeActivity.class);
+                                startActivity(intent);
                                 break;
                             case R.id.navi_menu_logout:
                                 logOut();

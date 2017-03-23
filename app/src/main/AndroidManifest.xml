@@ -32,6 +32,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".activity.CaoZuoTaiActivity"/>
         <activity android:name=".activity.XuanGouKeChengActivity"/>
         <activity android:name=".activity.FuKuanActivity"/>
 

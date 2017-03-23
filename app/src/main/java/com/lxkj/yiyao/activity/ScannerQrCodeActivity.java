@@ -37,7 +37,15 @@ public class ScannerQrCodeActivity extends BaseActivity{
                 }
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
-                    Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+                    //Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
+
+                    Intent intent = new Intent(this,CaoZuoTaiActivity.class);
+                    intent.putExtra("qrcode_result",result);
+                    startActivity(intent);
+
+
+                    finish();
+
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {
                     Toast.makeText(this, "解析二维码失败", Toast.LENGTH_LONG).show();
                 }
