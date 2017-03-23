@@ -663,7 +663,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
                 break;
-            case 6:
+            case -1:
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
                 GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
@@ -674,7 +674,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         fragments.clear();
-                        int id = item.getItemId();
+                         int id =  item.getItemId();
                         switch (id){
                             case R.id.navi_menu_1:
                                 setTitle("个人用户首页");
