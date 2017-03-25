@@ -14,6 +14,10 @@ public interface GlobalString {
     public static final String examOkUrl = "/admin/stk/stjg";
 
 
+    //用户余额
+    public static final String yueUrl = "/admin/qita1/ye";
+
+
 
     public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";
