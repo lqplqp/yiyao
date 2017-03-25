@@ -37,6 +37,8 @@
         <activity android:name=".activity.CaoZuoTaiActivity"/>
         <activity android:name=".activity.XuanGouKeChengActivity"/>
         <activity android:name=".activity.FuKuanActivity"/>
+        <activity android:name=".activity.GeRenScannerQrCodeActivity"/>
+        <activity android:name=".activity.KaoShiJieGuoZhiFaActivity"/>
 
         <activity android:name=".activity.GenerationQrCodeActivity"/>
         <activity android:name=".activity.ScannerQrCodeActivity"/>

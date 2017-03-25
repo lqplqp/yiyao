@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.activity.ExamActivity;
+import com.lxkj.yiyao.activity.GeRenScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
 import com.lxkj.yiyao.activity.ScannerQrCodeActivity;
 import com.lxkj.yiyao.adapter.VPFAdapter;
@@ -668,7 +669,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
                 break;
-            case -1:
+            case 6:
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
                 GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
@@ -733,12 +734,14 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(geRenYongHuAnQuanSheZhiFragment);
                                 break;
                             case R.id.navi_menu_7:
-                                /*setTitle("安全设置");
-                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu6);
+                                setTitle("扫一扫答题");
+                                /*pagerTitles = getResources().getStringArray(R.array.gerenyonghu6);
                                 //重置密码
                                 GeRenYongHuAnQuanSheZhiFragment geRenYongHuAnQuanSheZhiFragment = new GeRenYongHuAnQuanSheZhiFragment();
                                 fragments.add(geRenYongHuAnQuanSheZhiFragment);*/
-                                Intent intent = new Intent(MainActivity.this,ScannerQrCodeActivity.class);
+
+
+                                Intent intent = new Intent(MainActivity.this,GeRenScannerQrCodeActivity.class);
                                 startActivity(intent);
                                 break;
                             case R.id.navi_menu_logout:

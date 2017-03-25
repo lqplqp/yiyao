@@ -13,14 +13,13 @@ import com.uuzuche.lib_zxing.activity.CodeUtils;
  * Created by liqinpeng on 2017/3/14 0014.
  */
 
-public class ScannerQrCodeActivity extends BaseActivity{
+public class GeRenScannerQrCodeActivity extends BaseActivity{
 
     private int REQUEST_CODE = 1;
 
     @Override
     protected void init() {
         Intent intent = new Intent(this, CaptureActivity.class);
-
         startActivityForResult(intent, REQUEST_CODE);
     }
 
@@ -39,8 +38,8 @@ public class ScannerQrCodeActivity extends BaseActivity{
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
                     //Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
-                    Intent intent = new Intent(this,CaoZuoTaiActivity.class);
-                    intent.putExtra("qrcode_result",result);
+                    Intent intent = new Intent(this,ExamActivity.class);
+                    intent.putExtra("kmid",result);
                     startActivity(intent);
                     finish();
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {

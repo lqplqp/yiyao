@@ -30,7 +30,7 @@ public class ExamDataBean  extends DataSupport {
     public String fs;
     public int zf;
     public int jgfs;
-    public int kmid;
+    public String kmid;
     public int id;
 
     public String getTm() {
@@ -105,11 +105,11 @@ public class ExamDataBean  extends DataSupport {
         this.jgfs = jgfs;
     }
 
-    public int getKmid() {
+    public String getKmid() {
         return kmid;
     }
 
-    public void setKmid(int kmid) {
+    public void setKmid(String kmid) {
         this.kmid = kmid;
     }
 

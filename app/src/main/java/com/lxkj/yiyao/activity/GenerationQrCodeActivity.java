@@ -33,6 +33,7 @@ public class GenerationQrCodeActivity extends BaseActivity {
 
 
     private String codeText;
+    String username;
 
     @Override
     protected void init() {

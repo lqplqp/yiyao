@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ExamBean {
     public List<ExamDataBean> data;
-    public int code;
+    public String code;
     public String message;
 
     public List<ExamDataBean> getData() {
@@ -21,11 +21,11 @@ public class ExamBean {
         this.data = data;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
