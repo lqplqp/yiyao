@@ -187,7 +187,7 @@
                 android:textSize="@dimen/title_big_textsize"
                 android:textColor="@color/global_black"
                 />
-            <TextView
+            <Spinner
                 android:id="@+id/hangyeleixing"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -196,14 +196,7 @@
                 android:layout_toRightOf="@id/match_hangyeleixing"
                 android:text="选择行业类型"
                 android:textSize="@dimen/title_big_textsize"
-                />
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignTop="@id/match_hangyeleixing"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/ic_come"
+                android:entries="@array/hangyeleixing"
                 />
         </RelativeLayout>
 
@@ -213,38 +206,7 @@
             android:layout_marginTop="20dp"
             android:background="@color/line"
             />
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/match_kaochafanwei"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="20dp"
-                android:text="考察范围"
-                android:textSize="@dimen/title_big_textsize"
-                android:textColor="@color/global_black"
-                />
-            <TextView
-                android:id="@+id/kaochafanwei"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_alignTop="@id/match_kaochafanwei"
-                android:layout_toRightOf="@id/match_kaochafanwei"
-                android:text=""
-                android:textSize="@dimen/title_big_textsize"
-                />
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_alignTop="@id/match_kaochafanwei"
-                android:layout_marginRight="20dp"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/ic_come"
-                />
-        </RelativeLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

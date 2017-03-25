@@ -40,8 +40,6 @@ public class GeRenYongHuShouYeFragment extends BaseFragment {
     RadioButton rb1;
     @BindView(R.id.rb_2)
     RadioButton rb2;
-    @BindView(R.id.back_img)
-    ImageView backImg;
 
     private BaseAdapter tongZhiAdapter;
     private BaseAdapter peiXunBanListAdapter;
