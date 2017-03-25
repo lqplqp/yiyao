@@ -10,6 +10,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
@@ -18,10 +21,19 @@ import butterknife.ButterKnife;
  */
 
 public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
-    JSONArray objects;
+    private JSONArray objects;
+    private HashMap<Integer, Boolean> checkedMap = new HashMap<>();
 
     public XuanGouKeChengQiYeRenYuanAdapter(String result) {
         objects = JSONArray.parseArray(result);
+        initMap();
+    }
+
+    private void initMap() {
+        int size = objects.size();
+        for (int i = 0; i < size; i++){
+            checkedMap.put(i, false);
+        }
     }
 
     @Override
@@ -40,7 +52,7 @@ public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
+    public View getView(final int i, View view, ViewGroup viewGroup) {
         ViewHolder holder = null;
         if (view == null) {
             view = View.inflate(viewGroup.getContext(), R.layout.qiyerenyuanliebiao_item, null);
@@ -51,9 +63,21 @@ public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
         }
         final JSONObject object = objects.getJSONObject(i);
         //姓名
-        holder.name.setText(""+object.get("name"));
-
+        holder.name.setText(""+object.getString("name"));
+        holder.checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (checkedMap.get(i)){
+                    checkedMap.put(i, false);
+                }else {
+                    checkedMap.put(i, true);
+                }
+            }
+        });
         return view;
+    }
+    public HashMap<Integer, Boolean> getCheckMap(){
+        return checkedMap;
     }
 
 

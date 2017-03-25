@@ -152,9 +152,10 @@ public class LoginActivity extends BaseActivity {
                         String txdz = (String) data.get("txdz");
                         int id = (int) data.get("id");
                         int fl = ((int) data.get("fl")) - 1;
-                        SharedPreferences sp = getSharedPreferences("shiyao", 0);
+                        SharedPreferences sp = getSharedPreferences("shiyao", MODE_PRIVATE);
                         SharedPreferences.Editor edit = sp.edit();
                         edit.putInt("id", id);
+                        edit.putString("username", username);
                         edit.commit();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra("userType", fl);

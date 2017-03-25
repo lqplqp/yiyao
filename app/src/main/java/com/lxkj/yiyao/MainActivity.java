@@ -24,6 +24,7 @@ import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.GeRenScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
 import com.lxkj.yiyao.activity.ScannerQrCodeActivity;
+import com.lxkj.yiyao.activity.XuanGouKeChengRenYuan;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongHuAnQuanSheZhiFragment;
@@ -127,7 +128,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        /**
+         * 测试用
+         */
+        titleTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, XuanGouKeChengRenYuan.class));
+            }
+        });
         initData();
         initView();
     }

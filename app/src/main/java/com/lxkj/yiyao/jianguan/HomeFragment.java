@@ -57,6 +57,7 @@ public class HomeFragment extends BaseFragment {
                 break;
             case R.id.select_project:
                 intent = new Intent(getActivity(),SelectTrainActivity.class);
+                intent.putExtra("qiye_admin", true);
                 startActivity(intent);
                 break;
         }

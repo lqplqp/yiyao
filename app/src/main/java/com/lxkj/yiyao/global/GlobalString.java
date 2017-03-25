@@ -14,6 +14,12 @@ public interface GlobalString {
     public static final String examOkUrl = "/admin/stk/stjg";
 
 
+    //选购课程和学习的人员
+    public static final String xuangoukechengrenyuanUrl = "/admin/ybpxxm/xgkc";
+    //用户余额
+    public static final String yueUrl = "/admin/qita1/ye";
+
+
 
     public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";

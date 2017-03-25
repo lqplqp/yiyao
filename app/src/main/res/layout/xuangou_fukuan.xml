@@ -18,6 +18,7 @@
             android:textSize="16sp"
             />
         <TextView
+            android:id="@+id/gongji_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
@@ -48,6 +49,7 @@
             android:text="余额付款"
             />
         <TextView
+            android:id="@+id/yue_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
@@ -57,7 +59,7 @@
             />
     </LinearLayout>
     <TextView
-        android:id="@+id/chakanmoban"
+        android:id="@+id/tijiao_but"
         android:layout_width="100dp"
         android:gravity="center"
         android:layout_height="wrap_content"
