@@ -1,13 +1,21 @@
 package com.lxkj.yiyao.activity;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.global.GlobalString;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -33,6 +41,8 @@ public class CaoZuoTaiActivity extends BaseActivity {
     Button kaoshijieguo;
     @BindView(R.id.qiyezhifa)
     Button qiyezhifa;
+    @BindView(R.id.shipin)
+    TextView shipin;
     private String qrInfo;
 
     private String xukezhengbianhao;
@@ -53,11 +63,46 @@ public class CaoZuoTaiActivity extends BaseActivity {
     protected void init() {
         qrInfo = getIntent().getStringExtra("qrcode_result");
         parseInfo();
+        requestData();
+    }
+
+    private void requestData() {
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/qita1/qyxx");
+        SharedPreferences sp = getSharedPreferences("shiyao", 0);
+        String id = sp.getString("id", "");
+
+        params.addBodyParameter("username", id);
+        params.addBodyParameter("qyxxbh", xukezhengbianhao);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                JSONObject obj = JSONObject.parseObject(result);
+                String message = obj.get("message").toString();
+                shipin.setText(message);
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+
+
     }
 
     private void parseInfo() {
         String[] split = qrInfo.split(";");
-        if(split.length > 6){
+        if (split.length > 6) {
             xukezhengbianhao = split[0].replace("许可证编号:", "");
             jingyingzhemingcheng = split[1].replace("经营者名称:", "");
             jingyingchangsuo = split[2].replace("经营场所:", "");
@@ -68,13 +113,13 @@ public class CaoZuoTaiActivity extends BaseActivity {
         }
 
 
-        if(!TextUtils.isEmpty(jingyingzhemingcheng))
+        if (!TextUtils.isEmpty(jingyingzhemingcheng))
             qiyemingcheng.setText(jingyingzhemingcheng);
-        if(!TextUtils.isEmpty(fadingdaibiaoren))
+        if (!TextUtils.isEmpty(fadingdaibiaoren))
             faren.setText(fadingdaibiaoren);
-        if(!TextUtils.isEmpty(zhutiyetai))
+        if (!TextUtils.isEmpty(zhutiyetai))
             jingyingfanwei.setText(zhutiyetai);
-        if(!TextUtils.isEmpty(jingyingchangsuo))
+        if (!TextUtils.isEmpty(jingyingchangsuo))
             dizhi.setText(jingyingchangsuo);
 
 
@@ -86,12 +131,13 @@ public class CaoZuoTaiActivity extends BaseActivity {
     }
 
 
-
     @OnClick({R.id.erweimashengcheng, R.id.kaoshijieguo, R.id.qiyezhifa})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.erweimashengcheng:
-
+                /*Intent intent = new Intent(this,GenerationQrCodeActivity.class);
+                intent.putExtra("qrcode_result",xukezhengbianhao);
+                startActivity(intent);*/
                 break;
             case R.id.kaoshijieguo:
                 break;
@@ -99,7 +145,15 @@ public class CaoZuoTaiActivity extends BaseActivity {
                 break;
         }
     }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }
+
 /*
 许可证编号:JY24107110024586;
 经营者名称:新乡市牧野区小城固始餐馆;
@@ -107,4 +161,5 @@ public class CaoZuoTaiActivity extends BaseActivity {
 法定代表人(负责人):刘兰发;
 主体业态:餐饮服务经营者;
 有效期至:2021-09-25;
-更多信息请访问:http://hda.gov.cn/CL0577*/
+更多信息请访问:http://hda.gov.cn/CL0577
+*/
