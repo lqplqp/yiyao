@@ -51,7 +51,7 @@ public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
         }
         final JSONObject object = objects.getJSONObject(i);
         //姓名
-        holder.name.setText(""+object.get("name"));
+        holder.name.setText(""+object.getString("name"));
 
         return view;
     }

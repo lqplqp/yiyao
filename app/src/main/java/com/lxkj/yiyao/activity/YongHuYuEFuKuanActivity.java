@@ -20,6 +20,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by sun on 2017/3/25.
+ * 选购课程后支付页面
  */
 
 public class YongHuYuEFuKuanActivity extends BaseActivity {
