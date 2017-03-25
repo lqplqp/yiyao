@@ -3,6 +3,7 @@ package com.lxkj.yiyao.activity;
 import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -65,6 +66,12 @@ public class XuanGouKeChengRenYuan extends BaseActivity {
 
     @Override
     protected void init() {
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         requestData();
     }
 

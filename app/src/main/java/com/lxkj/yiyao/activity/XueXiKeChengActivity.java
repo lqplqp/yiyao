@@ -1,6 +1,5 @@
 package com.lxkj.yiyao.activity;
 
-import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -11,10 +10,6 @@ import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengJiChuKeChengAdapter;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengQiYeRenYuanAdapter;
-import com.lxkj.yiyao.adapter.JiChuKeChengAdapter;
-import com.lxkj.yiyao.adapter.JieYeKaoShiAdapter;
-import com.lxkj.yiyao.adapter.JieYeZhengShuAdapter;
-import com.lxkj.yiyao.adapter.XiangGuanZiLiaoAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 
@@ -23,7 +18,6 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by liqinpeng on 2017/3/19 0019.
@@ -32,7 +26,7 @@ import butterknife.ButterKnife;
  *         -------------------------------
  */
 
-public class XuanGouKeChengActivity extends BaseActivity {
+public class XueXiKeChengActivity extends BaseActivity {
     @BindView(R.id.back_img)
     ImageView backImg;
     @BindView(R.id.title_tv)
@@ -93,7 +87,7 @@ public class XuanGouKeChengActivity extends BaseActivity {
 
                 JSONObject object = JSONObject.parseObject(a);
 
-                Glide.with(XuanGouKeChengActivity.this).load(object.get("tpdz")).into(image);
+                Glide.with(XueXiKeChengActivity.this).load(object.get("tpdz")).into(image);
                 if (object.get("tpjs") != null) {
                     title.setText("" + object.get("tpjs").toString());
                 }
