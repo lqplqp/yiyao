@@ -147,6 +147,7 @@ public interface GlobalString {
 
     public static final String gerenyonghu_yibao = "admin/fenji6/ybpxxm/";
     public static final String gerenyonghu_anquanshezhi = "admin/fenji6/aqsz/";
+    public static final String gerenyonghu_tongzhixiaoxi = "admin/fenji6/tzxx/";
 
 //个人用户——————————————————————————
 

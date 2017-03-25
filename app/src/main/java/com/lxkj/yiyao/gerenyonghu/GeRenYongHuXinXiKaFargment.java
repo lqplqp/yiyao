@@ -31,21 +31,21 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
 
 
     @BindView(R.id.bianhao)
-    EditText bianhao;
+    TextView bianhao;
     @BindView(R.id.xingming)
-    EditText xingming;
+    TextView xingming;
     @BindView(R.id.xingbie)
-    EditText xingbie;
+    TextView xingbie;
     @BindView(R.id.gangwei)
-    EditText gangwei;
+    TextView gangwei;
     @BindView(R.id.dianhuahaoma)
-    EditText dianhuahaoma;
+    TextView dianhuahaoma;
     @BindView(R.id.gongzuodanwei)
-    EditText gongzuodanwei;
+    TextView gongzuodanwei;
     @BindView(R.id.youxiaoqi)
-    EditText youxiaoqi;
+    TextView youxiaoqi;
     @BindView(R.id.shengchangangwei)
-    EditText shengchangangwei;
+    TextView shengchangangwei;
     @BindView(R.id.fanhui)
     Button fanhui;
     Unbinder unbinder;
@@ -54,7 +54,7 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
     protected void initView() {
         TextView username = (TextView) getActivity().findViewById(R.id.user_name);
         String s = username.getText().toString();
-        requestDate("a");
+        requestDate(s);
     }
 
     private void requestDate(String s) {

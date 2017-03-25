@@ -28,7 +28,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:text="编        号："
                 />
-            <EditText
+            <TextView
                 android:id="@+id/bianhao"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:text="姓        名："
                 />
-            <EditText
+            <TextView
                 android:id="@+id/xingming"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:text="性        别："
                 />
-            <EditText
+            <TextView
                 android:id="@+id/xingbie"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
-            <EditText
+            <TextView
                 android:id="@+id/gangwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -166,7 +166,7 @@
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
-            <EditText
+            <TextView
                 android:id="@+id/dianhuahaoma"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -200,7 +200,7 @@
                 android:text="工作单位："
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/gongzuodanwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -234,7 +234,7 @@
                 android:text="有  效  期："
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/youxiaoqi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -267,7 +267,7 @@
                 android:text="监管单位："
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/shengchangangwei"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
