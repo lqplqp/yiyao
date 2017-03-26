@@ -27,7 +27,7 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*用    户    名："/>
-                <TextView
+                <EditText
                     android:id="@+id/username_tv"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
@@ -57,8 +57,8 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:text="*姓            名："/>
-                <TextView
+                    android:hint="*姓            名："/>
+                <EditText
                     android:id="@+id/unitname_tv"
                     android:layout_width="180dp"
                     android:layout_height="wrap_content"
@@ -125,9 +125,9 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*身 份 证 号："/>
-                <TextView
+                <EditText
                     android:id="@+id/manage_person_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -151,9 +151,9 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="* 单 位 名 称："/>
-                <TextView
+                <EditText
                     android:id="@+id/contact_name_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -177,9 +177,9 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*邮          箱："/>
-                <TextView
+                <EditText
                     android:id="@+id/email_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -203,9 +203,9 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*手 机 号 码："/>
-                <TextView
+                <EditText
                     android:id="@+id/phone_tv"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -229,8 +229,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*出 生 日 期："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -254,8 +254,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*职         位："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -279,8 +279,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*工        种："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -328,8 +328,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*单 位 地 址："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -356,8 +356,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="体检报告编号："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
@@ -384,8 +384,8 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="过 期 日 期："/>
-                <TextView
-                    android:layout_width="wrap_content"
+                <EditText
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"

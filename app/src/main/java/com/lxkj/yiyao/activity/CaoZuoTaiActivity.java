@@ -135,23 +135,27 @@ public class CaoZuoTaiActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.erweimashengcheng:
-                /*Intent intent = new Intent(this,GenerationQrCodeActivity.class);
+                Intent intent = new Intent(this,GenerationQrCodeActivity.class);
                 intent.putExtra("qrcode_result",xukezhengbianhao);
-                startActivity(intent);*/
+                SharedPreferences sp = getSharedPreferences("shiyao", 0);
+                String id = sp.getString("id", "");
+                intent.putExtra("username",id);
+                startActivity(intent);
                 break;
             case R.id.kaoshijieguo:
+                Intent intent2 = new Intent(this,KaoShiJieGuoZhiFaActivity.class);
+                intent2.putExtra("qrcode_result",xukezhengbianhao);
+                SharedPreferences sp2 = getSharedPreferences("shiyao", 0);
+                String id2 = sp2.getString("id", "");
+                intent2.putExtra("username",id2);
+
+                startActivity(intent2);
                 break;
             case R.id.qiyezhifa:
                 break;
         }
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }
 
 /*
