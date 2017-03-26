@@ -1,7 +1,6 @@
 package com.lxkj.yiyao.activity;
 
 import android.app.ProgressDialog;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -9,6 +8,7 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.adapter.SelectTrainAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 
@@ -17,7 +17,6 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by liqinpeng on 2017/3/8 0008.

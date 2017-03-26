@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.activity;
+package com.lxkj.yiyao.activity.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.LearningActivity;
+import com.lxkj.yiyao.activity.XuanGouKeChengRenYuan;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;

@@ -43,7 +43,7 @@ public class GeRenYongHuShouYeFragment extends BaseFragment {
 
     private BaseAdapter tongZhiAdapter;
     private BaseAdapter peiXunBanListAdapter;
-
+    private static int userType;
     private void hide1() {
         rb1.setChecked(false);
         rb1.setChecked(false);
@@ -70,7 +70,13 @@ public class GeRenYongHuShouYeFragment extends BaseFragment {
                 tongZhiAdapter = new GeRenYongHuTongZhiXiaoXiAdapter(tongzhixiaoxi);
                 listView.setAdapter(tongZhiAdapter);
 
-                peiXunBanListAdapter = new GrenYongHuShouYePeiXunBanAdapter(peixunbanxinxi, getActivity());
+                Bundle bundle = getArguments();
+                if(bundle == null){
+                    userType = -1;
+                }else{
+                userType = bundle.getInt("user_type");
+                }
+                peiXunBanListAdapter = new GrenYongHuShouYePeiXunBanAdapter(userType,peixunbanxinxi, getActivity());
                 gridView.setAdapter(peiXunBanListAdapter);
             }
 

@@ -64,13 +64,14 @@
             android:gravity="center"
             android:layout_marginTop="20dp"
             >
+
             <ImageView
                 android:id="@+id/img_3"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginRight="30dp"
-                android:src="@mipmap/ic_jia"
-                />
+                android:src="@mipmap/ic_jia" />
+
             <ImageView
                 android:id="@+id/img_4"
                 android:layout_width="100dp"

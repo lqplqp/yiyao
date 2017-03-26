@@ -48,6 +48,7 @@
         android:hint="@string/login_input_pwd"
         android:textColorHint="@color/login_hint"
         android:layout_marginTop="300dp"
+        android:inputType="textPassword"
         android:id="@+id/password" />
     <View
         android:layout_width="match_parent"
