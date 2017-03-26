@@ -152,6 +152,11 @@ public class CaoZuoTaiActivity extends BaseActivity {
                 startActivity(intent2);
                 break;
             case R.id.qiyezhifa:
+
+                Intent intent3 = new Intent(this,QiYeZhiFaActivity.class);
+                intent3.putExtra("xkzbh",xukezhengbianhao);
+                startActivity(intent3);
+
                 break;
         }
     }
