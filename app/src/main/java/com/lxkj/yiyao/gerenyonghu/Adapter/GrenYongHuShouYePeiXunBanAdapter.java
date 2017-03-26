@@ -11,7 +11,6 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.LearningActivity;
-import com.lxkj.yiyao.activity.XuanGouKeChengActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
@@ -24,9 +23,11 @@ import butterknife.ButterKnife;
 public class GrenYongHuShouYePeiXunBanAdapter extends MBaseAdapter <GrenYongHuShouYePeiXunBanAdapter.ViewHolder>{
 
     private Activity mActivity;
-    public GrenYongHuShouYePeiXunBanAdapter(String s,Activity activity) {
+    private int muserType;
+    public GrenYongHuShouYePeiXunBanAdapter(int userType, String s,Activity activity) {
         mActivity = activity;
         datas = JSONArray.parseArray(s);
+        muserType = userType;
     }
 
     @Override
@@ -41,6 +42,7 @@ public class GrenYongHuShouYePeiXunBanAdapter extends MBaseAdapter <GrenYongHuSh
             public void onClick(View view) {
                     Intent intent = new Intent(mActivity,LearningActivity.class);
                     intent.putExtra("pxid",result.get("id").toString());
+                    intent.putExtra("user_type",muserType);
                     mActivity.startActivity(intent);
             }
         });

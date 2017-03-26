@@ -29,17 +29,11 @@
                     android:text="*用    户    名："/>
                 <EditText
                     android:id="@+id/username_tv"
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="username"
-                    />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/read_erro"
                     />
             </LinearLayout>
             <View
@@ -60,19 +54,13 @@
                     android:hint="*姓            名："/>
                 <EditText
                     android:id="@+id/unitname_tv"
-                    android:layout_width="180dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="新乡面对面重庆小店"
+                    android:hint="新乡面对面重庆小店"
                     />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/green_ture"
-                    />
-
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -132,7 +120,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="1"
+                    android:hint="123"
                     />
             </LinearLayout>
             <View
@@ -158,7 +146,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="username"
+                    android:hint="username"
                     />
             </LinearLayout>
             <View
@@ -184,7 +172,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="123456"
+                    android:hint="123456"
                     />
             </LinearLayout>
             <View
@@ -210,7 +198,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="xxxxx"
+                    android:hint="xxxxx"
                     />
             </LinearLayout>
             <View
@@ -235,7 +223,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="222@163.com"
+                    android:hint="222@163.com"
                     />
             </LinearLayout>
             <View
@@ -260,7 +248,7 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text="食品"
+                    android:hint="食品"
                     />
             </LinearLayout>
             <View
@@ -285,7 +273,6 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:text=""
                     />
             </LinearLayout>
             <View
@@ -335,7 +322,7 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:text="xzxxxx"
+                    android:hint="xxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -363,7 +350,7 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:text="xzxxxx"
+                    android:hint="xzxxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -391,7 +378,7 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:text="xzxxxx"
+                    android:hint="xzxxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -412,6 +399,6 @@
             android:layout_marginBottom="40dp"
             android:background="@drawable/yellow_but_bg"
             android:textColor="@color/white"
-            android:text="提交"/>
+            android:text="更新"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

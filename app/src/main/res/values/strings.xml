@@ -341,6 +341,9 @@
     <!--下载中心-->
     <string-array name="gerenyonghu5">
         <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
     </string-array>
     <!--安全设置-->
     <string-array name="gerenyonghu6">

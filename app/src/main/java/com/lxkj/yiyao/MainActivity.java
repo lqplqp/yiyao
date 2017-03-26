@@ -678,10 +678,13 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
                 break;
-            case 6:
+            case -1:
+                Bundle bundle = new Bundle();
+                bundle.putInt("user_type", userType);
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
                 GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
+                geRenYongHuShouYeFragment.setArguments(bundle);
                 fragments.add(geRenYongHuShouYeFragment);
                 setVP();
                 naviView.inflateMenu(R.menu.navi_menu_gerenyonghu);
@@ -694,6 +697,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_1:
                                 setTitle("个人用户首页");
                                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
+
                                 //首页
                                 GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
                                 fragments.add(geRenYongHuShouYeFragment);
@@ -732,8 +736,17 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu5);
                                 //法律法规文档下载
-                                GeRenYongHuWenDangXiaZaiFragment geRenYongHuWenDangXiaZaiFragment = new GeRenYongHuWenDangXiaZaiFragment();
-                                fragments.add(geRenYongHuWenDangXiaZaiFragment);
+                                /*GeRenYongHuWenDangXiaZaiFragment geRenYongHuWenDangXiaZaiFragment = new GeRenYongHuWenDangXiaZaiFragment();
+                                fragments.add(geRenYongHuWenDangXiaZaiFragment);*/
+                                //法律法规文档下载
+                                SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                                SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                                SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                                SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
+                                fragments.add(sjgrDownloadDocFragment);
+                                fragments.add(sjgrDownloadDocFragment1);
+                                fragments.add(sjgrDownloadDocFragment2);
+                                fragments.add(sjgrDownloadDocFragment3);
                                 break;
                             case R.id.navi_menu_6:
                                 setTitle("安全设置");
