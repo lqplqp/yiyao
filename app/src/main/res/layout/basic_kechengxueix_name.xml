@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/global_black"
+        android:text="中华人民共和国食品安全法"
+        android:id="@+id/name" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/global_bg_blue"
+        android:text="立即学习"
+        android:id="@+id/xuexi" />
+    <TextView
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/global_bg_blue"
+        android:text="立即考试"
+        android:id="@+id/kaoshi" />
+
+
+</LinearLayout>
