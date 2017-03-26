@@ -64,6 +64,8 @@ public class LoginActivity extends BaseActivity {
 
     @Override
     protected void init() {
+
+
 //        initSpinner();
         guohui.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +74,6 @@ public class LoginActivity extends BaseActivity {
                 finish();
             }
         });
-
     }
 
     /*private void initSpinner() {

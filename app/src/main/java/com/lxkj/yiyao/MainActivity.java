@@ -23,6 +23,7 @@ import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.GeRenScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
+import com.lxkj.yiyao.activity.QiYeZhiFaActivity;
 import com.lxkj.yiyao.activity.ScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.XuanGouKeChengRenYuan;
 import com.lxkj.yiyao.adapter.VPFAdapter;
@@ -128,15 +129,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        /**
-         * 测试用
-         */
-        titleTv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, XuanGouKeChengRenYuan.class));
-            }
-        });
+
+        /*Intent intent = new Intent(this, QiYeZhiFaActivity.class);
+        startActivity(intent);*/
+
+
         initData();
         initView();
     }
