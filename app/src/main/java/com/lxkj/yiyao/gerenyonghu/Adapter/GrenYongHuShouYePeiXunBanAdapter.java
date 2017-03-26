@@ -10,6 +10,8 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.LearningActivity;
+import com.lxkj.yiyao.activity.XuanGouKeChengActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
@@ -28,11 +30,20 @@ public class GrenYongHuShouYePeiXunBanAdapter extends MBaseAdapter <GrenYongHuSh
     }
 
     @Override
-    protected void fillData(int i, ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, ViewHolder holder, final JSONObject result) {
         Glide.with(mActivity).load(result.get("tpdz")).into(holder.img1);
 
         holder.title.setText( "" + result.get("pxbname").toString());
         holder.time.setText("" + result.get("pxtime").toString());
+
+        holder.img1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    Intent intent = new Intent(mActivity,LearningActivity.class);
+                    intent.putExtra("pxid",result.get("id").toString());
+                    mActivity.startActivity(intent);
+            }
+        });
 
     }
 
