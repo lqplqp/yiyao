@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
@@ -53,12 +52,11 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
             public void onClick(View view) {
 
                 if(!qiye_admin){
-
                     Intent intent = new Intent(mActivity,LearningActivity.class);
                     intent.putExtra("pxid",result.get("id").toString());
                     mActivity.startActivity(intent);
                 }else{
-                    Intent intent = new Intent(mActivity,XuanGouKeChengActivity.class);
+                    Intent intent = new Intent(mActivity,XuanGouKeChengRenYuan.class);
                     intent.putExtra("pxid",result.get("id").toString());
                     mActivity.startActivity(intent);
                 }

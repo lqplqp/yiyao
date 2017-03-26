@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -87,9 +88,13 @@ public class ExamActivity extends BaseActivity {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                //JSONObject examBean = JSONObject.parseObject(result);
+                //String  retCode = examBean.get("code").toString();
+
                 ExamBean examBean = gson.fromJson(result, ExamBean.class);
-                int retCode = examBean.getCode();
-                if (11111 == retCode) {
+                String retCode = examBean.getCode();
+                if ("11111" .equals(retCode) ) {
+
                     examData = examBean.getData();
                     if (examData.size() > 0) {
                         current = 0;
@@ -104,7 +109,7 @@ public class ExamActivity extends BaseActivity {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ex.printStackTrace();
             }
 
             @Override
@@ -293,6 +298,11 @@ public class ExamActivity extends BaseActivity {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examOkUrl);
         String examOkJson = gson.toJson(examData);
         params.addBodyParameter("data", examOkJson);
+        Log.i("data",examOkJson);
+        params.addBodyParameter("xkzbh","");
+        SharedPreferences sp = getSharedPreferences("shiyao", 0);
+        String id = sp.getString("id", "");
+        params.addBodyParameter("username",id);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {

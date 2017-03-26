@@ -51,14 +51,14 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/image"
+                        android:id="@+id/peixun_image"
                         android:layout_width="160dp"
                         android:layout_height="100dp"
                         android:layout_margin="10dp"
                         android:background="#000000" />
 
                     <TextView
-                        android:id="@+id/title"
+                        android:id="@+id/peixun_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
@@ -348,7 +348,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/chakanmoban"
+                android:id="@+id/tijiao_but"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
