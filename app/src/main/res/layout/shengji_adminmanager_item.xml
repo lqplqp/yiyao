@@ -19,10 +19,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="1"
+                android:text="序号"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/number" />
+                android:textSize="@dimen/table_textsize" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -33,7 +32,19 @@
                 android:text="XXXX"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/yhm" />
+                android:id="@+id/xuhao" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="用户名"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -44,7 +55,134 @@
                 android:text="XXXX"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/xm" />
+                android:id="@+id/yonghuming" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="姓名"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/xingming" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="性别"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/xingbie" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="手机号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/shoujihao" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="邮箱"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/youxiang" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/xiangqing"
+                />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/bianji" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="移除"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/yichu" />
         </TableRow>
 
 
