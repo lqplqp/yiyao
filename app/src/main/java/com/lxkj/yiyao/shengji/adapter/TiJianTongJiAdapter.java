@@ -40,7 +40,7 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
 
     @Override
     protected int getItemLayout() {
-        return R.layout.tijian_tonghi_item;
+        return R.layout.shengji_tijian_tonghi_item;
     }
 
     @Override

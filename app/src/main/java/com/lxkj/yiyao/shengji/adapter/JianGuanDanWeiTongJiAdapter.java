@@ -14,10 +14,10 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/2.
  */
 
-public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.ViewHolder> {
+public class JianGuanDanWeiTongJiAdapter extends MBaseAdapter<JianGuanDanWeiTongJiAdapter.ViewHolder> {
 
 
-    public MessageSearchAdapter(String bean) {
+    public JianGuanDanWeiTongJiAdapter(String bean) {
         super(bean);
     }
 
@@ -42,7 +42,7 @@ public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.View
 
     @Override
     protected int getItemLayout() {
-        return R.layout.shengji_peixunmessage_search_item;
+        return R.layout.shengji_jianguandanweitongji_item;
     }
 
     @Override

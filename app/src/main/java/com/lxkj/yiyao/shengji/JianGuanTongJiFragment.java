@@ -5,6 +5,7 @@ import android.util.Log;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.shengji.adapter.JianGuanDanWeiTongJiAdapter;
 import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -22,7 +23,7 @@ public class JianGuanTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    MessageSearchAdapter adapter;
+    JianGuanDanWeiTongJiAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
     private int page = 1;
@@ -74,9 +75,10 @@ requestData();
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new MessageSearchAdapter(result);
+                    adapter = new JianGuanDanWeiTongJiAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -113,7 +115,7 @@ requestData();
 
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_jianguantongji;
+        return R.layout.shengji_fragment_layout_jianguantongji;
     }
 
 }

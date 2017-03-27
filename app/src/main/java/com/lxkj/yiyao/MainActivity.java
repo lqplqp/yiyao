@@ -55,11 +55,13 @@ import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
 import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
 import com.lxkj.yiyao.shengji.PersonAnalysisFragment;
+import com.lxkj.yiyao.shengji.QiYeYongHuTongJiFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
 import com.lxkj.yiyao.shengji.ShengJiPeiXunMessageSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianTongJiFragment;
 import com.lxkj.yiyao.shengji.UpdatePswFragment;
+import com.lxkj.yiyao.shengji.ZhiFaJiLuTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRBaoMingMessageFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyInfoListFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyTongJiFragment;
@@ -301,16 +303,16 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan6);
                                 //监管单位统计分析
-                                JianGuanTongJiFragment sjgrJianGuanTongJiFragment = new JianGuanTongJiFragment();
+                                JianGuanTongJiFragment jianGuanTongJiFragment = new JianGuanTongJiFragment();
                                 //执法记录统计分析 待定
-                                JianGuanTongJiFragment sjgrJianGuanTongJiFragment1 = new JianGuanTongJiFragment();
+                                ZhiFaJiLuTongJiFragment zhiFaJiLuTongJiFragment = new ZhiFaJiLuTongJiFragment();
                                 //企业用户统计分析
-                                CompanyTongJiFragment sjgrCompanyTongJiFragment = new CompanyTongJiFragment();
+                                QiYeYongHuTongJiFragment qiYeYongHuTongJiFragment = new QiYeYongHuTongJiFragment();
                                 //个人用户统计分析
                                 PersonAnalysisFragment sjgrPersonAnalysisFragment = new PersonAnalysisFragment();
-                                fragments.add(sjgrJianGuanTongJiFragment);
-                                fragments.add(sjgrJianGuanTongJiFragment1);
-                                fragments.add(sjgrCompanyTongJiFragment);
+                                fragments.add(jianGuanTongJiFragment);
+                                fragments.add(zhiFaJiLuTongJiFragment);
+                                fragments.add(qiYeYongHuTongJiFragment);
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_8:

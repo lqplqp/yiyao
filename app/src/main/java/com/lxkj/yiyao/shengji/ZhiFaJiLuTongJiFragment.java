@@ -1,15 +1,12 @@
 package com.lxkj.yiyao.shengji;
 
-import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.PeiXunListAdapter;
+import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
+import com.lxkj.yiyao.shengji.adapter.ZhiFaJiLuTongJiAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -17,23 +14,21 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2017/1/18 0018.
+ * Created by Administrator on 2017/1/19.
  */
 
-public class PeiXunListFragment extends BaseFragment {
-
+public class ZhiFaJiLuTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    PeiXunListAdapter adapter;
+    ZhiFaJiLuTongJiAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
     private int page = 1;
 
-    private String TAG = "CompanyManageyFragment";
+    private String TAG = "ZhiFaJiLuTongJiFragment";
 
 
     @Override
@@ -72,7 +67,7 @@ requestData();
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_ybpxxm);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tzxx);
         params.addBodyParameter("page", page + "");
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -80,9 +75,10 @@ requestData();
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new PeiXunListAdapter(result);
+                    adapter = new ZhiFaJiLuTongJiAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -119,14 +115,7 @@ requestData();
 
     @Override
     public int getLayout() {
-        return R.layout.shengji_fragment_layout_yibao_peixun_list;
+        return R.layout.shengji_fragment_layout_zhifajilutongji;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 }
