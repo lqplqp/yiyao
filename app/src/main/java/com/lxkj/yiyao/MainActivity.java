@@ -528,6 +528,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.navi_menu_4:
                                 setTitle("企业管理");
+
                                 pagerTitles = getResources().getStringArray(R.array.shiji3);
                                 ShiJiQiYeGuanLiFragment shiJiQiYeGuanLiFragment = new ShiJiQiYeGuanLiFragment();
                                 fragments.add(shiJiQiYeGuanLiFragment);
