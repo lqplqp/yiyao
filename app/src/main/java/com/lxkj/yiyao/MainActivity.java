@@ -734,17 +734,17 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("下载中心");
                                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu5);
                                 //法律法规文档下载
-                                /*GeRenYongHuWenDangXiaZaiFragment geRenYongHuWenDangXiaZaiFragment = new GeRenYongHuWenDangXiaZaiFragment();
-                                fragments.add(geRenYongHuWenDangXiaZaiFragment);*/
+                                GeRenYongHuWenDangXiaZaiFragment geRenYongHuWenDangXiaZaiFragment = new GeRenYongHuWenDangXiaZaiFragment();
+                                fragments.add(geRenYongHuWenDangXiaZaiFragment);
                                 //法律法规文档下载
-                                SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                                /*SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
                                 SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
                                 SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
                                 SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                                 fragments.add(sjgrDownloadDocFragment);
                                 fragments.add(sjgrDownloadDocFragment1);
                                 fragments.add(sjgrDownloadDocFragment2);
-                                fragments.add(sjgrDownloadDocFragment3);
+                                fragments.add(sjgrDownloadDocFragment3);*/
                                 break;
                             case R.id.navi_menu_6:
                                 setTitle("安全设置");
