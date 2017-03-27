@@ -73,6 +73,7 @@
             android:layout_marginRight="10dp"
             android:paddingLeft="10dp"
             android:hint="@string/sj_shenhe_input_key"
+            android:textSize="14sp"
             android:lines="1"
             android:id="@+id/input_key" />
     </LinearLayout>

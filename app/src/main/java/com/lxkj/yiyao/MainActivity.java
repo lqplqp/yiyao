@@ -56,6 +56,7 @@ import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
 import com.lxkj.yiyao.shengji.PersonAnalysisFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
+import com.lxkj.yiyao.shengji.ShengJiPeiXunMessageSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianTongJiFragment;
 import com.lxkj.yiyao.shengji.UpdatePswFragment;
@@ -267,8 +268,8 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("培训通知管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan2);
                                 //培训通知列表
-                                com.lxkj.yiyao.shengji.SJGRMessageSearchFragment sjgrMessageSearchFragment = new com.lxkj.yiyao.shengji.SJGRMessageSearchFragment();
-                                fragments.add(sjgrMessageSearchFragment);
+                                ShengJiPeiXunMessageSearchFragment shengJiPeiXunMessageSearchFragment = new ShengJiPeiXunMessageSearchFragment();
+                                fragments.add(shengJiPeiXunMessageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
                                 setTitle("体检机构审核");

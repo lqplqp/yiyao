@@ -174,7 +174,7 @@
                 android:textColor="@color/global_white" />
         </RelativeLayout>
 
-        <TableLayout
+        <!--<TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -221,7 +221,7 @@
 
 
 
-        </TableLayout>
+        </TableLayout>-->
 
 
         <!--体验机构列表 end-->
