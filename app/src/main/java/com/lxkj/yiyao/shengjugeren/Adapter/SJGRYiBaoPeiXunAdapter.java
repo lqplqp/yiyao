@@ -30,7 +30,7 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         holder.peixunleixing.setText(""+result.getString("pxbmc"));
         //培训类型
         holder.peixunleixing.setText(""+result.getString(" pxlx"));
-        //培训时间
+       /* //培训时间
         holder.peixunshijian.setText(""+result.getString("pxkssj"));
         //证书名称
         holder.zhengshumingcheng.setText(""+result.getString("pxbt"));
@@ -38,7 +38,7 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         holder.goumaishijian.setText(""+result.getString("cjsj"));
         //学习进度
         holder.xuexijindu.setText(""+result.getString("xxjd"));
-        //查看
+        //查看*/
     }
 
 
@@ -60,7 +60,7 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         TextView peixunmingci;
         @BindView(R.id.peixunleixing)
         TextView peixunleixing;
-        @BindView(R.id.peixunshijian)
+      /*  @BindView(R.id.peixunshijian)
         TextView peixunshijian;
         @BindView(R.id.zhengshumingcheng)
         TextView zhengshumingcheng;
@@ -69,7 +69,7 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         @BindView(R.id.xuexijindu)
         TextView xuexijindu;
         @BindView(R.id.chakan)
-        TextView chakan;
+        TextView chakan;*/
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

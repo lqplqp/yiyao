@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/fillet_white_bg"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="您还没有证书"
+        android:textColor="@color/global_black"
+        android:textSize="@dimen/qyinfo_text_size"
+        android:gravity="center"
+        />
+    <View
+        android:background="@color/global_bg_gray"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+</LinearLayout>

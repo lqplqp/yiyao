@@ -6,29 +6,28 @@
         <item
             android:id="@+id/navi_menu_1"
             android:icon="@mipmap/ic_home"
-            android:title="监管单位首页"
+            android:title="监管人员首页"
             />
         <item
             android:id="@+id/navi_menu_2"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
-            android:title="监管单位管理"
+            android:title="监管人员中心"
             />
-        <item
+        <!--<item
             android:id="@+id/navi_menu_3"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
             android:title="培训通知管理"
+            />-->
+        <item
+            android:id="@+id/navi_menu_5"
+            android:icon="@mipmap/ic_peixunxuexi"
+            android:title="培训学习"
             />
         <item
             android:id="@+id/navi_menu_4"
             android:icon="@mipmap/ic_qiyeguanli"
             android:title="企业管理"
             />
-        <item
-            android:id="@+id/navi_menu_5"
-            android:icon="@mipmap/ic_peixunxuexi"
-            android:title="培训报名"
-            />
-
         <item
         android:id="@+id/navi_menu_6"
             android:icon="@mipmap/ic_jianguantongji"

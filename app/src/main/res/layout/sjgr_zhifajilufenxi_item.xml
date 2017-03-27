@@ -32,7 +32,7 @@
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="体检单位"
+                android:text="监管单位名称"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
@@ -46,14 +46,14 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/tijiandanwei" />
+                android:id="@+id/jianguandanweimingcheng" />
         </TableRow>
         <TableRow>
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="体检人数"
+                android:text="执法人员数量"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
@@ -62,12 +62,12 @@
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="体检人数"
+                android:text="网上培训"
                 android:maxLength="12"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/tijianrenshu" />
+                android:id="@+id/zhifarenyuanshuliang" />
         </TableRow>
         <TableRow>
 
@@ -76,7 +76,7 @@
                 android:layout_weight="1"
                 android:background="@drawable/table_border_bg"
                 android:gravity="center"
-                android:text="合格人数"
+                android:text="管辖企业数"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
@@ -89,36 +89,14 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/hegerenshu" />
+                android:id="@+id/guanxiaqiyeshu" />
         </TableRow>
         <TableRow>
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="不合格人数"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
-
-            <TextView
-                android:id="@+id/buhegerenshu"
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:background="@drawable/table_border_bg"
-                android:gravity="center"
-                android:maxLength="12"
-                android:text="网上培训"
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size" />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_height="@dimen/table_hight"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="体检合格率"
+                android:text="管辖从业人数"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
@@ -132,7 +110,49 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/tijianhegelv" />
+                android:id="@+id/guanxiacongyerenshu" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法人次"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/zhifarenci" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="执法企业数量"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/zhifaqiyeshuliang" />
         </TableRow>
 
     </TableLayout>

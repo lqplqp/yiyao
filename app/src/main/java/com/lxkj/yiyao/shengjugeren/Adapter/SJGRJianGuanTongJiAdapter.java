@@ -9,7 +9,6 @@ import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import master.flame.danmaku.danmaku.model.android.ViewCacheStuffer;
 
 /**
  * Created by Administrator on 2017/3/8.
@@ -22,9 +21,20 @@ public class SJGRJianGuanTongJiAdapter extends MBaseAdapter<SJGRJianGuanTongJiAd
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        holder.jianguandanweimingcheng.setText(""+result.get("jgdwmc"));
+        //监管单位名称
+        holder.jianguandanweimingcheng.setText(""+result.get("jianguandanweimingcheng"));
+        //集中培训人数
+        holder.jizhongpeixunrenshu.setText(""+result.get("jizhongpeixunrenshu"));
+        //培训率
+        holder.peixunlv.setText(""+result.get("peixunlv"));
+        //网上培训人数
+        holder.wangshangpeixunrenshu.setText(""+result.get("wangshangpeixunrenshu"));
+        //辖区管理人数
+        holder.xiaquguanlirenshu.setText(""+result.get("xiaquguanlirenshu"));
+        //序号
         holder.xuhao.setText(""+result.get("xuhao"));
-        holder.yonghuming.setText(""+result.get("yhm"));
+        //用户名
+        holder.yonghuming.setText(""+result.get("yonghuming"));
     }
 
 
@@ -38,6 +48,7 @@ public class SJGRJianGuanTongJiAdapter extends MBaseAdapter<SJGRJianGuanTongJiAd
         return new ViewHolder(view);
     }
 
+
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
@@ -45,6 +56,14 @@ public class SJGRJianGuanTongJiAdapter extends MBaseAdapter<SJGRJianGuanTongJiAd
         TextView jianguandanweimingcheng;
         @BindView(R.id.yonghuming)
         TextView yonghuming;
+        @BindView(R.id.xiaquguanlirenshu)
+        TextView xiaquguanlirenshu;
+        @BindView(R.id.jizhongpeixunrenshu)
+        TextView jizhongpeixunrenshu;
+        @BindView(R.id.wangshangpeixunrenshu)
+        TextView wangshangpeixunrenshu;
+        @BindView(R.id.peixunlv)
+        TextView peixunlv;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

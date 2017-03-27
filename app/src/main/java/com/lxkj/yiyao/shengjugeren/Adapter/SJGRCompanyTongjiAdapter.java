@@ -14,19 +14,25 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/3/2.
  */
 
-public class SJGRCompanyTongjiAdapter extends MBaseAdapter <SJGRCompanyTongjiAdapter.ViewHolder>{
+public class SJGRCompanyTongjiAdapter extends MBaseAdapter<SJGRCompanyTongjiAdapter.ViewHolder> {
     public SJGRCompanyTongjiAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //企业数量
-        holder.qiyeshuliang.setText(""+result.getString("qysl"));
+        //不合格人数
+        holder.buhegerenshu.setText(""+result.get("buhegerenshu"));
+        //合格人数
+        holder.hegerenshu.setText(""+result.get("hegerenshu"));
+        //体检单位
+        holder.tijiandanwei.setText(""+result.get("tijiandanwei"));
+        //体检合格率
+        holder.tijianhegelv.setText(""+result.get("tijianhegelv"));
+        //体检人数
+        holder.tijianrenshu.setText(""+result.get("tijianrenshu"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
-        //地区
-        holder.diqu.setText(""+result.getString("dq"));
+        holder.xuhao.setText(""+result.get("xuhao"));
     }
 
     @Override
@@ -39,13 +45,20 @@ public class SJGRCompanyTongjiAdapter extends MBaseAdapter <SJGRCompanyTongjiAda
         return new ViewHolder(view);
     }
 
+
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.diqu)
-        TextView diqu;
-        @BindView(R.id.qiyeshuliang)
-        TextView qiyeshuliang;
+        @BindView(R.id.tijiandanwei)
+        TextView tijiandanwei;
+        @BindView(R.id.tijianrenshu)
+        TextView tijianrenshu;
+        @BindView(R.id.hegerenshu)
+        TextView hegerenshu;
+        @BindView(R.id.buhegerenshu)
+        TextView buhegerenshu;
+        @BindView(R.id.tijianhegelv)
+        TextView tijianhegelv;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

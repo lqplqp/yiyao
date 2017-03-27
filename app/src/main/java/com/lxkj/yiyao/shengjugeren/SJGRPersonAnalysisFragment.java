@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.shengjugeren;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +47,19 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
     MBaseAdapter adapter;
     private int page = 1;
 
-
+    private View rootView;
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if(rootView == null) {
+            rootView = super.onCreateView(inflater, container, savedInstanceState);
+            return rootView;
+        }
+        ViewGroup parent = (ViewGroup) rootView.getParent();
+        if (parent != null) {
+            parent.removeView(rootView);
+        }
+        return rootView;
+    }
     @Override
     protected void initView() {
 

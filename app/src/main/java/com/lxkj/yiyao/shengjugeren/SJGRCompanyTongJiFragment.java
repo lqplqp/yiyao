@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.shengjugeren;
 
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,12 +35,12 @@ import butterknife.Unbinder;
 
 public class SJGRCompanyTongJiFragment extends BaseFragment {
     public String TAG = this.getClass().getSimpleName();
-    @BindView(R.id.chaxun)
+    /*@BindView(R.id.chaxun)
     TextView chaxun;
     @BindView(R.id.star_time)
     EditText starTime;
     @BindView(R.id.end_time)
-    EditText endTime;
+    EditText endTime;*/
     @BindView(R.id.list_view)
     RefreshListView listView;
     Unbinder unbinder;
@@ -48,13 +49,25 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
 
     MBaseAdapter adapter;
     private int page = 1;
-
+    private View rootView;
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        if(rootView == null) {
+            rootView = super.onCreateView(inflater, container, savedInstanceState);
+            return rootView;
+        }
+        ViewGroup parent = (ViewGroup) rootView.getParent();
+        if (parent != null) {
+            parent.removeView(rootView);
+        }
+        return rootView;
+    }
 
     @Override
     protected void initView() {
-
-        requestData(starTime.getText().toString(),
-                endTime.getText().toString());
+        requestData();
+        /*requestData(starTime.getText().toString(),
+                endTime.getText().toString());*/
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -65,9 +78,9 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
                 adapter.clear();
                 adapter.notifyDataSetChanged();
                 page=1;
-
-                requestData(starTime.getText().toString(),
-                        endTime.getText().toString());
+                requestData();
+                /*requestData(starTime.getText().toString(),
+                        endTime.getText().toString());*/
 
 
             }
@@ -75,9 +88,9 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
             @Override
             public void onLoadingMore() {
 
-
-                requestData(starTime.getText().toString(),
-                        endTime.getText().toString());
+                requestData();
+                /*requestData(starTime.getText().toString(),
+                        endTime.getText().toString());*/
 
 
 
@@ -93,13 +106,13 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData(String star_time,String end_time){
+    public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qyhtjfx);
         params.addBodyParameter("page",page+"");
-        if(star_time!=null){
+        /*if(star_time!=null){
             params.addBodyParameter("sj1",star_time);
             params.addBodyParameter("sj2",end_time);
-        }
+        }*/
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -147,7 +160,7 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
         return R.layout.sjgr_fragment_layout_qiye_yonghu_tongji;
     }
 
-    @OnClick({R.id.chaxun, R.id.star_time, R.id.end_time})
+    /*@OnClick({R.id.chaxun, R.id.star_time, R.id.end_time})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.start_time:
@@ -201,5 +214,5 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
 
                 break;
         }
-    }
+    }*/
 }

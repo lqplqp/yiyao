@@ -7,44 +7,152 @@
         android:layout_height="wrap_content"
         android:background="@drawable/fillet_white_bg"
         android:layout_margin="10dp">
-
         <TableRow>
             <TextView
-                android:id="@+id/xuhao"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="3"
+                android:text="序号"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:id="@+id/jianguandanweimingcheng"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="新乡市食品药品监督管理局"
+                android:text="1"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/xuhao" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="监管单位名称"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/jianguandanweimingcheng" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="用户名"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
             <TextView
-                android:id="@+id/yonghuming"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="0"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/yonghuming" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="辖区监管人员人数"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/xiaquguanlirenshu" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="集中培训人数"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/jizhongpeixunrenshu" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训人数"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/wangshangpeixunrenshu" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="培训率"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="网上培训"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/peixunlv" />
         </TableRow>
 
-        <View
-            android:background="@color/global_bg_gray"
-            android:layout_width="match_parent"
-
-            android:layout_height="10dp"/>
     </TableLayout>
 </LinearLayout>

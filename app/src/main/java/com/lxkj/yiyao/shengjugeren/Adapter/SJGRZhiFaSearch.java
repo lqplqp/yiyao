@@ -16,6 +16,8 @@ import butterknife.ButterKnife;
 
 public class SJGRZhiFaSearch extends MBaseAdapter<SJGRZhiFaSearch.ViewHolder> {
 
+
+
     public SJGRZhiFaSearch(String bean) {
         super(bean);
     }
@@ -29,7 +31,7 @@ public class SJGRZhiFaSearch extends MBaseAdapter<SJGRZhiFaSearch.ViewHolder> {
         //序号
         holder.xuhao.setText("" + result.getString("xuhao"));
         //培训开始时间
-        holder.peixunkaishishijian.setText("" + result.getString("zfsj"));
+        holder.zhifashijian.setText("" + result.getString("zfsj"));
         //执法编号
         holder.zhifabianhao.setText("" + result.getString("zfbh"));
         //执法类型
@@ -49,20 +51,23 @@ public class SJGRZhiFaSearch extends MBaseAdapter<SJGRZhiFaSearch.ViewHolder> {
     }
 
     static class ViewHolder {
+
+        @BindView(R.id.bzhifarenxingm)
+        TextView bzhifarenxingm;
+        @BindView(R.id.beizhifarenbianhao)
+        TextView beizhifarenbianhao;
+        @BindView(R.id.zhifashijian)
+        TextView zhifashijian;
         @BindView(R.id.xuhao)
         TextView xuhao;
         @BindView(R.id.zhifabianhao)
         TextView zhifabianhao;
         @BindView(R.id.zhifarenxingming)
         TextView zhifarenxingming;
-        @BindView(R.id.beizhifarenbianhao)
-        TextView beizhifarenbianhao;
-        @BindView(R.id.biezhifarenxingming)
-        TextView bzhifarenxingm;
+
         @BindView(R.id.zhifaleixing)
         TextView zhifaleixing;
-        @BindView(R.id.peixunkaishishijian)
-        TextView peixunkaishishijian;
+
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

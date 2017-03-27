@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <!--查询条件和查询条件之下的输入框  start-->
+   <!-- 查询条件和查询条件之下的输入框  start
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         </LinearLayout>
 
     </LinearLayout>
-    <!--查询条件和查询条件之下的输入框  end-->
+    查询条件和查询条件之下的输入框  end-->
 
 
     <!--体验机构列表 start-->

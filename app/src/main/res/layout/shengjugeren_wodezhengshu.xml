@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <RadioButton
+                android:id="@+id/rb_1"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/blue_but_bg"
+                android:checked="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="我的证书"/>
+            <RadioButton
+                android:id="@+id/rb_2"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:button="@null"
+                android:background="@drawable/radiobut_color"
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:text="过期证书"/>
+        </RadioGroup>
+
+    </LinearLayout>
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+</LinearLayout>

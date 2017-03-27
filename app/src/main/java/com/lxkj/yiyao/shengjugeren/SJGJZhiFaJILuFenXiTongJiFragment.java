@@ -12,6 +12,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRJianGuanTongJiAdapter;
+import com.lxkj.yiyao.shengjugeren.Adapter.SJGRZhiFaFenXiAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -19,36 +20,35 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
  */
 
-public class SJGRJianGuanTongJiFragment extends BaseFragment {
+public class SJGJZhiFaJILuFenXiTongJiFragment extends BaseFragment {
     public String TAG = this.getClass().getSimpleName();
 
     @BindView(R.id.list_view)
     RefreshListView listView;
     Unbinder unbinder;
-    private View rootView;
+
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
     private int page = 1;
-
+    private View rootView;
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if(rootView == null) {
             rootView = super.onCreateView(inflater, container, savedInstanceState);
             return rootView;
         }
-            ViewGroup parent = (ViewGroup) rootView.getParent();
-            if (parent != null) {
-                parent.removeView(rootView);
-            }
-            return rootView;
+        ViewGroup parent = (ViewGroup) rootView.getParent();
+        if (parent != null) {
+            parent.removeView(rootView);
+        }
+        return rootView;
     }
 
     @Override
@@ -102,7 +102,7 @@ public class SJGRJianGuanTongJiFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if(adapter == null){
-                    adapter = new SJGRJianGuanTongJiAdapter(result);
+                    adapter = new SJGRZhiFaFenXiAdapter(result);
                     listView.setAdapter(adapter);
                 }else{
                     adapter.addData(result);
@@ -140,7 +140,7 @@ public class SJGRJianGuanTongJiFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_jianguantongji;
+        return R.layout.sjgr_fragment_layout_zhifajilufenxi;
     }
 
 }

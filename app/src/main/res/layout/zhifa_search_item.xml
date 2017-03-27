@@ -74,7 +74,6 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="被执法人编号"
-                android:id="@+id/beizhifarenbianhao"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
@@ -88,7 +87,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/biezhifarenxingming" />
+                android:id="@+id/beizhifarenbianhao" />
         </TableRow>
         <TableRow>
             <TextView
@@ -139,7 +138,7 @@
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="培训开始时间"
+                android:text="执法时间"
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
@@ -154,7 +153,7 @@
                 android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/peixunkaishishijian" />
+                android:id="@+id/zhifashijian" />
         </TableRow>
 
         <TableRow>
