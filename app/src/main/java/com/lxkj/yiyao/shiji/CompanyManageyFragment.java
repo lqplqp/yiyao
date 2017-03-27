@@ -31,13 +31,18 @@ import butterknife.Unbinder;
 public class CompanyManageyFragment extends BaseFragment {
 
     public String TAG = this.getClass().getSimpleName();
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.sousuoneirong)
-    EditText sousuoneirong;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
-    Unbinder unbinder;
+//    @BindView(R.id.select)
+//    TextView select;
+//    @BindView(R.id.sousuoneirong)
+//    EditText sousuoneirong;
+//    @BindView(R.id.list_view)
+//    RefreshListView listView;
+//    Unbinder unbinder;
+
+
+
+
+
 
     // ======================== 模板代码=============================
 
@@ -48,10 +53,10 @@ public class CompanyManageyFragment extends BaseFragment {
     @Override
     protected void initView() {
 
-        requestData(null);
+//        requestData(null);
 
 
-        listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+        /*listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
 
@@ -75,7 +80,7 @@ public class CompanyManageyFragment extends BaseFragment {
 
 
             }
-        });
+        });*/
 
 
     }
@@ -86,7 +91,7 @@ public class CompanyManageyFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData(String s){
+    /*public void requestData(String s){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_jgdwxx);
         params.addBodyParameter("page",page+"");
         if(s!=null){
@@ -129,17 +134,17 @@ public class CompanyManageyFragment extends BaseFragment {
                 return false;
             }
         });
-    }
+    }*/
 
 
     // ======================== 模板代码=============================
 
     @Override
     public int getLayout() {
-        return R.layout.shiji_fragment_layout_company_manager;
+        return R.layout.jianguandanweiguanli_layout;
     }
 
-    @OnClick(R.id.select)
+    /*@OnClick(R.id.select)
     public void onClick() {
         toast("查询");
         // TODO: 2017/1/18
@@ -149,5 +154,5 @@ public class CompanyManageyFragment extends BaseFragment {
             page=1;
         }
         requestData(sousuoneirong.getText().toString());
-    }
+    }*/
 }

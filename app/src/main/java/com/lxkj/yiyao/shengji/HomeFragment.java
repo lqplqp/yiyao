@@ -2,6 +2,7 @@ package com.lxkj.yiyao.shengji;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +28,7 @@ public class HomeFragment extends BaseFragment {
     TextView learning;
     @BindView(R.id.none)
     TextView none;
+
     @BindView(R.id.select_project)
     TextView selectProject;
     @BindView(R.id.add_people)
@@ -61,6 +63,7 @@ public class HomeFragment extends BaseFragment {
             case R.id.add_people:
                 intent = new Intent(getActivity(),AddAdminActivity.class);
                 startActivity(intent);
+                Log.d("123","213");
                 break;
             case R.id.select_project:
                 intent = new Intent(getActivity(),SelectTrainActivity.class);

@@ -113,15 +113,16 @@ android:background="@color/global_bg_gray">
             />
     </LinearLayout>
 </LinearLayout>
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginLeft="80dp"
-    android:layout_marginRight="80dp"
-    android:background="@drawable/yellow_but_bg"
-    android:textSize="@dimen/qyinfo_text_size"
-    android:textColor="@color/white"
-    android:text="提交"
-    android:id="@+id/commit" />
+
+    <Button
+        android:id="@+id/commit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/yellow_but_bg"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="@dimen/qyinfo_text_size" />
 </LinearLayout>

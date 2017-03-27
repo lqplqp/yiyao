@@ -16,6 +16,7 @@ import com.lxkj.yiyao.adapter.JieYeKaoShiAdapter;
 import com.lxkj.yiyao.adapter.JieYeZhengShuAdapter;
 import com.lxkj.yiyao.adapter.XiangGuanZiLiaoAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuXueXiAdapter;
 import com.lxkj.yiyao.global.GlobalString;
 
 import org.xutils.common.Callback;
@@ -67,10 +68,12 @@ public class LearningActivity extends BaseActivity {
     TextView titleTv;
     @BindView(R.id.chakanmoban)
     TextView chakanmoban;
-    private int index = 1;
 
+    private int index = 1;
+    private int user_type;
 
     private JiChuKeChengAdapter jiChuKeChengAdapter;
+    private GeRenYongHuXueXiAdapter geRenYongHuXueXiAdapter;
     private JieYeKaoShiAdapter jieYeKaoShiAdapter;
     private JieYeZhengShuAdapter jieYeZhengShuAdapter;
     private XiangGuanZiLiaoAdapter xiangGuanZiLiaoAdapter;
@@ -84,6 +87,7 @@ public class LearningActivity extends BaseActivity {
             }
         });
         index = Integer.parseInt(getIntent().getStringExtra("pxid"));
+        user_type = getIntent().getIntExtra("user_type",0);
         requestDate();
     }
 
@@ -122,10 +126,13 @@ public class LearningActivity extends BaseActivity {
                 if (object.get("jysj") != null && object.get("jysj1") != null)
                     jieshushijian.setText("" + object.get("jysj").toString() + "到" + object.get("jysj1").toString());
 
-
-                jiChuKeChengAdapter = new JiChuKeChengAdapter(b);
-                jichukechengListview.setAdapter(jiChuKeChengAdapter);
-
+                if(user_type == -1){
+                    geRenYongHuXueXiAdapter = new GeRenYongHuXueXiAdapter(LearningActivity.this,b);
+                    jichukechengListview.setAdapter(geRenYongHuXueXiAdapter);
+                }else {
+                    jiChuKeChengAdapter = new JiChuKeChengAdapter(b);
+                    jichukechengListview.setAdapter(jiChuKeChengAdapter);
+                }
                 xiangGuanZiLiaoAdapter = new XiangGuanZiLiaoAdapter(c);
                 xiangguanziliaoListview.setAdapter(xiangGuanZiLiaoAdapter);
 

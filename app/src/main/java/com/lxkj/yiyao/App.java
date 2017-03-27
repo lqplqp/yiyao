@@ -15,7 +15,7 @@ import org.xutils.x;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class App extends LitePalApplication {
+public class App extends Application {
 
     public static Application mApplication;
 

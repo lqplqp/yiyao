@@ -30,13 +30,13 @@ public class CompanyManageyFragment extends BaseFragment {
 // ======================== 模板代码=============================
 
     CompanyManagerAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
+//    @BindView(R.id.list_view)
+//    RefreshListView listView;
 
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.sousuoneirong)
-    EditText sousuoneirong;
+//    @BindView(R.id.select)
+//    TextView select;
+//    @BindView(R.id.sousuoneirong)
+//    EditText sousuoneirong;
 
     private int page = 1;
 
@@ -45,9 +45,9 @@ public class CompanyManageyFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        requestData();
+//        requestData();
 
-        listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+        /*listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
 
@@ -80,7 +80,7 @@ public class CompanyManageyFragment extends BaseFragment {
                 page = 1;
                 requestData();
             }
-        });
+        });*/
 
 
     }
@@ -88,7 +88,7 @@ public class CompanyManageyFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
+   /* public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
         params.addBodyParameter("xx", sousuoneirong.getText() + "");
         params.addBodyParameter("page", page + "");
@@ -131,7 +131,7 @@ public class CompanyManageyFragment extends BaseFragment {
                 return false;
             }
         });
-    }
+    }*/
 
 
     // ======================== 模板代码=============================
@@ -139,7 +139,7 @@ public class CompanyManageyFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.shiji_fragment_layout_company_manager;
+        return R.layout.jianguandanweiguanli_layout;
     }
 
     @Override

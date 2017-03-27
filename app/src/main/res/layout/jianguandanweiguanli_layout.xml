@@ -26,16 +26,16 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
-            android:text="用    户    名："/>
-        <TextView
-            android:id="@+id/username"
-            android:layout_width="wrap_content"
+            android:text="*用  户  名："/>
+
+        <EditText
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
-            android:text="username"
-            />
+            android:hint="username"
+            android:id="@+id/yonghuming" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -52,15 +52,15 @@
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/global_black"
-        android:text="单 位  名 称："/>
-    <TextView
-        android:id="@+id/danweimingcheng"
-        android:layout_width="wrap_content"
+        android:text="*单位名称："/>
+    <EditText
+        android:id="@+id/xingming"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/global_gray"
-        android:text="新乡面对面重庆小店"
+        android:text="新乡市食品药品监督管理局"
         />
 </LinearLayout>
     <View
@@ -72,203 +72,24 @@
         android:layout_height="@dimen/qyinfo_line_height"
         android:orientation="horizontal"
         android:gravity="center_vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
-            android:text="从 业  人 数："/>
-        <TextView
-            android:id="@+id/congyerenshu"
-            android:layout_width="wrap_content"
+            android:text="*单位人数："
+            android:id="@+id/textView" />
+
+        <EditText
+            android:id="@+id/shenfenzhenghao"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
-            android:text="3"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="管理人员数："/>
-        <TextView
-            android:id="@+id/guanliyuanrenshu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="1"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="管    理    员："/>
-        <TextView
-            android:id="@+id/guanliyuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="username"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="电            话："/>
-        <TextView
-            android:id="@+id/dianhuan"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="123456"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="职            务："/>
-        <TextView
-            android:id="@+id/zhiwu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text=""
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="邮            箱："/>
-        <TextView
-            android:id="@+id/youxiang"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="222@163.com"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="行 业  领 域："/>
-        <TextView
-            android:id="@+id/hangyelingyu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="食品"
-            />
-    </LinearLayout>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/line"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/qyinfo_line_height"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_black"
-            android:text="所 在  地 区："/>
-        <TextView
-            android:id="@+id/suozaidiqu"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text=""
+            android:text="14"
             />
     </LinearLayout>
     <View
@@ -276,6 +97,109 @@
         android:layout_height="0.1dp"
         android:background="@color/line"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qyinfo_line_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            android:text="*管理员："/>
+
+        <EditText
+            android:id="@+id/danweimingcheng"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="刘"
+            android:textColor="@color/global_gray"
+            android:textSize="@dimen/qyinfo_text_size" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qyinfo_line_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            android:text="*邮        箱："/>
+        <EditText
+            android:id="@+id/youxiang"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_gray"
+            android:text="user@163.com"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qyinfo_line_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            android:text="*手机号码："/>
+        <EditText
+            android:id="@+id/shoujihaoma"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_gray"
+            android:text="12345678"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qyinfo_line_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
+            android:text="*行业领域："/>
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:checked="true"
+            android:text="监管队伍"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="80dp"
@@ -287,10 +211,10 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
-            android:text="单 位  地 址："/>
-        <TextView
+            android:text="*详细地址："/>
+        <EditText
             android:id="@+id/danweidizhi"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
