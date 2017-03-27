@@ -41,9 +41,9 @@ public class GeRenYongHuWenDangXiaZaiAdapter extends MBaseAdapter<GeRenYongHuWen
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
         //文档发布时间
-        holder.time.setText("" + result.get("sendtime"));
+        holder.time.setText("" + result.get("sj"));
         //文档名
-        holder.wendangming.setText("" + result.get("title"));
+        holder.wendangming.setText("" + result.get("wj"));
         //设置点击事件
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,7 @@ public class GeRenYongHuWenDangXiaZaiAdapter extends MBaseAdapter<GeRenYongHuWen
                 String s = result.get("url").toString();
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
-                params.setSaveFilePath("/mnt/sdcard/" + result.get("url").toString());
+                params.setSaveFilePath("/mnt/sdcard/" + result.get("wjdz").toString());
                 x.http().get(params, new Callback.CommonCallback<File>() {
                     @Override
                     public void onSuccess(File result2) {

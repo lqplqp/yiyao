@@ -122,6 +122,6 @@
         android:background="@drawable/yellow_but_bg"
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/white"
-        android:text="更新"
+        android:text="提交修改"
         android:id="@+id/commit" />
 </LinearLayout>

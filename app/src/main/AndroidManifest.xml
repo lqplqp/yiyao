@@ -60,7 +60,7 @@
 
 
         <activity android:name=".qiye.AddAdminActivity"/>
-        <activity android:name=".qiyemanager.AddAdminActivity"/>
+        <activity android:name=".xianji.QyManagerAddAdminActivity"/>
         <activity android:name=".shengji.AddAdminActivity"/>
 
         <activity android:name=".jianguan.AddAdminActivity"/>

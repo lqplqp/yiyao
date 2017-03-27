@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.qiyemanager;
+package com.lxkj.yiyao.xianji;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
@@ -7,7 +7,7 @@ import com.lxkj.yiyao.base.BaseFragment;
  * Created by Administrator on 2017/1/19.
  */
 
-public class QYManagerTongZhiFragment extends BaseFragment {
+public class QYManagerPeiXunDingDanFragment extends BaseFragment {
 
     @Override
     protected void initView() {
@@ -16,7 +16,7 @@ public class QYManagerTongZhiFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.qymanager_fragment_layout_tongzhimessage;
+        return R.layout.qymanager_fragment_layout_peixundingdan;
     }
 
 }

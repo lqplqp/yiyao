@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.qiyemanager;
+package com.lxkj.yiyao.xianji;
 
 import android.widget.TextView;
 
@@ -13,7 +13,7 @@ import butterknife.OnClick;
  * Created by Administrator on 2017/3/6 0006.
  */
 
-public class AddAdminActivity extends BaseActivity {
+public class QyManagerAddAdminActivity extends BaseActivity {
 
 
     @BindView(R.id.register)

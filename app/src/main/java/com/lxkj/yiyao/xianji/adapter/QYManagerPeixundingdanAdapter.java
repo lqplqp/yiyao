@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.qiyemanager.adapter;
+package com.lxkj.yiyao.xianji.adapter;
 
 import android.view.View;
 import android.widget.TextView;
