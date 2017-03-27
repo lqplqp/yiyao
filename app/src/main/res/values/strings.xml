@@ -281,7 +281,6 @@
     <!-- 企业管理员3-->
     <string-array name="qiye3">
         <item>法律法规文档下载</item>
-        <item>应用模板下载</item>
         <item>应用插件下载</item>
         <item>其他相关下载</item>
     </string-array>
@@ -289,6 +288,42 @@
     <string-array name="qiye4">
         <item>安全设置</item>
     </string-array>
+
+
+    <!-- 县级管理员0-->
+    <string-array name="xianji0">
+        <item>首页</item>
+    </string-array>
+    <!-- 县级管理员1-->
+    <string-array name="xianji1">
+        <item>用户信息</item>
+        <item>我的证书</item>
+        <item>通知消息</item>
+        <item>我的信息卡</item>
+        <item>我的体检报告</item>
+    </string-array>
+
+    <!-- 县级管理员2-->
+    <string-array name="xianji2">
+        <item>选购培训项目</item>
+        <item>培训项目订单</item>
+        <item>已报培训项目</item>
+        <item>通知消息</item>
+    </string-array>
+
+    <!-- 县级管理员3-->
+    <string-array name="xianji3">
+        <item>法律法规文档下载</item>
+        <item>应用模板下载</item>
+        <item>应用插件下载</item>
+        <item>其他相关下载</item>
+    </string-array>
+    <!-- 县级管理员4-->
+    <string-array name="xianji4">
+        <item>安全设置</item>
+    </string-array>
+
+
 
     <!--3 市级个人-->
     <string-array name="ShiJiAdmin">
@@ -326,13 +361,14 @@
     <!--个人中心-->
     <string-array name="gerenyonghu2">
         <item>用户信息</item>
-        <item>我的信息卡</item>
         <item>我的证书</item>
+        <item>我的信息卡</item>
+        <item>我的体检报告</item>
     </string-array>
     <!--培训学习-->
     <string-array name="gerenyonghu3">
-        <item>通知消息</item>
-        <item>网上培训</item>
+        <item>已报培训项目</item>
+        <!--<item>网上培训</item>-->
     </string-array>
     <!--体检信息-->
     <string-array name="gerenyonghu4">
@@ -341,7 +377,6 @@
     <!--下载中心-->
     <string-array name="gerenyonghu5">
         <item>法律法规文档下载</item>
-        <item>应用模板下载</item>
         <item>应用插件下载</item>
         <item>其他相关下载</item>
     </string-array>

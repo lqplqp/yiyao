@@ -36,8 +36,7 @@ public class GeRenYongHuWenDangXiaZaiFragment extends BaseFragment {
     }
 
     private void requestDate() {
-
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji6/qtxg");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji1/flfg");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override

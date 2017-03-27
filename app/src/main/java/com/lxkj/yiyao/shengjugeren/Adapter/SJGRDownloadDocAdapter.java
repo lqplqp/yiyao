@@ -49,13 +49,13 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
 
-        holder.title.setText(result.get("title").toString());
+        holder.title.setText(result.get("wj").toString());
 
-        String sendtime = result.get("sendtime").toString();
+        //String sendtime = result.get("sendtime").toString();
 
-        String time = DataUtils.getTime(Integer.parseInt(sendtime));
+        //String time = DataUtils.getTime(Integer.parseInt(sendtime));
 
-        holder.time.setText(time);
+        holder.time.setText(result.get("sj").toString());
 
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +64,7 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
                 String s = result.get("url").toString();
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
-                params.setSaveFilePath("/mnt/sdcard/" + result.get("url").toString());
+                params.setSaveFilePath("/mnt/sdcard/" + result.get("wjdz").toString());
                 x.http().get(params, new Callback.CommonCallback<File>() {
                     @Override
                     public void onSuccess(File result2) {

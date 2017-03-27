@@ -15,34 +15,34 @@ import butterknife.ButterKnife;
  */
 
 public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.ViewHolder> {
+
+
     public MessageSearchAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //发布人
-        holder.faburen.setText(""+result.getString("fbr"));
-        //结束时间
-        holder.jieshushijian.setText(""+result.getString("pxjssj"));
-        //开始时间
-        holder.kaishishijian.setText(""+result.getString("pxkssj"));
-        //培训地点
-//        holder.peixundidian.setText(""+result.getString("peixundidian"));
-        //通知标题
-        holder.tongzhibiaoti.setText(""+result.getString("tzbt"));
-        //通知单位
-        holder.tongzhidanwei.setText(""+result.getString("tzdw"));
+        //监管单位名称
+        holder.jianguandanweimingcheng.setText("" + result.getString("fbr"));
+        //用户名
+        holder.yonghuming.setText("" + result.getString("pxjssj"));
+        //辖区内监管人员人数
+        holder.xiaquneirenshu.setText("" + result.getString("pxkssj"));
+        //集中培训人数
+        holder.jizhongpeixunrenshu.setText(""+result.getString("peixundidian"));
+        //网上培训人数
+        holder.wangshangpeixunrenshu.setText("" + result.getString("tzbt"));
         //序号
-        holder.xuhao.setText(""+result.getString("id"));
-        //类型
-        holder.tongzhileixing.setText(""+result.getString("tzlx"));
+        holder.xuhao.setText("" + result.getString("id"));
+        //培训率
+        holder.peixunlv.setText("" + result.getString("tzlx"));
 
     }
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_message_search_item;
+        return R.layout.shengji_peixunmessage_search_item;
     }
 
     @Override
@@ -53,21 +53,18 @@ public class MessageSearchAdapter extends MBaseAdapter<MessageSearchAdapter.View
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tongzhileixing)
-        TextView tongzhileixing;
-        @BindView(R.id.tongzhidanwei)
-        TextView tongzhidanwei;
-        @BindView(R.id.faburen)
-        TextView faburen;
-        @BindView(R.id.tongzhibiaoti)
-        TextView tongzhibiaoti;
-        @BindView(R.id.peixundidian)
-        TextView peixundidian;
-        @BindView(R.id.kaishishijian)
-        TextView kaishishijian;
-        @BindView(R.id.jieshushijian)
-        TextView jieshushijian;
-
+        @BindView(R.id.jianguandanweimingcheng)
+        TextView jianguandanweimingcheng;
+        @BindView(R.id.yonghuming)
+        TextView yonghuming;
+        @BindView(R.id.xiaquneirenshu)
+        TextView xiaquneirenshu;
+        @BindView(R.id.jizhongpeixunrenshu)
+        TextView jizhongpeixunrenshu;
+        @BindView(R.id.wangshangpeixunrenshu)
+        TextView wangshangpeixunrenshu;
+        @BindView(R.id.peixunlv)
+        TextView peixunlv;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

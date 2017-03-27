@@ -16,7 +16,7 @@ public class DataUtils {
 
     public static String getDate(String month,String day){
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//24小时制
-        Date d = new Date(); ;
+        java.util.Date d = new java.util.Date(); ;
         String str = sdf.format(d);
         String nowmonth = str.substring(5, 7);
         String nowday = str.substring(8,10 );
@@ -46,7 +46,7 @@ public class DataUtils {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time= null;
         try {
-            Date currentdate = new Date();//当前时间
+            java.util.Date currentdate = new java.util.Date();//当前时间
 
             long i = (currentdate.getTime()/1000-timestamp)/(60);
             System.out.println(currentdate.getTime());

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    android:orientation="vertical">
+
+
+
+    <!--体验机构列表 start-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+           style="@style/image_title_view"
+            android:src="@mipmap/sj_shenhe_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/title_left"
+            android:text="监管单位统计列表"
+            android:textColor="@color/global_black"
+            android:textSize="@dimen/title_textsize" />
+    </RelativeLayout>
+
+    <com.lxkj.yiyao.view.RefreshListView
+        android:id="@+id/list_view"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.lxkj.yiyao.view.RefreshListView>
+
+    <!--体验机构列表 end-->
+</LinearLayout>

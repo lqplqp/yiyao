@@ -121,6 +121,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:text="行   业  类   型："
+
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
             <RelativeLayout

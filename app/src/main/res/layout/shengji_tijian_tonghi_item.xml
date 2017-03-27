@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/fillet_white_bg">
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="序号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="11111"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/xuhao" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="体检单位"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/tijiandanwei" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:text="体检人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="xxx"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/tijianrenshu" />
+
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView48"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:text="合格人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="XXXXXX"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/hegerenshu" />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
+                android:gravity="center"
+                android:text="不合格人数"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="156132156"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/buhegerenshu" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="体检合格率"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="asdasdsa"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:id="@+id/tijianhegelv" />
+        </TableRow>
+
+    </TableLayout>
+
+
+
+</LinearLayout>

@@ -136,7 +136,7 @@ public interface GlobalString {
     public static final String qiye_info = "/admin/fenji4/qyxx";
     public static final String qiye_person_manager = "/admin/fenji4/qyglqyry";
 
-    public static final String qiye_xxk = "/admin/fenji4/xxk";
+    public static final String qiye_xxk = "/admin/fenji4/xxkgl";
     public static final String qiye_quanbudingdan = "/admin/fenji4/allorder";
 
     public static final String qiye_daifukuan = "/admin/fenji4/dfkorder";

@@ -44,7 +44,7 @@ public class TiJianTongJiFragment extends BaseFragment {
     TextView select;
     private int page = 1;
 
-    private String TAG = "TiJianTongJiFragment";
+    private String TAG = "ShiJiTiJianTongJiFragment";
 
 
     @Override
@@ -184,7 +184,7 @@ public class TiJianTongJiFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_tijian_tongji;
+        return R.layout.shengji_fragment_layout_tijian_tongji;
     }
 
     @Override
