@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
  * Created by Administrator on 2017/1/18 0018.
  */
 
-public class PeiXunListFragment extends BaseFragment {
+public class ShengJiYiBaoPeiXunListFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
@@ -119,8 +119,7 @@ requestData();
 
     @Override
     public int getLayout() {
-        return R.layout.shiji_fragment_layout_yibao_peixun_list;
-//        return R.layout.qymanager_fragment_layout_select_train;
+        return R.layout.shengji_fragment_layout_yibao_peixun_list;
     }
 
     @Override

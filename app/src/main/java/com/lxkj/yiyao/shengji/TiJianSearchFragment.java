@@ -47,7 +47,7 @@ public class TiJianSearchFragment extends BaseFragment {
     TextView endTime;
     private int page = 1;
 
-    private String TAG = "TiJianSearchFragment";
+    private String TAG = "ShiJiTiJianSearchFragment";
 
 
     @Override

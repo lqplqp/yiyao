@@ -5,8 +5,8 @@ import android.util.Log;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.JianGuanDanWeiTongJiAdapter;
-import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
+import com.lxkj.yiyao.shengji.adapter.QiYeYongHuTongJiAdapter;
+import com.lxkj.yiyao.shengji.adapter.ZhiFaJiLuTongJiAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -19,16 +19,16 @@ import butterknife.BindView;
  * Created by Administrator on 2017/1/19.
  */
 
-public class JianGuanTongJiFragment extends BaseFragment {
+public class QiYeYongHuTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    JianGuanDanWeiTongJiAdapter adapter;
+    QiYeYongHuTongJiAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
     private int page = 1;
 
-    private String TAG = "JianGuanTongJiFragment";
+    private String TAG = "ZhiFaJiLuTongJiFragment";
 
 
     @Override
@@ -75,7 +75,7 @@ requestData();
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new JianGuanDanWeiTongJiAdapter(result);
+                    adapter = new QiYeYongHuTongJiAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     listView.setAdapter(adapter);
@@ -115,7 +115,7 @@ requestData();
 
     @Override
     public int getLayout() {
-        return R.layout.shengji_fragment_layout_jianguantongji;
+        return R.layout.shengji_fragment_layout_qiyeyonghutongji;
     }
 
 }

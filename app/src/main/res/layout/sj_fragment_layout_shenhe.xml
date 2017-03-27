@@ -103,6 +103,7 @@
 
     <!--体验机构列表 end-->
     <com.lxkj.yiyao.view.RefreshListView
+        android:layout_marginTop="10dp"
         android:id="@id/list_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">

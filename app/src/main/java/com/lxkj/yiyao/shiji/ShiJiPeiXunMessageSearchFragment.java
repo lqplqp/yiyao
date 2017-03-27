@@ -1,6 +1,5 @@
 package com.lxkj.yiyao.shiji;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -8,12 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shiji.adapter.AdminManagerAdapter;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.shengji.adapter.ShengJiPeiXunMessageSearchAdapter;
+import com.lxkj.yiyao.shiji.adapter.ShiJiPeiXunMessageSearchAdapter;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -26,37 +28,40 @@ import java.util.Calendar;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
- * Created by Administrator on 2017/1/18 0018.
+ * Created by Administrator on 2017/1/19.
  */
 
-public class AdminManagerFragment extends BaseFragment {
-
+public class ShiJiPeiXunMessageSearchFragment extends BaseFragment {
+    public String TAG = this.getClass().getSimpleName();
+    @BindView(R.id.chaxun)
+    TextView chaxun;
+    @BindView(R.id.faqidanwei)
+    EditText faqidanwei;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
+    Unbinder unbinder;
 
     // ======================== 模板代码=============================
 
-    AdminManagerAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
+    MBaseAdapter adapter;
+    @BindView(R.id.imageView3)
+    ImageView imageView3;
     @BindView(R.id.start_time)
     TextView startTime;
     @BindView(R.id.end_time)
     TextView endTime;
-    @BindView(R.id.chaxun)
-    TextView select;
-    @BindView(R.id.souguoneirong)
-    EditText souguoneirong;
-    @BindView(R.id.add)
-    TextView add;
+    Unbinder unbinder1;
     private int page = 1;
-
-    private String TAG = "AdminManagerFragment";
 
 
     @Override
     protected void initView() {
-        requestData();
+
+        requestData(null);
+
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -68,7 +73,7 @@ public class AdminManagerFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData(null);
 
 
             }
@@ -77,25 +82,9 @@ public class AdminManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null);
 
 
-            }
-        });
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                page = 1;
-                requestData();
-            }
-        });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), com.lxkj.yiyao.jianguan.AddAdminActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -105,20 +94,19 @@ public class AdminManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_jgrygl);
+    public void requestData(String s) {
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("xx", souguoneirong.getText() + "");
-        params.addBodyParameter("sj1", startTime.getText() + "");
-        params.addBodyParameter("sj2", endTime.getText() + "");
-
+        if (s != null) {
+            params.addBodyParameter("cx", s);
+        }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new AdminManagerAdapter(result);
+                    adapter = new ShiJiPeiXunMessageSearchAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);
@@ -154,10 +142,9 @@ public class AdminManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-
     @Override
     public int getLayout() {
-        return R.layout.shiji_fragment_layout_jianguanmanager;
+        return R.layout.shengji_fragment_layout_peixun_message_search;
     }
 
     @OnClick({R.id.start_time, R.id.end_time})
@@ -204,13 +191,29 @@ public class AdminManagerFragment extends BaseFragment {
                 });
                 break;
         }
+
+        /*@OnClick(R.id.chaxun)
+        public void onClick () {
+            if (adapter != null) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
+            }
+            requestData(null);
+        }*/
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // TODO: inflate a fragment view
         View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
+        unbinder1 = ButterKnife.bind(this, rootView);
         return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder1.unbind();
     }
 }

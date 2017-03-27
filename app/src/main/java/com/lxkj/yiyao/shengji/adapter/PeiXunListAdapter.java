@@ -15,6 +15,10 @@ import butterknife.ButterKnife;
  */
 
 public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder> {
+
+
+
+
     public PeiXunListAdapter(String bean) {
         super(bean);
     }
@@ -22,19 +26,16 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 //        holder.caozuo.setText("" + result.get("caozuo"));
-        holder.goumaishijian.setText("" + result.get("cjsj"));
-        holder.number.setText("" + result.get("id"));
+        holder.xuhao.setText("" + result.get("id"));
         holder.peixunbanleixing.setText("" + result.get(" pxlx"));
-        holder.peixunbanmingci.setText("" + result.get("pxbmc"));
+        holder.peixunbanmingcheng.setText("" + result.get("pxbmc"));
         holder.peixuntime.setText("" + result.get("pxkssj"));
-        holder.xuexijindu.setText("" + result.get("xxjd"));
-        holder.zhengshumingcheng.setText("" + result.get("pxbt"));
     }
 
 
     @Override
     protected int getItemLayout() {
-        return R.layout.peixunlist_item;
+        return R.layout.shengji_yibao_peixunlist_item;
     }
 
     @Override
@@ -44,23 +45,22 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
 
 
     static class ViewHolder {
-        @BindView(R.id.number)
-        TextView number;
-        @BindView(R.id.peixunbanmingci)
-        TextView peixunbanmingci;
+        @BindView(R.id.xuhao)
+        TextView xuhao;
+        @BindView(R.id.dingdanbianhao)
+        TextView dingdanbianhao;
+        @BindView(R.id.peixunbanmingcheng)
+        TextView peixunbanmingcheng;
         @BindView(R.id.peixunbanleixing)
         TextView peixunbanleixing;
         @BindView(R.id.peixuntime)
         TextView peixuntime;
-        @BindView(R.id.zhengshumingcheng)
-        TextView zhengshumingcheng;
-        @BindView(R.id.goumaishijian)
-        TextView goumaishijian;
-        @BindView(R.id.xuexijindu)
-        TextView xuexijindu;
+        @BindView(R.id.shibaorenshu)
+        TextView shibaorenshu;
+        @BindView(R.id.goukerenshu)
+        TextView goukerenshu;
         @BindView(R.id.caozuo)
         TextView caozuo;
-
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

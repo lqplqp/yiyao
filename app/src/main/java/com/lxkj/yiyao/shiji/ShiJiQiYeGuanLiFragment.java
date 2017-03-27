@@ -1,12 +1,19 @@
-package com.lxkj.yiyao.shengji;
+package com.lxkj.yiyao.shiji;
 
-import android.util.Log;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.JianGuanDanWeiTongJiAdapter;
-import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
+import com.lxkj.yiyao.shengji.adapter.CompanyInfoListAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -14,27 +21,32 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * Created by Administrator on 2017/1/19.
  */
 
-public class JianGuanTongJiFragment extends BaseFragment {
+public class ShiJiQiYeGuanLiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    JianGuanDanWeiTongJiAdapter adapter;
+    CompanyInfoListAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.select)
+    TextView select;
+    @BindView(R.id.sousuoxinxi)
+    EditText sousuoxinxi;
     private int page = 1;
 
-    private String TAG = "JianGuanTongJiFragment";
+    private String TAG = "ShiJiQiYeGuanLiFragment";
 
 
     @Override
     protected void initView() {
+        requestData();
 
-requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -59,7 +71,15 @@ requestData();
 
             }
         });
-
+        select.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
+                requestData();
+            }
+        });
 
     }
     // ======================== 模板代码=============================
@@ -67,18 +87,23 @@ requestData();
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tzxx);
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shiyao", Context.MODE_PRIVATE);
+        String username = sharedPreferences.getString("username", "");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qygl);
         params.addBodyParameter("page", page + "");
+        params.addBodyParameter("username", "" + username);
+        params.addBodyParameter("xx", sousuoxinxi.getText() + "");
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new JianGuanDanWeiTongJiAdapter(result);
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    String data = jsonObject.getString("data");
+                    adapter = new CompanyInfoListAdapter(data);
                     listView.setAdapter(adapter);
                 } else {
-                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -115,7 +140,14 @@ requestData();
 
     @Override
     public int getLayout() {
-        return R.layout.shengji_fragment_layout_jianguantongji;
+        return R.layout.sjgr_fragment_layout_person_qiye_info_list;
     }
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
+    }
 }
