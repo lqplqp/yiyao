@@ -675,7 +675,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
                 break;
-            case 6:
+            case -1:
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
                 GeRenYongHuShouYeFragment geRenYongHuShouYeFragment = new GeRenYongHuShouYeFragment();
