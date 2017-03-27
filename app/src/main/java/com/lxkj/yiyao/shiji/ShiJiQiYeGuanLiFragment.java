@@ -87,11 +87,8 @@ public class ShiJiQiYeGuanLiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("shiyao", Context.MODE_PRIVATE);
-        String username = sharedPreferences.getString("username", "");
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qygl);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("username", "" + username);
         params.addBodyParameter("xx", sousuoxinxi.getText() + "");
 
 
@@ -99,9 +96,7 @@ public class ShiJiQiYeGuanLiFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 if (adapter == null) {
-                    JSONObject jsonObject = JSONObject.parseObject(result);
-                    String data = jsonObject.getString("data");
-                    adapter = new CompanyInfoListAdapter(data);
+                    adapter = new CompanyInfoListAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);

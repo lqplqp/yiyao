@@ -36,12 +36,6 @@ public class MessageSearchFragment extends BaseFragment {
     TextView chaxun;
     @BindView(R.id.faqidanwei)
     EditText faqidanwei;
-    @BindView(R.id.peixuntongzhileixing)
-    Spinner peixuntongzhileixing;
-    @BindView(R.id.xingzhengleixing)
-    Spinner xingzhengleixing;
-    @BindView(R.id.peixunbanleixing)
-    Spinner peixunbanleixing;
     @BindView(R.id.list_view)
     RefreshListView listView;
     Unbinder unbinder;
