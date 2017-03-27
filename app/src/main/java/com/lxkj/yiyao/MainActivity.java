@@ -538,6 +538,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(peiXunListFragment1);
                                 fragments.add(messageSearchFragment);
                                 break;
+
                             case R.id.navi_menu_6:
                                 setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shiji5);
