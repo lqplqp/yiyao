@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.shengjugeren.Adapter;
 
 import android.os.Environment;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -10,6 +11,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.utils.DataUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -47,9 +49,13 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
 
 
-        holder.title.setText(result.get("wj").toString());
+        holder.title.setText(result.get("title").toString());
 
-        holder.time.setText(result.get("sj").toString());
+        String sendtime = result.get("sendtime").toString();
+
+        String time = DataUtils.getTime(Integer.parseInt(sendtime));
+
+        holder.time.setText(time);
 
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override

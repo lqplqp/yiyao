@@ -16,7 +16,6 @@ import com.lxkj.yiyao.adapter.JieYeKaoShiAdapter;
 import com.lxkj.yiyao.adapter.JieYeZhengShuAdapter;
 import com.lxkj.yiyao.adapter.XiangGuanZiLiaoAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
-import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuXueXiAdapter;
 import com.lxkj.yiyao.global.GlobalString;
 
 import org.xutils.common.Callback;
