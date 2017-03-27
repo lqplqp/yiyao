@@ -5,14 +5,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.CompanyInfoListAdapter;
-import com.lxkj.yiyao.shengji.adapter.ShenHeAapter;
+import com.lxkj.yiyao.shengji.adapter.PeiXunListAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -23,29 +20,26 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2017/1/19.
+ * Created by Administrator on 2017/1/18 0018.
  */
 
-public class SJGRCompanyInfoListFragment extends BaseFragment {
+public class ShengJiYiBaoPeiXunListFragment extends BaseFragment {
+
 
     // ======================== 模板代码=============================
 
-    CompanyInfoListAdapter adapter;
+    PeiXunListAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.sousuoxinxi)
-    EditText sousuoxinxi;
     private int page = 1;
 
-    private String TAG = "SJGRCompanyInfoListFragment";
+    private String TAG = "CompanyManageyFragment";
 
 
     @Override
     protected void initView() {
-        requestData();
 
+requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -70,15 +64,7 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
 
             }
         });
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                page = 1;
-                requestData();
-            }
-        });
+
 
     }
     // ======================== 模板代码=============================
@@ -86,16 +72,15 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_qygl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_ybpxxm);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("xx", sousuoxinxi.getText() + "");
-
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new CompanyInfoListAdapter(result);
+                    adapter = new PeiXunListAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);
@@ -134,7 +119,7 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_person_qiye_info_list;
+        return R.layout.shengji_fragment_layout_yibao_peixun_list;
     }
 
     @Override

@@ -20,12 +20,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.activity.GeRenScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
-import com.lxkj.yiyao.activity.QiYeZhiFaActivity;
 import com.lxkj.yiyao.activity.ScannerQrCodeActivity;
-import com.lxkj.yiyao.activity.XuanGouKeChengRenYuan;
 import com.lxkj.yiyao.adapter.VPFAdapter;
 import com.lxkj.yiyao.adapter.VPFAdapter2;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongHuAnQuanSheZhiFragment;
@@ -51,16 +48,15 @@ import com.lxkj.yiyao.qiye.QYMessageSearchFragment;
 import com.lxkj.yiyao.qiye.QYPersonManagerFragment;
 import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
 import com.lxkj.yiyao.qiyemanager.QYManagerTiJianBaoGaoFragment;
-import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
-import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
 import com.lxkj.yiyao.shengji.PersonAnalysisFragment;
 import com.lxkj.yiyao.shengji.QiYeYongHuTongJiFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
 import com.lxkj.yiyao.shengji.ShengJiPeiXunMessageSearchFragment;
+import com.lxkj.yiyao.shengji.ShengJiYiBaoPeiXunListFragment;
+import com.lxkj.yiyao.shengji.ShengjiQiYeGuanLiFragment;
 import com.lxkj.yiyao.shengji.TiJianSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianTongJiFragment;
-import com.lxkj.yiyao.shengji.UpdatePswFragment;
 import com.lxkj.yiyao.shengji.ZhiFaJiLuTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRBaoMingMessageFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyInfoListFragment;
@@ -76,7 +72,6 @@ import com.lxkj.yiyao.shengjugeren.SJGRPersonAnalysisFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRPersonManagerAddFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRTiJianSearchFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRTiJianTongJiFragment;
-import com.lxkj.yiyao.shengjugeren.SJGRUpdatePswFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRYiBaoPeiXunXiangMuFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRZhiFaSerachFragment;
 import com.lxkj.yiyao.shiji.AdminManagerFragment;
@@ -84,8 +79,14 @@ import com.lxkj.yiyao.shiji.CompanyManageyFragment;
 import com.lxkj.yiyao.shiji.HomeFragment;
 import com.lxkj.yiyao.shiji.MessageSearchFragment;
 import com.lxkj.yiyao.shiji.PeiXunListFragment;
-import com.lxkj.yiyao.shiji.ProjectApplyFragment;
-import com.lxkj.yiyao.shiji.QiYeInfoFragment;
+import com.lxkj.yiyao.shiji.ShiJiJiYiBaoPeiXunListFragment;
+import com.lxkj.yiyao.shiji.ShiJiJianGuanTongJiFragment;
+import com.lxkj.yiyao.shiji.ShiJiPeiXunMessageSearchFragment;
+import com.lxkj.yiyao.shiji.ShiJiQiYeGuanLiFragment;
+import com.lxkj.yiyao.shiji.ShiJiQiYeYongHuTongJiFragment;
+import com.lxkj.yiyao.shiji.ShiJiTiJianSearchFragment;
+import com.lxkj.yiyao.shiji.ShiJiTiJianTongJiFragment;
+import com.lxkj.yiyao.shiji.ShiJiZhiFaJiLuTongJiFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -283,8 +284,8 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan4);
                                 //企业信息列表
-                                com.lxkj.yiyao.shengji.SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new com.lxkj.yiyao.shengji.SJGRCompanyInfoListFragment();
-                                fragments.add(sjgrCompanyInfoListFragment);
+                                ShengjiQiYeGuanLiFragment shengjiQiYeGuanLiFragment = new ShengjiQiYeGuanLiFragment();
+                                fragments.add(shengjiQiYeGuanLiFragment);
                                 break;
                             case R.id.navi_menu_6:
                                 setTitle("培训报名");
@@ -292,11 +293,11 @@ public class MainActivity extends AppCompatActivity {
                                 //培训项目报名
                                 SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
                                 //已报培训项目
-                                com.lxkj.yiyao.shengji.PeiXunListFragment peiXunListFragment = new com.lxkj.yiyao.shengji.PeiXunListFragment();
+                                ShengJiYiBaoPeiXunListFragment shengJiYiBaoPeiXunListFragment = new ShengJiYiBaoPeiXunListFragment();
                                 //通知消息
                                 com.lxkj.yiyao.shengji.MessageSearchFragment messageSearchFragment = new com.lxkj.yiyao.shengji.MessageSearchFragment();
                                 fragments.add(projectApplyFragment);
-                                fragments.add(peiXunListFragment);
+                                fragments.add(shengJiYiBaoPeiXunListFragment);
                                 fragments.add(messageSearchFragment);
                                 break;
                             case R.id.navi_menu_7:
@@ -522,20 +523,20 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_3:
                                 setTitle("培训通知管理");
                                 pagerTitles = getResources().getStringArray(R.array.shiji2);
-                                PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
-                                fragments.add(peiXunListFragment);
+                                ShiJiPeiXunMessageSearchFragment shiJiPeiXunMessageSearchFragment = new ShiJiPeiXunMessageSearchFragment();
+                                fragments.add(shiJiPeiXunMessageSearchFragment);
                                 break;
                             case R.id.navi_menu_4:
                                 setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shiji3);
-                                QiYeInfoFragment qiYeInfoFragment = new QiYeInfoFragment();
-                                fragments.add(qiYeInfoFragment);
+                                ShiJiQiYeGuanLiFragment shiJiQiYeGuanLiFragment = new ShiJiQiYeGuanLiFragment();
+                                fragments.add(shiJiQiYeGuanLiFragment);
                                 break;
                             case R.id.navi_menu_5:
                                 setTitle("培训报名");
                                 pagerTitles = getResources().getStringArray(R.array.shiji4);
                                 SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
-                                PeiXunListFragment peiXunListFragment1 = new PeiXunListFragment();
+                                ShiJiJiYiBaoPeiXunListFragment peiXunListFragment1 = new ShiJiJiYiBaoPeiXunListFragment();
                                 MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
                                 fragments.add(projectApplyFragment);
                                 fragments.add(peiXunListFragment1);
@@ -545,27 +546,27 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("监管统计");
                                 pagerTitles = getResources().getStringArray(R.array.shiji5);
                                 //监管单位统计分析
-                                SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment = new SJGRJianGuanTongJiFragment();
+                                ShiJiJianGuanTongJiFragment shiJiJianGuanTongJiFragment = new ShiJiJianGuanTongJiFragment();
                                 //执法记录统计分析 待定
-                                SJGRJianGuanTongJiFragment sjgrJianGuanTongJiFragment1 = new SJGRJianGuanTongJiFragment();
+                                ShiJiZhiFaJiLuTongJiFragment shiJiZhiFaJiLuTongJiFragment = new ShiJiZhiFaJiLuTongJiFragment();
                                 //企业用户统计分析
-                                SJGRCompanyTongJiFragment sjgrCompanyTongJiFragment = new SJGRCompanyTongJiFragment();
+                                ShiJiQiYeYongHuTongJiFragment shiJiQiYeYongHuTongJiFragment = new ShiJiQiYeYongHuTongJiFragment();
                                 //个人用户统计分析
                                 SJGRPersonAnalysisFragment sjgrPersonAnalysisFragment = new SJGRPersonAnalysisFragment();
-                                fragments.add(sjgrJianGuanTongJiFragment);
-                                fragments.add(sjgrJianGuanTongJiFragment1);
-                                fragments.add(sjgrCompanyTongJiFragment);
+                                fragments.add(shiJiJianGuanTongJiFragment);
+                                fragments.add(shiJiZhiFaJiLuTongJiFragment);
+                                fragments.add(shiJiQiYeYongHuTongJiFragment);
                                 fragments.add(sjgrPersonAnalysisFragment);
                                 break;
                             case R.id.navi_menu_7:
                                 setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shiji6);
                                 //体检统计
-                                SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
+                                ShiJiTiJianTongJiFragment shiJiTiJianTongJiFragment = new ShiJiTiJianTongJiFragment();
                                 //体检查询
-                                SJGRTiJianSearchFragment sjgrTiJianSearchFragment = new SJGRTiJianSearchFragment();
-                                fragments.add(sjgrTiJianTongJiFragment);
-                                fragments.add(sjgrTiJianSearchFragment);
+                                ShiJiTiJianSearchFragment shiJiTiJianSearchFragment = new ShiJiTiJianSearchFragment();
+                                fragments.add(shiJiTiJianTongJiFragment);
+                                fragments.add(shiJiTiJianSearchFragment);
                                 break;
                             case R.id.navi_menu_8:
                                 setTitle("下载中心");
@@ -645,7 +646,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(projectApplyFragment);
                                 QYTrainOrderFragment qyTrainOrderFragment = new QYTrainOrderFragment();
                                 fragments.add(qyTrainOrderFragment);
-                                PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                                ShengJiYiBaoPeiXunListFragment peiXunListFragment = new ShengJiYiBaoPeiXunListFragment();
                                 fragments.add(peiXunListFragment);
                                 MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
                                 fragments.add(messageSearchFragment);

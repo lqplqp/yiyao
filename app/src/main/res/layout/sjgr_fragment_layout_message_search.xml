@@ -92,34 +92,6 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:text="培训通知类型："
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/table_border_bg"
-                android:gravity="center">
-                <Spinner
-                    android:id="@+id/peixuntongzhileixing"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
                 android:text="行   业  类   型："
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
@@ -135,33 +107,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     />
-            </RelativeLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="10dp"
-            android:gravity="center_vertical">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:text="培 训 班 类 型："
-                android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size" />
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/table_border_bg"
-                android:gravity="center">
-                <Spinner
-                    android:id="@+id/peixunbanleixing"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
             </RelativeLayout>
         </LinearLayout>
 

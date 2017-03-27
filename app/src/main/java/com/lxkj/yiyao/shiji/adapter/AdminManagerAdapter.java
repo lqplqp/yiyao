@@ -25,19 +25,19 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
 
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
-        holder.number.setText("" + result.get("number"));
+        holder.xuhao.setText("" + result.getString("id"));
 
         //用户名
-        holder.yhm.setText("" + result.get("zh"));
+        holder.yonghuming.setText("" + result.getString("zh"));
 
         //姓名
-        holder.xm.setText("" + result.get("xm"));
+        holder.xingming.setText("" + result.getString("xm"));
 
 
     }
 
     protected int getItemLayout() {
-        return R.layout.adminmanager_item;
+        return R.layout.shengji_adminmanager_item;
     }
 
     protected ViewHolder getHolder(View view) {
@@ -45,13 +45,24 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
     }
 
     static class ViewHolder {
-        @BindView(R.id.number)
-        TextView number;
-        @BindView(R.id.yhm)
-        TextView yhm;
-        @BindView(R.id.xm)
-        TextView xm;
-
+        @BindView(R.id.xuhao)
+        TextView xuhao;
+        @BindView(R.id.yonghuming)
+        TextView yonghuming;
+        @BindView(R.id.xingming)
+        TextView xingming;
+        @BindView(R.id.xingbie)
+        TextView xingbie;
+        @BindView(R.id.shoujihao)
+        TextView shoujihao;
+        @BindView(R.id.youxiang)
+        TextView youxiang;
+        @BindView(R.id.xiangqing)
+        TextView xiangqing;
+        @BindView(R.id.bianji)
+        TextView bianji;
+        @BindView(R.id.yichu)
+        TextView yichu;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

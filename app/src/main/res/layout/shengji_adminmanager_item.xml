@@ -10,7 +10,41 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/fillet_white_bg">
+        <TableRow>
 
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="详情"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/xiangqing"
+                />
+
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="编辑"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/bianji" />
+            <TextView
+                android:background="@drawable/table_frame_fray"
+                android:layout_height="@dimen/table_hight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="移除"
+                android:textColor="@color/global_bg_blue"
+                android:textSize="@dimen/table_textsize"
+                android:id="@+id/yichu" />
+        </TableRow>
 
         <TableRow>
 
@@ -150,41 +184,7 @@
                 android:textSize="@dimen/table_textsize"
                 android:id="@+id/youxiang" />
         </TableRow>
-        <TableRow>
 
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="详情"
-                android:textColor="@color/global_bg_blue"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/xiangqing"
-                />
-
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="编辑"
-                android:textColor="@color/global_bg_blue"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/bianji" />
-            <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="移除"
-                android:textColor="@color/global_bg_blue"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/yichu" />
-        </TableRow>
 
 
 

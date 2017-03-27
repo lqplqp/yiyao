@@ -1,19 +1,17 @@
 package com.lxkj.yiyao.shiji;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shiji.adapter.AdminManagerAdapter;
+import com.lxkj.yiyao.shengji.adapter.TiJianTongJiAdapter;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -28,36 +26,31 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
- * Created by Administrator on 2017/1/18 0018.
+ * Created by Administrator on 2017/1/19.
  */
 
-public class AdminManagerFragment extends BaseFragment {
-
+public class ShiJiTiJianTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    AdminManagerAdapter adapter;
+    TiJianTongJiAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
     @BindView(R.id.start_time)
     TextView startTime;
     @BindView(R.id.end_time)
     TextView endTime;
-    @BindView(R.id.chaxun)
+    @BindView(R.id.select)
     TextView select;
-    @BindView(R.id.souguoneirong)
-    EditText souguoneirong;
-    @BindView(R.id.add)
-    TextView add;
     private int page = 1;
 
-    private String TAG = "AdminManagerFragment";
+    private String TAG = "ShiJiTiJianTongJiFragment";
 
 
     @Override
     protected void initView() {
-        requestData();
 
+        requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -85,17 +78,11 @@ public class AdminManagerFragment extends BaseFragment {
         select.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 adapter.clear();
                 adapter.notifyDataSetChanged();
                 page = 1;
                 requestData();
-            }
-        });
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), com.lxkj.yiyao.jianguan.AddAdminActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -106,19 +93,15 @@ public class AdminManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_jgrygl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_tjtj);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("xx", souguoneirong.getText() + "");
-        params.addBodyParameter("sj1", startTime.getText() + "");
-        params.addBodyParameter("sj2", endTime.getText() + "");
-
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new AdminManagerAdapter(result);
+                    adapter = new TiJianTongJiAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
                     adapter.addData(result);
@@ -153,13 +136,6 @@ public class AdminManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-
-
-    @Override
-    public int getLayout() {
-        return R.layout.shiji_fragment_layout_jianguanmanager;
-    }
-
     @OnClick({R.id.start_time, R.id.end_time})
     public void onClick(View view) {
         switch (view.getId()) {
@@ -204,6 +180,11 @@ public class AdminManagerFragment extends BaseFragment {
                 });
                 break;
         }
+    }
+
+    @Override
+    public int getLayout() {
+        return R.layout.shengji_fragment_layout_tijian_tongji;
     }
 
     @Override
