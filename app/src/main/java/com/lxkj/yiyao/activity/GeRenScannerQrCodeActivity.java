@@ -54,4 +54,10 @@ public class GeRenScannerQrCodeActivity extends BaseActivity{
     public int getLayout() {
         return R.layout.image;
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

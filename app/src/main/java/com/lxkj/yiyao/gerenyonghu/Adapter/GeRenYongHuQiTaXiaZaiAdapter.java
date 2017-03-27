@@ -1,7 +1,5 @@
-package com.lxkj.yiyao.shengjugeren.Adapter;
+package com.lxkj.yiyao.gerenyonghu.Adapter;
 
-import android.os.Environment;
-import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -11,28 +9,22 @@ import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
-import com.lxkj.yiyao.utils.DataUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
-import org.xutils.common.util.FileUtil;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.OutputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by liqinpeng on 2017/3/9 0009.
+ * Created by Administrator on 2017/3/16.
  */
 
-public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.ViewHolder> {
+public class GeRenYongHuQiTaXiaZaiAdapter extends MBaseAdapter<GeRenYongHuQiTaXiaZaiAdapter.ViewHolder> {
 
     @BindView(R.id.title)
     TextView title;
@@ -41,22 +33,17 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
     @BindView(R.id.line1)
     LinearLayout line1;
 
-    public SJGRDownloadDocAdapter(String bean) {
+    public GeRenYongHuQiTaXiaZaiAdapter(String bean) {
         super(bean);
     }
 
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
-
-
-        holder.title.setText(result.get("wj").toString());
-
-        //String sendtime = result.get("sendtime").toString();
-
-        //String time = DataUtils.getTime(Integer.parseInt(sendtime));
-
-        holder.time.setText(result.get("sj").toString());
-
+        //文档发布时间
+        holder.time.setText("" + result.get("sendtime"));
+        //文档名
+        holder.wendangming.setText("" + result.get("title"));
+        //设置点击事件
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -64,7 +51,7 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
                 String s = result.get("url").toString();
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
-                params.setSaveFilePath("/mnt/sdcard/" + result.get("wjdz").toString());
+                params.setSaveFilePath("/mnt/sdcard/" + result.get("url").toString());
                 x.http().get(params, new Callback.CommonCallback<File>() {
                     @Override
                     public void onSuccess(File result2) {
@@ -90,16 +77,13 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
 
 
                 });
-
             }
         });
-
-
     }
 
     @Override
     protected int getItemLayout() {
-        return R.layout.downloaddoc_item;
+        return R.layout.gerenyonghu_wendangxiazai_item;
     }
 
     @Override
@@ -107,14 +91,13 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
         return new ViewHolder(view);
     }
 
-
     static class ViewHolder {
-        @BindView(R.id.title)
-        TextView title;
-        @BindView(R.id.time)
-        TextView time;
         @BindView(R.id.line1)
         LinearLayout line1;
+        @BindView(R.id.wendangming)
+        TextView wendangming;
+        @BindView(R.id.time)
+        TextView time;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

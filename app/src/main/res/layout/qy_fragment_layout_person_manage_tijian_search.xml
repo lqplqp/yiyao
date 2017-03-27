@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="10dp"
-                    android:text="体检时间："
+                    android:text="注册时间："
                     android:textColor="@color/global_black"
                     android:textSize="16sp" />
 
@@ -166,12 +166,12 @@
         </RelativeLayout>
 
 
-            <com.lxkj.yiyao.view.RefreshListView
-                android:id="@+id/list_view"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        <com.lxkj.yiyao.view.RefreshListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            </com.lxkj.yiyao.view.RefreshListView>
+        </com.lxkj.yiyao.view.RefreshListView>
 
 
         <!--体验机构列表 end-->

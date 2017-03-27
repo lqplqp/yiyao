@@ -34,7 +34,7 @@ public class SJGRDownloadDocFragment3 extends BaseFragment {
 
     private void requestDate() {
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji5/flfg");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji1/yycj");
         params.addBodyParameter("type",3 + "");
 
         x.http().get(params, new Callback.CommonCallback<String>() {

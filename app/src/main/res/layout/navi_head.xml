@@ -24,14 +24,14 @@
 
 
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_alignParentRight="true"
         android:layout_margin="10dp"
         android:id="@+id/emial"
         android:src="@mipmap/ic_email"
-        />
+        />-->
 
 
 

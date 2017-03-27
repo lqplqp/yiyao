@@ -1,19 +1,13 @@
-package com.lxkj.yiyao.qiyemanager;
+package com.lxkj.yiyao.xianji;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.jianguan.*;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**

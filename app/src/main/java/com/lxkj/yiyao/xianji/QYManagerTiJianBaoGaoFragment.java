@@ -1,6 +1,5 @@
-package com.lxkj.yiyao.qiyemanager;
+package com.lxkj.yiyao.xianji;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -10,8 +9,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
-import com.lxkj.yiyao.qiye.adapter.QYPersonManagerAdapter;
-import com.lxkj.yiyao.qiyemanager.adapter.QYManagerTiJianBaoGaoAdapter;
+import com.lxkj.yiyao.xianji.adapter.QYManagerTiJianBaoGaoAdapter;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 

@@ -40,7 +40,7 @@ public class SJGRDownloadDocFragment extends BaseFragment {
 
     private void requestDate() {
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji5/flfg");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji1/flfg");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
