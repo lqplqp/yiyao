@@ -26,13 +26,13 @@ public class UserManagerAdapter extends MBaseAdapter<UserManagerAdapter.ViewHold
         //性别
         holder.userSex.setText("" + result.get("sex"));
         //体检报告号
-        holder.tijianbaogaohao.setText("" + result.get("tjbgyxq"));
+        holder.tijianbaogaohao.setText("" + result.get("tjbgh"));
         //培训证号
         holder.peixunzhenghao.setText("" + result.get("pxzh"));
         //培训有效期
         holder.peixunyouxiaoqi.setText("" + result.get("pxzyxq"));
         //消息提醒
-        holder.xiaoxitixing.setText(""+result.get("gqtx"));
+        holder.xiaoxitixing.setText(""+result.get("xxtx"));
     }
 
 

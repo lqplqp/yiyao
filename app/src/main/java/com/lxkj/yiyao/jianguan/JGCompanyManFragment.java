@@ -86,7 +86,7 @@ public class JGCompanyManFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_jgdwgl);
         params.addBodyParameter("page",page+"");
         if(s!=null){
-            params.addBodyParameter("cx",s);
+            params.addBodyParameter("xx",s);
         }
 
         x.http().get(params, new Callback.CacheCallback<String>() {

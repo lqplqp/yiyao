@@ -52,6 +52,7 @@
                         android:src="@mipmap/sj_admin_eye"
                         />
                     <TextView
+                        android:id="@+id/jianguan_xuexizhong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
@@ -71,6 +72,7 @@
                         android:paddingTop="50dp"
                         />
                     <TextView
+                        android:id="@+id/jianguan_yiwancheng"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
@@ -152,7 +154,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:id="@+id/learning"
+                        android:id="@+id/xuanze_xuexizhong"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
                         android:layout_alignParentRight="true"
@@ -172,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="0"
-                        android:id="@+id/none"
+                        android:id="@+id/xuanze_yiwancheng"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
                         android:layout_alignParentRight="true"
@@ -230,24 +232,10 @@
         </LinearLayout>
         <!--首页面的第3个小布局 end-->
 
-        <LinearLayout
-            android:layout_margin="10dp"
-            android:background="@drawable/fillet_white_bg"
+        <ListView
+            android:id="@+id/list_view"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:text="暂无消息"
-                android:textColor="@color/global_black"
-                android:id="@+id/content" />
-
-        </LinearLayout>
+            android:layout_height="100dp"></ListView>
 
     </LinearLayout>
 

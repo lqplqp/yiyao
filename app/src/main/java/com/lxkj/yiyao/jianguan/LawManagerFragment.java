@@ -59,6 +59,7 @@ public class LawManagerFragment extends BaseFragment {
 
     private ArrayAdapter<String> mSpinnerAdapter;
     private int userType;
+    private String zhifaType;
 
 
     @Override
@@ -69,7 +70,7 @@ public class LawManagerFragment extends BaseFragment {
 
 
         Log.i("BaseFragment", "initView");
-        requestData(null);
+        requestData(null,null,null,null);
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -82,7 +83,7 @@ public class LawManagerFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData(null);
+                requestData(null,null,null,null);
 
 
             }
@@ -91,7 +92,7 @@ public class LawManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData(null);
+                requestData(null,null,null,null);
 
 
             }
@@ -103,19 +104,14 @@ public class LawManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData(String s) {
+    public void requestData(String mnumber,String mzhifaType,String mstartTime,String mendTime) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_zfjlgl);
         params.addBodyParameter("page", page + "");
         // TODO: 2017/3/14 0014 传递下拉参数
-        params.addBodyParameter("id", "" + number.getText().toString());
-        params.addBodyParameter("type", "" + userType);
-        params.addBodyParameter("start_time", "" + startTime.getText().toString());
-        params.addBodyParameter("end_time", "" + endTime.getText().toString());
-
-        if (s != null) {
-            params.addBodyParameter("cx", s);
-        }
-
+        params.addBodyParameter("xx", mnumber);
+        params.addBodyParameter("xz",mzhifaType);
+        params.addBodyParameter("sj1",mstartTime);
+        params.addBodyParameter("sj2",mendTime);
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
@@ -173,7 +169,10 @@ public class LawManagerFragment extends BaseFragment {
             adapter.notifyDataSetChanged();
             page = 1;
         }
-        requestData(null);
+        requestData(number.getText().toString(),
+                zhifaType
+                ,startTime.getText().toString(),
+                endTime.getText().toString());
     }
 
 
@@ -246,6 +245,7 @@ public class LawManagerFragment extends BaseFragment {
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 // TODO Auto-generated method stub
                 userType = (int) arg3;
+                zhifaType = selects.get((int)arg3);
                 /* 将mySpinner 显示*/
                 //arg0.setVisibility(View.VISIBLE);
                 ToastUtil.show("  " + userType);
@@ -260,11 +260,4 @@ public class LawManagerFragment extends BaseFragment {
 
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 }

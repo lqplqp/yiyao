@@ -50,9 +50,7 @@ import com.lxkj.yiyao.qiye.QYInfocardManagerFragment;
 import com.lxkj.yiyao.qiye.QYMessageSearchFragment;
 import com.lxkj.yiyao.qiye.QYPersonManagerFragment;
 import com.lxkj.yiyao.qiye.QYTrainOrderFragment;
-import com.lxkj.yiyao.qiyemanager.QYManagerTiJianBaoGaoFragment;
 import com.lxkj.yiyao.shengji.CompanyTongJiFragment;
-import com.lxkj.yiyao.shengji.DownloadDocFragment;
 import com.lxkj.yiyao.shengji.JianGuanTongJiFragment;
 import com.lxkj.yiyao.shengji.PersonAnalysisFragment;
 import com.lxkj.yiyao.shengji.ShenHeFragment;
@@ -60,6 +58,7 @@ import com.lxkj.yiyao.shengji.ShengJiPeiXunMessageSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianSearchFragment;
 import com.lxkj.yiyao.shengji.TiJianTongJiFragment;
 import com.lxkj.yiyao.shengji.UpdatePswFragment;
+import com.lxkj.yiyao.shengjugeren.SJGJZhiFaJILuFenXiTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRBaoMingMessageFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyInfoListFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRCompanyTongJiFragment;
@@ -76,6 +75,7 @@ import com.lxkj.yiyao.shengjugeren.SJGRTiJianSearchFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRTiJianTongJiFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRUpdatePswFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRYiBaoPeiXunXiangMuFragment;
+import com.lxkj.yiyao.shengjugeren.SJGRZhengShuFragment;
 import com.lxkj.yiyao.shengjugeren.SJGRZhiFaSerachFragment;
 import com.lxkj.yiyao.shiji.AdminManagerFragment;
 import com.lxkj.yiyao.shiji.CompanyManageyFragment;
@@ -84,6 +84,7 @@ import com.lxkj.yiyao.shiji.MessageSearchFragment;
 import com.lxkj.yiyao.shiji.PeiXunListFragment;
 import com.lxkj.yiyao.shiji.ProjectApplyFragment;
 import com.lxkj.yiyao.shiji.QiYeInfoFragment;
+import com.lxkj.yiyao.xianji.QYManagerTiJianBaoGaoFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -281,7 +282,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("企业管理");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan4);
                                 //企业信息列表
-                                com.lxkj.yiyao.shengji.SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new com.lxkj.yiyao.shengji.SJGRCompanyInfoListFragment();
+                                SJGRCompanyInfoListFragment sjgrCompanyInfoListFragment = new SJGRCompanyInfoListFragment();
                                 fragments.add(sjgrCompanyInfoListFragment);
                                 break;
                             case R.id.navi_menu_6:
@@ -290,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
                                 //培训项目报名
                                 SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
                                 //已报培训项目
-                                com.lxkj.yiyao.shengji.PeiXunListFragment peiXunListFragment = new com.lxkj.yiyao.shengji.PeiXunListFragment();
+                                PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
                                 //通知消息
                                 com.lxkj.yiyao.shengji.MessageSearchFragment messageSearchFragment = new com.lxkj.yiyao.shengji.MessageSearchFragment();
                                 fragments.add(projectApplyFragment);

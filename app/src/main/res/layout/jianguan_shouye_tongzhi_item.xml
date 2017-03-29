@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:background="@drawable/fillet_white_bg"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:text="暂无消息"
+            android:textColor="@color/global_black"
+            android:id="@+id/xiaoxi" />
