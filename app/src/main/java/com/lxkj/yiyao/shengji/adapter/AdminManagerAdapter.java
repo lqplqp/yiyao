@@ -33,6 +33,11 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
         //姓名
         holder.xingming.setText("" + result.getString("xm"));
 
+        holder.xingbie.setText("" + result.getString("xb"));
+
+        holder.shoujihao.setText("" + result.getString("sjhm"));
+
+        holder.youxiang.setText("" + result.getString("yx"));
 
     }
 

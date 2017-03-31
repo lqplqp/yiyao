@@ -1,18 +1,20 @@
 package com.lxkj.yiyao.shengji;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.CompanyManagerAdapter;
-import com.lxkj.yiyao.view.RefreshListView;
+import com.lxkj.yiyao.utils.PickViewUtils;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -20,6 +22,7 @@ import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
@@ -30,129 +33,168 @@ public class CompanyManageyFragment extends BaseFragment {
 // ======================== 模板代码=============================
 
     CompanyManagerAdapter adapter;
-//    @BindView(R.id.list_view)
-//    RefreshListView listView;
+    @BindView(R.id.yonghuming)
+    EditText yonghuming;
+    @BindView(R.id.danweimingcheng)
+    EditText danweimingcheng;
+    @BindView(R.id.textView)
+    TextView textView;
+    @BindView(R.id.danweirenshu)
+    EditText danweirenshu;
+    @BindView(R.id.guanliyuan)
+    EditText guanliyuan;
+    @BindView(R.id.youxiang)
+    EditText youxiang;
+    @BindView(R.id.shoujihao)
+    EditText shoujihao;
+    @BindView(R.id.jianguanduiwu)
+    CheckBox jianguanduiwu;
+    @BindView(R.id.danweidizhi)
+    TextView danweidizhi;
+    @BindView(R.id.commit)
+    Button commit;
 
-//    @BindView(R.id.select)
-//    TextView select;
-//    @BindView(R.id.sousuoneirong)
-//    EditText sousuoneirong;
 
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
 
 
+    // ======================== 模板代码=============================
+
+
     @Override
     protected void initView() {
-//        requestData();
+        //requestData();
+        requestUserInfo();
+    }
 
-        /*listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
-            @Override
-            public void onDownPullRefresh() {
+    private void requestUserInfo() {
+        try {
+            RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/jgdwxx");
 
+        /*单位名称 dwmc
+        单位人数 dwrs
+        管理员 gly
+        邮箱 yx
+        手机号码 sjhm
+        行业领域 hyly
+        详细地址 szdq  szdq1 szdq2  dwdz*/
+            SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+            params.addBodyParameter("username",sp.getString("username","") + "");
 
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                page = 1;
+            //params.addBodyParameter("dwdz", "");
 
+            x.http().get(params, new Callback.CommonCallback<String>() {
+                @Override
+                public void onSuccess(String result) {
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    JSONObject data = jsonObject.getJSONObject("data");
+                    yonghuming.setHint(data.get("username").toString());
+                    danweimingcheng.setHint(data.get("dwmc").toString());
+                    danweirenshu.setHint(data.get("dwrs").toString());
+                    guanliyuan.setHint(data.get("gly").toString());
+                    youxiang.setHint(data.get("yx").toString());
+                    shoujihao.setHint(data.get("sjhm").toString());
+                    danweidizhi.setText(data.get("szdq") +"-" + data.get("szdq1") +"-"+data.get("szdq2"));
 
-                requestData();
+                }
 
+                @Override
+                public void onError(Throwable ex, boolean isOnCallback) {
+                    ex.printStackTrace();
+                }
 
-            }
+                @Override
+                public void onCancelled(CancelledException cex) {
 
-            @Override
-            public void onLoadingMore() {
+                }
 
+                @Override
+                public void onFinished() {
 
-                requestData();
-
-
-            }
-        });
-
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                page = 1;
-                requestData();
-            }
-        });*/
+                }
+            });
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
 
 
     }
-    // ======================== 模板代码=============================
 
+    private void requestData() {
+        try {
+            RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/jgdwxx");
 
-    // ======================== 模板代码=============================
-   /* public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgdwxx);
-        params.addBodyParameter("xx", sousuoneirong.getText() + "");
-        params.addBodyParameter("page", page + "");
+        /*单位名称 dwmc
+        单位人数 dwrs
+        管理员 gly
+        邮箱 yx
+        手机号码 sjhm
+        行业领域 hyly
+        详细地址 szdq  szdq1 szdq2  dwdz*/
+            SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+            params.addBodyParameter("username",sp.getString("username","") + "");
+            params.addBodyParameter("dwmc", danweimingcheng.getText().toString() + "");
+            params.addBodyParameter("dwrs", danweirenshu.getText().toString() + "");
+            params.addBodyParameter("gly", guanliyuan.getText().toString() + "");
+            params.addBodyParameter("yx", youxiang.getText().toString() + "");
+            params.addBodyParameter("sjhm", shoujihao.getText().toString() + "");
+            boolean selected = jianguanduiwu.isSelected();
+            if (!selected) {
+                params.addBodyParameter("dwhylymc", jianguanduiwu.getText().toString() + "");
+            }
+            String[] split = danweidizhi.getText().toString().split("-");
+            params.addBodyParameter("szdq", split[0]);
+            params.addBodyParameter("szdq1", split[1]);
+            params.addBodyParameter("szdq2", split[2]);
+            //params.addBodyParameter("dwdz", "");
 
-
-
-        x.http().get(params, new Callback.CacheCallback<String>() {
-            @Override
-            public void onSuccess(String result) {
-                Log.i(TAG, result);
-                if (adapter == null) {
-                    adapter = new CompanyManagerAdapter(result);
-                    listView.setAdapter(adapter);
-                } else {
-                    adapter.addData(result);
-                    listView.deferNotifyDataSetChanged();
+            x.http().get(params, new Callback.CommonCallback<String>() {
+                @Override
+                public void onSuccess(String result) {
+                    String s = result;
                 }
-                page++;
 
-            }
+                @Override
+                public void onError(Throwable ex, boolean isOnCallback) {
+                    ex.printStackTrace();
+                }
 
-            @Override
-            public void onError(Throwable ex, boolean isOnCallback) {
-                ex.printStackTrace();
-            }
+                @Override
+                public void onCancelled(CancelledException cex) {
 
-            @Override
-            public void onCancelled(CancelledException cex) {
+                }
 
-            }
+                @Override
+                public void onFinished() {
 
-            @Override
-            public void onFinished() {
-                listView.onRefreshComplete();
-                listView.loadMoreComplete();
-            }
-
-            @Override
-            public boolean onCache(String result) {
-                return false;
-            }
-        });
-    }*/
+                }
+            });
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
 
 
-    // ======================== 模板代码=============================
-
+    }
 
     @Override
     public int getLayout() {
         return R.layout.jianguandanweiguanli_layout;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
 
+
+    @OnClick({R.id.danweidizhi, R.id.commit})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.danweidizhi:
+                new PickViewUtils(getActivity(), danweidizhi).pickProvince();
+                break;
+            case R.id.commit:
+                requestData();
+                break;
+        }
     }
 }

@@ -60,8 +60,8 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("url").toString().replace("/",""));
-                String s = result.get("url").toString();
+                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("wjdz").toString());
+
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
                 params.setSaveFilePath("/mnt/sdcard/" + result.get("wjdz").toString());

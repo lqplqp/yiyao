@@ -22,21 +22,21 @@ public class MessageSearchAdapter extends com.lxkj.yiyao.jianguan.adapter.MBaseA
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //发布人
-        holder.faburen.setText(""+result.get("fbr"));
+        holder.faburen.setText(""+result.getString("fbr"));
         //序号
-        holder.number.setText(""+result.get("number"));
+        holder.number.setText(""+result.getString("xh"));
         //培训开始时间
-        holder.peixunDate.setText(""+result.get("pxkssj"));
+        holder.peixunDate.setText(""+result.getString("pxkssj"));
         //培训地点
-        holder.peixundidian.setText(""+result.get("peixundidian"));
+        holder.peixundidian.setText(""+result.getString("pxdd"));
         //培训结束时间
-        holder.peixunOver.setText(""+result.get("pxjssj"));
+        holder.peixunOver.setText(""+result.getString("pxjssj"));
         //通知标题
-        holder.tongzhibiaoti.setText(""+result.get("tzbt"));
+        holder.tongzhibiaoti.setText(""+result.getString("tzbt"));
         //通知单位
-        holder.tongzhidanwei.setText(""+result.get("tzdw"));
+        holder.tongzhidanwei.setText(""+result.getString("tzdw"));
         //通知类型
-        holder.tongzhileixing.setText(""+result.get("tzlx"));
+        holder.tongzhileixing.setText(""+result.getString("tzlx"));
     }
 
 

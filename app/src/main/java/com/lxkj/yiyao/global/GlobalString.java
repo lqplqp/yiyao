@@ -76,6 +76,7 @@ public interface GlobalString {
     public static final String sjgr_wdzf = "admin/fenji2/wdzf/";
     //shengjugeren_通知消息
     public static final String sjgr_tzxx = "admin/fenji2/tzxx/";
+
     //shengjugeren_医保培训项目
     public static final String sjgr_ybpxxm = "admin/fenji2/ybpxxm/";
     //shengjugeren_企业信息列表
@@ -93,7 +94,6 @@ public interface GlobalString {
     public static final String fenji1_jgdwxx = "/admin/fenji1/jgdwxx";
     //监管人员管理
     public static final String fenji1_jgrygl = "/admin/fenji1/jgrygl";
-
 
 
     //培训通知列表接
@@ -156,5 +156,24 @@ public interface GlobalString {
     public static final String gerenyonghu_tongzhixiaoxi = "admin/fenji6/tzxx/";
 
 //个人用户——————————————————————————
+
+
+    /**
+     * 市级管理员  2017年3月31日13:55:22
+     */
+    //首页
+    public static final String shiji_shouye = BaseURL + "admin/fenji3/sy/";
+    //监管单位信息
+    public static final String shiji_jianguandanweixinxi = BaseURL + "admin/fenji3/jgdwxx/";
+    //监管人员管理
+    public static final String shiji_jianguanrenyuanguanli = BaseURL + "admin/fenji3/jgrygl/";
+    //培训通知管理
+    public static final String shiji_peixuntongzhiguanli = BaseURL + "admin/fenji3/pxtzgl/";
+    //已报培训项目
+    public static final String shiji_yibaopeixun = BaseURL + "admin/fenji3/ybpxxm/";
+    //培训 通知消息
+    public static final String shiji_tongzhixiaoxi = BaseURL + "admin/fenji3/tzxx/";
+
+
 
 }

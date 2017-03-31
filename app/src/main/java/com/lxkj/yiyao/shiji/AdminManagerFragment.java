@@ -14,6 +14,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shiji.adapter.AdminManagerAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -52,10 +53,12 @@ public class AdminManagerFragment extends BaseFragment {
     private int page = 1;
 
     private String TAG = "AdminManagerFragment";
+    private String userName;
 
 
     @Override
     protected void initView() {
+        userName = SPUtil.getUserName(getActivity());
         requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -106,11 +109,12 @@ public class AdminManagerFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_jgrygl);
+        RequestParams params = new RequestParams(GlobalString.shiji_jianguanrenyuanguanli);
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", souguoneirong.getText() + "");
         params.addBodyParameter("sj1", startTime.getText() + "");
         params.addBodyParameter("sj2", endTime.getText() + "");
+        params.addBodyParameter("username", userName);
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

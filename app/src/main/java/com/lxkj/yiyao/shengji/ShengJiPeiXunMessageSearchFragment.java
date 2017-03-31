@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shengji;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -94,12 +95,15 @@ public class ShengJiPeiXunMessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String s) {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_tzxx);
+        RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/pxtzgl");
         params.addBodyParameter("page", page + "");
         if (s != null) {
-            params.addBodyParameter("cx", s);
+            params.addBodyParameter("cqdw", s);
         }
-
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("sj1",startTime.getText().toString());
+        params.addBodyParameter("sj2",endTime.getText().toString());
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {

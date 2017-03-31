@@ -86,7 +86,7 @@ public class ShenHeFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tjjgsh);
+        RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/tjjgsh");
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", inputKey.getText() + "");
 

@@ -14,6 +14,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.CompanyInfoListAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -41,10 +42,12 @@ public class ShiJiQiYeGuanLiFragment extends BaseFragment {
     private int page = 1;
 
     private String TAG = "ShiJiQiYeGuanLiFragment";
+    private String userName;
 
 
     @Override
     protected void initView() {
+        userName = SPUtil.getUserName(getActivity());
         requestData();
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -90,6 +93,7 @@ public class ShiJiQiYeGuanLiFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qygl);
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", sousuoxinxi.getText() + "");
+        params.addBodyParameter("username", userName);
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

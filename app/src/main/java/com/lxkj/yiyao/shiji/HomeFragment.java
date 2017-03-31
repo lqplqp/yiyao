@@ -7,15 +7,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.SelectTrainActivity;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.jianguan.*;
+import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
+import com.lxkj.yiyao.shiji.adapter.ShouYeTongZhiXiaoXiAdapter;
+import com.lxkj.yiyao.view.RefreshListView;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
@@ -26,18 +35,60 @@ public class HomeFragment extends BaseFragment {
 
     @BindView(R.id.add_people)
     TextView addPeople;
-    @BindView(R.id.learning)
-    TextView learning;
-    @BindView(R.id.none)
-    TextView none;
     @BindView(R.id.select_project)
     TextView selectProject;
-    @BindView(R.id.content)
-    TextView content;
+    @BindView(R.id.jianguan_xuexizhong)
+    TextView jianguanXuexizhong;
+    @BindView(R.id.jianguan_yiwancheng)
+    TextView jianguanYiwancheng;
+    @BindView(R.id.xuanze_xuexizhong)
+    TextView xuanzeXuexizhong;
+    @BindView(R.id.xuanze_yiwancheng)
+    TextView xuanzeYiwancheng;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
+    Unbinder unbinder;
 
     @Override
     protected void initView() {
+        requestData();
+    }
 
+    private void requestData() {
+        RequestParams requestParams = new RequestParams(GlobalString.shiji_shouye);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                if (result != null) {
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    JSONArray jsonArray = JSONArray.parseArray(jsonObject.getString("data"));
+                    listView.setAdapter(new ShouYeTongZhiXiaoXiAdapter(jsonArray));
+                    String jgxxz = jsonObject.getString("jgxxz");
+                    String jgywc = jsonObject.getString("jgywc");
+                    String pxxmxxz = jsonObject.getString("pxxmxxz");
+                    String pxxmywc = jsonObject.getString("pxxmywc");
+                    jianguanXuexizhong.setText("" + jgxxz);
+                    jianguanYiwancheng.setText("" + jgywc);
+                    xuanzeXuexizhong.setText("" + pxxmxxz);
+                    xuanzeYiwancheng.setText("" + pxxmywc);
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
     }
 
     @Override
@@ -48,16 +99,30 @@ public class HomeFragment extends BaseFragment {
 
     @OnClick({R.id.add_people, R.id.select_project})
     public void onClick(View view) {
-        Intent intent ;
+        Intent intent;
         switch (view.getId()) {
             case R.id.add_people:
-                intent = new Intent(getActivity(),AddAdminActivity.class);
+                intent = new Intent(getActivity(), AddAdminActivity.class);
                 startActivity(intent);
                 break;
             case R.id.select_project:
-                intent = new Intent(getActivity(),SelectTrainActivity.class);
+                intent = new Intent(getActivity(), SelectTrainActivity.class);
                 startActivity(intent);
                 break;
         }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        unbinder = ButterKnife.bind(this, rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
 }

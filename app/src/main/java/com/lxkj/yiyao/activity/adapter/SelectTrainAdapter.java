@@ -10,7 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.LearningActivity;
-import com.lxkj.yiyao.activity.XuanGouKeChengRenYuan;
+import com.lxkj.yiyao.activity.XuanGouKeChengRenYuanActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
@@ -58,7 +58,7 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
                     intent.putExtra("pxid",result.get("id").toString());
                     mActivity.startActivity(intent);
                 }else{
-                    Intent intent = new Intent(mActivity,XuanGouKeChengRenYuan.class);
+                    Intent intent = new Intent(mActivity,XuanGouKeChengRenYuanActivity.class);
                     intent.putExtra("pxid",result.get("id").toString());
                     mActivity.startActivity(intent);
                 }
