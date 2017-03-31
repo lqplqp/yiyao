@@ -30,19 +30,19 @@ public class ShiJiPeiXunMessageSearchAdapter extends MBaseAdapter<ShiJiPeiXunMes
         //开始时间
         holder.kaishishijian.setText("" + result.getString("pxkssj"));
         //适用地区
-        holder.shiyongdiqu.setText("" + result.getString("peixundidian"));
+        holder.shiyongdiqu.setText("" + result.getString("pxsydq"));
         //培训标题
-        holder.peixunbiaoti.setText("" + result.getString("tzbt"));
+        holder.peixunbiaoti.setText("" + result.getString("pxbt"));
         //发起单位
         holder.faqidanwei.setText("" + result.getString("tzdw"));
         //培训类型
-        holder.peixunleixing.setText("" + result.getString("tzlx"));
+        holder.peixunleixing.setText("" + result.getString("pxlx"));
         //序号
-        holder.xuhao.setText("" + result.getString("xuhao"));
+        holder.xuhao.setText("" + result.getString("id"));
         //创建时间
-        holder.chuangjianshijian.setText("");
+        holder.chuangjianshijian.setText("cjsj");
         //发布状态
-        holder.fabuzhuangtai.setText("'");
+        holder.fabuzhuangtai.setText("fbzt");
     }
 
     @Override

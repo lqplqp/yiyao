@@ -16,6 +16,7 @@ import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengji.adapter.ShengJiPeiXunMessageSearchAdapter;
 import com.lxkj.yiyao.shiji.adapter.ShiJiPeiXunMessageSearchAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -55,11 +56,12 @@ public class ShiJiPeiXunMessageSearchFragment extends BaseFragment {
     TextView endTime;
     Unbinder unbinder1;
     private int page = 1;
+    private String userName;
 
 
     @Override
     protected void initView() {
-
+        userName = SPUtil.getUserName(getActivity());
         requestData(null);
 
 
@@ -95,11 +97,16 @@ public class ShiJiPeiXunMessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String s) {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
+        RequestParams params = new RequestParams(GlobalString.shiji_peixuntongzhiguanli);
         params.addBodyParameter("page", page + "");
-        if (s != null) {
+        params.addBodyParameter("fqdw", faqidanwei.getText().toString());
+        params.addBodyParameter("sj1", startTime.getText().toString());
+        params.addBodyParameter("sj2", endTime.getText().toString());
+        params.addBodyParameter("username", userName);
+
+        /*if (s != null) {
             params.addBodyParameter("cx", s);
-        }
+        }*/
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

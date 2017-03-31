@@ -14,6 +14,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shiji.adapter.MessageSearchAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -44,11 +45,12 @@ public class MessageSearchFragment extends BaseFragment {
 
     MBaseAdapter adapter;
     private int page = 1;
+    private String userName;
 
 
     @Override
     protected void initView() {
-
+        userName = SPUtil.getUserName(getActivity());
         requestData(faqidanwei.getText().toString(),"","","");
 
 
@@ -88,13 +90,14 @@ public class MessageSearchFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String faqidanwei,String peixuntongzhileixing,String xingzhengleixing,String peixunbanleixing){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_tzxx);
+        RequestParams params = new RequestParams(GlobalString.shiji_tongzhixiaoxi);
         params.addBodyParameter("page",page+"");
+        params.addBodyParameter("username", userName);
         if(faqidanwei!=null){
             params.addBodyParameter("fqdw",faqidanwei);
             params.addBodyParameter("pxtzlx",peixuntongzhileixing);
             params.addBodyParameter("pxblx",peixunbanleixing);
-            params.addBodyParameter("xzlx",xingzhengleixing);
+            params.addBodyParameter("hylx",xingzhengleixing);
 
         }
 
@@ -106,6 +109,7 @@ public class MessageSearchFragment extends BaseFragment {
                     adapter = new MessageSearchAdapter(result);
                     listView.setAdapter(adapter);
                 }else{
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }

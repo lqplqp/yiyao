@@ -34,6 +34,7 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
+            android:enabled="false"
             android:hint="username"
             android:id="@+id/yonghuming" />
     </LinearLayout>
@@ -54,7 +55,7 @@
         android:textColor="@color/global_black"
         android:text="*单位名称："/>
     <EditText
-        android:id="@+id/xingming"
+        android:id="@+id/danweimingcheng"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -83,12 +84,13 @@
             android:id="@+id/textView" />
 
         <EditText
-            android:id="@+id/shenfenzhenghao"
+            android:id="@+id/danweirenshu"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
+            android:inputType="number"
             android:text="14"
             />
     </LinearLayout>
@@ -111,7 +113,7 @@
             android:text="*管理员："/>
 
         <EditText
-            android:id="@+id/danweimingcheng"
+            android:id="@+id/guanliyuan"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
@@ -168,6 +170,7 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_gray"
+            android:inputType="phone"
             android:text="12345678"
             />
     </LinearLayout>
@@ -189,6 +192,7 @@
             android:text="*行业领域："/>
 
         <CheckBox
+            android:id="@+id/hangyelingyu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"

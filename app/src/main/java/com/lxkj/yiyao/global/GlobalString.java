@@ -157,4 +157,23 @@ public interface GlobalString {
 
 //个人用户——————————————————————————
 
+
+    /**
+     * 市级管理员  2017年3月31日13:55:22
+     */
+    //首页
+    public static final String shiji_shouye = BaseURL + "admin/fenji3/sy/";
+    //监管单位信息
+    public static final String shiji_jianguandanweixinxi = BaseURL + "admin/fenji3/jgdwxx/";
+    //监管人员管理
+    public static final String shiji_jianguanrenyuanguanli = BaseURL + "admin/fenji3/jgrygl/";
+    //培训通知管理
+    public static final String shiji_peixuntongzhiguanli = BaseURL + "admin/fenji3/pxtzgl/";
+    //已报培训项目
+    public static final String shiji_yibaopeixun = BaseURL + "admin/fenji3/ybpxxm/";
+    //培训 通知消息
+    public static final String shiji_tongzhixiaoxi = BaseURL + "admin/fenji3/tzxx/";
+
+
+
 }
