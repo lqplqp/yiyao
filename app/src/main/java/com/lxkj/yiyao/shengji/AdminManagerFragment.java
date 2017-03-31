@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.shengji;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -108,6 +109,9 @@ public class AdminManagerFragment extends BaseFragment {
     // ======================== 模板代码=============================
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgrygl);
+
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", souguoneirong.getText() + "");
         params.addBodyParameter("sj1", startTime.getText() + "");

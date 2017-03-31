@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/global_bg_gray"
+    android:orientation="vertical">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
@@ -8,7 +16,7 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <!--首页面的第一个小布局 start-->
         <RelativeLayout
             android:background="@drawable/fillet_white_bg"
@@ -51,44 +59,48 @@
                         android:layout_height="wrap_content"
                         android:src="@mipmap/sj_admin_eye"
                         />
+
                     <TextView
+                        android:id="@+id/xuexizhongshu1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="@color/global_black"
-                        android:textSize="22sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="170dp"
-                        />
+                        android:text="0"
+                        android:textColor="@color/global_black"
+                        android:textSize="22sp" />
+
                     <TextView
+                        android:id="@+id/xuexizhong1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="学习中"
-                        android:textColor="@color/global_black"
-                        android:textSize="14sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="155dp"
                         android:paddingTop="50dp"
-                        />
+                        android:text="学习中"
+                        android:textColor="@color/global_black"
+                        android:textSize="14sp" />
+
                     <TextView
+                        android:id="@+id/yiwanchengshu1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:textColor="@color/global_black"
-                        android:textSize="22sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="60dp"
-                        />
+                        android:text="0"
+                        android:textColor="@color/global_black"
+                        android:textSize="22sp" />
+
                     <TextView
+                        android:id="@+id/yiwancheng1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="已完成"
-                        android:textColor="@color/global_black"
-                        android:textSize="14sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="45dp"
                         android:paddingTop="50dp"
-                        />
+                        android:text="已完成"
+                        android:textColor="@color/global_black"
+                        android:textSize="14sp" />
                     <TextView
 
                         android:layout_width="wrap_content"
@@ -149,46 +161,50 @@
                         android:layout_height="wrap_content"
                         android:src="@mipmap/sj_admin_man"
                         />
+
                     <TextView
+                        android:id="@+id/xuexizhongshu2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:id="@+id/learning"
-                        android:textColor="@color/global_black"
-                        android:textSize="22sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="170dp"
-                        />
+                        android:text="0"
+                        android:textColor="@color/global_black"
+                        android:textSize="22sp" />
+
                     <TextView
+                        android:id="@+id/xuexizhong2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="学习中"
-                        android:textColor="@color/global_black"
-                        android:textSize="14sp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
                         android:paddingRight="155dp"
                         android:paddingTop="50dp"
-                        />
+                        android:text="学习中"
+                        android:textColor="@color/global_black"
+                        android:textSize="14sp" />
+
                     <TextView
+                        android:id="@+id/yiwanchengshu2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
-                        android:id="@+id/none"
-                        android:textColor="@color/global_black"
-                        android:textSize="22sp"
                         android:layout_alignParentRight="true"
                         android:paddingRight="60dp"
-                        />
+                        android:text="0"
+                        android:textColor="@color/global_black"
+                        android:textSize="22sp" />
+
                     <TextView
+                        android:id="@+id/yiwancheng2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="已完成"
-                        android:textColor="@color/global_black"
-                        android:textSize="14sp"
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
                         android:paddingRight="45dp"
                         android:paddingTop="50dp"
-                        />
+                        android:text="已完成"
+                        android:textColor="@color/global_black"
+                        android:textSize="14sp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -231,31 +247,20 @@
         </LinearLayout>
         <!--首页面的第3个小布局 end-->
 
-        <LinearLayout
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/fillet_white_bg"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            >
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="15dp"
-                android:textSize="16sp"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
 
-                android:text="暂无消息"
-                android:textColor="@color/global_black"
-                android:id="@+id/content" />
 
-        </LinearLayout>
 
     </LinearLayout>
+    <com.lxkj.yiyao.view.RefreshListView
+        android:layout_marginBottom="20dp"
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+
+    </com.lxkj.yiyao.view.RefreshListView>
 
 
 
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>
+</ScrollView>
