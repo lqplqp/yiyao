@@ -50,7 +50,7 @@ public class MessageSearchFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        requestData();
+        requestData(null,null,null,null);
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -62,7 +62,7 @@ public class MessageSearchFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData(null,null,null,null);
 
 
             }
@@ -71,7 +71,7 @@ public class MessageSearchFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null,null,null,null);
 
 
             }
@@ -83,14 +83,14 @@ public class MessageSearchFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
+    public void requestData(String mfaqidanwei, String mpeixuntongzhileixing,String mxingzhengleixing,String mpeixunbanleixing) {
         RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/tzxx");
         params.addBodyParameter("page", page + "");
 
-        params.addBodyParameter("fqdw",faqidanwei.getText().toString());
-        params.addBodyParameter("pxtzlx" , peixuntongzhileixing.getSelectedItem().toString());
-        params.addBodyParameter("hylx",xingzhengleixing.getSelectedItem().toString());
-        params.addBodyParameter("pxblx",peixunbanleixing.getSelectedItem().toString());
+        params.addBodyParameter("fqdw",mfaqidanwei);
+        params.addBodyParameter("pxtzlx" ,mpeixuntongzhileixing);
+        params.addBodyParameter("hylx",mxingzhengleixing);
+        params.addBodyParameter("pxblx",mpeixunbanleixing);
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -141,5 +141,15 @@ public class MessageSearchFragment extends BaseFragment {
 
     @OnClick(R.id.chaxun)
     public void onClick() {
+        if(adapter!=null){
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page=1;
+        }
+        requestData(faqidanwei.getText().toString(),
+                peixuntongzhileixing.getSelectedItem().toString(),
+                xingzhengleixing.getSelectedItem().toString(),
+                peixunbanleixing.getSelectedItem().toString()
+        );
     }
 }

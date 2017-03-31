@@ -40,7 +40,7 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
     @Override
     protected void initView() {
 
-        requestData(null);
+        requestData();
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -53,7 +53,7 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
                 page=1;
 
 
-                requestData(null);
+                requestData();
 
 
             }
@@ -62,7 +62,7 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData(null);
+                requestData();
 
 
 
@@ -78,12 +78,10 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData(String s){
+    public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_ybpxxm);
         params.addBodyParameter("page",page+"");
-        if(s!=null){
-            params.addBodyParameter("cx",s);
-        }
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

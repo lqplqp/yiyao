@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -15,6 +17,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRZhiFaSearch;
+import com.lxkj.yiyao.utils.ToastUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -22,7 +25,9 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,8 +44,6 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
     TextView chaxun;
     @BindView(R.id.zhifabianhao)
     EditText zhifabianhao;
-    @BindView(R.id.zhifaleixing)
-    Spinner zhifaleixing;
     @BindView(R.id.star_time)
     EditText starTime;
     @BindView(R.id.end_time)
@@ -51,14 +54,20 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
+    private ArrayAdapter<String> mSpinnerAdapter;
+    private String zhifaType;
+
     MBaseAdapter adapter;
+    @BindView(R.id.zhifaleixing)
+    Spinner type;
+    Unbinder unbinder1;
     private int page = 1;
 
 
     @Override
     protected void initView() {
-
-        requestData("","","","");
+        initSpinner();
+        requestData("", "", "", "");
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -68,10 +77,10 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
 
                 adapter.clear();
                 adapter.notifyDataSetChanged();
-                page=1;
+                page = 1;
 
 
-               requestData("","","","");
+                requestData("", "", "", "");
 
 
             }
@@ -80,8 +89,7 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData("","","","");
-
+                requestData("", "", "", "");
 
 
             }
@@ -92,19 +100,16 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
 
-
-
-
     // ======================== 模板代码=============================
-    public void requestData(String zhifabianhao,String zhifaleixing,String star_time,String end_time){
+    public void requestData(String zhifabianhao, String zhifaleixing, String star_time, String end_time) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_wdzf);
-        params.addBodyParameter("page",page+"");
-        if(zhifabianhao!=null){
+        params.addBodyParameter("page", page + "");
+        if (zhifabianhao != null) {
 
-            params.addBodyParameter("cx",zhifabianhao);
-            params.addBodyParameter("cx",zhifaleixing);
-            params.addBodyParameter("cx",star_time);
-            params.addBodyParameter("cx",end_time);
+            params.addBodyParameter("xx", zhifabianhao);
+            params.addBodyParameter("xz", zhifaleixing);
+            params.addBodyParameter("sj1", star_time);
+            params.addBodyParameter("sj2 ", end_time);
 
         }
 
@@ -112,10 +117,10 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                if(adapter == null){
+                if (adapter == null) {
                     adapter = new SJGRZhiFaSearch(result);
                     listView.setAdapter(adapter);
-                }else{
+                } else {
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -163,12 +168,16 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
                     adapter.notifyDataSetChanged();
                     page = 1;
                 }
-                requestData("","","","");
+                requestData(zhifabianhao.getText().toString(),
+                        zhifaType,
+                        starTime.getText().toString(),
+                        endTime.getText().toString());
 
                 break;
             case R.id.start_time:
                 starTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
+
                     @Override
                     public void onClick(View view) {
                         // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
@@ -188,6 +197,7 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
             case R.id.end_time:
                 endTime.setOnClickListener(new View.OnClickListener() {
                     Calendar c = Calendar.getInstance();
+
                     @Override
                     public void onClick(View view) {
                         // 最后一个false表示不显示日期，如果要显示日期，最后参数可以是true或者不用输入
@@ -205,5 +215,42 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
                 });
                 break;
         }
+    }
+
+
+    private List<String> selects = new ArrayList<String>();
+
+    private void initSpinner() {
+
+        selects.add("行政许可");
+        selects.add("行政处罚");
+        selects.add("行政强制");
+        selects.add("行政确认");
+        selects.add("行政奖励");
+        selects.add("其他行政权力");
+
+        mSpinnerAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, selects);
+        //第三步：为适配器设置下拉列表下拉时的菜单样式。
+        mSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //第四步：将适配器添加到下拉列表上
+        type.setAdapter(mSpinnerAdapter);
+        //第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
+        type.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                // TODO Auto-generated method stub
+
+                zhifaType = selects.get((int)arg3);
+                /* 将mySpinner 显示*/
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("" + zhifaType);
+            }
+
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("12332");
+            }
+        });
+
     }
 }
