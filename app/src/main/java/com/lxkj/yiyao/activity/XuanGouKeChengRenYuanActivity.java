@@ -28,7 +28,7 @@ import butterknife.BindView;
  * 选购参加培训的人员
  */
 
-public class XuanGouKeChengRenYuan extends BaseActivity {
+public class XuanGouKeChengRenYuanActivity extends BaseActivity {
     @BindView(R.id.back_img)
     ImageView backImg;
     @BindView(R.id.title_tv)
@@ -77,8 +77,8 @@ public class XuanGouKeChengRenYuan extends BaseActivity {
 
     private void requestData() {
         //从上一个界面传过来的培训id
-//        Intent intent = getIntent();
-        String pxid = "1";
+        Intent intent = getIntent();
+        String pxid = intent.getStringExtra("pxid") + "";
         if (!TextUtils.isEmpty(pxid)){
             RequestParams requestParams = new RequestParams(GlobalString.BaseURL + GlobalString.xuangoukechengrenyuanUrl);
             //临时用1

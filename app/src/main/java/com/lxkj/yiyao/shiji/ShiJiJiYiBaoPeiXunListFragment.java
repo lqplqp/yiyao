@@ -10,6 +10,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.PeiXunListAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -34,12 +35,13 @@ public class ShiJiJiYiBaoPeiXunListFragment extends BaseFragment {
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
+    private String userName;
 
 
     @Override
     protected void initView() {
-
-requestData();
+        userName = SPUtil.getUserName(getActivity());
+        requestData();
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -72,8 +74,9 @@ requestData();
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
+        RequestParams params = new RequestParams(GlobalString.shiji_yibaopeixun);
         params.addBodyParameter("page", page + "");
+        params.addBodyParameter("username", userName);
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

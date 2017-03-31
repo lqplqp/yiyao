@@ -169,6 +169,7 @@
             android:hint="12345678"
             android:textColor="@color/global_gray"
             android:textSize="@dimen/qyinfo_text_size" />
+            />
     </LinearLayout>
     <View
         android:layout_width="match_parent"

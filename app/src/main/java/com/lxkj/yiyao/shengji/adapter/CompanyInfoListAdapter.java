@@ -36,6 +36,11 @@ public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.
         //获得信息卡人数
         holder.huodexinxikarenshu.setText("" + result.getString("hdxxkrs"));
         //过期提醒(image)
+        if (result.getString("gqtx").equals("1")){
+            holder.guoqitixin.setImageResource(R.mipmap.red_point);
+        }else {
+            holder.guoqitixin.setImageResource(R.mipmap.ic_weiguoqi);
+        }
         holder.beizhu.setText("" + result.getString("bz"));
     }
 

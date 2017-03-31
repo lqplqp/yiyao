@@ -187,6 +187,7 @@ public class SelectTrainFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 SelectTrainAdapter adapter = new SelectTrainAdapter(result, getActivity());
+                adapter.setQiye_admin(true);
                 gridView.setAdapter(adapter);
                 progressDialog.dismiss();
 
