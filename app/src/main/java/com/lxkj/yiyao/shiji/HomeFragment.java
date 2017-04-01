@@ -62,7 +62,8 @@ public class HomeFragment extends BaseFragment {
                 if (result != null) {
                     JSONObject jsonObject = JSONObject.parseObject(result);
                     JSONArray jsonArray = JSONArray.parseArray(jsonObject.getString("data"));
-                    listView.setAdapter(new ShouYeTongZhiXiaoXiAdapter(jsonArray));
+                    ShouYeTongZhiXiaoXiAdapter shouYeTongZhiXiaoXiAdapter = new ShouYeTongZhiXiaoXiAdapter(jsonArray);
+                    listView.setAdapter(shouYeTongZhiXiaoXiAdapter);
                     String jgxxz = jsonObject.getString("jgxxz");
                     String jgywc = jsonObject.getString("jgywc");
                     String pxxmxxz = jsonObject.getString("pxxmxxz");

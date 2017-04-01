@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shiji.adapter;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -28,16 +29,16 @@ public class ShouYeTongZhiXiaoXiAdapter extends BaseAdapter{
 
     @Override
     public Object getItem(int position) {
-        return null;
+        return position;
     }
 
     @Override
     public long getItemId(int position) {
-        return 0;
+        return position;
     }
-
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        Log.d("", position + "");
         View view = View.inflate(parent.getContext(), R.layout.tongzhixiaoxi_item_layout, null);
         TextView xiaoxi = (TextView)view.findViewById(R.id.xiaoxi_text);
         JSONObject jsonObject = JSONObject.parseObject(jsonArray.get(position).toString());
