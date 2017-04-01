@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.RadioButton;
 
 import com.lxkj.yiyao.R;
@@ -12,6 +12,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -23,14 +24,9 @@ public class SJGRMessageFragment extends BaseFragment {
     RadioButton rb1;
     @BindView(R.id.rb_2)
     RadioButton rb2;
-    @BindView(R.id.img1)
-    ImageView img1;
-    @BindView(R.id.img2)
-    ImageView img2;
-    @BindView(R.id.img3)
-    ImageView img3;
-    @BindView(R.id.img4)
-    ImageView img4;
+    @BindView(R.id.list_view)
+    ListView listView;
+    Unbinder unbinder;
 
     @Override
     protected void initView() {
@@ -41,10 +37,7 @@ public class SJGRMessageFragment extends BaseFragment {
                 rb1.setBackgroundResource(R.drawable.blue_but_bg);
                 rb1.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
-                img1.setBackgroundResource(R.color.colorAccent);
-                img2.setBackgroundResource(R.color.colorAccent);
-                img3.setBackgroundResource(R.color.colorAccent);
-                img4.setBackgroundResource(R.color.colorAccent);
+
             }
         });
         rb2.setOnClickListener(new View.OnClickListener() {
@@ -54,13 +47,10 @@ public class SJGRMessageFragment extends BaseFragment {
                 rb2.setBackgroundResource(R.drawable.blue_but_bg);
                 rb1.setTextColor(getResources().getColor(R.color.global_black));
                 rb2.setTextColor(getResources().getColor(R.color.white));
-                img1.setBackgroundResource(R.color.global_bg_blue);
-                img2.setBackgroundResource(R.color.global_red);
-                img3.setBackgroundResource(R.color.global_red);
-                img4.setBackgroundResource(R.color.global_bg_blue);
             }
         });
     }
+
 
     private void hide() {
         rb1.setChecked(false);
@@ -74,11 +64,4 @@ public class SJGRMessageFragment extends BaseFragment {
         return R.layout.sjgr_fragment_layout_message;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 }

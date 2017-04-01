@@ -5,12 +5,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
-import com.lxkj.yiyao.shengji.adapter.PeiXunListAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -19,6 +20,7 @@ import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -31,6 +33,16 @@ public class MessageSearchFragment extends BaseFragment {
     MessageSearchAdapter adapter;
     @BindView(R.id.list_view)
     RefreshListView listView;
+    @BindView(R.id.chaxun)
+    TextView chaxun;
+    @BindView(R.id.faqidanwei)
+    EditText faqidanwei;
+    @BindView(R.id.peixuntongzhileixing)
+    Spinner peixuntongzhileixing;
+    @BindView(R.id.xingzhengleixing)
+    Spinner xingzhengleixing;
+    @BindView(R.id.peixunbanleixing)
+    Spinner peixunbanleixing;
     private int page = 1;
 
     private String TAG = "CompanyManageyFragment";
@@ -38,7 +50,7 @@ public class MessageSearchFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-requestData();
+        requestData(null,null,null,null);
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -50,7 +62,7 @@ requestData();
                 page = 1;
 
 
-                requestData();
+                requestData(null,null,null,null);
 
 
             }
@@ -59,7 +71,7 @@ requestData();
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null,null,null,null);
 
 
             }
@@ -71,10 +83,14 @@ requestData();
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_tzxx);
+    public void requestData(String mfaqidanwei, String mpeixuntongzhileixing,String mxingzhengleixing,String mpeixunbanleixing) {
+        RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/tzxx");
         params.addBodyParameter("page", page + "");
 
+        params.addBodyParameter("fqdw",mfaqidanwei);
+        params.addBodyParameter("pxtzlx" ,mpeixuntongzhileixing);
+        params.addBodyParameter("hylx",mxingzhengleixing);
+        params.addBodyParameter("pxblx",mpeixunbanleixing);
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -122,11 +138,18 @@ requestData();
         return R.layout.sjgr_fragment_layout_message_search;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+
+    @OnClick(R.id.chaxun)
+    public void onClick() {
+        if(adapter!=null){
+            adapter.clear();
+            adapter.notifyDataSetChanged();
+            page=1;
+        }
+        requestData(faqidanwei.getText().toString(),
+                peixuntongzhileixing.getSelectedItem().toString(),
+                xingzhengleixing.getSelectedItem().toString(),
+                peixunbanleixing.getSelectedItem().toString()
+        );
     }
 }

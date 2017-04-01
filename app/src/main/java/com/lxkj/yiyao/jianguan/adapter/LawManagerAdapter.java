@@ -40,19 +40,18 @@ public class LawManagerAdapter extends MBaseAdapter<LawManagerAdapter.ViewHolder
         holder.zhifashijian.setText("" + result.get("zfsj"));
 
         //许可证编号
-        holder.xukezhengbianhao.setText("" + result.get("zfzbh"));
+        holder.xukezhengbianhao.setText("" + result.get("bzfrxxkbh"));
 
 
         //被执法人
-        holder.beizhifaren.setText("" + result.get("bzfr"));
+        holder.beizhifaren.setText("" + result.get("bzfrxm"));
 
 
         //执法类型
         holder.zhifaleixing.setText("" + result.get("zflx"));
 
 
-        //查看
-        holder.chakan.setText("" + result.get("chakan"));
+
 
     }
 

@@ -76,6 +76,7 @@ public interface GlobalString {
     public static final String sjgr_wdzf = "admin/fenji2/wdzf/";
     //shengjugeren_通知消息
     public static final String sjgr_tzxx = "admin/fenji2/tzxx/";
+
     //shengjugeren_医保培训项目
     public static final String sjgr_ybpxxm = "admin/fenji2/ybpxxm/";
     //shengjugeren_企业信息列表
@@ -93,7 +94,6 @@ public interface GlobalString {
     public static final String fenji1_jgdwxx = "/admin/fenji1/jgdwxx";
     //监管人员管理
     public static final String fenji1_jgrygl = "/admin/fenji1/jgrygl";
-
 
 
     //培训通知列表接

@@ -25,6 +25,7 @@ public abstract class MBaseAdapter<T> extends BaseAdapter {
         jsonObject = json.getJSONObject("data");
         datas = jsonObject.getJSONArray("data");
     }
+
     public MBaseAdapter(){
 
     }
@@ -40,8 +41,12 @@ public abstract class MBaseAdapter<T> extends BaseAdapter {
             holder = (T) view.getTag();
         }
 
-        com.alibaba.fastjson.JSONObject object = com.alibaba.fastjson.JSONObject.parseObject(datas.get(i).toString());
-        fillData(i,holder,object);
+        try {
+            com.alibaba.fastjson.JSONObject object = com.alibaba.fastjson.JSONObject.parseObject(datas.get(i).toString());
+            fillData(i,holder,object);
+        }catch (Exception ex){
+            fillData(i,holder,json);
+        }
 
         return view;
     }

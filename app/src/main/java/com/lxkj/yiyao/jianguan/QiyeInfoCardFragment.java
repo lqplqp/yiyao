@@ -57,7 +57,7 @@ public class QiyeInfoCardFragment extends BaseFragment {
 
 
 
-        requestData();
+        requestData(null,null,null);
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -70,7 +70,7 @@ public class QiyeInfoCardFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData(null,null,null);
 
 
             }
@@ -79,7 +79,7 @@ public class QiyeInfoCardFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData(null,null,null);
 
 
             }
@@ -91,14 +91,14 @@ public class QiyeInfoCardFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
+    public void requestData(String mcontent,String mstartTime,String mendTime) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_xinxika);
         params.addBodyParameter("page", page + "");
 
-        params.addBodyParameter("xx", content.getText().toString());
+        params.addBodyParameter("xx", mcontent);
 
-        params.addBodyParameter("sj1", startTime.getText().toString());
-        params.addBodyParameter("sj2", startTime.getText().toString());
+        params.addBodyParameter("sj1", mstartTime);
+        params.addBodyParameter("sj2", mendTime);
 
 
 
@@ -157,7 +157,17 @@ public class QiyeInfoCardFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.select:
-                requestData();
+                toast("查询");
+
+                if(adapter!=null){
+                    adapter.clear();
+                    adapter.notifyDataSetChanged();
+                    page=1;
+                }
+                requestData(content.getText().toString(),
+                        startTime.getText().toString(),
+                        endTime.getText().toString());
+
                 break;
             case R.id.start_time:
                 startTime.setOnClickListener(new View.OnClickListener() {

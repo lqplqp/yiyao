@@ -72,7 +72,7 @@ requestData();
 
     // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_ybpxxm);
+        RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/ybpxxm");
         params.addBodyParameter("page", page + "");
 
         x.http().get(params, new Callback.CacheCallback<String>() {

@@ -146,6 +146,6 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
             adapter.notifyDataSetChanged();
             page = 1;
         }
-        requestData(select.getText().toString());
+        requestData(sousuoxinxi.getText().toString());
     }
 }

@@ -48,7 +48,7 @@ public class GeRenYongHuWenDangXiaZaiAdapter extends MBaseAdapter<GeRenYongHuWen
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("url").toString().replace("/",""));
+                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("wjdz").toString().replace("/",""));
                 String s = result.get("url").toString();
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
