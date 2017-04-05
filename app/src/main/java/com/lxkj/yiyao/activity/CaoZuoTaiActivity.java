@@ -136,9 +136,10 @@ public class CaoZuoTaiActivity extends BaseActivity {
         switch (view.getId()) {
             case R.id.erweimashengcheng:
                 Intent intent = new Intent(this,GenerationQrCodeActivity.class);
-                intent.putExtra("qrcode_result",xukezhengbianhao);
+
+                intent.putExtra("xkzbh",xukezhengbianhao);
                 SharedPreferences sp = getSharedPreferences("shiyao", 0);
-                String id = sp.getString("id", "");
+                String id = sp.getString("username", "");
                 intent.putExtra("username",id);
                 startActivity(intent);
                 break;
@@ -146,7 +147,7 @@ public class CaoZuoTaiActivity extends BaseActivity {
                 Intent intent2 = new Intent(this,KaoShiJieGuoZhiFaActivity.class);
                 intent2.putExtra("qrcode_result",xukezhengbianhao);
                 SharedPreferences sp2 = getSharedPreferences("shiyao", 0);
-                String id2 = sp2.getString("id", "");
+                String id2 = sp2.getString("username", "");
                 intent2.putExtra("username",id2);
 
                 startActivity(intent2);

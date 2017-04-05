@@ -68,6 +68,7 @@ public class ExamActivity extends BaseActivity {
     private ExamDataBean currData;
     private Gson gson;
     private String kmid = "";
+    private String xkzbh = "";
 
     @Override
     public int getLayout() {
@@ -78,6 +79,7 @@ public class ExamActivity extends BaseActivity {
     protected void init() {
         gson = new Gson();
         kmid = getIntent().getStringExtra("kmid");
+        xkzbh = getIntent().getStringExtra("xkzbh");
         requestData();
         initView();
     }
@@ -299,10 +301,12 @@ public class ExamActivity extends BaseActivity {
         String examOkJson = gson.toJson(examData);
         params.addBodyParameter("data", examOkJson);
         Log.i("data",examOkJson);
-        params.addBodyParameter("xkzbh","");
+        params.addBodyParameter("xkzbh",xkzbh);
         SharedPreferences sp = getSharedPreferences("shiyao", 0);
-        String id = sp.getString("id", "");
-        params.addBodyParameter("username",id);
+        String username = sp.getString("username", "");
+        //int id = sp.getInt("id", -1);
+        params.addBodyParameter("kmid",kmid);
+        params.addBodyParameter("username",username);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -323,7 +327,7 @@ public class ExamActivity extends BaseActivity {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ex.printStackTrace();
             }
 
             @Override

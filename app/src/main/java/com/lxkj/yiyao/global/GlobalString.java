@@ -11,7 +11,7 @@ public interface GlobalString {
     //在线考试
     public static final String examUrl = "/admin/stk/stk";
     //考试提交
-    public static final String examOkUrl = "/admin/stk/stjg";
+    public static final String examOkUrl = "/admin/stk/stjg1";
 
 
     //选购课程和学习的人员

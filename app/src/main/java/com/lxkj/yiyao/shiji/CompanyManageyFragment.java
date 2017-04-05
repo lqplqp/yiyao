@@ -51,11 +51,12 @@ public class CompanyManageyFragment extends BaseFragment {
     EditText youxiang;
     @BindView(R.id.shoujihaoma)
     EditText shoujihaoma;
-    @BindView(R.id.danweidizhi)
-    EditText danweidizhi;
+
     @BindView(R.id.commit)
     Button commit;
     Unbinder unbinder;
+    @BindView(R.id.danweidizhi)
+    TextView danweidizhi;
     private int page = 1;
     private String username;
 
@@ -171,17 +172,6 @@ public class CompanyManageyFragment extends BaseFragment {
         return R.layout.jianguandanweiguanli_layout;
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
+
 }
