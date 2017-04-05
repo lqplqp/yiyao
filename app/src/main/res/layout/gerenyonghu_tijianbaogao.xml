@@ -2,7 +2,7 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_bg"
+    android:background="@color/global_bg_gray"
     >
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
@@ -10,13 +10,7 @@
     android:background="@color/global_bg_gray">
 
 
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:layout_width="100dp"
-        android:layout_height="120dp"
-        android:src="@drawable/scan_light"
-        android:layout_gravity="center_horizontal"
-        />
+
 
 
     <LinearLayout
@@ -25,6 +19,14 @@
         android:layout_margin="10dp"
         android:orientation="vertical"
         android:background="@drawable/fillet_white_bg">
+        <ImageView
+            android:id="@+id/touxiang"
+            android:layout_marginTop="10dp"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@mipmap/ic_touxiang"
+            android:layout_gravity="center_horizontal"
+            />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -308,9 +310,10 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:text="河南省中医院（人民路19号）"
         android:layout_marginLeft="20dp"
+        android:visibility="gone"
         />
     <Button
-        android:visibility="invisible"
+        android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginBottom="20dp"

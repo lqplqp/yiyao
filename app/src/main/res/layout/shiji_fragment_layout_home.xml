@@ -16,6 +16,7 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="0dp"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <LinearLayout
@@ -43,12 +44,12 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="14dp"
-                    android:paddingTop="14dp"
+                    android:layout_marginTop="10dp"
                     >
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/img_diannao"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@mipmap/sj_admin_eye"
                         />
                     <TextView
@@ -58,8 +59,9 @@
                         android:text="0"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="170dp"
+                        android:layout_toRightOf="@id/img_diannao"
+                        android:layout_marginLeft="50dp"
+                        android:layout_alignTop="@id/img_diannao"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -67,9 +69,9 @@
                         android:text="学习中"
                         android:textColor="@color/global_black"
                         android:textSize="14sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="155dp"
-                        android:paddingTop="50dp"
+                        android:layout_below="@id/jianguan_xuexizhong"
+                        android:layout_alignLeft="@id/jianguan_xuexizhong"
+                        android:layout_marginTop="10dp"
                         />
                     <TextView
                         android:id="@+id/jianguan_yiwancheng"
@@ -78,8 +80,9 @@
                         android:text="0"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="60dp"
+                        android:layout_toRightOf="@id/jianguan_xuexizhong"
+                        android:layout_alignTop="@id/jianguan_xuexizhong"
+                        android:layout_marginLeft="100dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -87,9 +90,9 @@
                         android:text="已完成"
                         android:textColor="@color/global_black"
                         android:textSize="14sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="45dp"
-                        android:paddingTop="50dp"
+                        android:layout_below="@id/jianguan_yiwancheng"
+                        android:layout_alignLeft="@id/jianguan_yiwancheng"
+                        android:layout_marginTop="10dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -98,13 +101,12 @@
                         android:id="@+id/add_people"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
-                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@id/img_diannao"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="80dp"
                         android:background="@drawable/fillet_blue_bg"
                         android:clickable="true"
-                        android:layout_marginTop="90dp"
-                        android:layout_marginRight="70dp"
                         android:padding="8dp"
-                        android:layout_marginBottom="10dp"
                         />
                 </RelativeLayout>
             </LinearLayout>
@@ -142,12 +144,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingLeft="14dp"
-                    android:paddingTop="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
                     >
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:id="@+id/img_heiban"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
                         android:src="@mipmap/sj_admin_man"
                         />
                     <TextView
@@ -157,8 +161,9 @@
                         android:id="@+id/xuanze_xuexizhong"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="170dp"
+                        android:layout_toRightOf="@id/img_heiban"
+                        android:layout_marginLeft="50dp"
+                        android:layout_alignTop="@id/img_heiban"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -166,9 +171,9 @@
                         android:text="学习中"
                         android:textColor="@color/global_black"
                         android:textSize="14sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="155dp"
-                        android:paddingTop="50dp"
+                        android:layout_below="@id/xuanze_xuexizhong"
+                        android:layout_alignLeft="@id/xuanze_xuexizhong"
+                        android:layout_marginTop="10dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -177,8 +182,9 @@
                         android:id="@+id/xuanze_yiwancheng"
                         android:textColor="@color/global_black"
                         android:textSize="22sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="60dp"
+                        android:layout_toRightOf="@id/xuanze_xuexizhong"
+                        android:layout_alignTop="@id/xuanze_xuexizhong"
+                        android:layout_marginLeft="100dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -186,9 +192,9 @@
                         android:text="已完成"
                         android:textColor="@color/global_black"
                         android:textSize="14sp"
-                        android:layout_alignParentRight="true"
-                        android:paddingRight="45dp"
-                        android:paddingTop="50dp"
+                        android:layout_below="@id/xuanze_yiwancheng"
+                        android:layout_alignLeft="@id/xuanze_yiwancheng"
+                        android:layout_marginTop="10dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -196,14 +202,12 @@
                         android:text="@string/sj_admin_selectproject"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
-
-                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@id/img_heiban"
                         android:background="@drawable/fillet_blue_bg"
                         android:clickable="true"
-                        android:layout_marginTop="90dp"
-                        android:layout_marginRight="70dp"
                         android:padding="8dp"
-                        android:layout_marginBottom="10dp"
                         android:id="@+id/select_project" />
                 </RelativeLayout>
             </LinearLayout>

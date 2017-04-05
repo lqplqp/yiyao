@@ -51,12 +51,11 @@ public class CompanyManageyFragment extends BaseFragment {
     EditText youxiang;
     @BindView(R.id.shoujihaoma)
     EditText shoujihaoma;
-
+    @BindView(R.id.danweidizhi)
+    EditText danweidizhi;
     @BindView(R.id.commit)
     Button commit;
     Unbinder unbinder;
-    @BindView(R.id.danweidizhi)
-    TextView danweidizhi;
     private int page = 1;
     private String username;
 
@@ -171,7 +170,6 @@ public class CompanyManageyFragment extends BaseFragment {
     public int getLayout() {
         return R.layout.jianguandanweiguanli_layout;
     }
-
 
 
 }
