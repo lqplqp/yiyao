@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -49,13 +50,15 @@ public class CompanyManageyFragment extends BaseFragment {
     EditText guanliyuan;
     @BindView(R.id.youxiang)
     EditText youxiang;
-    @BindView(R.id.shoujihaoma)
-    EditText shoujihaoma;
-    @BindView(R.id.danweidizhi)
-    EditText danweidizhi;
     @BindView(R.id.commit)
     Button commit;
     Unbinder unbinder;
+    @BindView(R.id.shoujihao)
+    EditText shoujihao;
+    @BindView(R.id.jianguanduiwu)
+    CheckBox jianguanduiwu;
+    @BindView(R.id.danweidizhi)
+    TextView danweidizhi;
     private int page = 1;
     private String username;
 
@@ -72,7 +75,7 @@ public class CompanyManageyFragment extends BaseFragment {
                 String dwrs = danweirenshu.getText().toString();
                 String gly = guanliyuan.getText().toString();
                 String yx = youxiang.getText().toString();
-                String sjhm = shoujihaoma.getText().toString();
+                String sjhm = shoujihao.getText().toString();
                 String dwdz = danweidizhi.getText().toString();
                 RequestParams requestParams = new RequestParams(GlobalString.shiji_jianguandanweixinxi);
                 requestParams.addBodyParameter("username", username);
@@ -143,7 +146,7 @@ public class CompanyManageyFragment extends BaseFragment {
                     danweirenshu.setText("" + glrs);
                     guanliyuan.setText("" + xm);
                     youxiang.setText("" + yx);
-                    shoujihaoma.setText("" + sjhm);
+                    shoujihao.setText("" + sjhm);
                     danweidizhi.setText("" + szdq + szdq1 + szdq2 + dwdz);
 
                 }

@@ -5,14 +5,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
-import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuWenDangXiaZaiAdapter;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.SPUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -49,48 +49,53 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
     @BindView(R.id.fanhui)
     Button fanhui;
     Unbinder unbinder;
+    @BindView(R.id.touxiang)
+    ImageView touxiang;
+    Unbinder unbinder1;
+    private String userName;
 
     @Override
     protected void initView() {
-        TextView username = (TextView) getActivity().findViewById(R.id.user_name);
-        String s = username.getText().toString();
-        requestDate(s);
+        userName = SPUtil.getUserName(getActivity());
+
+        requestDate();
     }
 
-    private void requestDate(String s) {
-
+    private void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji6/wdxxk");
-        params.addBodyParameter("username", s);
-
+        params.addBodyParameter("username", userName);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 String a = jsonObject.get("date").toString();
                 JSONObject object = JSONObject.parseObject(a);
-                if(object.get("xxkbh")!=null){
+                if (object.get("xxkbh") != null) {
                     bianhao.setText(object.get("xxkbh").toString());
                 }
-                if(object.get("xm") != null){
+                if (object.get("xm") != null) {
                     xingming.setText(object.get("xm").toString());
                 }
-                if (object.get("xb") != null){
+                if (object.get("xb") != null) {
                     xingbie.setText(object.get("xb").toString());
                 }
-                if (object.get("gw") != null){
+                if (object.get("gw") != null) {
                     gangwei.setText(object.get("gw").toString());
                 }
-                if (object.get("sjhm") != null){
+                if (object.get("sjhm") != null) {
                     dianhuahaoma.setText(object.get("sjhm").toString());
                 }
-                if (object.get("gzdw") != null){
+                if (object.get("gzdw") != null) {
                     gongzuodanwei.setText(object.get("gzdw").toString());
                 }
                 if (object.get("yxq") != null && object.get("xyq1") != null) {
                     youxiaoqi.setText("" + object.get("yxq").toString() + "到" + object.get("xyq1").toString());
                 }
-                if (object.get("jgdw") != null){
+                if (object.get("jgdw") != null) {
                     shengchangangwei.setText(object.get("jgdw").toString());
+                }
+                if (object.getString("tpdz") != null) {
+                    x.image().bind(touxiang, object.getString("tpdz"));
                 }
             }
 
@@ -119,5 +124,19 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
 
     @OnClick(R.id.fanhui)
     public void onClick() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        unbinder1 = ButterKnife.bind(this, rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder1.unbind();
     }
 }

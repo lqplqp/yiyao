@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -46,6 +47,9 @@ public class GeRenYongHuTiJianBaoGaoFragment extends BaseFragment {
     @BindView(R.id.commit)
     Button commit;
     Unbinder unbinder;
+    @BindView(R.id.touxiang)
+    ImageView touxiang;
+    Unbinder unbinder1;
 
     @Override
     protected void initView() {
@@ -65,29 +69,32 @@ public class GeRenYongHuTiJianBaoGaoFragment extends BaseFragment {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 String a = jsonObject.get("date").toString();
                 JSONObject object = JSONObject.parseObject(a);
-                if(object.get("xxkbh")!=null){
+                if (object.get("xxkbh") != null) {
                     bianhao.setText(object.get("xxkbh").toString());
                 }
-                if (object.get("xb") != null){
+                if (object.get("xb") != null) {
                     xingbie.setText(object.get("xb").toString());
                 }
-                if (object.get("gw") != null){
+                if (object.get("gw") != null) {
                     gangwei.setText(object.get("gw").toString());
                 }
-                if (object.get("tj") != null){
+                if (object.get("tj") != null) {
                     tijian.setText(object.get("tijian").toString());
                 }
-                if (object.get("gzdw") != null){
+                if (object.get("gzdw") != null) {
                     gongzuogangwei.setText(object.get("gzdw").toString());
                 }
                 if (object.get("yxq") != null && object.get("xyq1") != null) {
                     fazhengriqi.setText(object.get("yxq").toString());
                 }
-                if(object.get("yxq1") != null){
+                if (object.get("yxq1") != null) {
                     guoqiriqi.setText(object.get("yxq1").toString());
                 }
-                if (object.get("jgdw") != null){
+                if (object.get("jgdw") != null) {
                     fazhengdanwei.setText(object.get("jgdw").toString());
+                }
+                if (object.getString("tpdz") != null) {
+                    x.image().bind(touxiang, object.getString("tpdz"));
                 }
             }
 
@@ -113,8 +120,23 @@ public class GeRenYongHuTiJianBaoGaoFragment extends BaseFragment {
     public int getLayout() {
         return R.layout.gerenyonghu_tijianbaogao;
     }
+
     @OnClick(R.id.commit)
     public void onClick() {
         ToastUtil.show("返回");
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        unbinder1 = ButterKnife.bind(this, rootView);
+        return rootView;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder1.unbind();
     }
 }

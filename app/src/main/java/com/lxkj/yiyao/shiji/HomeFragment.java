@@ -64,6 +64,17 @@ public class HomeFragment extends BaseFragment {
                     JSONArray jsonArray = JSONArray.parseArray(jsonObject.getString("data"));
                     ShouYeTongZhiXiaoXiAdapter shouYeTongZhiXiaoXiAdapter = new ShouYeTongZhiXiaoXiAdapter(jsonArray);
                     listView.setAdapter(shouYeTongZhiXiaoXiAdapter);
+                    listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+                        @Override
+                        public void onDownPullRefresh() {
+                            listView.onRefreshComplete();
+                        }
+
+                        @Override
+                        public void onLoadingMore() {
+                            listView.loadMoreComplete();
+                        }
+                    });
                     String jgxxz = jsonObject.getString("jgxxz");
                     String jgywc = jsonObject.getString("jgywc");
                     String pxxmxxz = jsonObject.getString("pxxmxxz");
@@ -108,6 +119,7 @@ public class HomeFragment extends BaseFragment {
                 break;
             case R.id.select_project:
                 intent = new Intent(getActivity(), SelectTrainActivity.class);
+                intent.putExtra("qiye_admin", true);
                 startActivity(intent);
                 break;
         }
