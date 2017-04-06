@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.qiye;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -52,7 +53,7 @@ public class QYInfocardManagerFragment extends BaseFragment {
     protected void initView() {
 
 
-        requestData();
+        requestData("","","");
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -65,7 +66,7 @@ public class QYInfocardManagerFragment extends BaseFragment {
                 page = 1;
 
 
-                requestData();
+                requestData("","","");
 
 
             }
@@ -74,7 +75,7 @@ public class QYInfocardManagerFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData();
+                requestData("","","");
 
 
             }
@@ -86,14 +87,17 @@ public class QYInfocardManagerFragment extends BaseFragment {
 
 
     // ======================== 模板代码=============================
-    public void requestData() {
+    public void requestData(String sousuo,String star_time,String end_time) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_xxk);
         params.addBodyParameter("page", page + "");
 
-        params.addBodyParameter("xx", content.getText().toString());
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
 
-        params.addBodyParameter("sj1", startTime.getText().toString());
-        params.addBodyParameter("sj2", startTime.getText().toString());
+        params.addBodyParameter("xx", sousuo);
+
+        params.addBodyParameter("sj1", star_time);
+        params.addBodyParameter("sj2", end_time);
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -148,8 +152,10 @@ public class QYInfocardManagerFragment extends BaseFragment {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.select:
-
-                requestData();
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                page = 1;
+                requestData(content.getText().toString(),startTime.getText().toString(),endTime.getText().toString());
 
                 break;
 

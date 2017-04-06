@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.qiye;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -88,7 +89,8 @@ public class QYPersonManagerFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_person_manager);
         params.addBodyParameter("page", page + "");
-
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
         params.addBodyParameter("xx",selectContent.getText().toString());
 
         params.addBodyParameter("sj1",startTime.getText().toString());

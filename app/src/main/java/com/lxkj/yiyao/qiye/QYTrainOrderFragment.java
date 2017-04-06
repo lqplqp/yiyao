@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.qiye;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -101,7 +102,8 @@ public class QYTrainOrderFragment extends BaseFragment {
         }
 
         params.addBodyParameter("page", page + "");
-
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {

@@ -23,7 +23,7 @@ public class QYMessageSearchAdapter extends MBaseAdapter<QYMessageSearchAdapter.
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("xh"));
         //通知类型
         holder.tongzhileixing.setText("" + result.get("tzlx"));
         //通知单位
