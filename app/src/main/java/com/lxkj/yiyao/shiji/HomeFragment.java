@@ -64,6 +64,17 @@ public class HomeFragment extends BaseFragment {
                     JSONArray jsonArray = JSONArray.parseArray(jsonObject.getString("data"));
                     ShouYeTongZhiXiaoXiAdapter shouYeTongZhiXiaoXiAdapter = new ShouYeTongZhiXiaoXiAdapter(jsonArray);
                     listView.setAdapter(shouYeTongZhiXiaoXiAdapter);
+                    listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+                        @Override
+                        public void onDownPullRefresh() {
+                            listView.onRefreshComplete();
+                        }
+
+                        @Override
+                        public void onLoadingMore() {
+                            listView.loadMoreComplete();
+                        }
+                    });
                     String jgxxz = jsonObject.getString("jgxxz");
                     String jgywc = jsonObject.getString("jgywc");
                     String pxxmxxz = jsonObject.getString("pxxmxxz");
