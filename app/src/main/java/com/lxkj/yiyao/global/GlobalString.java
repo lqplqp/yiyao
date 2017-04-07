@@ -20,6 +20,16 @@ public interface GlobalString {
     public static final String yueUrl = "/admin/qita1/ye";
 
 
+    //0407的选购课程接口
+    //培训班信息
+    public static final String xuangou_peixunbanxinxi = BaseURL + "admin/fenji1/zxdc";
+    //基础课程名
+    public static final String xuangou_jichukecheng = BaseURL + "admin/fenji1/jckcmc";
+    //企业人员 列表
+    public static final String xuangou_qiyerenyuan = BaseURL + "admin/fenji1/personnellist";
+    //提交
+    public static final String xuangou_tijiao = BaseURL + "admin/fenji1/submit";
+
 
     public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";
