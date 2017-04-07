@@ -1,4 +1,4 @@
-package com.lxkj.yiyao.activity.adapter;
+package com.lxkj.yiyao.shengjugeren.Adapter;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,77 +6,66 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.LearningActivity;
-import com.lxkj.yiyao.activity.XuanGouKeChengRenYuanActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by liqinpeng on 2017/3/8 0008.
+ * Created by Administrator on 2017/4/5.
  */
 
-public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHolder> {
-
+public class SJGRShouYePeiXunBanAdapter extends MBaseAdapter<SJGRShouYePeiXunBanAdapter.ViewHolder> {
+    @BindView(R.id.img1)
+    ImageView img1;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.time)
+    TextView time;
     private Activity mActivity;
+    private int muserType;
 
-    public SelectTrainAdapter(String bean , Activity activity) {
-        super(bean);
+    public SJGRShouYePeiXunBanAdapter(int userType, String s, Activity activity) {
         mActivity = activity;
-
+        datas = JSONArray.parseArray(s);
+        muserType = userType;
     }
-
-    public boolean isQiye_admin() {
-        return qiye_admin;
-    }
-
-    public void setQiye_admin(boolean qiye_admin) {
-        this.qiye_admin = qiye_admin;
-    }
-
-    public boolean qiye_admin = false;
 
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
-
-
         Glide.with(mActivity).load(result.get("tpdz")).into(holder.img1);
 
-        holder.title.setText( "" + result.get("bt").toString());
+        holder.title.setText("" + result.get("tpjs").toString());
         holder.time.setText("" + result.get("pxsj").toString());
 
         holder.img1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                if(!qiye_admin){
-                    Intent intent = new Intent(mActivity,LearningActivity.class);
-                    intent.putExtra("pxid",result.get("id").toString());
-                    mActivity.startActivity(intent);
-                }else{
-                    Intent intent = new Intent(mActivity,XuanGouKeChengRenYuanActivity.class);
-                    intent.putExtra("pxid",result.get("id").toString());
-                    mActivity.startActivity(intent);
-                }
+                Intent intent = new Intent(mActivity, LearningActivity.class);
+                intent.putExtra("pxid", result.get("id").toString());
+                intent.putExtra("user_type", muserType);
+                mActivity.startActivity(intent);
             }
         });
 
     }
 
-
     @Override
     protected int getItemLayout() {
-        return R.layout.peixunlist_select_train_item;
+        return R.layout.shengjugeren_shouye_peixunban_item;
     }
 
     @Override
     protected ViewHolder getHolder(View view) {
+
         return new ViewHolder(view);
     }
+
 
     static class ViewHolder {
         @BindView(R.id.img1)

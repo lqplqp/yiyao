@@ -68,19 +68,18 @@
                 android:textSize="16sp" />
 
             <EditText
+                android:id="@+id/company"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="@dimen/edit_height"
                 android:layout_centerVertical="true"
+                android:textSize="@dimen/qyinfo_text_size"
                 android:gravity="center_vertical"
                 android:layout_marginRight="10dp"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="10dp"
                 android:paddingLeft="5dp"
-                android:paddingBottom="8dp"
                 android:background="@drawable/table_border_bg"
                 android:hint=""
-                android:lines="1"
-                android:paddingTop="10dp"
-                android:id="@+id/company" />
+                android:lines="1"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -119,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:text="行政类型："
+                android:text="行业类型："
                 android:textColor="@color/global_black"
                 android:textSize="16sp" />
             <RelativeLayout

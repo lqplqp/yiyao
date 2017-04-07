@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shengjugeren;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -105,7 +106,8 @@ public class SJGRZhiFaSerachFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_wdzf);
         params.addBodyParameter("page", page + "");
         if (zhifabianhao != null) {
-
+            SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+            params.addBodyParameter("username",sp.getString("username","") + "");
             params.addBodyParameter("xx", zhifabianhao);
             params.addBodyParameter("xz", zhifaleixing);
             params.addBodyParameter("sj1", star_time);

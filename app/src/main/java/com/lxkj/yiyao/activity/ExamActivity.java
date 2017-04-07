@@ -24,6 +24,7 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -68,6 +69,8 @@ public class ExamActivity extends BaseActivity {
     private ExamDataBean currData;
     private Gson gson;
     private String kmid = "";
+    private String xkzbh = "";
+    private String ctr = "";
 
     @Override
     public int getLayout() {
@@ -78,6 +81,8 @@ public class ExamActivity extends BaseActivity {
     protected void init() {
         gson = new Gson();
         kmid = getIntent().getStringExtra("kmid");
+        xkzbh = getIntent().getStringExtra("xkzbh");
+        ctr = getIntent().getStringExtra("ctr");
         requestData();
         initView();
     }
@@ -85,6 +90,7 @@ public class ExamActivity extends BaseActivity {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examUrl);
         params.addBodyParameter("kmid", kmid);
+        params.addBodyParameter("xkzbh",xkzbh);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -93,11 +99,12 @@ public class ExamActivity extends BaseActivity {
 
                 ExamBean examBean = gson.fromJson(result, ExamBean.class);
                 String retCode = examBean.getCode();
-                if ("11111" .equals(retCode) ) {
+                if ("111111" .equals(retCode) ) {
 
                     examData = examBean.getData();
                     if (examData.size() > 0) {
                         current = 0;
+                        kmid = examData.get(0).kmid;
                         exam();
                     } else {
 
@@ -277,19 +284,19 @@ public class ExamActivity extends BaseActivity {
             String da = examData.get(current).getDa();
             if (da.equals("0")) {
                 rbA.setChecked(true);
-                ToastUtil.show("A");
+                //ToastUtil.show("A");
             } else if (da.equals("1")) {
                 rbB.setChecked(true);
-                ToastUtil.show("B");
+                //ToastUtil.show("B");
             } else if (da.equals("2")) {
                 rbC.setChecked(true);
-                ToastUtil.show("C");
+                //ToastUtil.show("C");
             } else if (da.equals("3")) {
                 rbD.setChecked(true);
-                ToastUtil.show("D");
+                //ToastUtil.show("D");
             } else {
                 noChecked();
-                ToastUtil.show("0");
+                //ToastUtil.show("0");
             }
         }
     }
@@ -299,10 +306,13 @@ public class ExamActivity extends BaseActivity {
         String examOkJson = gson.toJson(examData);
         params.addBodyParameter("data", examOkJson);
         Log.i("data",examOkJson);
-        params.addBodyParameter("xkzbh","");
+        //params.addBodyParameter("xkzbh",xkzbh);
         SharedPreferences sp = getSharedPreferences("shiyao", 0);
-        String id = sp.getString("id", "");
-        params.addBodyParameter("username",id);
+        String username = sp.getString("username", "");
+        //int id = sp.getInt("id", -1);
+        params.addBodyParameter("kmid",kmid);
+        params.addBodyParameter("username",username);
+        params.addBodyParameter("ctr",ctr);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -311,7 +321,10 @@ public class ExamActivity extends BaseActivity {
                 String code = jsonObject.get("code").toString();
                 String data = jsonObject.get("data").toString();
                 JSONObject jsonObject1 = JSONObject.parseObject(data);
-                int fs = (int) jsonObject1.get("fs");
+                String x = jsonObject1.get("fs") + "";
+                float fs1 = Float.parseFloat(x);
+                int fs = (int) fs1;
+
                 if (code.equals("11111")) {
                     Log.d("", fs + "");
                     Intent intent = new Intent(ExamActivity.this, ExamResultActivity.class);
@@ -323,7 +336,7 @@ public class ExamActivity extends BaseActivity {
 
             @Override
             public void onError(Throwable ex, boolean isOnCallback) {
-
+                ex.printStackTrace();
             }
 
             @Override
@@ -370,10 +383,4 @@ public class ExamActivity extends BaseActivity {
         rbD.setText("D." + currData.getD());
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 }

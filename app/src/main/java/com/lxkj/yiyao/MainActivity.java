@@ -13,12 +13,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
+import android.text.TextUtils;
 import android.text.style.ForegroundColorSpan;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.activity.GeRenScannerQrCodeActivity;
 import com.lxkj.yiyao.activity.LoginActivity;
@@ -96,6 +98,10 @@ import com.lxkj.yiyao.xianji.XianJiXinXiKaFargment;
 import com.lxkj.yiyao.xianji.XianJiYongHuXinXiFragment;
 import com.lxkj.yiyao.xianji.XianJiYongHuZhengShuFragment;
 import com.lxkj.yiyao.xianji.XianJiYonghuTiJianBaoGaoFragment;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -368,7 +374,9 @@ public class MainActivity extends AppCompatActivity {
             /**
              * 省局个人  添加执法
              */
-            case 2:
+            case 2 :
+            case 6 :
+            case 7 :
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan0);
                 //省局个人首页
@@ -743,7 +751,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.navi_menu_4:
                                 setTitle("体检信息");
-                                pagerTitles = getResources().getStringArray(R.array.gerenyonghu4);
+                                   pagerTitles = getResources().getStringArray(R.array.gerenyonghu4);
                                 //我的体检报告
                                 GeRenYongHuTiJianBaoGaoFragment geRenYongHuTiJianBaoGaoFragment2 = new GeRenYongHuTiJianBaoGaoFragment();
                                 fragments.add(geRenYongHuTiJianBaoGaoFragment2);
@@ -931,12 +939,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navi_menu_4:
                         setTitle("下载中心");
                         pagerTitles = getResources().getStringArray(R.array.qiye3);
+                        //法律法规文档下载
                         SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
-                        SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
                         SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
                         SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
                         fragments.add(sjgrDownloadDocFragment);
-                        fragments.add(sjgrDownloadDocFragment1);
                         fragments.add(sjgrDownloadDocFragment2);
                         fragments.add(sjgrDownloadDocFragment3);
                         break;
@@ -990,16 +997,50 @@ public class MainActivity extends AppCompatActivity {
 
 
         View mRootView = naviView.getHeaderView(0);
-        CircleImageView circleImageView = (CircleImageView) mRootView.findViewById(R.id.user_head);
-        TextView username_tv = (TextView) mRootView.findViewById(R.id.username_tv);
-        TextView name_tv = (TextView) mRootView.findViewById(R.id.name_tv);
-        TextView unit_name_tv = (TextView) mRootView.findViewById(R.id.unit_name_tv);
+        final CircleImageView circleImageView = (CircleImageView) mRootView.findViewById(R.id.user_head);
+        final TextView username_tv = (TextView) mRootView.findViewById(R.id.username_tv);
+        final TextView name_tv = (TextView) mRootView.findViewById(R.id.name_tv);
+        final TextView unit_name_tv = (TextView) mRootView.findViewById(R.id.unit_name_tv);
 
-        username_tv.setText(user_name);
-        name_tv.setText(user_name);
-        unit_name_tv.setText(user_dep);
 
-        Glide.with(this).load(user_img).into(circleImageView);
+        RequestParams params = new RequestParams("http://af.0101hr.com/admin/denglu/main");
+        params.addBodyParameter("username",user_name);
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+
+                JSONObject jsonObj = JSONObject.parseObject(result);
+                JSONObject cade = jsonObj.getJSONObject("cade");
+
+                if(!TextUtils.isEmpty(cade.get("username").toString())){
+                    username_tv.setText(cade.get("username").toString());
+                }
+                if(!TextUtils.isEmpty(cade.get("xm").toString())){
+                    name_tv.setText(cade.get("xm").toString());
+                }
+                if(!TextUtils.isEmpty(cade.get("dwmc").toString())){
+                    unit_name_tv.setText(cade.get("dwmc").toString());
+                }
+                Glide.with(MainActivity.this).load(cade.get("txdz").toString()).into(circleImageView);
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+
+
         userName.setText(user_name);
         Glide.with(this).load(user_img).into(toolbarHead);
 

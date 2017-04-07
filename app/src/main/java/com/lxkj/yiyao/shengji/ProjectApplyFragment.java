@@ -34,8 +34,6 @@ public class ProjectApplyFragment extends BaseFragment {
     RadioButton rb32;
     @BindView(R.id.img1)
     ImageView img1;
-    @BindView(R.id.img2)
-    ImageView img2;
     @BindView(R.id.img3)
     ImageView img3;
     @BindView(R.id.img4)
