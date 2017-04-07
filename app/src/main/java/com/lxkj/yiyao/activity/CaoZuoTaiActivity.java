@@ -69,7 +69,7 @@ public class CaoZuoTaiActivity extends BaseActivity {
     private void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/qita1/qyxx");
         SharedPreferences sp = getSharedPreferences("shiyao", 0);
-        String id = sp.getString("id", "");
+        String id = sp.getString("username", "");
 
         params.addBodyParameter("username", id);
         params.addBodyParameter("qyxxbh", xukezhengbianhao);
