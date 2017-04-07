@@ -12,12 +12,12 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2017/3/31.
+ * Created by Administrator on 2017/4/5.
  */
 
-public class SJGRShouYeTongZhiAdapter extends MBaseAdapter <SJGRShouYeTongZhiAdapter.ViewHolder>{
+public class SJGRGongShigongGaoAdapter extends MBaseAdapter<SJGRGongShigongGaoAdapter.ViewHolder> {
 
-    public SJGRShouYeTongZhiAdapter(String bean) {
+    public SJGRGongShigongGaoAdapter(String bean) {
         datas = JSONArray.parseArray(bean);
     }
 
@@ -33,7 +33,7 @@ public class SJGRShouYeTongZhiAdapter extends MBaseAdapter <SJGRShouYeTongZhiAda
 
     @Override
     protected int getItemLayout() {
-        return R.layout.shengjigeren_shouye_tongzhixaoxi;
+        return R.layout.shengjugeren_gongshigonggao_item;
     }
 
     @Override

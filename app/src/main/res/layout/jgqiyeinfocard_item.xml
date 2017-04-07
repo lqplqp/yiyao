@@ -115,6 +115,7 @@
         <TableRow>
 
             <TextView
+                android:id="@+id/xingbie"
                 android:background="@drawable/table_frame_fray"
                 android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"

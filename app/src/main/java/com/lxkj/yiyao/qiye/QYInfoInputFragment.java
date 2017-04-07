@@ -1,20 +1,21 @@
 package com.lxkj.yiyao.qiye;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -24,6 +25,7 @@ import org.xutils.x;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -56,10 +58,13 @@ public class QYInfoInputFragment extends BaseFragment {
     RadioButton rgFourth;
     @BindView(R.id.radiogroup)
     RadioGroup radiogroup;
-    @BindView(R.id.adress_tv)
-    EditText adressTv;
     @BindView(R.id.commit)
     Button commit;
+    @BindView(R.id.danweidizhi)
+    TextView danweidizhi;
+    @BindView(R.id.danwei)
+    EditText danwei;
+    Unbinder unbinder;
 
     @Override
     protected void initView() {
@@ -72,47 +77,57 @@ public class QYInfoInputFragment extends BaseFragment {
     }
 
 
-
-
-    @OnClick(R.id.commit)
-    public void onClick() {
-        requestDate();
-
+    @OnClick({R.id.danweidizhi, R.id.commit})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.danweidizhi:
+                new PickViewUtils(getActivity(), danweidizhi).pickProvince();
+                break;
+            case R.id.commit:
+                ToastUtil.show("OK");
+                requestDate();
+                break;
+        }
     }
 
 
-
-    void  requestDate(){
+    void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_info);
-
-        params.addBodyParameter("yhm",usernameTv.getText().toString());
-        params.addBodyParameter("dwmc",unitnameTv.getText().toString());
-        params.addBodyParameter("cyrs",doPersonTv.getText().toString());
-        params.addBodyParameter("glrys",managePersonTv.getText().toString());
-        params.addBodyParameter("gly",contactNameTv.getText().toString());
-        params.addBodyParameter("yx",emailTv.getText().toString());
-        params.addBodyParameter("dh",phoneTv.getText().toString());
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", usernameTv.getText().toString());
+        params.addBodyParameter("dwmc", unitnameTv.getText().toString());
+        params.addBodyParameter("cyrs", doPersonTv.getText().toString());
+        params.addBodyParameter("glrys", managePersonTv.getText().toString());
+        params.addBodyParameter("gly", contactNameTv.getText().toString());
+        params.addBodyParameter("yx", emailTv.getText().toString());
+        params.addBodyParameter("dh", phoneTv.getText().toString());
 
         int id = 0;
-        switch (radiogroup.getCheckedRadioButtonId()){
-            case R.id.rg_first :
-                id=1;
+        switch (radiogroup.getCheckedRadioButtonId()) {
+            case R.id.rg_first:
+                id = 1;
                 break;
             case R.id.rg_second:
-                id=2;
+                id = 2;
                 break;
             case R.id.rg_third:
-                id=3;
+                id = 3;
                 break;
             case R.id.rg_fourth:
-                id=4;
+                id = 4;
                 break;
         }
 
 
-        params.addBodyParameter("hyly","" + id);
-        params.addBodyParameter("dwdz",adressTv.getText().toString());
+        params.addBodyParameter("hyly", "" + id);
 
+        String [] sanji = danweidizhi.getText().toString().split("-");
+
+        params.addBodyParameter("szdq", sanji[0]);
+        params.addBodyParameter("szdq1", sanji[1]);
+        params.addBodyParameter("szdq2", sanji[2]);
+        params.addBodyParameter("dz", danwei.getText().toString());
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -138,5 +153,4 @@ public class QYInfoInputFragment extends BaseFragment {
             }
         });
     }
-
 }

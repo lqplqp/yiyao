@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/global_bg_gray"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:orientation="vertical"
@@ -15,7 +16,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="0dp"
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -64,6 +64,7 @@
                         android:layout_alignTop="@id/img_diannao"
                         />
                     <TextView
+                        android:id="@+id/match_xuexizhong1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="学习中"
@@ -101,12 +102,12 @@
                         android:id="@+id/add_people"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
-                        android:layout_toRightOf="@id/img_diannao"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="80dp"
                         android:background="@drawable/fillet_blue_bg"
                         android:clickable="true"
                         android:padding="8dp"
+                        android:layout_below="@id/match_xuexizhong1"
+                        android:layout_toRightOf="@id/match_xuexizhong1"
+                        android:layout_marginTop="20dp"
                         />
                 </RelativeLayout>
             </LinearLayout>
@@ -166,6 +167,7 @@
                         android:layout_alignTop="@id/img_heiban"
                         />
                     <TextView
+                        android:id="@+id/xuexizhong2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="学习中"
@@ -202,10 +204,10 @@
                         android:text="@string/sj_admin_selectproject"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginLeft="80dp"
-                        android:layout_toRightOf="@id/img_heiban"
                         android:background="@drawable/fillet_blue_bg"
+                        android:layout_below="@id/xuexizhong2"
+                        android:layout_toRightOf="@id/xuexizhong2"
+                        android:layout_marginTop="20dp"
                         android:clickable="true"
                         android:padding="8dp"
                         android:id="@+id/select_project" />
@@ -247,7 +249,8 @@
             <com.lxkj.yiyao.view.RefreshListView
                 android:id="@+id/list_view"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                >
             </com.lxkj.yiyao.view.RefreshListView>
         </LinearLayout>
 
@@ -255,4 +258,4 @@
 
 
 
-</android.support.v4.widget.NestedScrollView>
+</LinearLayout>

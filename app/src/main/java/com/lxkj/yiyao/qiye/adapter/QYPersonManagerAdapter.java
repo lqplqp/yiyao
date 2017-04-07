@@ -24,17 +24,17 @@ public class QYPersonManagerAdapter extends MBaseAdapter<QYPersonManagerAdapter.
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
        //手机号
-        holder.shoujihao.setText(""+result.get("shoujihao"));
+        holder.shoujihao.setText(""+result.get("sjhm"));
         //性别
         holder.xingbie.setText(""+result.get("xingb"));
         //姓名
-        holder.xingming.setText(""+result.get("xingming"));
+        holder.xingming.setText(""+result.get("sex"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("xh"));
         //用户名
-        holder.yonghuming.setText(""+result.get("yonghuming"));
+        holder.yonghuming.setText(""+result.get("yhm"));
         //邮箱
-        holder.youxiang.setText(""+result.get("youxiang"));
+        holder.youxiang.setText(""+result.get("yx"));
     }
 
     @Override

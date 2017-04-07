@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.shengjugeren;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -54,13 +56,19 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
     @BindView(R.id.xueli)
     TextView xueli;
     @BindView(R.id.danweidizhi)
-    EditText danweidizhi;
+    TextView danweidizhi;
     @BindView(R.id.commit)
     Button commit;
+    Unbinder unbinder2;
     Unbinder unbinder;
+    @BindView(R.id.gongzhong)
+    EditText gongzhong;
+    @BindView(R.id.danwei)
+    EditText danwei;
 
     @Override
     protected void initView() {
+        requestData();
 
     }
 
@@ -68,25 +76,34 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
     public int getLayout() {
         return R.layout.sjgr_fragment_layout_person_manage_add;
     }
-    public void requestData(){
+
+    public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_jgryxx);
-
-        params.addBodyParameter("zh",yonghuming.getText().toString());
-        params.addBodyParameter("xm",xingming.getText().toString());
-        if(nan.isClickable()){
-            params.addBodyParameter("xb","男");
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("zh", yonghuming.getText().toString());
+        params.addBodyParameter("xm", xingming.getText().toString());
+        if (nan.isClickable()) {
+            params.addBodyParameter("xb", "男");
         }
-        if(nu.isClickable()){
-            params.addBodyParameter("xb","女");
+        if (nu.isClickable()) {
+            params.addBodyParameter("xb", "女");
         }
-        params.addBodyParameter("sfzh",shenfenzhenghao.getText().toString());
-        params.addBodyParameter("dwmc",danweimingcheng.getText().toString());
-        params.addBodyParameter("yx",youxiang.getText().toString());
-        params.addBodyParameter("sjhm",shoujihaoma.getText().toString());
-        params.addBodyParameter("zw",zhiwei.getText().toString());
-        params.addBodyParameter("zcsj",chushengriqi.getText().toString());
-        params.addBodyParameter("xl",xueli.getText().toString());
+        params.addBodyParameter("sfzh", shenfenzhenghao.getText().toString());
+        params.addBodyParameter("jgdwmc", danweimingcheng.getText().toString());
+        params.addBodyParameter("yx", youxiang.getText().toString());
+        params.addBodyParameter("sjhm", shoujihaoma.getText().toString());
+        params.addBodyParameter("zw", zhiwei.getText().toString());
+        params.addBodyParameter("csrq", chushengriqi.getText().toString());
+        params.addBodyParameter("gw", gongzhong.getText().toString());
+        params.addBodyParameter("xl", xueli.getText().toString());
 
+        String [] sanji = danweidizhi.getText().toString().split("-");
+
+        params.addBodyParameter("szdq", sanji[0]);
+        params.addBodyParameter("szdq1", sanji[1]);
+        params.addBodyParameter("szdq2", sanji[2]);
+        params.addBodyParameter("dz", danwei.getText().toString());
 
         x.http().get(params, new Callback.CacheCallback<String>() {
 
@@ -123,9 +140,17 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
         });
     }
 
-    @OnClick(R.id.commit)
-    public void onClick() {
-        ToastUtil.show("提交");
-        requestData();
+    @OnClick({R.id.danweidizhi, R.id.commit})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.danweidizhi:
+                new PickViewUtils(getActivity(), danweidizhi).pickProvince();
+                break;
+            case R.id.commit:
+                ToastUtil.show("OK");
+                requestData();
+                break;
+        }
     }
+
 }

@@ -23,25 +23,27 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //发卡单位
-        holder.fakadanwei.setText(""+result.get("fakadanwei"));
+        holder.fakadanwei.setText(""+result.get("jgdw"));
         //发卡日期
-        holder.fakariqi.setText(""+result.get("fakariqi"));
+        holder.fakariqi.setText(""+result.get("yxq"));
         //发卡状态
-        holder.fakazhuangtai.setText(""+result.get("fakazhuangtai"));
+        holder.fakazhuangtai.setText(""+result.get("zt"));
         //岗位
-        holder.gangwei.setText(""+result.get("gangwei"));
+        holder.gangwei.setText(""+result.get("gw"));
         //过期日期
-        holder.guoqiriqi.setText(""+result.get("guoqiriqi"));
+        holder.guoqiriqi.setText(""+result.get("yxq1"));
         //身份证号
-        holder.shenfenzhenghao.setText(""+result.get("shenfenzhenghao"));
+        holder.shenfenzhenghao.setText(""+result.get("sfzh"));
         //手机号
         holder.shoujihao.setText(""+result.get("shoujihao"));
         //姓名
-        holder.xingming.setText(""+result.get("xingming"));
+        holder.xingming.setText(""+result.get("xm"));
         //信息卡编号
-        holder.xinxikabianhao.setText(""+result.get("xinxikabianhao"));
+        holder.xinxikabianhao.setText(""+result.get("xxkbh"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("xh"));
+        //性别
+        holder.xingbie.setText(""+result.get("xb"));
     }
 
 
@@ -59,6 +61,8 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
+        @BindView(R.id.xingbie)
+        TextView xingbie;
         @BindView(R.id.xingming)
         TextView xingming;
         @BindView(R.id.xinxikabianhao)
