@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -56,7 +57,7 @@ public class HomeFragment extends BaseFragment {
     @BindView(R.id.yiwancheng1)
     TextView yiwancheng1;
     @BindView(R.id.list_view)
-    RefreshListView listView;
+    ExpandableListView listView;
 
 
     @Override

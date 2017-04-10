@@ -270,7 +270,7 @@
                     android:layout_height="1dp"
                     android:background="@color/line" />
 
-                <com.lxkj.yiyao.utils.ExpandListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:id="@+id/jichukecheng_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -339,7 +339,7 @@
                     android:layout_height="1dp"
                     android:background="@color/line" />
 
-                <com.lxkj.yiyao.utils.ExpandListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:id="@+id/qiyerenyuanleibiao_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

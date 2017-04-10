@@ -28,6 +28,8 @@ public class DoubleDatePickerDialog extends AlertDialog implements OnClickListen
     private final DatePicker mDatePicker_start;
     private final OnDateSetListener mCallBack;
 
+
+
     /**
      * The callback used to indicate the user is done filling in the date.
      */

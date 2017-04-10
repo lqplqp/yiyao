@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.lxkj.yiyao.utils.ExpandListView;
+import com.lxkj.yiyao.view.ExpandListView;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengJiChuKeChengAdapter;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengQiYeRenYuanAdapter;

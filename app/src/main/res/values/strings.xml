@@ -402,7 +402,7 @@
 
 
 <!--企业管理员增加企业人员  岗位-->
-    <string-array name="qiye_gangwei">
+    <string-array name="qiye_zhiwu">
         <item >生产岗位</item>
         <item >设计岗位</item>
         <item >售后岗位</item>

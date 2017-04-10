@@ -408,6 +408,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/global_gray"
+                android:entries="@array/qiye_zhiwu"
                 android:textSize="@dimen/title_big_textsize"
                 android:id="@+id/zhiwu" />
         </LinearLayout>
@@ -432,14 +433,14 @@
                 android:text="岗位："
                 android:textSize="@dimen/title_big_textsize"
                 />
-            <Spinner
+            <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:hint="岗位"
                 android:textColorHint="@color/global_gray"
                 android:textSize="@dimen/title_big_textsize"
-                android:id="@+id/gangwei"
-                android:entries="@array/qiye_gangwei"
-                />
+                android:background="@color/white"
+                android:id="@+id/gangwei" />
         </LinearLayout>
 
 
@@ -501,6 +502,16 @@
                 android:background="@color/white"
                 android:id="@+id/xiangxidizhi" />
         </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:hint="详细地址"
+            android:textColorHint="@color/global_gray"
+            android:textSize="@dimen/title_big_textsize"
+            android:background="@color/white"
+            android:id="@+id/dizhi_et" />
 
 
         <View
