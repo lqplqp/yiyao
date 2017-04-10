@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -16,7 +15,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.bean.ShengJiHomeBean;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
 import com.lxkj.yiyao.shengji.adapter.ShengJiHomeAdapter;
-import com.lxkj.yiyao.view.RefreshListView;
+import com.lxkj.yiyao.view.ExpandListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -25,13 +24,13 @@ import org.xutils.x;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/18 0018.
  */
 
 public class HomeFragment extends BaseFragment {
-
 
 
     @BindView(R.id.select_project)
@@ -56,8 +55,11 @@ public class HomeFragment extends BaseFragment {
     TextView xuexizhong1;
     @BindView(R.id.yiwancheng1)
     TextView yiwancheng1;
+    @BindView(R.id.textView14)
+    TextView textView14;
     @BindView(R.id.list_view)
-    ExpandableListView listView;
+    ExpandListView listView;
+    Unbinder unbinder;
 
 
     @Override
@@ -98,8 +100,8 @@ public class HomeFragment extends BaseFragment {
 
     private void flushView() {
         xuexizhongshu1.setText(homeBean.getJgxxz() + "");
-        yiwanchengshu1.setText(homeBean.getJgywc() + "" );
-        xuexizhongshu2.setText(homeBean.getPxxmxxz()+ "" );
+        yiwanchengshu1.setText(homeBean.getJgywc() + "");
+        xuexizhongshu2.setText(homeBean.getPxxmxxz() + "");
         yiwanchengshu2.setText(homeBean.getPxxmywc() + "");
 
         ShengJiHomeAdapter adapter = new ShengJiHomeAdapter(homeBean.getData());
@@ -139,6 +141,17 @@ public class HomeFragment extends BaseFragment {
     }
 
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        unbinder = ButterKnife.bind(this, rootView);
+        return rootView;
+    }
 
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
 }

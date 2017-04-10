@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -15,6 +14,7 @@ import com.lxkj.yiyao.activity.SelectTrainActivity;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.bean.QiYeHomeBean;
 import com.lxkj.yiyao.qiye.adapter.QiYeHomeAdapter;
+import com.lxkj.yiyao.view.ExpandListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -52,9 +52,9 @@ public class QYHomeFragment extends BaseFragment {
     TextView xuexizhong1;
     @BindView(R.id.yiwancheng1)
     TextView yiwancheng1;
-    @BindView(R.id.list_view)
-    ExpandableListView listView;
     Unbinder unbinder;
+    @BindView(R.id.list_view)
+    ExpandListView listView;
 
 
     @Override
@@ -106,7 +106,7 @@ public class QYHomeFragment extends BaseFragment {
 
     @Override
     public int getLayout() {
-        return R.layout.sj_fragment_layout_home;
+        return R.layout.qiye_fragment_layout_home;
     }
 
 
@@ -129,6 +129,7 @@ public class QYHomeFragment extends BaseFragment {
                 break;
             case R.id.select_project:
                 intent = new Intent(getActivity(), SelectTrainActivity.class);
+                intent.putExtra("qiye_admin", true);
                 startActivity(intent);
                 break;
         }

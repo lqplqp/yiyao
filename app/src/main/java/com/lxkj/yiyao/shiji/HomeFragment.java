@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
@@ -16,7 +16,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
 import com.lxkj.yiyao.shiji.adapter.ShouYeTongZhiXiaoXiAdapter;
-import com.lxkj.yiyao.view.RefreshListView;
+import com.lxkj.yiyao.view.ExpandListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -46,9 +46,17 @@ public class HomeFragment extends BaseFragment {
     TextView xuanzeXuexizhong;
     @BindView(R.id.xuanze_yiwancheng)
     TextView xuanzeYiwancheng;
-    @BindView(R.id.list_view)
-    ExpandableListView listView;
     Unbinder unbinder;
+    @BindView(R.id.img_diannao)
+    ImageView imgDiannao;
+    @BindView(R.id.match_xuexizhong1)
+    TextView matchXuexizhong1;
+    @BindView(R.id.img_heiban)
+    ImageView imgHeiban;
+    @BindView(R.id.xuexizhong2)
+    TextView xuexizhong2;
+    @BindView(R.id.list_view)
+    ExpandListView listView;
 
     @Override
     protected void initView() {
