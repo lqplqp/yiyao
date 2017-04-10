@@ -105,6 +105,12 @@
         <item >监管单位管理</item>
         <item >执法记录管理</item>
     </string-array>
+    <!--增加监管单位-->
+    <string-array name="zengjiajianguan2">
+        <item >添加管理员</item>
+        <item >添加企业管理员</item>
+    </string-array>
+
     <!--增加监管单位1-->
     <string-array name="zengjiajianguan1">
         <item >安全设置</item>

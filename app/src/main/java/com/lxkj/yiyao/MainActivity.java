@@ -40,6 +40,8 @@ import com.lxkj.yiyao.gerenyonghu.GeRenYongYingYongChaJianXiaZaiFragment;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.JGUpdatePswFragment;
+import com.lxkj.yiyao.jianguan.JianGuanAddGuanLiYuan;
+import com.lxkj.yiyao.jianguan.JianGuanAddQiYeGuanLiYuan;
 import com.lxkj.yiyao.jianguan.LawManagerFragment;
 import com.lxkj.yiyao.jianguan.QiyeInfoCardFragment;
 import com.lxkj.yiyao.jianguan.SelectTrainFragment;
@@ -239,6 +241,16 @@ public class MainActivity extends AppCompatActivity {
                                 pagerTitles = getResources().getStringArray(R.array.zengjiajianguan0);
                                 JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
                                 fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_3:
+                                setTitle("登录用户添加");
+                                pagerTitles = getResources().getStringArray(R.array.zengjiajianguan2);
+                                /*添加管理员*/
+                                JianGuanAddGuanLiYuan jianGuanAddGuanLiYuan = new JianGuanAddGuanLiYuan();
+                                /*添加企业管理员*/
+                                JianGuanAddQiYeGuanLiYuan jianGuanAddQiYeGuanLiYuan = new JianGuanAddQiYeGuanLiYuan();
+                                fragments.add(jianGuanAddGuanLiYuan);
+                                fragments.add(jianGuanAddQiYeGuanLiYuan);
                                 break;
                             case R.id.navi_menu_logout:
                                 logOut();

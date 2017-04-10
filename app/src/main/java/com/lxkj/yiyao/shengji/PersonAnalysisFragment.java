@@ -90,15 +90,13 @@ public class PersonAnalysisFragment extends BaseFragment {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_gryhtjfx);
         params.addBodyParameter("page", page + "");
-
+        String[] sanji =  diqu.getText().toString().split("-");
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
         params.addBodyParameter("username", sp.getString("username", "") + "");
-
-        String[] sanji = diqu.getText().toString().split("-");
-
-        params.addBodyParameter("sq", sanji[1]);
-        params.addBodyParameter("xq", sanji[2]);
-
+        if(sanji.length>1) {
+            params.addBodyParameter("sq", sanji[1]);
+            params.addBodyParameter("xq", sanji[2]);
+        }
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
