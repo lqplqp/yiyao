@@ -15,11 +15,11 @@
             android:icon="@mipmap/ic_anquanshezhi"
             android:title="安全设置"
             />
-        <item
+       <!-- <item
             android:id="@+id/navi_menu_3"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"
             android:title="登录用户添加"
-            />
+            />-->
         <item
             android:id="@+id/navi_menu_logout"
             android:icon="@mipmap/ic_jianguanrenyuanzhongxin"

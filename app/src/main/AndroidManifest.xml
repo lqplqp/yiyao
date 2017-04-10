@@ -45,7 +45,7 @@
         <activity android:name=".activity.ScannerQrCodeActivity"/>
 
         <activity android:name=".activity.MuBanActivity"/>
-
+        <activity android:name=".jianguan.JianGuanAddGuanLiYuanActivity"/>
         <activity android:name=".activity.LearningActivity"/>
         <activity android:name=".activity.PlayerActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"/>

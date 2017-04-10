@@ -106,7 +106,7 @@ public class HomeFragment extends BaseFragment {
         Intent intent;
         switch (view.getId()) {
             case R.id.add_people:
-                intent = new Intent(getActivity(), AddAdminActivity.class);
+                intent = new Intent(getActivity(), JianGuanAddGuanLiYuanActivity.class);
                 startActivity(intent);
                 break;
             case R.id.select_project:

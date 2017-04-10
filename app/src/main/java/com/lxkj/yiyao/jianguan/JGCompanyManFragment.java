@@ -153,7 +153,7 @@ public class JGCompanyManFragment extends BaseFragment {
             case R.id.add:
                 toast("添加");
                 // TODO: 2017/1/18
-                Intent intent = new Intent(getActivity(),AddAdminActivity.class);
+                Intent intent = new Intent(getActivity(),JianGuanAddGuanLiYuanActivity.class);
                 startActivity(intent);
                 break;
         }
