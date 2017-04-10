@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.gerenyonghu;
 
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.database.Cursor;
@@ -85,15 +86,19 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
     @BindView(R.id.commit_but)
     Button commitBut;
     private String userName;
+    private String upDateTpdz = "";
+    private ProgressDialog progressDialog;
 
     @Override
     protected void initView() {
         userName = SPUtil.getUserName(getActivity());
+        progressDialog = new ProgressDialog(getActivity());
+        progressDialog.setMessage("正在加载...");
+        progressDialog.setCanceledOnTouchOutside(false);
         requestData();
         commitBut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtil.show("123");
                 updateData();
             }
         });
@@ -108,6 +113,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
         } else if (radioNv.isChecked()) {
             requestParams.addBodyParameter("xb", "女");
         }
+        requestParams.addBodyParameter("tpdz", upDateTpdz);
         requestParams.addBodyParameter("sfzh", "" + managePersonTv.getText());
         requestParams.addBodyParameter("jgdwmc", "" + contactNameTv.getText());
         requestParams.addBodyParameter("yx", "" + emailTv.getText());
@@ -135,7 +141,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
                 if (result != null) {
                     JSONObject jsonObject = JSONObject.parseObject(result);
                     String code = jsonObject.getString("code");
-                    if (code.equals("1111111")) {
+                    if (code.equals("111111")) {
                         ToastUtil.show("保存成功");
                     } else {
                         ToastUtil.show("保存失败");
@@ -312,6 +318,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
                     }
                 });*/
                 headImage.setImageBitmap(bm);
+                progressDialog.show();
                 new Thread(new Runnable() {
                     @Override
                     public void run() {
@@ -319,8 +326,13 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
                             @Override
                             public void success(final String result) {
                                 JSONObject jsonObject = JSONObject.parseObject(result);
-                                String filePath = jsonObject.get("data").toString();
-
+                                upDateTpdz = jsonObject.get("data").toString();
+                                getActivity().runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        progressDialog.dismiss();
+                                    }
+                                });
 
                             }
 
