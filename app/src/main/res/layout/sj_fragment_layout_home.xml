@@ -34,7 +34,7 @@
                     android:paddingTop="8dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/sj_admin_actor"
+                    android:text="增加企业人员"
                     android:textSize="@dimen/jg_top"
                     android:textColor="@color/global_black"
                     android:gravity="center_horizontal"
@@ -106,7 +106,7 @@
 
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sj_admin_addadmin"
+                        android:text="增加企业人员"
                         android:id="@+id/add_people"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
@@ -253,14 +253,13 @@
 
 
     </LinearLayout>
-    <com.lxkj.yiyao.view.RefreshListView
-        android:layout_marginBottom="20dp"
+    <ExpandableListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"
-        android:layout_height="400dp">
-
-
-    </com.lxkj.yiyao.view.RefreshListView>
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/fillet_white_bg"
+        />
 
 
 

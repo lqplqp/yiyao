@@ -32,6 +32,7 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".qiye.ZengJiaRenYuanActivity"/>
         <activity android:name=".activity.XuanGouKeChengRenYuanActivity"/>
         <activity android:name=".activity.YongHuYuEFuKuanActivity"/>
         <activity android:name=".activity.CaoZuoTaiActivity"/>

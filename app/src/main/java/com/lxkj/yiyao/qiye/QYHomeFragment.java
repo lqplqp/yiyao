@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -13,12 +14,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.SelectTrainActivity;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.bean.QiYeHomeBean;
-import com.lxkj.yiyao.bean.ShengJiHomeBean;
-import com.lxkj.yiyao.jianguan.*;
-import com.lxkj.yiyao.jianguan.AddAdminActivity;
 import com.lxkj.yiyao.qiye.adapter.QiYeHomeAdapter;
-import com.lxkj.yiyao.shengji.adapter.ShengJiHomeAdapter;
-import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -27,6 +23,7 @@ import org.xutils.x;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -56,7 +53,8 @@ public class QYHomeFragment extends BaseFragment {
     @BindView(R.id.yiwancheng1)
     TextView yiwancheng1;
     @BindView(R.id.list_view)
-    RefreshListView listView;
+    ExpandableListView listView;
+    Unbinder unbinder;
 
 
     @Override
@@ -97,8 +95,8 @@ public class QYHomeFragment extends BaseFragment {
 
     private void flushView() {
         xuexizhongshu1.setText(homeBean.getJgxxz() + "");
-        yiwanchengshu1.setText(homeBean.getJgywc() + "" );
-        xuexizhongshu2.setText(homeBean.getPxxmxxz()+ "" );
+        yiwanchengshu1.setText(homeBean.getJgywc() + "");
+        xuexizhongshu2.setText(homeBean.getPxxmxxz() + "");
         yiwanchengshu2.setText(homeBean.getPxxmywc() + "");
 
         QiYeHomeAdapter adapter = new QiYeHomeAdapter(homeBean.getData());
@@ -125,7 +123,7 @@ public class QYHomeFragment extends BaseFragment {
         Intent intent;
         switch (view.getId()) {
             case R.id.add_people:
-                intent = new Intent(getActivity(), AddAdminActivity.class);
+                intent = new Intent(getActivity(), ZengJiaRenYuanActivity.class);
                 startActivity(intent);
                 Log.d("123", "213");
                 break;
@@ -137,6 +135,17 @@ public class QYHomeFragment extends BaseFragment {
     }
 
 
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        unbinder = ButterKnife.bind(this, rootView);
+        return rootView;
+    }
 
-
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
+    }
 }

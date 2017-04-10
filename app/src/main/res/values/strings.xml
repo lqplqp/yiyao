@@ -394,4 +394,29 @@
         <item>医疗器械</item>
     </string-array>
 
+
+<!--企业管理员增加企业人员  岗位-->
+    <string-array name="qiye_gangwei">
+        <item >生产岗位</item>
+        <item >设计岗位</item>
+        <item >售后岗位</item>
+        <item >销售岗位</item>
+        <item >管理岗位</item>
+        <item >后勤岗位</item>
+        <item >人事岗位</item>
+        <item >其他岗位</item>
+    </string-array>
+    <!--企业管理员增加企业人员  学历-->
+    <string-array name="qiye_xueli">
+        <item >小学</item>
+        <item >初中</item>
+        <item >中专</item>
+        <item >高中</item>
+        <item >大专</item>
+        <item >本科</item>
+        <item >硕士</item>
+        <item >博士</item>
+    </string-array>
+
+
 </resources>

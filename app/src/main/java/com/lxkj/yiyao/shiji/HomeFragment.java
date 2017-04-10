@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ExpandableListView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
@@ -46,7 +47,7 @@ public class HomeFragment extends BaseFragment {
     @BindView(R.id.xuanze_yiwancheng)
     TextView xuanzeYiwancheng;
     @BindView(R.id.list_view)
-    RefreshListView listView;
+    ExpandableListView listView;
     Unbinder unbinder;
 
     @Override
@@ -64,17 +65,7 @@ public class HomeFragment extends BaseFragment {
                     JSONArray jsonArray = JSONArray.parseArray(jsonObject.getString("data"));
                     ShouYeTongZhiXiaoXiAdapter shouYeTongZhiXiaoXiAdapter = new ShouYeTongZhiXiaoXiAdapter(jsonArray);
                     listView.setAdapter(shouYeTongZhiXiaoXiAdapter);
-                    listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
-                        @Override
-                        public void onDownPullRefresh() {
-                            listView.onRefreshComplete();
-                        }
 
-                        @Override
-                        public void onLoadingMore() {
-                            listView.loadMoreComplete();
-                        }
-                    });
                     String jgxxz = jsonObject.getString("jgxxz");
                     String jgywc = jsonObject.getString("jgywc");
                     String pxxmxxz = jsonObject.getString("pxxmxxz");
