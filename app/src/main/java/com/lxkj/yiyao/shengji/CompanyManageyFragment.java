@@ -51,6 +51,9 @@ public class CompanyManageyFragment extends BaseFragment {
     CheckBox jianguanduiwu;
     @BindView(R.id.danweidizhi)
     TextView danweidizhi;
+    @BindView(R.id.danwei)
+    EditText danwei;
+
     @BindView(R.id.commit)
     Button commit;
 
@@ -148,7 +151,7 @@ public class CompanyManageyFragment extends BaseFragment {
             params.addBodyParameter("szdq", split[0]);
             params.addBodyParameter("szdq1", split[1]);
             params.addBodyParameter("szdq2", split[2]);
-            //params.addBodyParameter("dwdz", "");
+            params.addBodyParameter("dz", danwei.getText().toString());
 
             x.http().get(params, new Callback.CommonCallback<String>() {
                 @Override

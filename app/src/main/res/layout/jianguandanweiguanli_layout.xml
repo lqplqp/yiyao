@@ -202,7 +202,7 @@
         android:background="@color/line"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="@dimen/qyinfo_line_height"
         android:orientation="horizontal"
         android:gravity="center_vertical">
         <TextView
@@ -211,18 +211,21 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
-            android:text="*详细地址："/>
+            android:text="*单位地址："/>
         <TextView
             android:id="@+id/danweidizhi"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
-            android:maxWidth="220dp"
-            android:maxLines="3"
-            android:text="牧野区河南省新乡市牧野区河南省新乡市牧野区"
             android:textColor="@color/global_gray"
-            />
+            android:text="xx省-xx市-xx县"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/danwei"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_gray"
+            android:hint="-地址"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
