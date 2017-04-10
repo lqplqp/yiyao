@@ -1,12 +1,12 @@
 package com.lxkj.yiyao.shengjugeren;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -14,6 +14,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRPersonAnalysisAdapter;
+import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -34,10 +35,6 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
 
     @BindView(R.id.chaxun)
     TextView chaxun;
-    @BindView(R.id.shiqu)
-    Spinner shiqu;
-    @BindView(R.id.xianqu)
-    Spinner xianqu;
     @BindView(R.id.list_view)
     RefreshListView listView;
     Unbinder unbinder;
@@ -45,12 +42,16 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
+    @BindView(R.id.diqu)
+    TextView diqu;
+    Unbinder unbinder1;
     private int page = 1;
 
     private View rootView;
+
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(rootView == null) {
+        if (rootView == null) {
             rootView = super.onCreateView(inflater, container, savedInstanceState);
             return rootView;
         }
@@ -58,12 +59,14 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
         if (parent != null) {
             parent.removeView(rootView);
         }
+        unbinder1 = ButterKnife.bind(this, rootView);
         return rootView;
     }
+
     @Override
     protected void initView() {
 
-        requestData("","");
+        requestData("", "");
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -73,10 +76,10 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
 
                 adapter.clear();
                 adapter.notifyDataSetChanged();
-                page=1;
+                page = 1;
 
 
-                requestData("","");
+                requestData("", "");
 
 
             }
@@ -85,8 +88,7 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData("","");
-
+                requestData("", "");
 
 
             }
@@ -97,26 +99,27 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
 
-
-
-
     // ======================== 模板代码=============================
-    public void requestData(String sq,String xq){
+    public void requestData(String sq, String xq) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_gryhtjfx);
-        params.addBodyParameter("page",page+"");
-        if(sq!=null && xq!=null){
-            params.addBodyParameter("sq",sq);
-            params.addBodyParameter("xq",xq);
+        params.addBodyParameter("page", page + "");
+
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username", sp.getString("username", "") + "");
+
+        if (sq != null && xq != null) {
+            params.addBodyParameter("sq", sq);
+            params.addBodyParameter("xq", xq);
         }
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
-                if(adapter == null){
+                if (adapter == null) {
                     adapter = new SJGRPersonAnalysisAdapter(result);
                     listView.setAdapter(adapter);
-                }else{
+                } else {
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -155,15 +158,26 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
         return R.layout.sjgr_fragment_layout_person_analysis;
     }
 
-    @OnClick(R.id.chaxun)
-    public void onClick() {
-        toast("查询");
-        // TODO: 2017/1/18
-        if(adapter!=null){
-            adapter.clear();
-            adapter.notifyDataSetChanged();
-            page=1;
+    @OnClick({R.id.chaxun, R.id.diqu})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.chaxun:
+                if (adapter != null) {
+                    adapter.clear();
+                    adapter.notifyDataSetChanged();
+                    page = 1;
+                }
+                String[] sanji = diqu.getText().toString().split("-");
+
+
+
+                requestData(sanji[1],sanji[2]);
+
+                break;
+            case R.id.diqu:
+                new PickViewUtils(getActivity(), diqu).pickProvince();
+
+                break;
         }
-        requestData("","");
     }
 }
