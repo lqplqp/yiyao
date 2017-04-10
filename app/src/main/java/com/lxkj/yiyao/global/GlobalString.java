@@ -11,7 +11,7 @@ public interface GlobalString {
     //在线考试
     public static final String examUrl = "/admin/stk/stk";
     //考试提交
-    public static final String examOkUrl = "/admin/stk/stjg";
+    public static final String examOkUrl = "/admin/stk/stjg1";
 
 
     //选购课程和学习的人员
@@ -19,6 +19,16 @@ public interface GlobalString {
     //用户余额
     public static final String yueUrl = "/admin/qita1/ye";
 
+
+    //0407的选购课程接口
+    //培训班信息
+    public static final String xuangou_peixunbanxinxi = BaseURL + "admin/fenji1/zxdc";
+    //基础课程名
+    public static final String xuangou_jichukecheng = BaseURL + "admin/fenji1/jckcmc";
+    //企业人员 列表
+    public static final String xuangou_qiyerenyuan = BaseURL + "admin/fenji1/personnellist";
+    //提交
+    public static final String xuangou_tijiao = BaseURL + "admin/fenji1/submit";
 
 
     public static final String reg = "/admin/denglu/zc2";

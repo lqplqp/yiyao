@@ -2,24 +2,28 @@ package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.lxkj.yiyao.utils.ExpandListView;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengJiChuKeChengAdapter;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengQiYeRenYuanAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import butterknife.BindView;
 
@@ -56,33 +60,186 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
     @BindView(R.id.textView4)
     TextView textView4;
     @BindView(R.id.jichukecheng_listview)
-    ListView jichukechengListview;
+    ExpandListView jichukechengListview;
     @BindView(R.id.textView7)
     TextView textView7;
     @BindView(R.id.qiyerenyuanleibiao_listview)
-    ListView qiyerenyuanleibiaoListview;
+    ExpandListView qiyerenyuanleibiaoListview;
     @BindView(R.id.tijiao_but)
     TextView tijiaoBut;
+    private String userName;
+    private String pxid;
+    private XuanGouKeChengQiYeRenYuanAdapter xuanGouKeChengQiYeRenYuanAdapter;
 
     @Override
     protected void init() {
+        userName = SPUtil.getUserName(this);
+        //从上一个界面传过来的培训id
+        Intent intent = getIntent();
+        pxid = intent.getStringExtra("pxid") + "";
         backImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-        requestData();
+//        requestData();
+        requestPeixunban();
+        requestJichukecheng();
+        requestRenyuan();
+    }
+
+    private void commitData() {
+        RequestParams requestParams = new RequestParams(GlobalString.xuangou_tijiao);
+        requestParams.addBodyParameter("username", userName);
+        requestParams.addBodyParameter("id", pxid);
+        HashMap<Integer, Boolean> checkMap = xuanGouKeChengQiYeRenYuanAdapter.getCheckMap();
+        int count = xuanGouKeChengQiYeRenYuanAdapter.getCount();
+        JSONArray objects = xuanGouKeChengQiYeRenYuanAdapter.getObjects();
+        List<RenYuanBean> renyuanList = new ArrayList<>();
+        for (int i = 0; i < count; i++){
+            Boolean aBoolean = checkMap.get(i);
+            if (aBoolean){
+                int id = JSONObject.parseObject(objects.get(i).toString()).getIntValue("id");
+                RenYuanBean renYuanBean = new RenYuanBean();
+                renYuanBean.setId(id);
+                renyuanList.add(renYuanBean);
+            }
+        }
+        String json = JSONObject.toJSONString(renyuanList);
+        //username=gmy&id=1&data=[{"id":115}]
+        requestParams.addBodyParameter("data", json);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                if (!TextUtils.isEmpty(result)){
+                    int code = JSONObject.parseObject(result).getIntValue("code");
+                    if (code == 111111){
+                        ToastUtil.show("提交成功");
+                    }
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
+
+    /**
+     * 请求企业人员列表
+     */
+    private void requestRenyuan() {
+        RequestParams requestParams = new RequestParams(GlobalString.xuangou_qiyerenyuan);
+        requestParams.addBodyParameter("username", userName);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                if (!TextUtils.isEmpty(result)){
+                    String data = JSONObject.parseObject(result).getString("data");
+                    setRenYuanData(data);
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
+
+    /**
+     * 请求基础课程名称列表
+     */
+    private void requestJichukecheng() {
+        RequestParams requestParams = new RequestParams(GlobalString.xuangou_jichukecheng);
+        requestParams.addBodyParameter("id", pxid);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                if (!TextUtils.isEmpty(result)){
+                    String data = JSONObject.parseObject(JSONObject.parseObject(result).getString("data")).getString("data");
+                    setKeChengData(data);
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+    }
+
+    /**
+     * 请求培训班的信息
+     */
+    private void requestPeixunban() {
+        RequestParams requestParams = new RequestParams(GlobalString.xuangou_peixunbanxinxi);
+        requestParams.addBodyParameter("id", pxid);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                if (!TextUtils.isEmpty(result)){
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    JSONObject data = JSONObject.parseObject(jsonObject.getString("data"));
+                    setPeiXunBanData(data);
+                }
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
     }
 
     private void requestData() {
-        //从上一个界面传过来的培训id
-        Intent intent = getIntent();
-        String pxid = intent.getStringExtra("pxid") + "";
+
         if (!TextUtils.isEmpty(pxid)){
             RequestParams requestParams = new RequestParams(GlobalString.BaseURL + GlobalString.xuangoukechengrenyuanUrl);
             //临时用1
-            requestParams.addBodyParameter("pxid", pxid);
+            requestParams.addBodyParameter("id", pxid);
             x.http().post(requestParams, new Callback.CommonCallback<String>() {
                 @Override
                 public void onSuccess(String result) {
@@ -139,9 +296,9 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
         //图片地址
         String tpdz = peiXunBanParse.getString("tpdz") + "";
         x.image().bind(peixunImage, tpdz);
-        //描述
-        String tpjs = peiXunBanParse.getString("tpjs") + "";
-        peixunName.setText("" + tpjs);
+        //标题
+        String bt = peiXunBanParse.getString("bt") + "";
+        peixunName.setText("" + bt);
         //适应地区
         String sydq = peiXunBanParse.getString("sydq") + "";
         shiyingdiqu.setText("" + sydq);
@@ -163,15 +320,15 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
         String jytj = peiXunBanParse.getString("jytj") + "";
         jieyetiaojian.setText("" + jytj);
         //提示
-        String ts = peiXunBanParse.getString("ts") + "";
-        jieguo.setText("" + ts);
+//        String ts = peiXunBanParse.getString("ts") + "";
+        jieguo.setVisibility(View.GONE);
         //结业考试时间限制开始
         String jysj = peiXunBanParse.getString("jysj") + "";
         //结业考试时间限制结束
         String jysj1 = peiXunBanParse.get("jysj1") + "";
         jieshushijian.setText("" + jysj + " 到 " + jysj1);
         //关联字段
-        String pxid = peiXunBanParse.getString("pxid") + "";
+//        String pxid = peiXunBanParse.getString("pxid") + "";
 
 
     }
@@ -190,8 +347,14 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
      * @param renYuanParse
      */
     private void setRenYuanData(String renYuanParse) {
-        XuanGouKeChengQiYeRenYuanAdapter xuanGouKeChengQiYeRenYuanAdapter = new XuanGouKeChengQiYeRenYuanAdapter(renYuanParse);
+        xuanGouKeChengQiYeRenYuanAdapter = new XuanGouKeChengQiYeRenYuanAdapter(renYuanParse);
         qiyerenyuanleibiaoListview.setAdapter(xuanGouKeChengQiYeRenYuanAdapter);
+        tijiaoBut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                commitData();
+            }
+        });
     }
 
 
@@ -200,4 +363,26 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
         return R.layout.xuangou_kecheng_yibaopeixun;
     }
 
+    public class RenYuanBean {
+        private int id;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+    }
+    public class RenYuanDataBean{
+        private List<RenYuanBean> data;
+
+        public List<RenYuanBean> getData() {
+            return data;
+        }
+
+        public void setData(List<RenYuanBean> data) {
+            this.data = data;
+        }
+    }
 }

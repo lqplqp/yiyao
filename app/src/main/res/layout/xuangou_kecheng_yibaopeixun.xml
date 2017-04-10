@@ -28,9 +28,11 @@
             />
     </RelativeLayout>
 
-    <android.support.v4.widget.NestedScrollView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
 
 
         <LinearLayout
@@ -268,11 +270,11 @@
                     android:layout_height="1dp"
                     android:background="@color/line" />
 
-                <ListView
+                <com.lxkj.yiyao.utils.ExpandListView
                     android:id="@+id/jichukecheng_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"></ListView>
+                    android:layout_margin="10dp"/>
             </LinearLayout>
 
 
@@ -337,13 +339,11 @@
                     android:layout_height="1dp"
                     android:background="@color/line" />
 
-                <ListView
+                <com.lxkj.yiyao.utils.ExpandListView
                     android:id="@+id/qiyerenyuanleibiao_listview"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp">
-
-                </ListView>
+                    />
 
             </LinearLayout>
 
@@ -364,7 +364,7 @@
         </LinearLayout>
 
 
-    </android.support.v4.widget.NestedScrollView>
+    </ScrollView>
 
 
 </LinearLayout>

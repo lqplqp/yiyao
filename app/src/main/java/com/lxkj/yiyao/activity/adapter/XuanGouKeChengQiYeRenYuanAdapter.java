@@ -63,7 +63,7 @@ public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
         }
         final JSONObject object = objects.getJSONObject(i);
         //姓名
-        holder.name.setText(""+object.getString("name"));
+        holder.name.setText(""+object.getString("xm"));
         holder.checkBox.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,6 +80,9 @@ public class XuanGouKeChengQiYeRenYuanAdapter extends BaseAdapter {
         return checkedMap;
     }
 
+    public JSONArray getObjects() {
+        return objects;
+    }
 
     class ViewHolder {
         @BindView(R.id.name)

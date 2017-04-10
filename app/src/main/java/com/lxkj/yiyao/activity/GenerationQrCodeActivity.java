@@ -33,14 +33,18 @@ public class GenerationQrCodeActivity extends BaseActivity {
 
 
     private String codeText;
+    String xkzbh;
     String username;
 
     @Override
     protected void init() {
-        codeText = getIntent().getStringExtra("qrcode_result");
+        //codeText = getIntent().getStringExtra("qrcode_result");
+        xkzbh = getIntent().getStringExtra("xkzbh");
+        username = getIntent().getStringExtra("username").toString();
         if(TextUtils.isEmpty(codeText)){
             codeText = "非法二维码";
         }
+        codeText = xkzbh + "----" + username;
 
         Bitmap mBitmap = CodeUtils.createImage(codeText, 400, 400, BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
         this.image.setImageBitmap(mBitmap);

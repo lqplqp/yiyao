@@ -37,9 +37,13 @@ public class GeRenScannerQrCodeActivity extends BaseActivity{
                 }
                 if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_SUCCESS) {
                     String result = bundle.getString(CodeUtils.RESULT_STRING);
+                    String[] split = result.split("----");
                     //Toast.makeText(this, "解析结果:" + result, Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(this,ExamActivity.class);
-                    intent.putExtra("kmid",result);
+                    //intent.putExtra("kmid",split[0]);
+                    intent.putExtra("xkzbh",split[0]);
+                    intent.putExtra("ctr",split[1]);
+
                     startActivity(intent);
                     finish();
                 } else if (bundle.getInt(CodeUtils.RESULT_TYPE) == CodeUtils.RESULT_FAILED) {

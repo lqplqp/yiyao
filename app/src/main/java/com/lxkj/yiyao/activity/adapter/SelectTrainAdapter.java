@@ -38,7 +38,7 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
         this.qiye_admin = qiye_admin;
     }
 
-    public boolean qiye_admin;
+    public boolean qiye_admin = false;
 
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {

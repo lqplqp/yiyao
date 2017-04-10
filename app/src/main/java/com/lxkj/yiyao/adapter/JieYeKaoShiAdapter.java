@@ -1,5 +1,7 @@
 package com.lxkj.yiyao.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -8,6 +10,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.ExamActivity;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.BindView;
@@ -21,6 +24,7 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
 
     JSONArray objects;
     JSONObject object;
+    Context context;
 
 
     public JieYeKaoShiAdapter(String result) {
@@ -46,6 +50,7 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         ViewHolder holder ;
+        context  = viewGroup.getContext();
         if(view == null){
             view = View.inflate(viewGroup.getContext(),R.layout.zaixiankaoshi_item,null);
             holder = new ViewHolder(view);
@@ -60,8 +65,10 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
 
         holder.jinrukaochang.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                ToastUtil.show("未实现,接口有误");
+            public void onClick(View views) {
+                Intent intent = new Intent(context, ExamActivity.class);
+                intent.putExtra("kmid",object.get("id").toString());
+                context.startActivity(intent);
             }
         });
 
