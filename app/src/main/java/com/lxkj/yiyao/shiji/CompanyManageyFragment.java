@@ -52,7 +52,7 @@ public class CompanyManageyFragment extends BaseFragment {
     @BindView(R.id.shoujihaoma)
     EditText shoujihaoma;
     @BindView(R.id.danweidizhi)
-    EditText danweidizhi;
+    TextView danweidizhi;
     @BindView(R.id.commit)
     Button commit;
     Unbinder unbinder;
