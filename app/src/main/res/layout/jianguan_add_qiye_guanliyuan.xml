@@ -82,14 +82,11 @@
                     android:text="上传头像"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
-                <EditText
+                <ImageView
                     android:id="@+id/touxiangdizhi"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:hint=""
-                    android:textColor="@color/global_gray"
-                    android:textSize="@dimen/qyinfo_text_size" />
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
             </LinearLayout>
             <View
                 android:layout_width="match_parent"

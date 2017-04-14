@@ -99,47 +99,48 @@ public class AddAdminActivity extends BaseActivity {
     }
 
     private void requestDate() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/qita1/afforce");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/qita1/lawenforcer");
         SharedPreferences sp = this.getSharedPreferences("shiyao", this.MODE_PRIVATE);
         params.addBodyParameter("username",sp.getString("username","") + "");
 
-        params.addBodyParameter("username1", username.getText().toString());
-        params.addBodyParameter("company", companyName.getText().toString());
-        params.addBodyParameter("level",jgJibie.getText().toString());
-        params.addBodyParameter("people", renshu.getText().toString());
-        params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("name",adminname.getText().toString());
+        params.addBodyParameter("yhm", username.getText().toString());
+        /*params.addBodyParameter("company", companyName.getText().toString());*/
+        /*params.addBodyParameter("level",jgJibie.getText().toString());
+        params.addBodyParameter("people", renshu.getText().toString());*/
+        params.addBodyParameter("mm", password.getText().toString());
+        params.addBodyParameter("qrmm",repassword.getText().toString());
+        params.addBodyParameter("xm",adminname.getText().toString());
 
         if(nan.isClickable()) {
-            params.addBodyParameter("sex", "男");
+            params.addBodyParameter("xb", "男");
         }
         if(nv.isClickable()) {
-            params.addBodyParameter("sex", "女");
+            params.addBodyParameter("xb", "女");
         }
 
-        params.addBodyParameter("eduction", xueliType);
-        params.addBodyParameter("idcard", shenfenzhenghao.getText().toString());
-        params.addBodyParameter("ipone", phone.getText().toString());
-        params.addBodyParameter("post", gangweiType);
-        params.addBodyParameter("job", zhiwu.getText().toString());
-        params.addBodyParameter("email", email.getText().toString());
+        params.addBodyParameter("xl", xueliType);
+        params.addBodyParameter("sfzh", shenfenzhenghao.getText().toString());
+        params.addBodyParameter("sjhm", phone.getText().toString());
+        params.addBodyParameter("gw", gangweiType);
+        params.addBodyParameter("zw", zhiwu.getText().toString());
+        params.addBodyParameter("yx", email.getText().toString());
 
-        if(jianguanhangye.isClickable()){
+        /*if(jianguanhangye.isClickable()){
             params.addBodyParameter("trade", "监管队伍");
-        }
+        }*/
 
         String [] sanji = danweidizhi.getText().toString().split("-");
 
-        params.addBodyParameter("address", sanji[0]);
-        params.addBodyParameter("address0", sanji[1]);
-        params.addBodyParameter("addess1", sanji[2]);
-        params.addBodyParameter("addess2", dizhi.getText().toString());
+        params.addBodyParameter("szdq", sanji[0]);
+        params.addBodyParameter("szdq1", sanji[1]);
+        params.addBodyParameter("szdq2", sanji[2]);
+        params.addBodyParameter("dz", dizhi.getText().toString());
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject object = JSONObject.parseObject(result);
-                String code = object.get("code").toString();
+                String code = object.get("data").toString();
                 if (code.equals("111111")) {
 
                     finish();

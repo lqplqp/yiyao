@@ -43,8 +43,8 @@ public class HomeFragment extends BaseFragment {
     TextView xuanzeXuexizhong;
     @BindView(R.id.xuanze_yiwancheng)
     TextView xuanzeYiwancheng;
-    @BindView(R.id.list_view)
-    ListView listView;
+    /*@BindView(R.id.list_view)
+    ListView listView;*/
     Unbinder unbinder;
 
     private MBaseAdapter mBaseAdapter;
@@ -62,7 +62,7 @@ public class HomeFragment extends BaseFragment {
                 String a = jsonObject.get("data").toString();
 
                 mBaseAdapter = new HomeMessageAdapter(a);
-                listView.setAdapter(mBaseAdapter);
+                /*listView.setAdapter(mBaseAdapter);*/
 
                 if(jsonObject.get("jgxxz") != null){
                     jianguanXuexizhong.setText(""+jsonObject.get("jgxxz").toString());
