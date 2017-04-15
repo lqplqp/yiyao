@@ -1,6 +1,14 @@
 package com.lxkj.yiyao.jianguan;
 
+import android.app.ProgressDialog;
+import android.content.ContentResolver;
+import android.content.Intent;
+import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.media.Image;
+import android.net.Uri;
+import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,11 +18,18 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
+import com.lxkj.yiyao.utils.UploadImgBiz;
 
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,7 +47,7 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
     @BindView(R.id.add_touxiang)
     Button addTouxiang;
     @BindView(R.id.touxiangdizhi)
-    EditText touxiangdizhi;
+    ImageView touxiangdizhi;
     @BindView(R.id.guanliyuanleixing)
     Spinner guanliyuanleixing;
     @BindView(R.id.shurumima)
@@ -60,8 +75,6 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
     /*@BindView(R.id.back_img)
     ImageView backImg;*/
     Unbinder unbinder;
-    @BindView(R.id.add_touxiang)
-    Button addTouxiang;
     private static final String IMAGE_UNSPECIFIED = "image/*";
     private final int IMAGE_CODE = 0; // 这里的IMAGE_CODE是自己任意定义的
 

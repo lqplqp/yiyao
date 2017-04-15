@@ -140,7 +140,7 @@ public class AddAdminActivity extends BaseActivity {
             @Override
             public void onSuccess(String result) {
                 JSONObject object = JSONObject.parseObject(result);
-                String code = object.get("data").toString();
+                String code = object.get("code").toString();
                 if (code.equals("111111")) {
 
                     finish();
