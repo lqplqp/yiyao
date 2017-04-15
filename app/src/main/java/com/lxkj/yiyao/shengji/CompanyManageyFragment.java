@@ -45,7 +45,7 @@ public class CompanyManageyFragment extends BaseFragment {
     EditText guanliyuan;
     @BindView(R.id.youxiang)
     EditText youxiang;
-    @BindView(R.id.shoujihao)
+    @BindView(R.id.shoujihaoma)
     EditText shoujihao;
     @BindView(R.id.jianguanduiwu)
     CheckBox jianguanduiwu;

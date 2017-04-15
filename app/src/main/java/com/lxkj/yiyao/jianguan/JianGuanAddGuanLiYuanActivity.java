@@ -57,8 +57,8 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
     Button commit;
     @BindView(R.id.hangyelingyu)
     Spinner hangyelingyu;
-    @BindView(R.id.back_img)
-    ImageView backImg;
+    /*@BindView(R.id.back_img)
+    ImageView backImg;*/
     Unbinder unbinder;
 
     private ArrayAdapter<String> mSpinnerAdapter;
@@ -69,12 +69,12 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
     protected void init() {
         initSpinner1();
         initSpinner2();
-        backImg.setOnClickListener(new View.OnClickListener() {
+        /*backImg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 finish();
             }
-        });
+        });*/
     }
 
     @Override
@@ -93,8 +93,13 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
                 break;
             case R.id.commit:
                 ToastUtil.show("借口待对接");
+                commitInfo();
+
                 break;
         }
+    }
+
+    private void commitInfo() {
     }
 
     private void initSpinner1() {
