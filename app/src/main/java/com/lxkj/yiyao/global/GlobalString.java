@@ -168,6 +168,8 @@ public interface GlobalString {
     public static final String gerenyonghu_tongzhixiaoxi = "admin/fenji6/tzxx/";
 
 
+
+
     //用户信息
     public static final String gerenyonghu_yonghuxinxi = BaseURL + "admin/fenji6/yhxx/";
 
