@@ -1,7 +1,10 @@
 package com.lxkj.yiyao.xianji;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
@@ -10,6 +13,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.jianguan.AddAdminActivity;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -39,12 +43,15 @@ public class QYManagerHomeFragment extends BaseFragment {
         return R.layout.qymanager_fragment_layout_home;
     }
 
+
+
+
+
     @OnClick({R.id.add_people, R.id.select_project})
     public void onClick(View view) {
-        Intent intent;
         switch (view.getId()) {
             case R.id.add_people:
-                intent = new Intent(getActivity(), AddAdminActivity.class);
+                Intent intent = new Intent(getActivity(), AddAdminActivity.class);
                 startActivity(intent);
                 break;
             case R.id.select_project:

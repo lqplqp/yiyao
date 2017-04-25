@@ -8,6 +8,8 @@ public interface GlobalString {
 
     public static final String BaseURL = "http://af.0101hr.com/";
 
+    public static final String jianGuan_addRenYuan = "/admin/fenji/addadmin";
+
     //在线考试
     public static final String examUrl = "/admin/stk/stk";
     //考试提交

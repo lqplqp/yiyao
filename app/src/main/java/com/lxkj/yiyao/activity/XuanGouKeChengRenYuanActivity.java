@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.lxkj.yiyao.bean.RenYuanBean;
 import com.lxkj.yiyao.view.ExpandListView;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.adapter.XuanGouKeChengJiChuKeChengAdapter;
@@ -96,7 +97,7 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
         HashMap<Integer, Boolean> checkMap = xuanGouKeChengQiYeRenYuanAdapter.getCheckMap();
         int count = xuanGouKeChengQiYeRenYuanAdapter.getCount();
         JSONArray objects = xuanGouKeChengQiYeRenYuanAdapter.getObjects();
-        List<RenYuanBean> renyuanList = new ArrayList<>();
+        List<RenYuanBean> renyuanList = new ArrayList<RenYuanBean>();
         for (int i = 0; i < count; i++){
             Boolean aBoolean = checkMap.get(i);
             if (aBoolean){
@@ -106,7 +107,8 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
                 renyuanList.add(renYuanBean);
             }
         }
-        String json = JSONObject.toJSONString(renyuanList);
+        String json  = JSONArray.toJSONString(renyuanList);
+        //String json = JSONObject.toJSONString(renyuanList);
         //username=gmy&id=1&data=[{"id":115}]
         requestParams.addBodyParameter("data", json);
         x.http().post(requestParams, new Callback.CommonCallback<String>() {
@@ -363,26 +365,6 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
         return R.layout.xuangou_kecheng_yibaopeixun;
     }
 
-    public class RenYuanBean {
-        private int id;
 
-        public int getId() {
-            return id;
-        }
 
-        public void setId(int id) {
-            this.id = id;
-        }
-    }
-    public class RenYuanDataBean{
-        private List<RenYuanBean> data;
-
-        public List<RenYuanBean> getData() {
-            return data;
-        }
-
-        public void setData(List<RenYuanBean> data) {
-            this.data = data;
-        }
-    }
 }
