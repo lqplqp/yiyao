@@ -11,6 +11,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.contract.RegisterContract;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -71,7 +72,8 @@ public class Register2Activity extends BaseActivity implements RegisterContract.
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.i(TAG,result);
+                ToastUtil.show(result);
+                finish();
             }
 
             @Override

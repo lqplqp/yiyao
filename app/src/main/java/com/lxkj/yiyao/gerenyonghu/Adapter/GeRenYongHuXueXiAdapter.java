@@ -49,6 +49,7 @@ public class GeRenYongHuXueXiAdapter extends MBaseAdapter <GeRenYongHuXueXiAdapt
                 mActivity.startActivity(intent);
             }
         });
+
     }
 
     @Override

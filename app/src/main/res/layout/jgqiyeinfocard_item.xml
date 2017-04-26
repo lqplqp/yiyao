@@ -7,62 +7,62 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/fillet_white_bg">
+        android:background="@drawable/fillet_white_bg"
+        android:gravity="center">
 
         <TableRow>
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="序号"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xuhao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="11111"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xuhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
 
         <TableRow>
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="姓名"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xingming"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="XXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xingming" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
+
         <TableRow>
 
             <TextView
@@ -77,17 +77,18 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xinxikabianhao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="xxx"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xinxikabianhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
+
         <TableRow>
 
             <TextView
@@ -102,149 +103,163 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/shenfenzhenghao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="XXXXXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/shenfenzhenghao" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
 
             <TextView
-                android:id="@+id/xingbie"
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="性别"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xingbie"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="156132156"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/shoujihao" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="岗位"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/gangwei"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="asdasdsa"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/gangwei" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="发卡日期"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/fakariqi"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="asdasdsa"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/fakariqi" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="过期日期"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/guoqiriqi"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="asdasdsa"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/guoqiriqi" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="发卡单位"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/fakadanwei"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="asdasdsa"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/fakadanwei" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="发卡状态"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/fakazhuangtai"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
                 android:text="asdasdsa"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/fakazhuangtai" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
 
 
     </TableLayout>
-
 
 
 </LinearLayout>

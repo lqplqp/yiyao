@@ -32,6 +32,9 @@ public interface GlobalString {
     //提交
     public static final String xuangou_tijiao = BaseURL + "admin/fenji1/submit";
 
+    //获取支付宝支付参数
+    public static final String xuangou_zhifubao = BaseURL + "admin/fenji1/ordernr";
+
 
     public static final String reg = "/admin/denglu/zc2";
     public static final String reg1 = "/admin/denglu/zc1";
@@ -166,6 +169,8 @@ public interface GlobalString {
     public static final String gerenyonghu_yibao = "admin/fenji6/ybpxxm/";
     public static final String gerenyonghu_anquanshezhi = "admin/fenji6/aqsz/";
     public static final String gerenyonghu_tongzhixiaoxi = "admin/fenji6/tzxx/";
+
+
 
 
     //用户信息

@@ -132,6 +132,7 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
                     JSONObject jsonObject = JSONObject.parseObject(result);
                     String code = jsonObject.getString("data");
                     if (code.equals("111111")) {
+                        finish();
                         ToastUtil.show("保存成功");
                     } else {
                         ToastUtil.show("保存失败");
@@ -193,7 +194,17 @@ public class JianGuanAddGuanLiYuanActivity extends BaseActivity {
         guanliyuanleixing.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 // TODO Auto-generated method stub
-                guanliyuanleixingtId = (int) arg3;
+                if(arg3==0){
+                    guanliyuanleixingtId = 2;
+                }
+                if(arg3 ==1){
+                    guanliyuanleixingtId = 4;
+                }
+                if(arg3 ==2){
+                    guanliyuanleixingtId = 6;
+                }
+
+                //guanliyuanleixingtId = (int) arg3;
                 guanliyuanleixingtType = selects.get((int) arg3);
                 /* 将mySpinner 显示*/
                 //arg0.setVisibility(View.VISIBLE);

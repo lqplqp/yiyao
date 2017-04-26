@@ -191,7 +191,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@null"
-                android:hint="管理员姓名,必填"
+                android:hint="姓名,必填"
                 android:textColorHint="@color/global_gray"
                 android:textSize="18sp" />
 

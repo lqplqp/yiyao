@@ -108,6 +108,7 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
                 int code = Integer.parseInt(object.get("code").toString());
                 if(code == 111111){
                     ToastUtil.show("注册成功");
+                    finish();
                 }else{
                     ToastUtil.show(object.get("message").toString());
                 }

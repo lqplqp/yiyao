@@ -38,7 +38,7 @@ public class ShengJiPeiXunMessageSearchAdapter extends MBaseAdapter<ShengJiPeiXu
         //培训类型
         holder.peixunleixing.setText("" + result.getString("pxlx"));
         //序号
-        holder.xuhao.setText("" + result.getString("xuhao"));
+        holder.xuhao.setText("" + result.getString("xh"));
         //创建时间
         holder.chuangjianshijian.setText("" + result.getString("cjsj"));
         //发布状态

@@ -19,12 +19,13 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="详情"
-                android:textColor="@color/global_bg_blue"
+                android:textColor="@color/global_black"
                 android:textSize="@dimen/table_textsize"
+                android:visibility="gone"
                 android:id="@+id/xiangqing"
                 />
 
-            <TextView
+            <!--<TextView
                 android:background="@drawable/table_frame_fray"
                 android:layout_height="@dimen/table_hight"
                 android:layout_width="0dp"
@@ -43,7 +44,7 @@
                 android:text="移除"
                 android:textColor="@color/global_bg_blue"
                 android:textSize="@dimen/table_textsize"
-                android:id="@+id/yichu" />
+                android:id="@+id/yichu" />-->
         </TableRow>
 
         <TableRow>
