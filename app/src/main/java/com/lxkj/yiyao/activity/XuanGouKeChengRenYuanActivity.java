@@ -118,6 +118,11 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
                     int code = JSONObject.parseObject(result).getIntValue("code");
                     if (code == 111111){
                         ToastUtil.show("提交成功");
+                        //下单成功，开始付款，跳转付款界面
+                        String data = JSONObject.parseObject(result).getString("data");
+                        Intent intent = new Intent(XuanGouKeChengRenYuanActivity.this, YongHuYuEFuKuanActivity.class);
+                        intent.putExtra("data", data);
+                        startActivity(intent);
                     }
                 }
             }
