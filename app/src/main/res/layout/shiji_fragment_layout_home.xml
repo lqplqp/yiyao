@@ -52,6 +52,7 @@
                         android:layout_width="100dp"
                         android:layout_height="100dp"
                         android:src="@mipmap/sj_admin_eye"
+
                         />
                     <TextView
                         android:id="@+id/jianguan_xuexizhong"
