@@ -100,7 +100,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/sj_admin_addadmin"
+                        android:text="增加监管人员"
 
                         android:id="@+id/add_people"
                         android:textColor="@color/global_white"
