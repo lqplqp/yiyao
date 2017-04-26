@@ -101,6 +101,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/sj_admin_addadmin"
+
                         android:id="@+id/add_people"
                         android:textColor="@color/global_white"
                         android:textSize="14sp"
