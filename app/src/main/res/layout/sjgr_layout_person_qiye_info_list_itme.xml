@@ -34,6 +34,7 @@
                     android:textColor="@color/global_bg_blue"
                     android:id="@+id/chakan" />
                 <TextView
+                    android:id="@+id/qiyerenyuan"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"

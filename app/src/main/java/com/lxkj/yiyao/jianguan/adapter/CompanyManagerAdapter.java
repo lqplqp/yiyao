@@ -1,6 +1,7 @@
 package com.lxkj.yiyao.jianguan.adapter;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -12,6 +13,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.google.gson.Gson;
 import com.lxkj.yiyao.MainActivity;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.QiYeRenYuanActivity;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.json.JSONObject;
@@ -32,7 +34,7 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         mActivity = activity;
     }
 
-    protected void fillData(int i, ViewHolder holder , com.alibaba.fastjson.JSONObject result) {
+    protected void fillData(int i, ViewHolder holder , final com.alibaba.fastjson.JSONObject result) {
 
         //企业名称
         holder.qiyeName.setText(""+result.get("qymc").toString());
@@ -49,9 +51,22 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
         holder.chakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((MainActivity)mActivity).setIndexFragement(1);
+                Intent intent = new Intent(mActivity, QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", result.getString("qymc"));
+                mActivity.startActivity(intent);
+//                ((MainActivity)mActivity).setIndexFragement(1);
             }
         });
+
+        holder.qiyerenyuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", result.getString("qymc"));
+                mActivity.startActivity(intent);
+            }
+        });
+
 
     }
 

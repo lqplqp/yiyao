@@ -2,17 +2,15 @@ package com.lxkj.yiyao.shengji;
 
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.lxkj.yiyao.R;
-import com.lxkj.yiyao.base.BaseFragment;
+import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.shengji.adapter.CompanyInfoListAdapter;
-import com.lxkj.yiyao.shengji.adapter.ShenHeAapter;
+import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.jianguan.adapter.UserManagerAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -23,29 +21,33 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
- * Created by Administrator on 2017/1/19.
+ * Created by sun on 2017/4/26.
  */
 
-public class ShengjiQiYeGuanLiFragment extends BaseFragment {
-
-    // ======================== 模板代码=============================
-
-    CompanyInfoListAdapter adapter;
+public class QiYeRenYuanActivity extends BaseActivity {
+    @BindView(R.id.back_img)
+    ImageView backImg;
+    @BindView(R.id.title_tv)
+    TextView titleTv;
     @BindView(R.id.list_view)
     RefreshListView listView;
-    @BindView(R.id.select)
-    TextView select;
-    @BindView(R.id.sousuoxinxi)
-    EditText sousuoxinxi;
+    private static final String TAG = "QiYeRenYuanActivity";
+    MBaseAdapter adapter;
+
     private int page = 1;
-
-    private String TAG = "ShengjiQiYeGuanLiFragment";
-
+    private String qymc;
 
     @Override
-    protected void initView() {
+    protected void init() {
+        qymc = getIntent().getStringExtra("qymc");
         requestData();
-
+        titleTv.setText("企业人员");
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
             public void onDownPullRefresh() {
@@ -70,35 +72,23 @@ public class ShengjiQiYeGuanLiFragment extends BaseFragment {
 
             }
         });
-        select.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                adapter.clear();
-                adapter.notifyDataSetChanged();
-                page = 1;
-                requestData();
-            }
-        });
-
     }
-    // ======================== 模板代码=============================
 
-
-    // ======================== 模板代码=============================
     public void requestData() {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_qygl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_gryhgl);
         params.addBodyParameter("page", page + "");
-        params.addBodyParameter("xx", sousuoxinxi.getText() + "");
+        params.addBodyParameter("qymc", qymc + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                Log.i(TAG, result);
                 if (adapter == null) {
-                    adapter = new CompanyInfoListAdapter(result);
-                    adapter.setContext(getActivity());
+                    adapter = new UserManagerAdapter(result);
                     listView.setAdapter(adapter);
                 } else {
+                    listView.setAdapter(adapter);
                     adapter.addData(result);
                     listView.deferNotifyDataSetChanged();
                 }
@@ -129,20 +119,15 @@ public class ShengjiQiYeGuanLiFragment extends BaseFragment {
         });
     }
 
-
-    // ======================== 模板代码=============================
-
-
     @Override
     public int getLayout() {
-        return R.layout.sjgr_fragment_layout_person_qiye_info_list;
+        return R.layout.jianguan_qiyerenyuan_layout;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
-        return rootView;
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }
