@@ -67,13 +67,13 @@ public class LoginActivity extends BaseActivity {
 
 
 //        initSpinner();
-        guohui.setOnClickListener(new View.OnClickListener() {
+      /*  guohui.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginActivity.this, LoginTestActivity.class));
                 finish();
             }
-        });
+        });*/
     }
 
     /*private void initSpinner() {
