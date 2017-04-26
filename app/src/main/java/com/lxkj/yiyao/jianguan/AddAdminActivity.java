@@ -145,7 +145,7 @@ public class AddAdminActivity extends BaseActivity {
 
                     finish();
                 }
-                ToastUtil.show(object.get("message").toString());
+                ToastUtil.show(object.get("msg").toString());
             }
 
             @Override
@@ -185,9 +185,9 @@ public class AddAdminActivity extends BaseActivity {
     }
     private void initSpinner1() {
         final List<String> selects = new ArrayList<String>();
-        selects.add("生产岗位");
+        /*selects.add("生产岗位");
         selects.add("设计岗位");
-        selects.add("售后岗位");
+        selects.add("售后岗位");*/
         selects.add("销售岗位");
         selects.add("管理岗位");
         selects.add("后勤岗位");
@@ -218,10 +218,10 @@ public class AddAdminActivity extends BaseActivity {
     }
     private void initSpinner2() {
         final List<String> selects = new ArrayList<String>();
-        selects.add("小学");
+        /*selects.add("小学");
         selects.add("初中");
         selects.add("中专");
-        selects.add("高中");
+        selects.add("高中");*/
         selects.add("大专");
         selects.add("本科");
         selects.add("硕士 ");

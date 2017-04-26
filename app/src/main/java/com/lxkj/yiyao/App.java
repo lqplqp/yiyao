@@ -24,6 +24,7 @@ public class App extends Application {
         super.onCreate();
         mApplication = this;
         x.Ext.init(this);
+        x.Ext.setDebug(true);
         ZXingLibrary.initDisplayOpinion(this);
 //        SQLiteDatabase db = Connector.getDatabase();
     }

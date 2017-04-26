@@ -37,6 +37,7 @@ import com.lxkj.yiyao.gerenyonghu.GeRenYongHuXinXiKaFargment;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongHuYongHuXinXiFragment;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongHuZhengShuFragment;
 import com.lxkj.yiyao.gerenyonghu.GeRenYongYingYongChaJianXiaZaiFragment;
+import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.CompanyManagerFragment;
 import com.lxkj.yiyao.jianguan.JGCompanyManFragment;
 import com.lxkj.yiyao.jianguan.JGUpdatePswFragment;
@@ -289,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(homeFragment);
                                 break;
                             case R.id.navi_menu_2:
-                                setTitle("监管单位管理");
+                                setTitle("监管人员中心");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan1);
                                 //监管单位信息
                                 com.lxkj.yiyao.shengji.CompanyManageyFragment companyManageyFragment = new com.lxkj.yiyao.shengji.CompanyManageyFragment();
@@ -414,7 +415,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(sjgrMessageFragment);
                                 break;
                             case R.id.navi_menu_2:
-                                setTitle("监管单位管理");
+                                setTitle("监管人员中心");
                                 pagerTitles = getResources().getStringArray(R.array.shengjugeren1);
                                 //监管人员信息
                                 SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment = new SJGRPersonManagerAddFragment();
@@ -545,7 +546,7 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(homeFragment);
                                 break;
                             case R.id.navi_menu_2:
-                                setTitle("监管单位管理");
+                                setTitle("监管人员中心");
                                 pagerTitles = getResources().getStringArray(R.array.shiji1);
                                 //还差行业领域和地址
                                 CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
@@ -714,6 +715,94 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });*/
                 break;
+
+
+
+            case 9:
+
+                fragments.clear();
+                pagerTitles = getResources().getStringArray(R.array.qiye0);
+                SelectTrainFragment qyHomeFragment = new SelectTrainFragment();
+                fragments.add(qyHomeFragment);
+                setVP();
+                naviView.inflateMenu(R.menu.navi_menu_xianji);
+                naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                        fragments.clear();
+                        int id = item.getItemId();
+                        switch (id) {
+                            case R.id.navi_menu_1:
+                                setTitle("菜单");
+                                pagerTitles = getResources().getStringArray(R.array.xianji0);
+                                QYManagerHomeFragment qyHomeFragment = new QYManagerHomeFragment();
+                                fragments.add(qyHomeFragment);
+                                break;
+                            case R.id.navi_menu_2:
+
+                                //用户中心
+                                setTitle("用户中心");
+                                pagerTitles = getResources().getStringArray(R.array.xianji1);
+                                //用户信息
+                                //QYManager
+                                XianJiYongHuXinXiFragment xianJiYongHuXinXiFragment = new XianJiYongHuXinXiFragment();
+                                fragments.add(xianJiYongHuXinXiFragment);
+                                //我的证书
+                                XianJiYongHuZhengShuFragment xianJiYongHuZhengShuFragment = new XianJiYongHuZhengShuFragment();
+                                fragments.add(xianJiYongHuZhengShuFragment);
+                                //通知消息
+                                XianJiMessageSearchFragment xianJiMessageSearchFragment = new XianJiMessageSearchFragment();
+                                fragments.add(xianJiMessageSearchFragment);
+                                //我的信息卡
+                                XianJiXinXiKaFargment xianJiXinXiKaFargment = new XianJiXinXiKaFargment();
+                                fragments.add(xianJiXinXiKaFargment);
+                                //我的体检报告
+                                XianJiYonghuTiJianBaoGaoFragment xianJiYonghuTiJianBaoGaoFragment = new XianJiYonghuTiJianBaoGaoFragment();
+                                fragments.add(xianJiYonghuTiJianBaoGaoFragment);
+
+
+                                break;
+                            case R.id.navi_menu_3:
+                                setTitle("培训学习");
+                                pagerTitles = getResources().getStringArray(R.array.qiye2);
+                                SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
+                                fragments.add(projectApplyFragment);
+                                QYTrainOrderFragment qyTrainOrderFragment = new QYTrainOrderFragment();
+                                fragments.add(qyTrainOrderFragment);
+                                PeiXunListFragment peiXunListFragment = new PeiXunListFragment();
+                                fragments.add(peiXunListFragment);
+                                QYMessageSearchFragment messageSearchFragment = new QYMessageSearchFragment();
+                                fragments.add(messageSearchFragment);
+                                break;
+                            case R.id.navi_menu_4:
+                                setTitle("下载中心");
+                                pagerTitles = getResources().getStringArray(R.array.qiye3);
+                                SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                                SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                                SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                                SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
+                                fragments.add(sjgrDownloadDocFragment);
+                                fragments.add(sjgrDownloadDocFragment1);
+                                //fragments.add(sjgrDownloadDocFragment2);
+                                fragments.add(sjgrDownloadDocFragment3);
+                                break;
+                            case R.id.navi_menu_5:
+                                setTitle("安全设置");
+                                pagerTitles = getResources().getStringArray(R.array.qiye4);
+                                JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
+
+                                fragments.add(sjgrUpdatePswFragment);
+                                break;
+                            case R.id.navi_menu_logout:
+                                logOut();
+                                break;
+                        }
+                        vpfAdapter2.setData(fragments, pagerTitles);
+                        drawer.closeDrawers();
+                        return true;
+                    }
+                });
+                break;
             case -1:
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.gerenyonghu1);
@@ -820,12 +909,120 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
                 break;
-
         }
     }
 
     private void xianji() {
+
+
         fragments.clear();
+        pagerTitles = getResources().getStringArray(R.array.shiji0);
+        HomeFragment homeFragment2 = new HomeFragment();
+        fragments.add(homeFragment2);
+        setVP();
+        naviView.inflateMenu(R.menu.navi_menu_shiji);
+        naviView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                fragments.clear();
+                int id = item.getItemId();
+                switch (id) {
+                    case R.id.navi_menu_1:
+                        setTitle("菜单");
+                        pagerTitles = getResources().getStringArray(R.array.shiji0);
+                        HomeFragment homeFragment = new HomeFragment();
+                        fragments.add(homeFragment);
+                        break;
+                    case R.id.navi_menu_2:
+                        setTitle("监管单位中心");
+                        pagerTitles = getResources().getStringArray(R.array.shiji1);
+                        //还差行业领域和地址
+                        CompanyManageyFragment companyManageyFragment = new CompanyManageyFragment();
+                        AdminManagerFragment adminManagerFragment = new AdminManagerFragment();
+                        fragments.add(companyManageyFragment);
+                        fragments.add(adminManagerFragment);
+                        break;
+                    case R.id.navi_menu_3:
+                        setTitle("培训通知管理");
+                        pagerTitles = getResources().getStringArray(R.array.shiji2);
+                        ShiJiPeiXunMessageSearchFragment shiJiPeiXunMessageSearchFragment = new ShiJiPeiXunMessageSearchFragment();
+                        fragments.add(shiJiPeiXunMessageSearchFragment);
+                        break;
+                    case R.id.navi_menu_4:
+                        setTitle("企业管理");
+
+                        pagerTitles = getResources().getStringArray(R.array.shiji3);
+                        ShiJiQiYeGuanLiFragment shiJiQiYeGuanLiFragment = new ShiJiQiYeGuanLiFragment();
+                        fragments.add(shiJiQiYeGuanLiFragment);
+                        break;
+                    case R.id.navi_menu_5:
+                        setTitle("培训报名");
+                        pagerTitles = getResources().getStringArray(R.array.shiji4);
+                        SelectTrainFragment projectApplyFragment = new SelectTrainFragment();
+                        ShiJiJiYiBaoPeiXunListFragment peiXunListFragment1 = new ShiJiJiYiBaoPeiXunListFragment();
+                        MessageSearchFragment messageSearchFragment = new MessageSearchFragment();
+                        fragments.add(projectApplyFragment);
+                        fragments.add(peiXunListFragment1);
+                        fragments.add(messageSearchFragment);
+                        break;
+
+                    case R.id.navi_menu_6:
+                        setTitle("监管统计");
+                        pagerTitles = getResources().getStringArray(R.array.shiji5);
+                        //监管单位统计分析
+                        ShiJiJianGuanTongJiFragment shiJiJianGuanTongJiFragment = new ShiJiJianGuanTongJiFragment();
+                        //执法记录统计分析 待定
+                        ShiJiZhiFaJiLuTongJiFragment shiJiZhiFaJiLuTongJiFragment = new ShiJiZhiFaJiLuTongJiFragment();
+                        //企业用户统计分析
+                        ShiJiQiYeYongHuTongJiFragment shiJiQiYeYongHuTongJiFragment = new ShiJiQiYeYongHuTongJiFragment();
+                        //个人用户统计分析
+                        SJGRPersonAnalysisFragment sjgrPersonAnalysisFragment = new SJGRPersonAnalysisFragment();
+                        fragments.add(shiJiJianGuanTongJiFragment);
+                        fragments.add(shiJiZhiFaJiLuTongJiFragment);
+                        fragments.add(shiJiQiYeYongHuTongJiFragment);
+                        fragments.add(sjgrPersonAnalysisFragment);
+                        break;
+                    case R.id.navi_menu_7:
+                        setTitle("体检信息");
+                        pagerTitles = getResources().getStringArray(R.array.shiji6);
+                        //体检统计
+                        ShiJiTiJianTongJiFragment shiJiTiJianTongJiFragment = new ShiJiTiJianTongJiFragment();
+                        //体检查询
+                        ShiJiTiJianSearchFragment shiJiTiJianSearchFragment = new ShiJiTiJianSearchFragment();
+                        fragments.add(shiJiTiJianTongJiFragment);
+                        fragments.add(shiJiTiJianSearchFragment);
+                        break;
+                    case R.id.navi_menu_8:
+                        setTitle("下载中心");
+                        pagerTitles = getResources().getStringArray(R.array.shiji7);
+                        //法律法规文档下载
+                        SJGRDownloadDocFragment sjgrDownloadDocFragment = new SJGRDownloadDocFragment();
+                        SJGRDownloadDocFragment2 sjgrDownloadDocFragment1 = new SJGRDownloadDocFragment2();
+                        SJGRDownloadDocFragment3 sjgrDownloadDocFragment2 = new SJGRDownloadDocFragment3();
+                        SJGRDownloadDocFragment4 sjgrDownloadDocFragment3 = new SJGRDownloadDocFragment4();
+                        fragments.add(sjgrDownloadDocFragment);
+                        fragments.add(sjgrDownloadDocFragment1);
+                        fragments.add(sjgrDownloadDocFragment2);
+                        fragments.add(sjgrDownloadDocFragment3);
+                        break;
+                    case R.id.navi_menu_9:
+                        setTitle("安全设置");
+                        pagerTitles = getResources().getStringArray(R.array.shiji8);
+                        //安全设置
+                        JGUpdatePswFragment sjgrUpdatePswFragment = new JGUpdatePswFragment();
+                        fragments.add(sjgrUpdatePswFragment);
+                        break;
+                    case R.id.navi_menu_logout:
+                        logOut();
+                        break;
+                }
+                vpfAdapter2.setData(fragments, pagerTitles);
+                drawer.closeDrawers();
+                return true;
+            }
+        });
+
+        /*fragments.clear();
         pagerTitles = getResources().getStringArray(R.array.qiye0);
         QYManagerHomeFragment qyHomeFragment = new QYManagerHomeFragment();
         fragments.add(qyHomeFragment);
@@ -906,7 +1103,7 @@ public class MainActivity extends AppCompatActivity {
                 drawer.closeDrawers();
                 return true;
             }
-        });
+        });*/
     }
 
     private void qiye(){
@@ -1037,7 +1234,7 @@ public class MainActivity extends AppCompatActivity {
                 if(!TextUtils.isEmpty(cade.get("dwmc").toString())){
                     unit_name_tv.setText(cade.get("dwmc").toString());
                 }
-                Glide.with(MainActivity.this).load(cade.get("txdz").toString()).into(circleImageView);
+                Glide.with(MainActivity.this).load(GlobalString.BaseURL + user_img).into(circleImageView);
             }
 
             @Override
@@ -1058,7 +1255,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         userName.setText(user_name);
-        Glide.with(this).load(user_img).into(toolbarHead);
+        Glide.with(this).load(GlobalString.BaseURL + user_img).into(toolbarHead);
+        //Glide.with(this).load(GlobalString.BaseURL + user_img).into(circleImageView);
 
 
         /*switch (userType){

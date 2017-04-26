@@ -204,7 +204,9 @@
                 android:id="@+id/fabuzhuangtai" />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:visibility="gone"
+            >
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"

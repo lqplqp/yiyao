@@ -65,10 +65,6 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
         TextView youxiang;
         @BindView(R.id.xiangqing)
         TextView xiangqing;
-        @BindView(R.id.bianji)
-        TextView bianji;
-        @BindView(R.id.yichu)
-        TextView yichu;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

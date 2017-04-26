@@ -121,6 +121,7 @@
             android:background="@color/global_gray"
             />
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -151,6 +152,7 @@
             android:background="@color/global_gray"
             />
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -181,6 +183,7 @@
             android:background="@color/global_gray"
             />
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -211,6 +214,7 @@
             android:background="@color/global_gray"
             />
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -219,6 +223,7 @@
             android:layout_marginRight="20dp"
             >
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="培训证有效期："
@@ -274,6 +279,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
+            android:visibility="gone"
             android:gravity="center_vertical"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"

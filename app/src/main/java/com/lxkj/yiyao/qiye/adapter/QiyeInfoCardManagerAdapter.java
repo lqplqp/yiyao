@@ -35,7 +35,7 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
         //身份证号
         holder.shenfenzhenghao.setText(""+result.get("sfzh"));
         //手机号
-        holder.shoujihao.setText(""+result.get("shoujihao"));
+        //holder.shoujihao.setText(""+result.get("shoujihao"));
         //姓名
         holder.xingming.setText(""+result.get("xm"));
         //信息卡编号
@@ -69,8 +69,6 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
         TextView xinxikabianhao;
         @BindView(R.id.shenfenzhenghao)
         TextView shenfenzhenghao;
-        @BindView(R.id.shoujihao)
-        TextView shoujihao;
         @BindView(R.id.gangwei)
         TextView gangwei;
         @BindView(R.id.fakariqi)

@@ -13,7 +13,10 @@
         android:layout_marginTop="12dp"
         android:background="@drawable/fillet_white_bg">
 
-        <TableRow>
+        <TableRow
+
+            android:visibility="gone"
+            >
 
             <TextView
                 android:background="@drawable/table_frame_fray"
@@ -31,6 +34,7 @@
                android:layout_height="@dimen/table_hight"
                android:layout_width="0dp"
                android:orientation="horizontal"
+
                >
                 <TextView
                     android:textColor="@color/colorPrimary"

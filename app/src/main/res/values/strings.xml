@@ -7,7 +7,7 @@
     <string name="app_name">食药系统</string>
     <string name="sj_admin_actor">监管人员管理</string>
     <string name="sj_admin_msg">对监管单位要参加培训的监管人员进行管理</string>
-    <string name="sj_admin_addadmin">增加监管人员</string>
+    <string name="sj_admin_addadmin">增加监管单位</string>
     <string name="sj_admin_project">选择培训项目</string>
     <string name="sj_admin_selectproject">选择培训项目</string>
     <string name="sj_admin_labamsg">通知消息</string>
@@ -16,7 +16,7 @@
     <string name="sj_shenhe_selectmsg">查询条件</string>
     <string name="sj_shenhe_keymsg">关键字 : </string>
     <string name="sj_shenhe_input_key">    可输入用户名,电话</string>
-    <string name="sj_shenhe_tiyan">体验机构列表</string>
+    <string name="sj_shenhe_tiyan">监管人员管理</string>
     <string name="login_input_username">用户名</string>
     <string name="login_input_pwd">密码</string>
     <string name="login_input_code">验证码</string>

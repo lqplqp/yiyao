@@ -181,13 +181,14 @@
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textSize="@dimen/qyinfo_text_size"
+                    android:text="单位人数："
                     android:textColor="@color/global_black"
-                    android:text="管理人数："/>
+                    android:textSize="@dimen/qyinfo_text_size" />
 
                 <EditText
                     android:id="@+id/guanlirenshu"
@@ -285,6 +286,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/line"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
