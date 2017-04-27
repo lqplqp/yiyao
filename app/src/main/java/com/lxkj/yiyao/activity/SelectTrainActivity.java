@@ -123,6 +123,13 @@ public class SelectTrainActivity extends BaseActivity {
         progressDialog = new ProgressDialog(this);
         progressDialog.setMessage("正在加载...");
         progressDialog.setCanceledOnTouchOutside(false);
+        backImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        initDate();
         requestDate();
 
 

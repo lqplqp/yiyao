@@ -2,8 +2,10 @@ package com.lxkj.yiyao.activity.adapter;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -23,9 +25,10 @@ import butterknife.ButterKnife;
 
 public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHolder> {
 
+
     private Activity mActivity;
 
-    public SelectTrainAdapter(String bean , Activity activity) {
+    public SelectTrainAdapter(String bean, Activity activity) {
         super(bean);
         mActivity = activity;
 
@@ -43,24 +46,27 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
 
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
+        String tpdz = GlobalString.BaseURL + "uploads/" + result.getString("tpdz");
+        Log.d("fillData", "" + tpdz);
 
+        String s1 = "http://af.0101hr.com/uploads/20170426/0efd0c86a367eb771aea792ffc3043f1.png";
+        String s = "http://mmbiz.qpic.cn/mmbiz_png/Wmfr3h5BMxfSp6BjD9M4Gf57EyWnvwRbhhjNXRe7libFNAVibDRtzAceicp2HwcuCSCQgxMORibbNueLlDD9ZY9icgg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1";
+        Glide.with(mActivity).load(tpdz).into(holder.img1);
 
-        Glide.with(mActivity).load(GlobalString.BaseURL + result.get("tpdz")).into(holder.img1);
-
-        holder.title.setText( "" + result.get("bt").toString());
+        holder.title.setText("" + result.get("bt").toString());
         holder.time.setText("" + result.get("pxsj").toString());
 
-        holder.img1.setOnClickListener(new View.OnClickListener() {
+        holder.rootLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if(!qiye_admin){
-                    Intent intent = new Intent(mActivity,LearningActivity.class);
-                    intent.putExtra("pxid",result.get("id").toString());
+                if (!qiye_admin) {
+                    Intent intent = new Intent(mActivity, LearningActivity.class);
+                    intent.putExtra("pxid", result.get("id").toString());
                     mActivity.startActivity(intent);
-                }else{
-                    Intent intent = new Intent(mActivity,XuanGouKeChengRenYuanActivity.class);
-                    intent.putExtra("pxid",result.get("id").toString());
+                } else {
+                    Intent intent = new Intent(mActivity, XuanGouKeChengRenYuanActivity.class);
+                    intent.putExtra("pxid", result.get("id").toString());
                     mActivity.startActivity(intent);
                 }
             }
@@ -86,7 +92,8 @@ public class SelectTrainAdapter extends MBaseAdapter<SelectTrainAdapter.ViewHold
         TextView title;
         @BindView(R.id.time)
         TextView time;
-
+        @BindView(R.id.root_layout)
+        LinearLayout rootLayout;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

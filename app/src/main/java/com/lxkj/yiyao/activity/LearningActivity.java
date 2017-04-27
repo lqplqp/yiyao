@@ -105,7 +105,7 @@ public class LearningActivity extends BaseActivity {
                 String e = jsonObject.get("date").toString();
                 JSONObject object = JSONObject.parseObject(a);
 
-                Glide.with(LearningActivity.this).load(object.get("tpdz")).into(image);
+                Glide.with(LearningActivity.this).load(GlobalString.BaseURL + "uploads/" + object.get("tpdz")).into(image);
                 if (object.get("tpjs") != null) {
                     title.setText("" + object.get("tpjs").toString());
                 }
