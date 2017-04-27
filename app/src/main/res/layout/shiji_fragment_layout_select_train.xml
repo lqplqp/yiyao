@@ -49,12 +49,18 @@
                 android:textColor="@color/global_black"
                 android:layout_marginLeft="10dp"
                 android:text="行业领域："/>
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp">
+
+
                 <RadioButton
                     android:id="@+id/rb_1_1"
                     android:layout_width="wrap_content"
@@ -67,18 +73,83 @@
                     android:gravity="center"
                     android:textColor="@color/white"
                     android:text="全部"/>
+
                 <RadioButton
                     android:id="@+id/rb_1_2"
                     android:layout_width="wrap_content"
                     android:layout_height="30dp"
-                    android:padding="5dp"
                     android:layout_margin="5dp"
-                    android:button="@null"
                     android:background="@drawable/radiobut_color"
+                    android:button="@null"
                     android:gravity="center"
-                    android:textColor="@color/global_black"
-                    android:text="食品"/>
+                    android:padding="5dp"
+                    android:text="食品"
+                    android:textColor="@color/global_black" />
+
+                <RadioButton
+                    android:id="@+id/rb_1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/radiobut_color"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="药品"
+                    android:textColor="@color/global_black" />
+
+                <RadioButton
+                    android:id="@+id/rb_1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/radiobut_color"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="化妆品"
+                    android:textColor="@color/global_black" />
+
+                <RadioButton
+                    android:id="@+id/rb_1_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/radiobut_color"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="保健品"
+                    android:textColor="@color/global_black" />
+
+                <RadioButton
+                    android:id="@+id/rb_1_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/radiobut_color"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="医疗器械"
+                    android:textColor="@color/global_black" />
+
+                <RadioButton
+                    android:id="@+id/rb_1_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/radiobut_color"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="监管队伍"
+                    android:textColor="@color/global_black" />
+
+
             </RadioGroup>
+
+        </HorizontalScrollView>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,19 +184,33 @@
                         android:gravity="center"
                         android:textColor="@color/white"
                         android:text="全部"/>
+
                     <RadioButton
                         android:id="@+id/rb_2_2"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_margin="5dp"
-                        android:padding="5dp"
-                        android:button="@null"
-                        android:textColor="@color/global_black"
                         android:background="@drawable/radiobut_color"
+                        android:button="@null"
                         android:gravity="center"
-                        android:text="食品安全管理员生产领域"/>
+                        android:padding="5dp"
+                        android:text="食品安全管理员生产领域"
+                        android:textColor="@color/global_black" />
+
                     <RadioButton
-                        android:id="@+id/rb_2_3"
+                    android:id="@+id/rb_2_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/global_black"
+                    android:button="@null"
+                    android:background="@drawable/radiobut_color"
+                    android:gravity="center"
+                    android:text="食品安全管理员流通领域"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_4"
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
                         android:layout_margin="5dp"
@@ -134,7 +219,43 @@
                         android:button="@null"
                         android:background="@drawable/radiobut_color"
                         android:gravity="center"
-                        android:text="食品安全管理员"/>
+                        android:text="食品安全管理员餐饮领域"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/global_black"
+                        android:button="@null"
+                        android:background="@drawable/radiobut_color"
+                        android:gravity="center"
+                        android:text="食品从业人员生产领域"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/global_black"
+                        android:button="@null"
+                        android:background="@drawable/radiobut_color"
+                        android:gravity="center"
+                        android:text="食品从业人员流通领域"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_2_7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/global_black"
+                        android:button="@null"
+                        android:background="@drawable/radiobut_color"
+                        android:gravity="center"
+                        android:text="食品从业人员餐饮领域"/>
                 </RadioGroup>
             </HorizontalScrollView>
 
