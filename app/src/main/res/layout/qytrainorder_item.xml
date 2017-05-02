@@ -8,204 +8,224 @@
         android:id="@+id/tab1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/fillet_white_bg"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        android:background="@drawable/fillet_white_bg">
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="培训项目信息"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="订单名称"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/peixunxiangmuxinxi"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
-                android:text="食品安全监管队伍继续教育培训班"
                 android:maxLength="12"
-                android:textSize="@dimen/qyinfo_text_size"
+                android:text="食品安全监管队伍继续教育培训班"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/peixunxiangmuxinxi" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="培训费用(元)"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="订单内容"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/peixunfeiyong"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
                 android:text="300"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/peixunfeiyong" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="资料费用(元)"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="支付人"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/ziliaofeiyong"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
+                android:maxLength="12"
                 android:text="20"
-                android:maxLength="12"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/ziliaofeiyong" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="学员人数"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="订单号"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/xueyuanrenshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
+                android:maxLength="12"
                 android:text="5"
-                android:maxLength="12"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/xueyuanrenshu" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="应付款(元)"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="人次"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/yingfukuan"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
+                android:ellipsize="end"
                 android:gravity="center"
+                android:maxLength="12"
                 android:text="320"
-                android:maxLength="12"
-                android:ellipsize="end"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/yingfukuan" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="已付款(元)"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:text="共计"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/yifukuan"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
+                android:ellipsize="end"
                 android:gravity="center"
+                android:maxLength="12"
                 android:text="0"
-                android:maxLength="12"
-                android:ellipsize="end"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/yifukuan" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
                 android:text="交易状态"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
+                android:id="@+id/jiaoyizhuangtai"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="已付款"
-                android:maxLength="12"
+                android:background="@drawable/table_border_bg"
                 android:ellipsize="end"
-                android:textSize="@dimen/qyinfo_text_size"
+                android:gravity="center"
+                android:maxLength="12"
+                android:text="已付款"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                android:id="@+id/jiaoyizhuangtai" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
+
         <TableRow>
+
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_border_bg"
                 android:gravity="center"
                 android:text="操作"
-                android:textSize="@dimen/qyinfo_text_size"
                 android:textColor="@color/global_black"
-                android:background="@drawable/table_border_bg"
-                />
+                android:textSize="@dimen/qyinfo_text_size" />
+
             <LinearLayout
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
                 android:orientation="horizontal">
+
                 <TextView
+                    android:visibility="gone"
+                    android:id="@+id/chakan"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:clickable="true"
                     android:gravity="center"
                     android:text="查看"
-                    android:clickable="true"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_bg_blue"
-                    android:background="@drawable/table_border_bg"
-                    android:id="@+id/chakan" />
+                    android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
+                    android:id="@+id/fukuan"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:clickable="true"
                     android:gravity="center"
                     android:text="付款"
-                    android:clickable="true"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_bg_blue"
-                    android:background="@drawable/table_border_bg"
-                    android:id="@+id/fukuan" />
+                    android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
+                    android:id="@+id/quxiao"
                     android:layout_width="0dp"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
+                    android:clickable="true"
                     android:gravity="center"
                     android:text="取消"
-                    android:clickable="true"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_bg_blue"
-                    android:background="@drawable/table_border_bg"
-                    android:id="@+id/quxiao" />
+                    android:textSize="@dimen/qyinfo_text_size" />
 
             </LinearLayout>
 

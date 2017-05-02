@@ -49,19 +49,7 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
 
     MBaseAdapter adapter;
     private int page = 1;
-    private View rootView;
-    @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        if(rootView == null) {
-            rootView = super.onCreateView(inflater, container, savedInstanceState);
-            return rootView;
-        }
-        ViewGroup parent = (ViewGroup) rootView.getParent();
-        if (parent != null) {
-            parent.removeView(rootView);
-        }
-        return rootView;
-    }
+
 
     @Override
     protected void initView() {
@@ -107,7 +95,7 @@ public class SJGRCompanyTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_qyhtjfx);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_yqyhtjfx);
         params.addBodyParameter("page",page+"");
         /*if(star_time!=null){
             params.addBodyParameter("sj1",star_time);

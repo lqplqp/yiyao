@@ -59,18 +59,20 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
+        if(object !=null){
+            holder.kaochang.setText("" + object.get("id"));
+            holder.shifoutongguo.setText("" + object.get("sftg"));
 
-        holder.kaochang.setText("" + object.get("id").toString());
-        holder.shifoutongguo.setText("" + object.get("sftg").toString());
+            holder.jinrukaochang.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View views) {
+                    Intent intent = new Intent(context, ExamActivity.class);
+                    intent.putExtra("kmid",""+object.get("pxid"));
+                    context.startActivity(intent);
+                }
+            });
+        }
 
-        holder.jinrukaochang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View views) {
-                Intent intent = new Intent(context, ExamActivity.class);
-                intent.putExtra("kmid",object.get("id").toString());
-                context.startActivity(intent);
-            }
-        });
 
 
 

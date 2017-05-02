@@ -26,7 +26,7 @@ public class QYManagerMessageCad extends MBaseAdapter<QYManagerMessageCad.ViewHo
         //信息卡编号
         holder.xinxikabianhao.setText(""+result.getString("xinxikabianhao"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
     }
 
 

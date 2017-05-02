@@ -63,7 +63,7 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
 
     private void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji6/wdxxk");
-        params.addBodyParameter("username", userName);
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -95,7 +95,7 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
                     shengchangangwei.setText(object.get("jgdw").toString());
                 }
                 if (object.getString("tpdz") != null) {
-                    x.image().bind(touxiang, object.getString("tpdz"));
+                    x.image().bind(touxiang, GlobalString.BaseURL + object.getString("tpdz"));
                 }
             }
 
@@ -126,17 +126,5 @@ public class GeRenYongHuXinXiKaFargment extends BaseFragment {
     public void onClick() {
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder1 = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder1.unbind();
-    }
 }

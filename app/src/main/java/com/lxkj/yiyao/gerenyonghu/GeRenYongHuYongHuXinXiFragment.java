@@ -106,7 +106,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
 
     private void updateData() {
         final RequestParams requestParams = new RequestParams(GlobalString.gerenyonghu_yonghuxinxi);
-        requestParams.addBodyParameter("username", userName);
+        requestParams.addBodyParameter("username", SPUtil.getUserName(getContext()));
         requestParams.addBodyParameter("xm", "" + unitnameTv.getText());
         if (radioNan.isChecked()) {
             requestParams.addBodyParameter("xb", "男");
@@ -168,7 +168,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
 
     private void requestData() {
         RequestParams requestParams = new RequestParams(GlobalString.gerenyonghu_yonghuxinxi);
-        requestParams.addBodyParameter("username", userName);
+        requestParams.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().post(requestParams, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -208,7 +208,7 @@ public class GeRenYongHuYongHuXinXiFragment extends BaseFragment {
                     //用户信息图片地址
                     String tpdz = jsonObject.getString("tpdz");
 
-                    x.image().bind(headImage, tpdz);
+                    x.image().bind(headImage, GlobalString.BaseURL + tpdz);
                     usernameTv.setText("" + zh);
                     unitnameTv.setText("" + xm);
                     if (TextUtils.equals("男", xb)) {

@@ -28,7 +28,7 @@ public class SJGRTiJianTongJiAdapter extends MBaseAdapter<SJGRTiJianTongJiAdapte
         //体检单位
         holder.tijaindanwei.setText(""+result.getString("tjdw"));
         //序号
-        holder.xuhao.setText("" + result.getString("xuhao"));
+        holder.xuhao.setText("" + result.getString("id"));
     }
 
     @Override

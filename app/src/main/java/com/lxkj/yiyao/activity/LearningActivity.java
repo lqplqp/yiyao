@@ -18,6 +18,8 @@ import com.lxkj.yiyao.adapter.XiangGuanZiLiaoAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuXueXiAdapter;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.SPUtil;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -77,6 +79,7 @@ public class LearningActivity extends BaseActivity {
     private JieYeKaoShiAdapter jieYeKaoShiAdapter;
     private JieYeZhengShuAdapter jieYeZhengShuAdapter;
     private XiangGuanZiLiaoAdapter xiangGuanZiLiaoAdapter;
+    String imageUrl;
 
     @Override
     protected void init() {
@@ -94,37 +97,45 @@ public class LearningActivity extends BaseActivity {
     private void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/ybpxxm/ybpxxm");
         params.addBodyParameter("pxid", index + "");
+        params.addBodyParameter("username", SPUtil.getUserName(this));
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
+                String s = result;
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                String a = jsonObject.get("data").toString();
-                String b = jsonObject.get("datb").toString();
-                String c = jsonObject.get("datc").toString();
-                String d = jsonObject.get("datd").toString();
-                String e = jsonObject.get("date").toString();
+                String a=null,b=null,c=null,d=null,e=null;
+                if(jsonObject.get("data") != null)
+                    a = jsonObject.get("data").toString();
+                if(jsonObject.get("datb") != null)
+                    b = jsonObject.get("datb").toString();
+                if(jsonObject.get("datc") != null)
+                    c = jsonObject.get("datc").toString();
+                if(jsonObject.get("datd") != null)
+                    d = jsonObject.get("datd").toString();
+                if(jsonObject.get("date") != null)
+                    e = jsonObject.get("date").toString();
                 JSONObject object = JSONObject.parseObject(a);
 
                 Glide.with(LearningActivity.this).load(GlobalString.BaseURL + "uploads/" + object.get("tpdz")).into(image);
                 if (object.get("tpjs") != null) {
-                    title.setText("" + object.get("tpjs").toString());
+                    title.setText("" + object.get("tpjs"));
                 }
                 if (object.get("sydq") != null)
-                    shiyingdiqu.setText("" + object.get("sydq").toString());
+                    shiyingdiqu.setText("" + object.get("sydq"));
                 if (object.get("sshy") != null)
-                    suoshuhangye.setText("" + object.get("sshy").toString());
+                    suoshuhangye.setText("" + object.get("sshy"));
                 if (object.get("pxsj") != null && object.get("pxsj1") != null)
-                    peixunshijian.setText("" + object.get("pxsj").toString() + "到" + object.get("pxsj1").toString());
+                    peixunshijian.setText("" + object.get("pxsj") + "到" + object.get("pxsj1"));
                 if (object.get("pxblb") != null)
-                    peixunbanleibie.setText("" + object.get("pxblb").toString());
+                    peixunbanleibie.setText("" + object.get("pxblb"));
                 if (object.get("zsmc") != null)
-                    zhengshumingcheng.setText("" + object.get("zsmc").toString());
+                    zhengshumingcheng.setText("" + object.get("zsmc"));
                 if (object.get("jytj") != null)
-                    jieyetiaojian.setText("" + object.get("jytj").toString());
+                    jieyetiaojian.setText("" + object.get("jytj"));
                 if (object.get("ts") != null)
-                    jieguo.setText("" + object.get("ts").toString());
+                    jieguo.setText("" + object.get("ts"));
                 if (object.get("jysj") != null && object.get("jysj1") != null)
-                    jieshushijian.setText("" + object.get("jysj").toString() + "到" + object.get("jysj1").toString());
+                    jieshushijian.setText("" + object.get("jysj")+ "到" + object.get("jysj1"));
 
                 if(user_type == -1){
                     geRenYongHuXueXiAdapter = new GeRenYongHuXueXiAdapter(LearningActivity.this,b);
@@ -142,6 +153,12 @@ public class LearningActivity extends BaseActivity {
 
                 jieYeZhengShuAdapter = new JieYeZhengShuAdapter(e);
                 jieyezhengshuListview.setAdapter(jieYeZhengShuAdapter);
+
+
+                JSONObject date = jsonObject.getJSONObject("date");
+                if(date!=null){
+                    imageUrl = date.get("imageurl").toString();
+                }
 
 
             }
@@ -187,7 +204,12 @@ public class LearningActivity extends BaseActivity {
     public void onClick() {
 
         Intent intent = new Intent(this,MuBanActivity.class);
-        startActivity(intent);
+        if(imageUrl==null){
+            ToastUtil.show("暂无模板,请联系管理员");
+        }else {
+            intent.putExtra("imagePath","zhengshu.png");
+            startActivity(intent);
+        }
 
     }
 }

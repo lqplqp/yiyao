@@ -28,7 +28,7 @@ public class LawManagerAdapter extends MBaseAdapter<LawManagerAdapter.ViewHolder
 
 
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("id"));
 
         //执法编号
         holder.zhifabianhao.setText("" + result.get("zfbh"));

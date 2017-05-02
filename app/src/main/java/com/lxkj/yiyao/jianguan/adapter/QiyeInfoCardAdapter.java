@@ -23,7 +23,7 @@ public class QiyeInfoCardAdapter extends MBaseAdapter<QiyeInfoCardAdapter.ViewHo
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("id"));
         //姓名
         holder.xingming.setText("" + result.get("xm"));
         //信息卡编号

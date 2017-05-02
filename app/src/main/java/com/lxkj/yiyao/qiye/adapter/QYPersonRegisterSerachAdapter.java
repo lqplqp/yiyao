@@ -25,7 +25,7 @@ public class QYPersonRegisterSerachAdapter extends MBaseAdapter<QYPersonRegister
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("id"));
         //姓名
         holder.xingming.setText("" + result.get("xingming")) ;
         //用户名

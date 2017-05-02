@@ -22,7 +22,7 @@ public class JGManagerAdapter extends MBaseAdapter<JGManagerAdapter.ViewHolder> 
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("id"));
 
         //账号
         holder.zhanghao.setText("" + result.get("zhanghao"));

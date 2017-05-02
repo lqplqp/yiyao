@@ -21,22 +21,26 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
+        //序号
+        holder.number.setText(""+result.get("id"));
+        //培训班名称
+        holder.dingdanbianhao.setText(""+result.get("pxbmc"));
+        //培训班类型
+        holder.peixunbanmingci.setText(""+result.get("pxlx"));
+
+        //培训班时间
+        holder.peixunbanleixing.setText(""+result.get("pxkssj"));
+
+        //证书名称
+        holder.peixunshijian.setText(""+result.get("pxbt"));
+
+        //购买时间
+        holder.shibaorenshu.setText(""+result.get("cjsj"));
+
+        //学习进度
+        holder.goukerenshu.setText(""+result.get("xxjd"));
         //操作
         holder.caozuo.setText(""+result.get("caozuo"));
-        //订单编号
-        holder.dingdanbianhao.setText(""+result.get("dngdanbianhao"));
-        //购课人数
-        holder.goukerenshu.setText(""+result.get("hgoukerenshu"));
-        //序号
-        holder.number.setText(""+result.get("xuhao"));
-        //培训班类型
-        holder.peixunbanleixing.setText(""+result.get("peixunbanleixing"));
-        //培训班名称
-        holder.peixunbanmingci.setText(""+result.get("peixunbanmingcheng"));
-        //培训时间
-        holder.peixunshijian.setText(""+result.get("peixunshijian"));
-        //时报人数
-        holder.shibaorenshu.setText(""+result.get("shibaorenshu"));
     }
 
 
@@ -46,7 +50,7 @@ public class PeiXunListAdapter extends MBaseAdapter<PeiXunListAdapter.ViewHolder
     }
 
     @Override
-    protected ViewHolder getHolder(View view) {
+    protected PeiXunListAdapter.ViewHolder getHolder(View view) {
         return new ViewHolder(view);
     }
 

@@ -38,7 +38,7 @@ public class SJGRTiJianSearchAdapter extends MBaseAdapter<SJGRTiJianSearchAdapte
         //姓名
         holder.xingming.setText(""+result.get("xingming"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
         //主检医师
         holder.zhuzhiyishi.setText(""+result.get("zhuzhiyishi"));
     }

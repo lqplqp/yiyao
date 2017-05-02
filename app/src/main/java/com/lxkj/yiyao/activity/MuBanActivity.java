@@ -6,6 +6,9 @@ import android.widget.ImageView;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
+import com.lxkj.yiyao.global.GlobalString;
+
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +23,10 @@ public class MuBanActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        Glide.with(this).load("http://af.0101hr.com/moban.png").into(image);
+        String imagePath = getIntent().getStringExtra("imagePath");
+        String s = GlobalString.BaseURL  + imagePath;
+        //Glide.with(this).load(s).into(image);
+        x.image().bind(image,s);
     }
 
     @Override

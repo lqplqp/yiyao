@@ -21,6 +21,7 @@
             android:orientation="vertical"
             >
             <ImageView
+                android:scaleType="centerCrop"
                 android:id="@+id/head_image"
                 android:layout_width="100dp"
                 android:layout_height="120dp"
@@ -38,12 +39,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:text="*用    户    名："
+                    android:text="体检报告编号:"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
 
-                <TextView
-                    android:id="@+id/username_tv"
+                <EditText
+                    android:id="@+id/tijianbaogaobianhao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -68,7 +69,7 @@
                     android:textColor="@color/global_black"
                     android:hint="*姓            名："/>
                 <EditText
-                    android:id="@+id/unitname_tv"
+                    android:id="@+id/xingming"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -130,7 +131,7 @@
                     android:textColor="@color/global_black"
                     android:text="*身 份 证 号："/>
                 <EditText
-                    android:id="@+id/manage_person_tv"
+                    android:id="@+id/shenfenzhenghao"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -147,15 +148,16 @@
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textSize="@dimen/qyinfo_text_size"
+                    android:text="工作单位:"
                     android:textColor="@color/global_black"
-                    android:text="* 单 位 名 称："/>
+                    android:textSize="@dimen/qyinfo_text_size" />
                 <EditText
-                    android:id="@+id/contact_name_tv"
+                    android:id="@+id/gongzuodanwei"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -168,6 +170,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -193,6 +196,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -219,6 +223,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -239,11 +244,9 @@
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0.1dp"
-                android:background="@color/gray_bg"/>
+
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -269,6 +272,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -305,13 +309,13 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:text="*学        历："/>
+                    android:text="*是否合格："/>
                 <Spinner
                     android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:entries="@array/xueli"
-                    android:id="@+id/xueli"
+                    android:entries="@array/shifouhege"
+                    android:id="@+id/shifouhege"
                     ></Spinner>
             </LinearLayout>
 
@@ -330,9 +334,9 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:text="*单 位 地 址："/>
+                    android:text="*体检时间："/>
                 <TextView
-                    android:id="@+id/danweidizhi_tv"
+                    android:id="@+id/tijianshijian"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -348,6 +352,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"

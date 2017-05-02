@@ -24,7 +24,7 @@ public class QYManagerPersonManagerAdapter extends MBaseAdapter <QYManagerPerson
         //姓名
         holder.xingming.setText(""+result.getString("xingming"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
         //用户名
         holder.yonghuming.setText(""+result.getString("yonghuming"));
     }

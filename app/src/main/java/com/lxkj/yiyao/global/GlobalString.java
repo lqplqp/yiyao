@@ -101,6 +101,9 @@ public interface GlobalString {
     //shengjugeren_监管单位统计信息
     public static final String sjgr_jgdwtjfx = "admin/fenji2/jgdwtjfx/";
 
+    public static final String sjgr_zfjltjfx = "admin/fenji2/zfjltjfx/";
+    public static final String sjgr_yqyhtjfx = "admin/fenji2/qyyhtjfx/";
+    public static final String sjgr_gryhtjfx = "admin/fenji2/gryhtjfx/";
 
     //--------------------------------------
     //-----------分级1 接口

@@ -15,6 +15,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.qiye.adapter.QYPersonManagerAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -90,7 +91,7 @@ public class QYPersonManagerFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_person_manager);
         params.addBodyParameter("page", page + "");
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         params.addBodyParameter("xx",selectContent.getText().toString());
 
         params.addBodyParameter("sj1",startTime.getText().toString());

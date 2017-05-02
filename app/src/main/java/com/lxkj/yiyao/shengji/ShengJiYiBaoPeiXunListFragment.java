@@ -10,6 +10,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.PeiXunListAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -74,7 +75,7 @@ requestData();
     public void requestData() {
         RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/ybpxxm");
         params.addBodyParameter("page", page + "");
-
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {

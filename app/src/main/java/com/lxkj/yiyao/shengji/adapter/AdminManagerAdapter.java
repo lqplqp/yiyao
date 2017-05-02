@@ -25,7 +25,7 @@ public class AdminManagerAdapter extends MBaseAdapter<AdminManagerAdapter.ViewHo
 
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
-        holder.xuhao.setText("" + result.getString("xh"));
+        holder.xuhao.setText("" + result.getString("id"));
 
         //用户名
         holder.yonghuming.setText("" + result.getString("zh"));

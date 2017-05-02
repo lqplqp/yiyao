@@ -68,7 +68,7 @@ public class QYInfoInputFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+        getDate();
     }
 
     @Override
@@ -88,6 +88,46 @@ public class QYInfoInputFragment extends BaseFragment {
                 requestDate();
                 break;
         }
+    }
+
+
+    void getDate(){
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_info);
+        SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
+        params.addBodyParameter("username",sp.getString("username","") + "");
+        x.http().get(params, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                JSONObject jsonObject = JSONObject.parseObject(result);
+                JSONObject data = jsonObject.getJSONObject("data");
+                usernameTv.setText(data.get("yhm").toString());
+                unitnameTv.setText(data.get("dwdz").toString());
+                doPersonTv.setText(data.get("cyrs").toString());
+                managePersonTv.setText(data.get("glrys").toString());
+                contactNameTv.setText(data.get("gly").toString());
+                emailTv.setText(data.get("yx").toString());
+
+                phoneTv.setText(data.get("dh").toString());
+
+
+                danweidizhi.setText(data.get("dwdz").toString());
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
     }
 
 

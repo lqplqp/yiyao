@@ -36,7 +36,7 @@ public class GeRenYongHuTongZhiAdapter extends MBaseAdapter<GeRenYongHuTongZhiAd
         //通知类型
         holder.tongzhileixing.setText(""+result.get("tzlx"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
     }
 
 

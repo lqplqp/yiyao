@@ -10,6 +10,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengji.QiYeRenYuanActivity;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +21,7 @@ import butterknife.ButterKnife;
 
 public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.ViewHolder> {
 
-private Context context;
+    private Context context;
 
 
     public CompanyInfoListAdapter(String bean) {
@@ -32,8 +33,9 @@ private Context context;
     }
 
     @Override
-    protected void fillData(int i, ViewHolder holder, final JSONObject result) {
+    protected void fillData(int i, final ViewHolder holder, final JSONObject result) {
         //查看
+        context = holder.beizhu.getContext();
 
         //企业名称
         holder.qiyemingcheng.setText("" + result.getString("qymc"));
@@ -55,15 +57,16 @@ private Context context;
         holder.chakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, QiYeRenYuanActivity.class);
+                Intent intent = new Intent(holder.beizhu.getContext(), QiYeRenYuanActivity.class);
                 intent.putExtra("qymc", qymc);
                 context.startActivity(intent);
+                //ToastUtil.show("123");
             }
         });
         holder.qiyerenyuan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, QiYeRenYuanActivity.class);
+                Intent intent = new Intent(holder.beizhu.getContext(), QiYeRenYuanActivity.class);
                 intent.putExtra("qymc", qymc);
                 context.startActivity(intent);
             }

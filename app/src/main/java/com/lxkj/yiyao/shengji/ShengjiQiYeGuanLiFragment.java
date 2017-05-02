@@ -13,6 +13,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.adapter.CompanyInfoListAdapter;
 import com.lxkj.yiyao.shengji.adapter.ShenHeAapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -89,7 +90,7 @@ public class ShengjiQiYeGuanLiFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_qygl);
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", sousuoxinxi.getText() + "");
-
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

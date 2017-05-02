@@ -100,9 +100,9 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
 
         String [] sanji = danweidizhi.getText().toString().split("-");
 
-        params.addBodyParameter("szdq", sanji[0]);
+        /*params.addBodyParameter("szdq", sanji[0]);
         params.addBodyParameter("szdq1", sanji[1]);
-        params.addBodyParameter("szdq2", sanji[2]);
+        params.addBodyParameter("szdq2", sanji[2]);*/
         params.addBodyParameter("dz", danwei.getText().toString());
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -116,8 +116,36 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                ToastUtil.show(result);
-                ToastUtil.show(jsonObject.get("data").toString());
+                //ToastUtil.show(result);
+                if(jsonObject.get("code").toString().equals("111111")){
+                    JSONObject data = jsonObject.getJSONObject("data");
+                    if(data.get("zh") != null)
+                        yonghuming.setText(data.get("zh").toString());
+                    if(data.get("xm") != null)
+                        xingming.setText(data.get("xm").toString());
+                    if(data.get("sfzh") != null)
+                        shenfenzhenghao.setText(data.get("sfzh").toString());
+                    if(data.get("jgdwmc") != null)
+                        danweimingcheng.setText(data.get("jgdwmc").toString());
+
+                    if(data.get("sjhm") != null)
+                        shoujihaoma.setText(data.get("sjhm").toString());
+
+                    if(data.get("zw") != null)
+                        zhiwei.setText(data.get("zw").toString());
+
+                    if(data.get("csrq") != null)
+                        chushengriqi.setText(data.get("csrq").toString());
+
+                    if(data.get("xl") != null)
+                        xueli.setText(data.get("xl").toString());
+
+                    if(data.get("dz") != null)
+                        danweidizhi.setText(data.get("dz").toString());
+
+
+                }
+                //ToastUtil.show(jsonObject.get("data").toString());
 
             }
 

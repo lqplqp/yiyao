@@ -8,10 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioButton;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
-import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.qiye.adapter.QYTrainOrderAdapter;
 import com.lxkj.yiyao.view.RefreshListView;
@@ -29,6 +30,12 @@ import butterknife.ButterKnife;
 
 public class QYTrainOrderFragment extends BaseFragment {
     private static final String TAG = "QYTrainOrderFragment";
+
+    // ======================== 模板代码=============================
+
+    MBaseAdapter adapter;
+    @BindView(R.id.list_view)
+    RefreshListView listView;
     @BindView(R.id.rb_1)
     RadioButton rb1;
     @BindView(R.id.rb_2)
@@ -37,12 +44,6 @@ public class QYTrainOrderFragment extends BaseFragment {
     RadioButton rb3;
     @BindView(R.id.rb_4)
     RadioButton rb4;
-
-    // ======================== 模板代码=============================
-
-    MBaseAdapter adapter;
-    @BindView(R.id.list_view)
-    RefreshListView listView;
     private int page = 1;
 
 
@@ -52,7 +53,7 @@ public class QYTrainOrderFragment extends BaseFragment {
         init();
 
 
-        requestData(null , 0);
+        requestData(null);
 
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
@@ -61,11 +62,11 @@ public class QYTrainOrderFragment extends BaseFragment {
 
 
                 adapter.clear();
-                adapter.notifyDataSetChanged();
+
                 page = 1;
 
 
-                requestData(null , 0);
+                requestData(null);
 
 
             }
@@ -74,7 +75,8 @@ public class QYTrainOrderFragment extends BaseFragment {
             public void onLoadingMore() {
 
 
-                requestData(null , 0);
+                requestData(null);
+                adapter.notifyDataSetChanged();
 
 
             }
@@ -84,26 +86,27 @@ public class QYTrainOrderFragment extends BaseFragment {
     }
     // ======================== 模板代码=============================
 
+    int tab = 1;
 
     // ======================== 模板代码=============================
-    public void requestData(String s , int tab) {
+    public void requestData(final String s) {
         RequestParams params = null;
-        if(tab == 1 || tab ==0){
+        if (tab == 1 || tab == 0) {
             params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_quanbudingdan);
         }
-        if(tab == 2){
+        if (tab == 2) {
             params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_daifukuan);
         }
-        if(tab ==3){
+        if (tab == 3) {
             params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_yifukuan);
         }
-        if(tab == 4){
+        if (tab == 4) {
             params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_yiquxiao);
         }
 
         params.addBodyParameter("page", page + "");
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", sp.getString("username", "") + "");
 
 
         x.http().get(params, new Callback.CacheCallback<String>() {
@@ -112,13 +115,44 @@ public class QYTrainOrderFragment extends BaseFragment {
                 Log.i(TAG, result);
                 if (adapter == null) {
                     adapter = new QYTrainOrderAdapter(result);
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+
+                    JSONObject data2 = jsonObject.getJSONObject("data");
+                    JSONArray data = data2.getJSONArray("data");
+                    if(tab == 1){
+                        rb1.setText("全部("+ data.size() + ")");
+                    }
+                    if(tab == 2){
+                        rb2.setText("代付款("+ data.size() + ")");
+                    }
+                    if(tab == 3){
+                        rb3.setText("已付款("+ data.size() + ")");
+                    }
+                    if(tab == 4){
+                        rb4.setText("已取消("+ data.size() + ")");
+                    }
+
                     listView.setAdapter(adapter);
                 } else {
+                    adapter = new QYTrainOrderAdapter(result);
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    JSONObject data2 = jsonObject.getJSONObject("data");
+                    JSONArray data = data2.getJSONArray("data");
+                    if(tab == 1){
+                        rb1.setText("全部("+ data.size() + ")");
+                    }
+                    if(tab == 2){
+                        rb2.setText("代付款("+ data.size() + ")");
+                    }
+                    if(tab == 3){
+                        rb3.setText("已付款("+ data.size() + ")");
+                    }
+                    if(tab == 4){
+                        rb4.setText("已取消("+ data.size() + ")");
+                    }
                     listView.setAdapter(adapter);
-                    adapter.addData(result);
-                    listView.deferNotifyDataSetChanged();
+                    //listView.deferNotifyDataSetChanged();
                 }
-                page++;
 
             }
 
@@ -170,7 +204,8 @@ public class QYTrainOrderFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 hide();
-                requestData(null , 1);
+                tab = 1;
+                requestData(null);
                 rb1.setBackgroundResource(R.drawable.blue_but_bg);
                 rb1.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
@@ -182,6 +217,8 @@ public class QYTrainOrderFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 hide();
+                tab = 2;
+                requestData(null);
                 rb2.setBackgroundResource(R.drawable.blue_but_bg);
                 rb2.setTextColor(getResources().getColor(R.color.white));
                 rb1.setTextColor(getResources().getColor(R.color.global_black));
@@ -193,6 +230,8 @@ public class QYTrainOrderFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 hide();
+                tab = 3;
+                requestData(null);
                 rb3.setBackgroundResource(R.drawable.blue_but_bg);
                 rb3.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
@@ -204,6 +243,8 @@ public class QYTrainOrderFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
                 hide();
+                tab = 4;
+                requestData(null);
                 rb4.setBackgroundResource(R.drawable.blue_but_bg);
                 rb4.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
@@ -214,5 +255,11 @@ public class QYTrainOrderFragment extends BaseFragment {
     }
 
 
-
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
+    }
 }

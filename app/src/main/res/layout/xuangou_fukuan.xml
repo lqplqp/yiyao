@@ -36,7 +36,7 @@
             android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="订单信息："
+            android:text="订单名称："
             android:textColor="@color/global_black"
             android:textSize="16sp"
             />
@@ -51,6 +51,109 @@
             android:layout_marginRight="10dp"
             />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单内容："
+            android:textColor="@color/global_black"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="xxx"
+            android:textSize="16sp"
+            android:id="@+id/dingdanneirong"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付人："
+            android:textColor="@color/global_black"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/zhifuren"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="xxx"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单号："
+            android:textColor="@color/global_black"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/dingdanhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="xxx"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="人次："
+            android:textColor="@color/global_black"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/renci"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="0"
+            android:textSize="16sp"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

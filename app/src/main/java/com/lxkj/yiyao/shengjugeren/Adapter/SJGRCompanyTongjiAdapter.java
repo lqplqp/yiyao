@@ -6,6 +6,7 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.shengji.adapter.QiYeYongHuTongJiAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -21,23 +22,32 @@ public class SJGRCompanyTongjiAdapter extends MBaseAdapter<SJGRCompanyTongjiAdap
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
-        //不合格人数
-        holder.buhegerenshu.setText(""+result.get("buhegerenshu"));
-        //合格人数
-        holder.hegerenshu.setText(""+result.get("hegerenshu"));
-        //体检单位
-        holder.tijiandanwei.setText(""+result.get("tijiandanwei"));
-        //体检合格率
-        holder.tijianhegelv.setText(""+result.get("tijianhegelv"));
-        //体检人数
-        holder.tijianrenshu.setText(""+result.get("tijianrenshu"));
+        //地区
+        holder.diqu.setText("" + result.getString("dq"));
+        //企业数量
+        holder.qiyeshuliang.setText("" + result.getString("qysl"));
+        //从业人员数量
+        holder.congyerenyuanshuliang.setText("" + result.getString("cyrys"));
+        //已报培训企业数量
+        holder.yibaopeixunqiyeshuliang.setText("" + result.getString("ybqysl"));
+        //已报培训从业人员数
+        holder.yibaopeixunrenyuanshu.setText("" + result.getString("ypxcyrys"));
+        //企业培训率
+        holder.qiyepeixunlv.setText("" + result.getString("qypxl"));
+        //从业人员培训率
+        holder.congyerenyuanpeixunlv.setText("" + result.getString("cyrypxl"));
+        //人员流入数量
+        holder.renyuanliurushuliang.setText("" + result.getString("rylrsl"));
+        //人员流出数量
+        holder.renyuanliuchushuliang.setText("" + result.getString("rylcsl"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText("" + result.getString("id"));
+
     }
 
     @Override
     protected int getItemLayout() {
-        return R.layout.sjgr_qiye_yonghu_tongji_item;
+        return R.layout.shengji_qiyeyonghutongji_item;
     }
 
     @Override
@@ -45,21 +55,27 @@ public class SJGRCompanyTongjiAdapter extends MBaseAdapter<SJGRCompanyTongjiAdap
         return new ViewHolder(view);
     }
 
-
     static class ViewHolder {
         @BindView(R.id.xuhao)
         TextView xuhao;
-        @BindView(R.id.tijiandanwei)
-        TextView tijiandanwei;
-        @BindView(R.id.tijianrenshu)
-        TextView tijianrenshu;
-        @BindView(R.id.hegerenshu)
-        TextView hegerenshu;
-        @BindView(R.id.buhegerenshu)
-        TextView buhegerenshu;
-        @BindView(R.id.tijianhegelv)
-        TextView tijianhegelv;
-
+        @BindView(R.id.diqu)
+        TextView diqu;
+        @BindView(R.id.qiyeshuliang)
+        TextView qiyeshuliang;
+        @BindView(R.id.congyerenyuanshuliang)
+        TextView congyerenyuanshuliang;
+        @BindView(R.id.yibaopeixunqiyeshuliang)
+        TextView yibaopeixunqiyeshuliang;
+        @BindView(R.id.yibaopeixunrenyuanshu)
+        TextView yibaopeixunrenyuanshu;
+        @BindView(R.id.qiyepeixunlv)
+        TextView qiyepeixunlv;
+        @BindView(R.id.congyerenyuanpeixunlv)
+        TextView congyerenyuanpeixunlv;
+        @BindView(R.id.renyuanliurushuliang)
+        TextView renyuanliurushuliang;
+        @BindView(R.id.renyuanliuchushuliang)
+        TextView renyuanliuchushuliang;
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
         }

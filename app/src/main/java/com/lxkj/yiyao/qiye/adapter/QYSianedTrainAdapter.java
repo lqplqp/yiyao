@@ -24,7 +24,7 @@ public class QYSianedTrainAdapter extends MBaseAdapter<QYSianedTrainAdapter.View
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
-        holder.xuhao.setText("" + result.get("xuhao"));
+        holder.xuhao.setText("" + result.get("id"));
         //订单编号
         holder.dingdanbianhao.setText("" + result.get("ddbh"));
         //培训班名称

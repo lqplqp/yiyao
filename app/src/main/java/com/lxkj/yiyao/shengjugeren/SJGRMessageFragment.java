@@ -17,6 +17,7 @@ import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRGongShigongGaoAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRShouYePeiXunBanAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRShouYeTongZhiAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -64,6 +65,7 @@ public class SJGRMessageFragment extends BaseFragment {
 
     private void requestDate(String s) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + s);
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().get(params, new Callback.CommonCallback<String>() {
 
             @Override
@@ -116,7 +118,7 @@ public class SJGRMessageFragment extends BaseFragment {
                 rb1.setBackgroundResource(R.drawable.blue_but_bg);
                 rb1.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
-                requestDate("/admin/fenji6/sy");
+                requestDate("/admin/fenji2/sy");
                 break;
             case R.id.rb_2:
                 hide1();
@@ -128,17 +130,5 @@ public class SJGRMessageFragment extends BaseFragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        unbinder = ButterKnife.bind(this, rootView);
-        return rootView;
-    }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        unbinder.unbind();
-    }
 }

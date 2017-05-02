@@ -36,7 +36,7 @@ public class QYManaYiBaoPeiXunAdapter extends MBaseAdapter <QYManaYiBaoPeiXunAda
         //实报人数
         holder.shibaorenshu.setText(""+result.getString("shibaorenshu"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
     }
 
     @Override
