@@ -301,7 +301,7 @@ public class XuanGouKeChengRenYuanActivity extends BaseActivity {
      */
     private void setPeiXunBanData(JSONObject peiXunBanParse) {
         //图片地址
-        String tpdz = peiXunBanParse.getString("tpdz") + "";
+        String tpdz = GlobalString.BaseURL + "uploads/" + peiXunBanParse.getString("tpdz") + "";
         x.image().bind(peixunImage, tpdz);
         //标题
         String bt = peiXunBanParse.getString("bt") + "";

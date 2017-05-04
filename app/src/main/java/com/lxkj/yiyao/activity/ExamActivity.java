@@ -90,7 +90,9 @@ public class ExamActivity extends BaseActivity {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examUrl);
         params.addBodyParameter("kmid", kmid);
-        params.addBodyParameter("xkzbh",xkzbh);
+        if( xkzbh!=null && !xkzbh.equals("") ){
+            params.addBodyParameter("xkzbh",xkzbh);
+        }
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -312,11 +314,11 @@ public class ExamActivity extends BaseActivity {
         //int id = sp.getInt("id", -1);
         params.addBodyParameter("kmid",kmid);
         params.addBodyParameter("username",username);
-        params.addBodyParameter("ctr",ctr);
+        params.addBodyParameter("ctr",ctr + "");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                Log.d("", result);
+                //Log.d("", result);
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 String code = jsonObject.get("code").toString();
                 String data = jsonObject.get("data").toString();

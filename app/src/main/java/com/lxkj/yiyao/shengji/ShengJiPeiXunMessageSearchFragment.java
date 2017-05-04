@@ -16,6 +16,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengji.adapter.ShengJiPeiXunMessageSearchAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -62,6 +63,17 @@ public class ShengJiPeiXunMessageSearchFragment extends BaseFragment {
 
         requestData(null);
 
+        chaxun.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                page=1;
+                adapter.clear();
+                adapter.notifyDataSetChanged();
+                listView.deferNotifyDataSetChanged();
+                requestData(faqidanwei.getText().toString());
+            }
+        });
+
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -98,10 +110,11 @@ public class ShengJiPeiXunMessageSearchFragment extends BaseFragment {
         RequestParams params = new RequestParams("http://af.0101hr.com/admin/fenji1/pxtzgl");
         params.addBodyParameter("page", page + "");
         if (s != null) {
-            params.addBodyParameter("cqdw", s);
+            params.addBodyParameter("fqdw", s);
         }
+
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         params.addBodyParameter("sj1",startTime.getText().toString());
         params.addBodyParameter("sj2",endTime.getText().toString());
         x.http().get(params, new Callback.CacheCallback<String>() {

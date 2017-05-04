@@ -9,6 +9,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import cn.qqtheme.framework.entity.City;
 import cn.qqtheme.framework.entity.County;
@@ -74,8 +75,9 @@ public class PickViewUtils {
     public void pickDate(){
         DatePicker picker = new DatePicker(activity, DatePicker.YEAR_MONTH_DAY);
         picker.setRangeStart(1980, 1, 1);//开始范围
-        picker.setRangeEnd(2016, 1, 1);//结束范围
-        picker.setSelectedItem(1995, 6, 15);
+        picker.setRangeEnd(2025, 1, 1);//结束范围
+        Calendar calendar = Calendar.getInstance();
+        picker.setSelectedItem(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH)+1, calendar.get(Calendar.DATE));
         picker.setOnDatePickListener(new DatePicker.OnYearMonthDayPickListener() {
             @Override
             public void onDatePicked(String year, String month, String day) {

@@ -22,19 +22,19 @@ public class SJGRJianGuanTongJiAdapter extends MBaseAdapter<SJGRJianGuanTongJiAd
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //监管单位名称
-        holder.jianguandanweimingcheng.setText(""+result.get("jianguandanweimingcheng"));
+        holder.jianguandanweimingcheng.setText(""+result.get("jgdwmc"));
         //集中培训人数
-        holder.jizhongpeixunrenshu.setText(""+result.get("jizhongpeixunrenshu"));
+        holder.jizhongpeixunrenshu.setText(""+result.get("jzpxrs"));
         //培训率
-        holder.peixunlv.setText(""+result.get("peixunlv"));
+        holder.peixunlv.setText(""+result.get("pxl"));
         //网上培训人数
-        holder.wangshangpeixunrenshu.setText(""+result.get("wangshangpeixunrenshu"));
+        holder.wangshangpeixunrenshu.setText(""+result.get("wspxrs"));
         //辖区管理人数
-        holder.xiaquguanlirenshu.setText(""+result.get("xiaquguanlirenshu"));
+        holder.xiaquguanlirenshu.setText(""+result.get("xqnjgryrs"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
         //用户名
-        holder.yonghuming.setText(""+result.get("yonghuming"));
+        holder.yonghuming.setText(""+result.get("yhm"));
     }
 
 

@@ -60,7 +60,7 @@ public class GeRenYongHuTiJianBaoGaoFragment extends BaseFragment {
 
     private void requestDate(String s) {
 
-        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji6/wdtjbg");
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji6/wdxxk");
         params.addBodyParameter("username", s);
 
         x.http().get(params, new Callback.CommonCallback<String>() {
@@ -94,7 +94,7 @@ public class GeRenYongHuTiJianBaoGaoFragment extends BaseFragment {
                     fazhengdanwei.setText(object.get("jgdw").toString());
                 }
                 if (object.getString("tpdz") != null) {
-                    x.image().bind(touxiang, object.getString("tpdz"));
+                    x.image().bind(touxiang, GlobalString.BaseURL + object.getString("tpdz"));
                 }
             }
 

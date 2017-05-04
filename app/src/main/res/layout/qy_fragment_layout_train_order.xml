@@ -28,6 +28,7 @@
                 android:checked="true"
                 android:gravity="center"
                 android:textColor="@color/white"
+
                 android:text="全部(2)"
                 android:id="@+id/rb_1" />
             <RadioButton

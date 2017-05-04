@@ -5,7 +5,13 @@ import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.utils.ToastUtil;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -20,7 +26,7 @@ public class ShenHeAapter extends MBaseAdapter<ShenHeAapter.ViewHolder> {
     }
 
     @Override
-    protected void fillData(int i, ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, final ViewHolder holder, JSONObject result) {
         //登录用户名
         holder.dengluyonghuming.setText(""+result.get("dlyhm"));
         //法人
@@ -28,7 +34,7 @@ public class ShenHeAapter extends MBaseAdapter<ShenHeAapter.ViewHolder> {
         //服务对象
         holder.fuwuduixiang.setText(""+result.get("fwdx"));
         //联系电话
-        holder.lianxidianhua.setText(""+result.get("lxh"));
+        holder.lianxidianhua.setText(""+result.get("lxdh"));
         //审核状态
         holder.shenhezhuangtai.setText(""+result.get("shzt"));
         //体检机构地址
@@ -36,7 +42,45 @@ public class ShenHeAapter extends MBaseAdapter<ShenHeAapter.ViewHolder> {
         //体检机构名称
         holder.tijianjigoumingcheng.setText(""+result.get("tjglmc"));
         //序号
-        holder.xuhao.setText(""+result.get("xh"));
+        holder.xuhao.setText(""+result.get("id"));
+
+
+        if(holder.shenhezhuangtai.getText().toString().equals("未审核")){
+            holder.shenhezhuangtai.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji1/sh");
+                    params.addBodyParameter("id",""+holder.xuhao.getText());
+                    x.http().get(params, new Callback.CommonCallback<String>() {
+                        @Override
+                        public void onSuccess(String result) {
+                            JSONObject jsonObject = JSONObject.parseObject(result);
+                            Object message = jsonObject.get("message");
+                            if(message!=null){
+                                ToastUtil.show(message.toString());
+                                holder.shenhezhuangtai.setText("审核通过");
+                            }
+                        }
+
+                        @Override
+                        public void onError(Throwable ex, boolean isOnCallback) {
+                            ex.printStackTrace();
+                        }
+
+                        @Override
+                        public void onCancelled(CancelledException cex) {
+
+                        }
+
+                        @Override
+                        public void onFinished() {
+
+                        }
+                    });
+                }
+            });
+        }
+
     }
 
     @Override

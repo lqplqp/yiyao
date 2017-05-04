@@ -26,23 +26,23 @@ public class QiYeYongHuTongJiAdapter extends MBaseAdapter<QiYeYongHuTongJiAdapte
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //地区
-        holder.diqu.setText("" + result.getString("fbr"));
+        holder.diqu.setText("" + result.getString("dq"));
         //企业数量
-        holder.qiyeshuliang.setText("" + result.getString("pxjssj"));
+        holder.qiyeshuliang.setText("" + result.getString("qysl"));
         //从业人员数量
-        holder.congyerenyuanshuliang.setText("" + result.getString("pxkssj"));
+        holder.congyerenyuanshuliang.setText("" + result.getString("cyrys"));
         //已报培训企业数量
-        holder.yibaopeixunqiyeshuliang.setText("" + result.getString("peixundidian"));
+        holder.yibaopeixunqiyeshuliang.setText("" + result.getString("ybqysl"));
         //已报培训从业人员数
-        holder.yibaopeixunrenyuanshu.setText("" + result.getString("tzbt"));
+        holder.yibaopeixunrenyuanshu.setText("" + result.getString("ypxcyrys"));
         //企业培训率
-        holder.qiyepeixunlv.setText("" + result.getString("tzbt"));
+        holder.qiyepeixunlv.setText("" + result.getString("qypxl"));
         //从业人员培训率
-        holder.congyerenyuanpeixunlv.setText("" + result.getString("tzbt"));
+        holder.congyerenyuanpeixunlv.setText("" + result.getString("cyrypxl"));
         //人员流入数量
-        holder.renyuanliurushuliang.setText("" + result.getString("tzbt"));
+        holder.renyuanliurushuliang.setText("" + result.getString("rylrsl"));
         //人员流出数量
-        holder.renyuanliuchushuliang.setText("" + result.getString("tzbt"));
+        holder.renyuanliuchushuliang.setText("" + result.getString("rylcsl"));
         //序号
         holder.xuhao.setText("" + result.getString("id"));
 

@@ -24,19 +24,19 @@ public class JianGuanDanWeiTongJiAdapter extends MBaseAdapter<JianGuanDanWeiTong
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //监管单位名称
-        holder.jianguandanweimingcheng.setText("" + result.getString("fbr"));
+        holder.jianguandanweimingcheng.setText("" + result.getString("jgdwmc"));
         //用户名
-        holder.yonghuming.setText("" + result.getString("pxjssj"));
+        holder.yonghuming.setText("" + result.getString("yhm"));
         //辖区内监管人员人数
-        holder.xiaquneirenshu.setText("" + result.getString("pxkssj"));
+        holder.xiaquneirenshu.setText("" + result.getString("xqnjgryrs"));
         //集中培训人数
-        holder.jizhongpeixunrenshu.setText(""+result.getString("peixundidian"));
+        holder.jizhongpeixunrenshu.setText(""+result.getString("jzpxrs"));
         //网上培训人数
-        holder.wangshangpeixunrenshu.setText("" + result.getString("tzbt"));
+        holder.wangshangpeixunrenshu.setText("" + result.getString("wspxrs"));
         //序号
         holder.xuhao.setText("" + result.getString("id"));
         //培训率
-        holder.peixunlv.setText("" + result.getString("tzlx"));
+        holder.peixunlv.setText("" + result.getString("pxl"));
 
     }
 

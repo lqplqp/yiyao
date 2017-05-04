@@ -14,6 +14,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.jianguan.adapter.JGCompanyManAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -85,6 +86,7 @@ public class JGCompanyManFragment extends BaseFragment {
         // TODO 修改接口地址和参数
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.jg_jgdwgl);
         params.addBodyParameter("page",page+"");
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         if(s!=null){
             params.addBodyParameter("xx",s);
         }

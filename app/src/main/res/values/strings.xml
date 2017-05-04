@@ -424,5 +424,18 @@
         <item >博士</item>
     </string-array>
 
+    <string-array name="shifouhege">
+        <item >是</item>
+        <item >否</item>
+    </string-array>
+
+    <!-- 体检端0-->
+    <string-array name="tijian">
+        <item>首页</item>
+        <item>列表</item>
+        <item>医院信息</item>
+        <item>修改密码</item>
+    </string-array>
+
 
 </resources>

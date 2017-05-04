@@ -16,6 +16,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.*;
 import com.lxkj.yiyao.shengji.adapter.AdminManagerAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.DoubleDatePickerDialog;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -111,7 +112,7 @@ public class AdminManagerFragment extends BaseFragment {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.fenji1_jgrygl);
 
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         params.addBodyParameter("page", page + "");
         params.addBodyParameter("xx", souguoneirong.getText() + "");
         params.addBodyParameter("sj1", startTime.getText() + "");

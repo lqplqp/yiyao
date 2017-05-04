@@ -93,7 +93,7 @@ public class SJGJZhiFaJILuFenXiTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_jgdwtjfx);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_zfjltjfx);
         params.addBodyParameter("page",page+"");
 
 

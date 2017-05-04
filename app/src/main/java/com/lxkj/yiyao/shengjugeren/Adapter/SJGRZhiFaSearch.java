@@ -29,7 +29,7 @@ public class SJGRZhiFaSearch extends MBaseAdapter<SJGRZhiFaSearch.ViewHolder> {
         //被指法人姓名
         holder.bzhifarenxingm.setText("" + result.getString("bzfrxm"));
         //序号
-        holder.xuhao.setText("" + result.getString("xuhao"));
+        holder.xuhao.setText("" + result.getString("id"));
         //培训开始时间
         holder.zhifashijian.setText("" + result.getString("zfsj"));
         //执法编号

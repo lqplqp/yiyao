@@ -293,7 +293,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="@dimen/title_left"
-                    android:text="企业人员列表"
+                    android:text="人员列表"
 
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />

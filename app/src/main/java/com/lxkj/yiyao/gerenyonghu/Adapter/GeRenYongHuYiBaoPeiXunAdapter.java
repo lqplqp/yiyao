@@ -34,7 +34,7 @@ public class GeRenYongHuYiBaoPeiXunAdapter extends MBaseAdapter<GeRenYongHuYiBao
         //培训进度
         holder.xuexijindu.setText(""+result.get("xxjd"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
         //证书名称
         holder.zhengshumingcheng.setText(""+result.get("pxbt"));
     }

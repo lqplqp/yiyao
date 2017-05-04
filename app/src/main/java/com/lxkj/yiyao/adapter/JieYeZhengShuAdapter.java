@@ -1,5 +1,6 @@
 package com.lxkj.yiyao.adapter;
 
+import android.content.Intent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -8,6 +9,8 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.MuBanActivity;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -56,8 +59,21 @@ public class JieYeZhengShuAdapter extends BaseAdapter {
         }
 
         //JSONObject object = objects.getJSONObject(i);
+        if(object!=null){
 
-        holder.name.setText("" + object.get("zsname").toString());
+            holder.name.setText("" + object.get("zsname").toString());
+        }
+
+        holder.name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),MuBanActivity.class);
+
+                intent.putExtra("imagePath",object.get("imageurl").toString());
+                v.getContext().startActivity(intent);
+            }
+        });
+
 
 
         return view;

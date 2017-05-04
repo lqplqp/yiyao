@@ -2,11 +2,8 @@
 <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray_bg"
+    android:background="@color/global_bg_gray"
     >
-
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,13 +11,7 @@
         android:orientation="vertical">
 
 
-        <ImageView
-            android:layout_marginTop="10dp"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
-            android:src="@drawable/scan_light"
-            android:layout_gravity="center_horizontal"
-            />
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -29,19 +20,29 @@
             android:layout_margin="10dp"
             android:orientation="vertical"
             >
+            <ImageView
+                android:id="@+id/head_image"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_touxiang" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
+
                 <TextView
+                    android:id="@+id/textView19"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:textSize="@dimen/qyinfo_text_size"
+                    android:text="*用    户    名："
                     android:textColor="@color/global_black"
-                    android:text="*用    户    名："/>
-                <EditText
+                    android:textSize="@dimen/qyinfo_text_size" />
+
+                <TextView
                     android:id="@+id/username_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +74,6 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="新乡面对面重庆小店"
                     />
             </LinearLayout>
             <View
@@ -98,12 +98,14 @@
                     android:orientation="horizontal"
                     >
                     <RadioButton
+                        android:id="@+id/radio_nan"
                         android:layout_marginLeft="10dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="男"
                         />
                     <RadioButton
+                        android:id="@+id/radio_nv"
                         android:layout_marginLeft="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -134,7 +136,6 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="123"
                     />
             </LinearLayout>
             <View
@@ -160,7 +161,6 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="username"
                     />
             </LinearLayout>
             <View
@@ -186,7 +186,6 @@
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="123456"
                     />
             </LinearLayout>
             <View
@@ -209,10 +208,10 @@
                     android:id="@+id/phone_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:inputType="phone"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="xxxxx"
                     />
             </LinearLayout>
             <View
@@ -232,12 +231,12 @@
                     android:textColor="@color/global_black"
                     android:text="*出 生 日 期："/>
                 <EditText
+                    android:id="@+id/chushengriqi_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="222@163.com"
                     />
             </LinearLayout>
             <View
@@ -257,12 +256,12 @@
                     android:textColor="@color/global_black"
                     android:text="*职         位："/>
                 <EditText
+                    android:id="@+id/zhiwei_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_gray"
-                    android:hint="食品"
                     />
             </LinearLayout>
             <View
@@ -282,6 +281,7 @@
                     android:textColor="@color/global_black"
                     android:text="*工        种："/>
                 <EditText
+                    android:id="@+id/gongzhong_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
@@ -307,9 +307,11 @@
                     android:textColor="@color/global_black"
                     android:text="*学        历："/>
                 <Spinner
+                    android:layout_marginLeft="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:entries="@array/xueli"
+                    android:id="@+id/xueli"
                     ></Spinner>
             </LinearLayout>
 
@@ -329,14 +331,14 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="*单 位 地 址："/>
-                <EditText
+                <TextView
+                    android:id="@+id/danweidizhi_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:hint="xxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -358,13 +360,13 @@
                     android:textColor="@color/global_black"
                     android:text="体检报告编号："/>
                 <EditText
+                    android:id="@+id/tijianbaogaibianhao_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:hint="xzxxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -374,6 +376,7 @@
                 android:layout_height="0.1dp"
                 android:background="@color/gray_bg"/>
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/qyinfo_line_height"
                 android:orientation="horizontal"
@@ -385,14 +388,14 @@
                     android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
                     android:text="过 期 日 期："/>
-                <EditText
+                <TextView
+                    android:id="@+id/guoqiriqi_tv"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:textSize="@dimen/qyinfo_text_size"
                     android:maxWidth="220dp"
                     android:maxLines="3"
-                    android:hint="xzxxxx"
                     android:textColor="@color/global_gray"
                     />
             </LinearLayout>
@@ -404,7 +407,7 @@
 
         </LinearLayout>
         <Button
-            android:id="@+id/commit"
+            android:id="@+id/commit_but"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -413,6 +416,6 @@
             android:layout_marginBottom="40dp"
             android:background="@drawable/yellow_but_bg"
             android:textColor="@color/white"
-            android:text="更新"/>
+            android:text="保存"/>
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/title_left"
-            android:text="监管单位人员列表"
+            android:text="监管单位列表"
             android:textColor="@color/global_black"
             android:textSize="@dimen/qyinfo_text_size" />
         <TextView
@@ -137,22 +137,22 @@
             android:id="@+id/textView12" />
 
         <TextView
-            android:background="@drawable/table_frame_fray"
-            android:layout_height="@dimen/table_hight"
             android:layout_width="0dp"
+            android:layout_height="@dimen/table_hight"
             android:layout_weight="1"
+            android:background="@drawable/table_frame_fray"
             android:gravity="center"
-            android:text="账号"
+            android:text="单位名字"
             android:textColor="@color/global_black"
             android:textSize="@dimen/table_textsize" />
 
         <TextView
-            android:background="@drawable/table_frame_fray"
-            android:layout_height="@dimen/table_hight"
             android:layout_width="0dp"
+            android:layout_height="@dimen/table_hight"
             android:layout_weight="1"
+            android:background="@drawable/table_frame_fray"
             android:gravity="center"
-            android:text="姓名"
+            android:text="联系人"
             android:textColor="@color/global_black"
             android:textSize="@dimen/table_textsize" />
     </TableRow>

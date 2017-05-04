@@ -25,11 +25,11 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
-        holder.xuhao.setText(""+result.getString("xh"));
+        holder.xuhao.setText(""+result.getString("id"));
         //培训名次
         holder.peixunleixing.setText(""+result.getString("pxbmc"));
         //培训类型
-        holder.peixunleixing.setText(""+result.getString(" pxlx"));
+        holder.peixunleixing.setText(""+result.getString("pxblx"));
        /* //培训时间
         holder.peixunshijian.setText(""+result.getString("pxkssj"));
         //证书名称

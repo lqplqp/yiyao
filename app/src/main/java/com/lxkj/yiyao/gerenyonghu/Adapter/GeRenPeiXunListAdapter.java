@@ -28,7 +28,7 @@ public class GeRenPeiXunListAdapter extends MBaseAdapter<GeRenPeiXunListAdapter.
         //购课人数
         holder.goukerenshu.setText(""+result.get("hgoukerenshu"));
         //序号
-        holder.number.setText(""+result.get("xuhao"));
+        holder.number.setText(""+result.get("id"));
         //培训班类型
         holder.peixunbanleixing.setText(""+result.get("peixunbanleixing"));
         //培训班名称

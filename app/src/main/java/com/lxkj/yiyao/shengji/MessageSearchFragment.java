@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.shengji.adapter.MessageSearchAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.utils.ToastUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
@@ -104,6 +105,9 @@ public class MessageSearchFragment extends BaseFragment {
         params.addBodyParameter("pxtzlx" ,mpeixuntongzhileixing);
         params.addBodyParameter("hylx",mxingzhengleixing);
         params.addBodyParameter("pxblx",mpeixunbanleixing);
+
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
+
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {

@@ -11,6 +11,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shengjugeren.Adapter.SJGRYiBaoPeiXunAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -81,7 +82,7 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
     public void requestData(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_ybpxxm);
         params.addBodyParameter("page",page+"");
-
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

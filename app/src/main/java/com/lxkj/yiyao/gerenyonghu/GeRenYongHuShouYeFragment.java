@@ -17,6 +17,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuTongZhiXiaoXiAdapter;
 import com.lxkj.yiyao.gerenyonghu.Adapter.GrenYongHuShouYePeiXunBanAdapter;
 import com.lxkj.yiyao.global.GlobalString;
+import com.lxkj.yiyao.utils.SPUtil;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -59,6 +60,7 @@ public class GeRenYongHuShouYeFragment extends BaseFragment {
 
     private void requestDate(String s) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + s);
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().get(params, new Callback.CommonCallback<String>() {
 
             @Override

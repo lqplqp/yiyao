@@ -30,7 +30,7 @@ public class QYPersonManagerAdapter extends MBaseAdapter<QYPersonManagerAdapter.
         //姓名
         holder.xingming.setText(""+result.get("sex"));
         //序号
-        holder.xuhao.setText(""+result.get("xh"));
+        holder.xuhao.setText(""+result.get("id"));
         //用户名
         holder.yonghuming.setText(""+result.get("yhm"));
         //邮箱

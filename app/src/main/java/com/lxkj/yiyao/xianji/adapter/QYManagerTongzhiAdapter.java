@@ -36,7 +36,7 @@ public class QYManagerTongzhiAdapter extends MBaseAdapter <QYManagerTongzhiAdapt
         //通知类型
         holder.tongzhileixing.setText(""+result.getString("tongzhileixing"));
         //序号
-        holder.xuhao.setText(""+result.getString("xuhao"));
+        holder.xuhao.setText(""+result.getString("id"));
     }
 
     @Override

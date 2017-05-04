@@ -22,19 +22,19 @@ public class SJGRZhiFaFenXiAdapter extends MBaseAdapter<SJGRZhiFaFenXiAdapter.Vi
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //管辖从业人数
-        holder.guanxiacongyerenshu.setText(""+result.get("guaxincongyerenshu"));
+        holder.guanxiacongyerenshu.setText(""+result.get("gxcyrs"));
         //管辖企业数
-        holder.guanxiaqiyeshu.setText(""+result.get("guanxiaqiyeshu"));
+        holder.guanxiaqiyeshu.setText(""+result.get("gxqys"));
         //监管单位名称
-        holder.jianguandanweimingcheng.setText(""+result.get("jianguandanweimingcheng"));
+        holder.jianguandanweimingcheng.setText(""+result.get("jgdwmc"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
         //执法企业数量
-        holder.zhifaqiyeshuliang.setText(""+result.get("zhifaqiyushuliang"));
+        holder.zhifaqiyeshuliang.setText(""+result.get("zfsl"));
         //执法人员数量
-        holder.zhifarenyuanshuliang.setText(""+result.get("zhifarenyuanshuliang"));
+        holder.zhifarenyuanshuliang.setText(""+result.get("zfrysl"));
         //执法人次
-        holder.zhifarenci.setText(""+result.get("zhifarenci"));
+        holder.zhifarenci.setText(""+result.get("zfrc"));
     }
 
 

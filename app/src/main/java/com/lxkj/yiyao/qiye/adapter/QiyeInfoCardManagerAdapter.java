@@ -41,7 +41,7 @@ public class QiyeInfoCardManagerAdapter extends MBaseAdapter<QiyeInfoCardManager
         //信息卡编号
         holder.xinxikabianhao.setText(""+result.get("xxkbh"));
         //序号
-        holder.xuhao.setText(""+result.get("xh"));
+        holder.xuhao.setText(""+result.get("id"));
         //性别
         holder.xingbie.setText(""+result.get("xb"));
     }

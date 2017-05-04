@@ -11,7 +11,10 @@ import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.LearningActivity;
+import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+
+import org.xutils.x;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,8 +41,9 @@ public class SJGRShouYePeiXunBanAdapter extends MBaseAdapter<SJGRShouYePeiXunBan
 
     @Override
     protected void fillData(int i, ViewHolder holder, final JSONObject result) {
-        Glide.with(mActivity).load(result.get("tpdz")).into(holder.img1);
-
+        //Glide.with(mActivity).load(GlobalString.BaseURL + "/uploads/" + result.get("tpdz")).into(holder.img1);
+        String s = GlobalString.BaseURL + "/uploads/" + result.get("tpdz").toString();
+        x.image().bind(holder.img1,GlobalString.BaseURL + "/uploads/" + result.get("tpdz").toString());
         holder.title.setText("" + result.get("tpjs").toString());
         holder.time.setText("" + result.get("pxsj").toString());
 

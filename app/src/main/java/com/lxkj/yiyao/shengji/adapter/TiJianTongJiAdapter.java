@@ -34,7 +34,7 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
         //体检人数
         holder.tijianrenshu.setText(""+result.get("tijianrenshu"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
 
     }
 

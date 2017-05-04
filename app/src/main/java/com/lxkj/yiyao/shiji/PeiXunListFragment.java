@@ -11,6 +11,7 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.shiji.adapter.PeiXunListAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -81,11 +82,12 @@ public class PeiXunListFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String s){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji3/ybpxxm");
         params.addBodyParameter("page",page+"");
         if(s!=null){
             params.addBodyParameter("cx",s);
         }
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override

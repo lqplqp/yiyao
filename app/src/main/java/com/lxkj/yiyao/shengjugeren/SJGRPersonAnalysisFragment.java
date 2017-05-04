@@ -101,7 +101,7 @@ public class SJGRPersonAnalysisFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String sq, String xq) {
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_gryhtjfx);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_gryhtjfx);
         params.addBodyParameter("page", page + "");
 
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);

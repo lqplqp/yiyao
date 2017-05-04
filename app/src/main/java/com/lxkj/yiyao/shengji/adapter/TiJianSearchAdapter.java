@@ -38,7 +38,7 @@ public class TiJianSearchAdapter extends MBaseAdapter<TiJianSearchAdapter.ViewHo
         //姓名
         holder.xingming.setText(""+result.get("xingming"));
         //序号
-        holder.xuhao.setText(""+result.get("xuhao"));
+        holder.xuhao.setText(""+result.get("id"));
         // 主治医生
         holder.zhuzhiyisheng.setText(""+result.get("zhuzhiyisheng"));
     }

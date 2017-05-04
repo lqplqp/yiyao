@@ -26,19 +26,19 @@ public class ZhiFaJiLuTongJiAdapter extends MBaseAdapter<ZhiFaJiLuTongJiAdapter.
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //监管单位名称
-        holder.jianguandanweimingcheng.setText("" + result.getString("fbr"));
+        holder.jianguandanweimingcheng.setText("" + result.getString("jgdwmc"));
         //执法人员数量
-        holder.zhifarenyuanshuliang.setText("" + result.getString("pxjssj"));
+        holder.zhifarenyuanshuliang.setText("" + result.getString("zfrysl"));
         //管辖企业数
-        holder.guanxiaqiyeshu.setText("" + result.getString("pxkssj"));
+        holder.guanxiaqiyeshu.setText("" + result.getString("gxqys"));
         //管辖从业人数
-        holder.guanxiacongyerenshu.setText("" + result.getString("peixundidian"));
+        holder.guanxiacongyerenshu.setText("" + result.getString("gxcyrs"));
         //执法人次
-        holder.zhifarenci.setText("" + result.getString("tzbt"));
+        holder.zhifarenci.setText("" + result.getString("zfrc"));
         //序号
         holder.xuhao.setText("" + result.getString("id"));
         //培训率
-        holder.zhifaqiyeshuliang.setText("" + result.getString("tzlx"));
+        holder.zhifaqiyeshuliang.setText("" + result.getString("zfsl"));
 
     }
 

@@ -1,5 +1,7 @@
 package com.lxkj.yiyao.shengji.adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -7,6 +9,8 @@ import android.widget.TextView;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.shengji.QiYeRenYuanActivity;
+import com.lxkj.yiyao.utils.ToastUtil;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -17,14 +21,21 @@ import butterknife.ButterKnife;
 
 public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.ViewHolder> {
 
+    private Context context;
+
 
     public CompanyInfoListAdapter(String bean) {
         super(bean);
     }
 
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
     @Override
-    protected void fillData(int i, ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, final ViewHolder holder, final JSONObject result) {
         //查看
+        context = holder.beizhu.getContext();
 
         //企业名称
         holder.qiyemingcheng.setText("" + result.getString("qymc"));
@@ -36,12 +47,30 @@ public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.
         //获得信息卡人数
         holder.huodexinxikarenshu.setText("" + result.getString("hdxxkrs"));
         //过期提醒(image)
-        if (result.getString("gqtx").equals("1")){
+        if (result.getString("gqtx").equals("1")) {
             holder.guoqitixin.setImageResource(R.mipmap.red_point);
-        }else {
+        } else {
             holder.guoqitixin.setImageResource(R.mipmap.ic_weiguoqi);
         }
         holder.beizhu.setText("" + result.getString("bz"));
+        final String qymc = result.getString("qymc");
+        holder.chakan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.beizhu.getContext(), QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", qymc);
+                context.startActivity(intent);
+                //ToastUtil.show("123");
+            }
+        });
+        holder.qiyerenyuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(holder.beizhu.getContext(), QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", qymc);
+                context.startActivity(intent);
+            }
+        });
     }
 
 
@@ -59,6 +88,8 @@ public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.
     static class ViewHolder {
         @BindView(R.id.chakan)
         TextView chakan;
+        @BindView(R.id.qiyerenyuan)
+        TextView qiyerenyuan;
         @BindView(R.id.qiyemingcheng)
         TextView qiyemingcheng;
         @BindView(R.id.congyerenshu)

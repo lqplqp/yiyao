@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/global_bg_gray">
 
     <TextView
@@ -13,36 +13,38 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
 
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/fillet_white_bg"
-            android:layout_margin="10dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/fillet_white_bg">
+
             <TableRow>
+
                 <TextView
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
                     android:gravity="center"
                     android:text="序号"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
+                    android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/number"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
                     android:gravity="center"
                     android:text="1"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -58,12 +60,13 @@
                     android:id="@+id/dingdanbianhao"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
                     android:gravity="center"
                     android:text="xxx"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"/>
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -74,18 +77,19 @@
                     android:text="培训班类型"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/peixunbanmingci"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -96,18 +100,19 @@
                     android:text="培训时间"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/peixunbanleixing"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:maxLength="12"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -118,19 +123,20 @@
                     android:text="证书名称"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/peixunshijian"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxxx"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="xxxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -146,15 +152,15 @@
                     android:id="@+id/shibaorenshu"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxx"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="xxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
 
                 <TextView
@@ -165,42 +171,43 @@
                     android:text="学习进度"
                     android:textColor="@color/global_black"
                     android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/goukerenshu"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="xxxx"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_black"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="xxxx"
+                    android:textColor="@color/global_black"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
+
             <TableRow>
+
                 <TextView
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
+                    android:background="@drawable/table_border_bg"
                     android:gravity="center"
                     android:text="操作"
-                    android:textSize="@dimen/qyinfo_text_size"
                     android:textColor="@color/global_black"
-                    android:background="@drawable/table_border_bg"
-                    />
+                    android:textSize="@dimen/qyinfo_text_size" />
+
                 <TextView
                     android:id="@+id/caozuo"
                     android:layout_height="@dimen/table_hight"
                     android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="查看"
-                    android:clickable="true"
-                    android:maxLength="12"
-                    android:ellipsize="end"
-                    android:textSize="@dimen/qyinfo_text_size"
-                    android:textColor="@color/global_bg_blue"
                     android:background="@drawable/table_border_bg"
-                    />
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxLength="12"
+                    android:text="查看"
+                    android:textColor="@color/global_bg_blue"
+                    android:textSize="@dimen/qyinfo_text_size" />
             </TableRow>
 
         </TableLayout>
