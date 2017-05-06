@@ -68,6 +68,7 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
                 public void onClick(View views) {
                     Intent intent = new Intent(context, ExamActivity.class);
                     intent.putExtra("kmid",""+object.get("pxid"));
+                    intent.putExtra("jyk",1);
                     context.startActivity(intent);
                 }
             });

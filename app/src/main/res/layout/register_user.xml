@@ -1,236 +1,266 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/global_bg_gray"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <LinearLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:background="@color/global_bg_gray"
+        android:layout_height="match_parent">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/qy_admin"
-            android:textColor="@color/global_black"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:padding="5dp"
-            android:clickable="true"
-            android:id="@+id/company_a_btn" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/qy_user"
-            android:textColor="@color/global_white"
-
-            android:background="@drawable/fillet_blue_bg"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:padding="5dp"
-            android:clickable="true"
-            android:id="@+id/user_btn" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/qy_gongsi"
-            android:textColor="@color/global_black"
-            android:layout_marginLeft="40dp"
-            android:textSize="16sp"
-            android:visibility="gone"
-            android:padding="5dp"
-            android:clickable="true"
-            android:id="@+id/company" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:background="@drawable/fillet_white_bg"
-        android:orientation="vertical"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
+        <LinearLayout
+            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/register_msg"
-            android:textColor="@color/global_red"
-            android:layout_margin="10dp"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:hint="@string/register_input_username"
-            android:textColorHint="@color/global_gray"
-            android:textSize="18sp"
-            android:background="@null"
-            android:id="@+id/username" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/global_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:hint="请输入本人真实姓名"
-            android:textColorHint="@color/global_gray"
-            android:textSize="18sp"
-            android:background="@null"
-            android:id="@+id/xingming" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/global_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:hint="请输入本人身份证号"
-            android:textColorHint="@color/global_gray"
-            android:textSize="18sp"
-            android:background="@null"
-            android:id="@+id/shenfenzheng" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/global_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            />
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:hint="设置密码,6-20字符"
-            android:textColorHint="@color/global_gray"
-            android:textSize="18sp"
-            android:background="@null"
-            android:id="@+id/password" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/global_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="5dp"
-            android:hint="请再次确认密码"
-            android:textColorHint="@color/global_gray"
-            android:textSize="18sp"
-            android:background="@null"
-            android:id="@+id/repassword" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1.5dp"
-            android:background="@color/global_gray"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="18dp"
-            android:layout_marginRight="18dp"
-            />
-
-        <RadioGroup
-            android:layout_marginLeft="18dp"
-            android:layout_width="match_parent"
-            android:id="@+id/radiogroup"
             android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></LinearLayout>
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="食品"
-                android:id="@+id/eat" />
+                android:text="@string/qy_admin"
+                android:textColor="@color/global_black"
+                android:layout_marginLeft="40dp"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:clickable="true"
+                android:id="@+id/company_a_btn" />
 
-            <RadioButton
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="药品"
-                android:id="@+id/yao" />
+                android:text="@string/qy_user"
+                android:textColor="@color/global_white"
 
-            <RadioButton
+                android:background="@drawable/fillet_blue_bg"
+                android:layout_marginLeft="40dp"
+                android:textSize="16sp"
+                android:padding="5dp"
+                android:clickable="true"
+                android:id="@+id/user_btn" />
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="化妆品"
-                android:id="@+id/huazhuang" />
+                android:text="@string/qy_gongsi"
+                android:textColor="@color/global_black"
+                android:layout_marginLeft="40dp"
+                android:textSize="16sp"
+                android:visibility="gone"
+                android:padding="5dp"
+                android:clickable="true"
+                android:id="@+id/company" />
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="保健品"
-                android:id="@+id/baojian" />
+        </LinearLayout>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/global_gray"
-                android:text="医疗器械"
-                android:id="@+id/yiliao" />
-        </RadioGroup>
-
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/blue_but_bg"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:layout_marginLeft="135dp"
-            android:layout_marginBottom="15dp"
-            android:text="@string/quick_register"
-            android:id="@+id/register" />
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/fillet_white_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/register_msg"
+                android:textColor="@color/global_red" />
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="@string/register_input_username"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/global_gray" />
+
+            <EditText
+                android:id="@+id/xingming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="请输入本人真实姓名"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/global_gray" />
+
+            <EditText
+                android:id="@+id/shenfenzheng"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="请输入本人身份证号"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/global_gray" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="设置密码,6-20字符"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/global_gray" />
+
+            <EditText
+                android:id="@+id/repassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@null"
+                android:hint="请再次确认密码"
+                android:textColorHint="@color/global_gray"
+                android:textSize="18sp" />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/global_gray" />
+            <LinearLayout
+                android:layout_marginLeft="20dp"
+
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="个人地址:"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/qiyedizhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="点击选择"
+                    />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radiogroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/eat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="食品"
+                    android:textColor="@color/global_gray" />
+
+                <RadioButton
+                    android:id="@+id/yao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="药品"
+                    android:textColor="@color/global_gray" />
+
+                <RadioButton
+                    android:id="@+id/huazhuang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="化妆品"
+                    android:textColor="@color/global_gray" />
+
+                <RadioButton
+                    android:id="@+id/baojian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="保健品"
+                    android:textColor="@color/global_gray" />
+
+                <RadioButton
+                    android:id="@+id/yiliao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="医疗器械"
+                    android:textColor="@color/global_gray" />
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="135dp"
+                android:background="@drawable/blue_but_bg"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/quick_register" />
+
+
+        </LinearLayout>
 
 
     </LinearLayout>
 
+</ScrollView>
 
-</LinearLayout>
+

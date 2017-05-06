@@ -1,6 +1,8 @@
 package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +15,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.contract.RegisterContract;
+import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -20,6 +23,7 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -51,6 +55,14 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     TextView userBtn;
     @BindView(R.id.company_2_btn)
     TextView company2Btn;
+    @BindView(R.id.company_a_btn)
+    TextView companyABtn;
+    @BindView(R.id.qiyedizhi)
+    TextView qiyedizhi;
+    @BindView(R.id.qiyemingcheng)
+    EditText qiyemingcheng;
+    @BindView(R.id.lianxirenxingming)
+    EditText lianxirenxingming;
 
 
     private String TAG = "RegisterActivity";
@@ -72,35 +84,46 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
+        params.addBodyParameter("xm",qiyemingcheng.getText().toString());
         int a = 0;
-        switch (radiogroup.getCheckedRadioButtonId()){
-            case R.id.eat :
-                a=1;
+        switch (radiogroup.getCheckedRadioButtonId()) {
+            case R.id.eat:
+                a = 1;
                 break;
             case R.id.yao:
-                a=2;
+                a = 2;
                 break;
             case R.id.huazhuang:
-                a=3;
+                a = 3;
                 break;
             case R.id.baojian:
-                a=4;
+                a = 4;
                 break;
             case R.id.yiliao:
-                a=5;
+                a = 5;
                 break;
         }
-        params.addBodyParameter("lx", a+"");
-        params.addBodyParameter("qrmm",repassword.getText().toString());
+        params.addBodyParameter("lx", a + "");
+        params.addBodyParameter("gly",lianxirenxingming.getText().toString());
+        params.addBodyParameter("qrmm", repassword.getText().toString());
+        params.addBodyParameter("qrmc", qiyedizhi.getText(), toString());
+
+        if (!TextUtils.isEmpty(qiyedizhi.getText())) {
+            String[] split = qiyedizhi.getText().toString().split("-");
+            params.addBodyParameter("szdq1", split[0] + "");
+            params.addBodyParameter("szdq2", split[1] + "");
+            params.addBodyParameter("szdq3", split[2] + "");
+        }
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject object = JSONObject.parseObject(result);
                 int code = Integer.parseInt(object.get("code").toString());
-                if(code == 111111){
+                if (code == 111111) {
                     ToastUtil.show("注册成功");
-                }else {
+                    finish();
+                } else {
                     ToastUtil.show("" + object.get("message"));
                 }
 
@@ -132,21 +155,31 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     }
 
 
-
-
-    @OnClick({R.id.user_btn, R.id.company_2_btn})
+    @OnClick({R.id.user_btn, R.id.company_2_btn, R.id.qiyedizhi})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.user_btn:
-                Intent intent = new Intent(this,Register1Activity.class);
+                Intent intent = new Intent(this, Register1Activity.class);
                 startActivity(intent);
                 finish();
                 break;
             case R.id.company_2_btn:
-                Intent intent2 = new Intent(this,Register2Activity.class);
-                startActivity(intent2);
-                finish();
+                //Intent intent2 = new Intent(this, RegisterActivity.class);
+                //startActivity(intent2);
+                //finish();
+                break;
+            case R.id.qiyedizhi:
+                PickViewUtils viewUtils = new PickViewUtils(RegisterActivity.this, qiyedizhi);
+                viewUtils.pickProvince();
                 break;
         }
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
     }
 }

@@ -16,6 +16,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.utils.PickViewUtils;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -68,7 +69,7 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        requestData();
+        requestData(false);
 
     }
 
@@ -77,33 +78,37 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
         return R.layout.sjgr_fragment_layout_person_manage_add;
     }
 
-    public void requestData() {
+    public void requestData(boolean flag) {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_jgryxx);
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
-        params.addBodyParameter("zh", yonghuming.getText().toString());
-        params.addBodyParameter("xm", xingming.getText().toString());
-        if (nan.isClickable()) {
-            params.addBodyParameter("xb", "男");
-        }
-        if (nu.isClickable()) {
-            params.addBodyParameter("xb", "女");
-        }
-        params.addBodyParameter("sfzh", shenfenzhenghao.getText().toString());
-        params.addBodyParameter("jgdwmc", danweimingcheng.getText().toString());
-        params.addBodyParameter("yx", youxiang.getText().toString());
-        params.addBodyParameter("sjhm", shoujihaoma.getText().toString());
-        params.addBodyParameter("zw", zhiwei.getText().toString());
-        params.addBodyParameter("csrq", chushengriqi.getText().toString());
-        params.addBodyParameter("gw", gongzhong.getText().toString());
-        params.addBodyParameter("xl", xueli.getText().toString());
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
+        if(flag){
+            params.addBodyParameter("zh", yonghuming.getText().toString());
+            params.addBodyParameter("xm", xingming.getText().toString());
+            if (nan.isClickable()) {
+                params.addBodyParameter("xb", "男");
+            }
+            if (nu.isClickable()) {
+                params.addBodyParameter("xb", "女");
+            }
+            params.addBodyParameter("sfzh", shenfenzhenghao.getText().toString());
+            params.addBodyParameter("jgdwmc", danweimingcheng.getText().toString());
+            params.addBodyParameter("yx", youxiang.getText().toString());
+            params.addBodyParameter("sjhm", shoujihaoma.getText().toString());
+            params.addBodyParameter("zw", zhiwei.getText().toString());
+            params.addBodyParameter("csrq", chushengriqi.getText().toString());
+            params.addBodyParameter("gw", gongzhong.getText().toString());
+            params.addBodyParameter("xl", xueli.getText().toString());
 
-        String [] sanji = danweidizhi.getText().toString().split("-");
+            String [] sanji = danweidizhi.getText().toString().split("-");
 
         /*params.addBodyParameter("szdq", sanji[0]);
         params.addBodyParameter("szdq1", sanji[1]);
         params.addBodyParameter("szdq2", sanji[2]);*/
-        params.addBodyParameter("dz", danwei.getText().toString());
+            params.addBodyParameter("dz", danwei.getText().toString());
+        }
+
+
 
         x.http().get(params, new Callback.CacheCallback<String>() {
 
@@ -142,7 +147,7 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
 
                     if(data.get("dz") != null)
                         danweidizhi.setText(data.get("dz").toString());
-
+                    youxiang.setText(data.get("yx")+"");
 
                 }
                 //ToastUtil.show(jsonObject.get("data").toString());
@@ -176,7 +181,7 @@ public class SJGRPersonManagerAddFragment extends BaseFragment {
                 break;
             case R.id.commit:
                 ToastUtil.show("OK");
-                requestData();
+                requestData(true);
                 break;
         }
     }

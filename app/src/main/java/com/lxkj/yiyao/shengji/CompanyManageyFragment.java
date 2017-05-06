@@ -15,7 +15,10 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.shengji.adapter.CompanyManagerAdapter;
 import com.lxkj.yiyao.utils.PickViewUtils;
+import com.lxkj.yiyao.utils.SPUtil;
+import com.lxkj.yiyao.utils.ToastUtil;
 
+import org.w3c.dom.Text;
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
@@ -84,21 +87,22 @@ public class CompanyManageyFragment extends BaseFragment {
         行业领域 hyly
         详细地址 szdq  szdq1 szdq2  dwdz*/
             SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-            params.addBodyParameter("username",sp.getString("username","") + "");
+            params.addBodyParameter("username", SPUtil.getUserName(getContext()));
 
             //params.addBodyParameter("dwdz", "");
 
             x.http().get(params, new Callback.CommonCallback<String>() {
                 @Override
                 public void onSuccess(String result) {
+
                     JSONObject jsonObject = JSONObject.parseObject(result);
                     JSONObject data = jsonObject.getJSONObject("data");
-                    yonghuming.setHint(data.get("username").toString());
-                    danweimingcheng.setHint(data.get("dwmc").toString());
-                    danweirenshu.setHint(data.get("dwrs").toString());
-                    guanliyuan.setHint(data.get("gly").toString());
-                    youxiang.setHint(data.get("yx").toString());
-                    shoujihao.setHint(data.get("sjhm").toString());
+                    yonghuming.setText(""+data.get("username"));
+                    danweimingcheng.setText(""+data.get("dwmc"));
+                    danweirenshu.setText(""+data.get("glrs"));
+                    guanliyuan.setText(""+data.get("xm"));
+                    youxiang.setText(""+data.get("yx"));
+                    shoujihao.setText(""+data.get("sjhm"));
                     danweidizhi.setText(data.get("szdq") +"-" + data.get("szdq1") +"-"+data.get("szdq2"));
 
                 }
@@ -156,7 +160,9 @@ public class CompanyManageyFragment extends BaseFragment {
             x.http().get(params, new Callback.CommonCallback<String>() {
                 @Override
                 public void onSuccess(String result) {
-                    String s = result;
+                    //String s = result;
+                    JSONObject jsonObject = JSONObject.parseObject(result);
+                    ToastUtil.show(jsonObject.get("message") + "");
                 }
 
                 @Override

@@ -4,6 +4,7 @@ package com.lxkj.yiyao;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.lxkj.yiyao.utils.SPUtil;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
 import org.litepal.LitePalApplication;
@@ -25,6 +26,7 @@ public class App extends Application {
         mApplication = this;
         x.Ext.init(this);
         x.Ext.setDebug(true);
+        String s = SPUtil.getUserName(mApplication);
         ZXingLibrary.initDisplayOpinion(this);
 //        SQLiteDatabase db = Connector.getDatabase();
     }

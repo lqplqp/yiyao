@@ -37,17 +37,17 @@ public class CompanyManagerAdapter extends MBaseAdapter<CompanyManagerAdapter.Vi
     protected void fillData(int i, ViewHolder holder , final com.alibaba.fastjson.JSONObject result) {
 
         //企业名称
-        holder.qiyeName.setText(""+result.get("qymc").toString());
+        holder.qiyeName.setText(""+result.get("qymc"));
         //体检合格人数
-        holder.tijianhegePeople.setText(""+result.get("tjhgrs").toString());
+        holder.tijianhegePeople.setText(""+result.get("tjhgrs"));
 
         //培训合格人数
-        holder.peixunhegeRenshu.setText(""+result.get("pxhgrs").toString());
+        holder.peixunhegeRenshu.setText(""+result.get("pxhgrs"));
         //获取信息卡人数
-        holder.infocardRenshu.setText(""+result.get("hdxxkrs").toString());
+        holder.infocardRenshu.setText(""+result.get("hdxxkrs"));
         // TODO: 2017/3/2 0002  true和false
         //备注
-        holder.beizhu.setText(""+result.get("bz").toString());
+        holder.beizhu.setText(""+result.get("bz"));
         holder.chakan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -47,6 +47,7 @@ public class QYTrainOrderFragment extends BaseFragment {
     private int page = 1;
 
 
+
     @Override
     protected void initView() {
 
@@ -123,7 +124,7 @@ public class QYTrainOrderFragment extends BaseFragment {
                         rb1.setText("全部("+ data.size() + ")");
                     }
                     if(tab == 2){
-                        rb2.setText("代付款("+ data.size() + ")");
+                        rb2.setText("待付款("+ data.size() + ")");
                     }
                     if(tab == 3){
                         rb3.setText("已付款("+ data.size() + ")");
@@ -142,7 +143,7 @@ public class QYTrainOrderFragment extends BaseFragment {
                         rb1.setText("全部("+ data.size() + ")");
                     }
                     if(tab == 2){
-                        rb2.setText("代付款("+ data.size() + ")");
+                        rb2.setText("待付款("+ data.size() + ")");
                     }
                     if(tab == 3){
                         rb3.setText("已付款("+ data.size() + ")");
@@ -206,6 +207,7 @@ public class QYTrainOrderFragment extends BaseFragment {
                 hide();
                 tab = 1;
                 requestData(null);
+                changeView(0);
                 rb1.setBackgroundResource(R.drawable.blue_but_bg);
                 rb1.setTextColor(getResources().getColor(R.color.white));
                 rb2.setTextColor(getResources().getColor(R.color.global_black));
@@ -252,6 +254,23 @@ public class QYTrainOrderFragment extends BaseFragment {
                 rb1.setTextColor(getResources().getColor(R.color.global_black));
             }
         });
+    }
+
+    private void changeView(int i) {
+        switch (i){
+            case 0:
+
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+        }
     }
 
 

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.AliPayHelper.Alipay;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.LearningActivity;
 import com.lxkj.yiyao.activity.XuanGouKeChengRenYuanActivity;
 import com.lxkj.yiyao.activity.YongHuYuEFuKuanActivity;
 import com.lxkj.yiyao.global.GlobalString;
@@ -30,6 +31,15 @@ import butterknife.ButterKnife;
 public class QYTrainOrderAdapter extends MBaseAdapter<QYTrainOrderAdapter.ViewHolder> {
 
     public Context mContext;
+    private int viewType = 0;
+
+    public int getViewType() {
+        return viewType;
+    }
+
+    public void setViewType(int viewType) {
+        this.viewType = viewType;
+    }
 
     public QYTrainOrderAdapter(String bean) {
         super(bean);
@@ -52,31 +62,38 @@ public class QYTrainOrderAdapter extends MBaseAdapter<QYTrainOrderAdapter.ViewHo
         //应付款
         holder.yingfukuan.setText("" + result.get("price"));
 
+        final String pxid = result.getString("cid");
 
         if(result.get("status").toString().equals("1")){
             //待支付
             holder.jiaoyizhuangtai.setText("待支付");
+            holder.fukuan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, YongHuYuEFuKuanActivity.class);
+                    intent.putExtra("data", result.toString());
+                    mContext.startActivity(intent);
+                }
+            });
         }else if(result.get("status").toString().equals("2")){
             //支付成功
             holder.jiaoyizhuangtai.setText("支付成功");
-            holder.fukuan.setText("已付款");
-            holder.fukuan.setClickable(false);
+            holder.fukuan.setText("去学习");
+            holder.fukuan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, LearningActivity.class);
+                    intent.putExtra("pxid", pxid);
+                    mContext.startActivity(intent);
+                }
+            });
 
         }else if(result.get("status").toString().equals("3")){
             //支付失败
             holder.jiaoyizhuangtai.setText("支付失败");
         }
-        //交易状态
 
-        holder.fukuan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //String data = JSONObject.parseObject(result).getString("data");
-                Intent intent = new Intent(mContext, YongHuYuEFuKuanActivity.class);
-                intent.putExtra("data", result.toString());
-                mContext.startActivity(intent);
-            }
-        });
+
 
 
         //查看
