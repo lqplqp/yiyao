@@ -8,7 +8,9 @@
         android:background="@drawable/fillet_white_bg"
         android:layout_margin="10dp"
         >
-        <TableRow>
+        <TableRow
+            android:visibility="gone"
+            >
             <TextView
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
