@@ -27,14 +27,13 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*用    户    名："/>
+
         <EditText
             android:id="@+id/username_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="username"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -52,14 +51,13 @@
         android:textSize="@dimen/qyinfo_text_size"
         android:textColor="@color/global_black"
         android:text="*单 位  名 称："/>
-    <EditText
-        android:id="@+id/unitname_tv"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:textSize="@dimen/qyinfo_text_size"
-        android:hint="新乡面对面重庆小店"
-        />
+
+        <EditText
+            android:id="@+id/unitname_tv"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size" />
 </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -76,15 +74,38 @@
             android:layout_marginLeft="10dp"
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
+            android:text="*许可证编号："/>
+
+        <EditText
+            android:id="@+id/xukezhengbianhao"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:background="@color/line"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qyinfo_line_height"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:textSize="@dimen/qyinfo_text_size"
+            android:textColor="@color/global_black"
             android:text="*从 业  人 数："/>
+
         <EditText
             android:id="@+id/do_person_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="3"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -102,14 +123,13 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*管 理  人 数："/>
+
         <EditText
             android:id="@+id/manage_person_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="1"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -127,14 +147,13 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*单位联系人："/>
+
         <EditText
             android:id="@+id/contact_name_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="username"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -152,14 +171,13 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*邮            箱："/>
+
         <EditText
             android:id="@+id/email_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="username@163.com"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -177,14 +195,13 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*手 机  号 码："/>
+
         <EditText
             android:id="@+id/phone_tv"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:hint="13343434567"
-            />
+            android:textSize="@dimen/qyinfo_text_size" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -247,13 +264,14 @@
             android:textSize="@dimen/qyinfo_text_size"
             android:textColor="@color/global_black"
             android:text="*单位地址："/>
+
         <TextView
             android:id="@+id/danweidizhi"
-            android:textSize="@dimen/qyinfo_text_size"
-            android:textColor="@color/global_gray"
-            android:text="xx省-xx市-xx县"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text="点击选择"
+            android:textColor="@color/global_gray"
+            android:textSize="@dimen/qyinfo_text_size" />
         <EditText
             android:id="@+id/danwei"
             android:textSize="@dimen/qyinfo_text_size"

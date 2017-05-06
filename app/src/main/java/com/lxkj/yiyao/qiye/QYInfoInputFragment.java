@@ -26,7 +26,6 @@ import org.xutils.x;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * Created by Administrator on 2017/1/19.
@@ -65,7 +64,8 @@ public class QYInfoInputFragment extends BaseFragment {
     TextView danweidizhi;
     @BindView(R.id.danwei)
     EditText danwei;
-    Unbinder unbinder;
+    @BindView(R.id.xukezhengbianhao)
+    EditText xukezhengbianhao;
 
     @Override
     protected void initView() {
@@ -92,7 +92,7 @@ public class QYInfoInputFragment extends BaseFragment {
     }
 
 
-    void getDate(){
+    void getDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_info);
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
         params.addBodyParameter("username", SPUtil.getUserName(getContext()));
@@ -101,17 +101,31 @@ public class QYInfoInputFragment extends BaseFragment {
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 JSONObject data = jsonObject.getJSONObject("data");
-                usernameTv.setText(data.get("username").toString());
-                unitnameTv.setText(data.get("dwdz").toString());
-                doPersonTv.setText(data.get("cyrs").toString());
-                managePersonTv.setText(data.get("glrys").toString());
-                contactNameTv.setText(data.get("gly").toString());
-                emailTv.setText(data.get("yx").toString());
+                if (data.get("yhm") != null)
+                    usernameTv.setText("" + data.get("yhm") + "");
+                if (data.get("dwmc") != null)
+                    unitnameTv.setText("" + data.get("dwmc") + "");
+                if (data.get("cyrs") != null)
+                    doPersonTv.setText("" + data.get("cyrs") + "");
+                if (data.get("glrys") != null)
+                    managePersonTv.setText("" + data.get("glrys") + "");
+                if (data.get("gly") != null)
+                    contactNameTv.setText("" + data.get("gly") + "");
+                if (data.get("yx") != null)
+                    emailTv.setText("" + data.get("yx") + "");
+                if (data.get("dh") != null)
+                    phoneTv.setText("" + data.get("dh") + "");
 
-                phoneTv.setText(data.get("dh").toString());
+                //danweidizhi.setText("123312123123");
+                //danweidizhi.setText("123");
+                if(data.get("sfzh") != null){
+                    xukezhengbianhao.setText(data.get("sfzh").toString());
+                }
 
+                danweidizhi.setText("" + data.get("szdq1").toString() + "-" + data.get("szdq2").toString() + "-" + data.get("szdq3").toString() + "");
+                if (data.get("dwdz") != null)
+                    danwei.setText("" + data.get("dwdz"));
 
-                danweidizhi.setText(data.get("dwdz").toString());
             }
 
             @Override
@@ -135,7 +149,7 @@ public class QYInfoInputFragment extends BaseFragment {
     void requestDate() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_info);
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", sp.getString("username", "") + "");
         params.addBodyParameter("username", usernameTv.getText().toString());
         params.addBodyParameter("dwmc", unitnameTv.getText().toString());
         params.addBodyParameter("cyrs", doPersonTv.getText().toString());
@@ -163,12 +177,16 @@ public class QYInfoInputFragment extends BaseFragment {
 
         params.addBodyParameter("hyly", "" + id);
 
-        String [] sanji = danweidizhi.getText().toString().split("-");
+        String[] sanji = danweidizhi.getText().toString().split("-");
 
-        params.addBodyParameter("szdq", sanji[0]);
-        params.addBodyParameter("szdq1", sanji[1]);
-        params.addBodyParameter("szdq2", sanji[2]);
-        params.addBodyParameter("dz", danwei.getText().toString());
+        if (sanji.length == 3) {
+            params.addBodyParameter("szdq1", sanji[0]);
+            params.addBodyParameter("szdq2", sanji[1]);
+            params.addBodyParameter("szdq3", sanji[2]);
+        }
+        params.addBodyParameter("sfzh",xukezhengbianhao.getText().toString());
+
+        params.addBodyParameter("dwdz", danwei.getText().toString());
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -194,4 +212,6 @@ public class QYInfoInputFragment extends BaseFragment {
             }
         });
     }
+
+
 }

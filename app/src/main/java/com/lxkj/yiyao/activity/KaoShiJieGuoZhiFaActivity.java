@@ -50,8 +50,8 @@ public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
 
     @Override
     protected void init() {
-        String number = getIntent().getStringExtra("qrcode_result").toString();
-        String username = getIntent().getStringExtra("username").toString();
+        String number = getIntent().getStringExtra("qrcode_result");
+        String username = getIntent().getStringExtra("username");
         requestDate();
     }
 

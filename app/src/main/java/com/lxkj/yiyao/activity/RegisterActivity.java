@@ -63,6 +63,8 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     EditText qiyemingcheng;
     @BindView(R.id.lianxirenxingming)
     EditText lianxirenxingming;
+    @BindView(R.id.xukezhengbianhao)
+    EditText xukezhengbianhao;
 
 
     private String TAG = "RegisterActivity";
@@ -84,7 +86,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("xm",qiyemingcheng.getText().toString());
+        params.addBodyParameter("xm", qiyemingcheng.getText().toString());
         int a = 0;
         switch (radiogroup.getCheckedRadioButtonId()) {
             case R.id.eat:
@@ -104,7 +106,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
                 break;
         }
         params.addBodyParameter("lx", a + "");
-        params.addBodyParameter("gly",lianxirenxingming.getText().toString());
+        params.addBodyParameter("gly", lianxirenxingming.getText().toString());
         params.addBodyParameter("qrmm", repassword.getText().toString());
         params.addBodyParameter("qrmc", qiyedizhi.getText(), toString());
 
@@ -114,6 +116,8 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
             params.addBodyParameter("szdq2", split[1] + "");
             params.addBodyParameter("szdq3", split[2] + "");
         }
+
+        params.addBodyParameter("sfzh", xukezhengbianhao.getText()+"");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -176,10 +180,5 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     }
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
+
 }
