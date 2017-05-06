@@ -731,7 +731,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
 
-
+            //社会个体
             case 9:
 
                 fragments.clear();
@@ -749,7 +749,7 @@ public class MainActivity extends AppCompatActivity {
                             case R.id.navi_menu_1:
                                 setTitle("菜单");
                                 pagerTitles = getResources().getStringArray(R.array.xianji0);
-                                QYManagerHomeFragment qyHomeFragment = new QYManagerHomeFragment();
+                                SelectTrainFragment qyHomeFragment = new SelectTrainFragment();
                                 fragments.add(qyHomeFragment);
                                 break;
                             case R.id.navi_menu_2:

@@ -1,6 +1,8 @@
 package com.lxkj.yiyao.activity;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +15,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.shengji.contract.RegisterContract;
+import com.lxkj.yiyao.utils.PickViewUtils;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -20,6 +23,7 @@ import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -59,6 +63,8 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
     RadioGroup radiogroup;
     @BindView(R.id.register)
     TextView register;
+    @BindView(R.id.qiyedizhi)
+    TextView qiyedizhi;
     private String TAG = "RegisterActivity";
 
     @Override
@@ -78,38 +84,47 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
 
         params.addBodyParameter("username", username.getText().toString());
         params.addBodyParameter("password", password.getText().toString());
-        params.addBodyParameter("xm",xingming.getText().toString());
-        params.addBodyParameter("qrmm",repassword.getText().toString());
-        params.addBodyParameter("sfzh",shenfenzheng.getText().toString());
+        params.addBodyParameter("xm", xingming.getText().toString());
+        params.addBodyParameter("qrmm", repassword.getText().toString());
+        params.addBodyParameter("sfzh", shenfenzheng.getText().toString());
+
+        if (!TextUtils.isEmpty(qiyedizhi.getText())){
+            String[] split = qiyedizhi.getText().toString().split("-");
+            params.addBodyParameter("szdq1", split[0] + "");
+            params.addBodyParameter("szdq2", split[1] + "");
+            params.addBodyParameter("szdq3", split[2] + "");
+            params.addBodyParameter("dz", qiyedizhi.getText() + "");
+        }
+
         int a = 0;
-        switch (radiogroup.getCheckedRadioButtonId()){
-            case R.id.eat :
-                a=1;
+        switch (radiogroup.getCheckedRadioButtonId()) {
+            case R.id.eat:
+                a = 1;
                 break;
             case R.id.yao:
-                a=2;
+                a = 2;
                 break;
             case R.id.huazhuang:
-                a=3;
+                a = 3;
                 break;
             case R.id.baojian:
-                a=4;
+                a = 4;
                 break;
             case R.id.yiliao:
-                a=5;
+                a = 5;
                 break;
         }
-        params.addBodyParameter("lx", a+"");
+        params.addBodyParameter("lx", a + "");
 
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject object = JSONObject.parseObject(result);
                 int code = Integer.parseInt(object.get("code").toString());
-                if(code == 111111){
+                if (code == 111111) {
                     ToastUtil.show("注册成功");
                     finish();
-                }else{
+                } else {
                     ToastUtil.show(object.get("message").toString());
                 }
 
@@ -135,7 +150,7 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
     }
 
 
-    @OnClick({R.id.company_a_btn, R.id.register})
+    @OnClick({R.id.company_a_btn, R.id.register,R.id.qiyedizhi})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.company_a_btn:
@@ -144,11 +159,16 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
                 finish();
                 break;
             case R.id.register:
-                ToastUtil.show("213");
                 toRegister();
+                break;
+            case R.id.qiyedizhi:
+                PickViewUtils viewUtils = new PickViewUtils(Register1Activity.this, qiyedizhi);
+                viewUtils.pickProvince();
                 break;
         }
     }
+
+
 
 
 }

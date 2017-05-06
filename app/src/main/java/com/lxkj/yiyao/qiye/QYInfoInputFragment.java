@@ -16,6 +16,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.utils.PickViewUtils;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -84,7 +85,7 @@ public class QYInfoInputFragment extends BaseFragment {
                 new PickViewUtils(getActivity(), danweidizhi).pickProvince();
                 break;
             case R.id.commit:
-                ToastUtil.show("OK");
+                //ToastUtil.show("OK");
                 requestDate();
                 break;
         }
@@ -94,13 +95,13 @@ public class QYInfoInputFragment extends BaseFragment {
     void getDate(){
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.qiye_info);
         SharedPreferences sp = getActivity().getSharedPreferences("shiyao", getActivity().MODE_PRIVATE);
-        params.addBodyParameter("username",sp.getString("username","") + "");
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
                 JSONObject data = jsonObject.getJSONObject("data");
-                usernameTv.setText(data.get("yhm").toString());
+                usernameTv.setText(data.get("username").toString());
                 unitnameTv.setText(data.get("dwdz").toString());
                 doPersonTv.setText(data.get("cyrs").toString());
                 managePersonTv.setText(data.get("glrys").toString());

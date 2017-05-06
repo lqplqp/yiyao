@@ -71,6 +71,7 @@ public class ExamActivity extends BaseActivity {
     private String kmid = "";
     private String xkzbh = "";
     private String ctr = "";
+    private int jyk = 0;
 
     @Override
     public int getLayout() {
@@ -83,6 +84,7 @@ public class ExamActivity extends BaseActivity {
         kmid = getIntent().getStringExtra("kmid");
         xkzbh = getIntent().getStringExtra("xkzbh");
         ctr = getIntent().getStringExtra("ctr");
+        jyk = getIntent().getIntExtra("jyk",0);
         requestData();
         initView();
     }
@@ -90,6 +92,7 @@ public class ExamActivity extends BaseActivity {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examUrl);
         params.addBodyParameter("kmid", kmid);
+        params.addBodyParameter("jyk",jyk+"");
         if( xkzbh!=null && !xkzbh.equals("") ){
             params.addBodyParameter("xkzbh",xkzbh);
         }

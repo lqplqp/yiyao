@@ -34,6 +34,19 @@ public class TiJianListFragment extends BaseFragment {
     @Override
     protected void initView() {
         requestData();
+
+        listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
+            @Override
+            public void onDownPullRefresh() {
+                requestData();
+            }
+
+            @Override
+            public void onLoadingMore() {
+
+                requestData();
+            }
+        });
     }
 
 
