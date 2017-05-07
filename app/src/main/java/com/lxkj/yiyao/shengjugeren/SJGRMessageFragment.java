@@ -71,9 +71,9 @@ public class SJGRMessageFragment extends BaseFragment {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                String tongzhixiaoxi = jsonObject.get("tzxx").toString();
-                String gongshigonggao = jsonObject.get("gsgg").toString();
-                String peixunbanxinxi = jsonObject.get("pxxx").toString();
+                String tongzhixiaoxi = jsonObject.get("tzxx")+"";
+                String gongshigonggao = jsonObject.get("gsgg")+"";
+                String peixunbanxinxi = jsonObject.get("pxxx")+"";
                 //通知消息
                 tongZhiAdapter = new SJGRShouYeTongZhiAdapter(tongzhixiaoxi);
                 listView.setAdapter(tongZhiAdapter);
