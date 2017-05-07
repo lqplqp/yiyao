@@ -19,6 +19,7 @@ public class ExamDataBean  extends DataSupport {
      fs			分数
      zf			总分
      jgfs			及格分数
+     daa  提交的答案
 
      */
     public String tm;
@@ -27,11 +28,20 @@ public class ExamDataBean  extends DataSupport {
     public String c;
     public String d;
     public String da;
+    public String daa;
     public String fs;
     public int zf;
     public int jgfs;
     public String kmid;
     public int id;
+
+    public String getDaa() {
+        return daa;
+    }
+
+    public void setDaa(String daa) {
+        this.daa = daa;
+    }
 
     public String getTm() {
         return tm;

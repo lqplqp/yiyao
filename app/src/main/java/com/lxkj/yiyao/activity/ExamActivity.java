@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -24,7 +25,6 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -57,6 +57,8 @@ public class ExamActivity extends BaseActivity {
     Button okBut;
     @BindView(R.id.back_img)
     ImageView backImg;
+    @BindView(R.id.exam_radio_group)
+    RadioGroup examRadioGroup;
 
 
     private int current = 0;
@@ -84,7 +86,7 @@ public class ExamActivity extends BaseActivity {
         kmid = getIntent().getStringExtra("kmid");
         xkzbh = getIntent().getStringExtra("xkzbh");
         ctr = getIntent().getStringExtra("ctr");
-        jyk = getIntent().getIntExtra("jyk",0);
+        jyk = getIntent().getIntExtra("jyk", 0);
         requestData();
         initView();
     }
@@ -92,9 +94,9 @@ public class ExamActivity extends BaseActivity {
     public void requestData() {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examUrl);
         params.addBodyParameter("kmid", kmid);
-        params.addBodyParameter("jyk",jyk+"");
-        if( xkzbh!=null && !xkzbh.equals("") ){
-            params.addBodyParameter("xkzbh",xkzbh);
+        params.addBodyParameter("jyk", jyk + "");
+        if (xkzbh != null && !xkzbh.equals("")) {
+            params.addBodyParameter("xkzbh", xkzbh);
         }
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
@@ -104,7 +106,7 @@ public class ExamActivity extends BaseActivity {
 
                 ExamBean examBean = gson.fromJson(result, ExamBean.class);
                 String retCode = examBean.getCode();
-                if ("111111" .equals(retCode) ) {
+                if ("111111".equals(retCode)) {
 
                     examData = examBean.getData();
                     if (examData.size() > 0) {
@@ -148,32 +150,36 @@ public class ExamActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 ExamDataBean examDataBean = examData.get(current);
-                examDataBean.setDa("0");
+                examDataBean.setDaa("A");
                 examData.set(current, examDataBean);
+                rbA.setChecked(true);
             }
         });
         rbB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ExamDataBean examDataBean = examData.get(current);
-                examDataBean.setDa("1");
+                examDataBean.setDaa("B");
                 examData.set(current, examDataBean);
+                rbB.setChecked(true);
             }
         });
         rbC.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ExamDataBean examDataBean = examData.get(current);
-                examDataBean.setDa("2");
+                examDataBean.setDaa("C");
                 examData.set(current, examDataBean);
+                rbC.setChecked(true);
             }
         });
         rbD.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ExamDataBean examDataBean = examData.get(current);
-                examDataBean.setDa("3");
+                examDataBean.setDaa("D");
                 examData.set(current, examDataBean);
+                rbD.setChecked(true);
             }
         });
         nextBut.setOnClickListener(new View.OnClickListener() {
@@ -277,26 +283,23 @@ public class ExamActivity extends BaseActivity {
     }
 
     private void noChecked() {
-        rbA.setChecked(false);
-        rbB.setChecked(false);
-        rbC.setChecked(false);
-        rbD.setChecked(false);
+        examRadioGroup.clearCheck();
     }
 
     private void checkIsSelect() {
         noChecked();
         if (examData.size() > 0) {
-            String da = examData.get(current).getDa();
-            if (da.equals("0")) {
+            String daa = examData.get(current).getDaa() + "";
+            if (daa.equals("A")) {
                 rbA.setChecked(true);
                 //ToastUtil.show("A");
-            } else if (da.equals("1")) {
+            } else if (daa.equals("B")) {
                 rbB.setChecked(true);
                 //ToastUtil.show("B");
-            } else if (da.equals("2")) {
+            } else if (daa.equals("C")) {
                 rbC.setChecked(true);
                 //ToastUtil.show("C");
-            } else if (da.equals("3")) {
+            } else if (daa.equals("D")) {
                 rbD.setChecked(true);
                 //ToastUtil.show("D");
             } else {
@@ -310,14 +313,14 @@ public class ExamActivity extends BaseActivity {
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.examOkUrl);
         String examOkJson = gson.toJson(examData);
         params.addBodyParameter("data", examOkJson);
-        Log.i("data",examOkJson);
+        Log.i("data", examOkJson);
         //params.addBodyParameter("xkzbh",xkzbh);
         SharedPreferences sp = getSharedPreferences("shiyao", 0);
         String username = sp.getString("username", "");
         //int id = sp.getInt("id", -1);
-        params.addBodyParameter("kmid",kmid);
-        params.addBodyParameter("username",username);
-        params.addBodyParameter("ctr",ctr + "");
+        params.addBodyParameter("kmid", kmid);
+        params.addBodyParameter("username", username);
+        params.addBodyParameter("ctr", ctr + "");
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
@@ -388,4 +391,10 @@ public class ExamActivity extends BaseActivity {
         rbD.setText("D." + currData.getD());
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
+        ButterKnife.bind(this);
+    }
 }

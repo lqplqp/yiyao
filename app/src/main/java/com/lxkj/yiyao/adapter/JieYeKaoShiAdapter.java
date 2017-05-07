@@ -60,7 +60,7 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
         }
 
         if(object !=null){
-            holder.kaochang.setText("" + object.get("jyks"));
+            holder.kaochang.setText("" + object.get("jykc"));
             String sftg = object.getString("sftg");
             if (sftg.equals("1")){
                 holder.shifoutongguo.setText("通过");
