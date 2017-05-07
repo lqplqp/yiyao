@@ -17,6 +17,8 @@ public class GeRenScannerQrCodeActivity extends BaseActivity{
 
     private int REQUEST_CODE = 1;
 
+    private String temp = "JY24107110024586----省人1";
+
     @Override
     protected void init() {
         Intent intent = new Intent(this, CaptureActivity.class);

@@ -34,13 +34,13 @@
             android:layout_marginTop="10dp"
             />
 
-        <com.lxkj.yiyao.view.RefreshListView
+        <com.lxkj.yiyao.view.ExpandListView
             android:id="@+id/chengjiliebiao"
-            android:layout_width="150dp"
+            android:layout_width="match_parent"
             android:layout_height="150dp">
 
 
-        </com.lxkj.yiyao.view.RefreshListView>
+        </com.lxkj.yiyao.view.ExpandListView>
 
 
     </LinearLayout>

@@ -321,7 +321,8 @@ public class ExamActivity extends BaseActivity {
         params.addBodyParameter("kmid", kmid);
         params.addBodyParameter("username", username);
         params.addBodyParameter("ctr", ctr + "");
-        x.http().get(params, new Callback.CommonCallback<String>() {
+
+        x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 //Log.d("", result);

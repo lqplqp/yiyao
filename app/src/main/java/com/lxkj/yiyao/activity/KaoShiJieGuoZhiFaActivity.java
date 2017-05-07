@@ -7,12 +7,14 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.activity.adapter.KaoShiJieGuoZhiFaAdapter;
 import com.lxkj.yiyao.base.BaseActivity;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.utils.ToastUtil;
+import com.lxkj.yiyao.view.ExpandListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -31,7 +33,7 @@ import butterknife.OnClick;
 
 public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
     @BindView(R.id.chengjiliebiao)
-    ListView chengjiliebiao;
+    ExpandListView chengjiliebiao;
     @BindView(R.id.shuaxin_but)
     Button shuaxinBut;
     @BindView(R.id.match_qiyemingcheng)
@@ -47,18 +49,18 @@ public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
     @BindView(R.id.tijiao_but)
     Button tijiaoBut;
 
-    String number;
-    String username;
     @BindView(R.id.qiyename)
     TextView qiyename;
 
     private KaoShiJieGuoZhiFaAdapter adapter;
     String qiyemingcheng;
+    private String number;
+    private String username;
 
     @Override
     protected void init() {
-        String number = getIntent().getStringExtra("qrcode_result");
-        String username = getIntent().getStringExtra("username");
+        number = getIntent().getStringExtra("qrcode_result");
+        username = getIntent().getStringExtra("username");
 
         qiyemingcheng = getIntent().getStringExtra("qiyemingcheng");
 
@@ -70,11 +72,16 @@ public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
         RequestParams params = new RequestParams(GlobalString.BaseURL + "admin/qita1/khcjlb");
         params.addBodyParameter("kmid", number);
         params.addBodyParameter("username", username);
+//        params.addBodyParameter("xkzbh", "JY24107110024586");
         params.addBodyParameter("xkzbh", number);
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-                adapter = new KaoShiJieGuoZhiFaAdapter(result);
+                String data = JSONObject.parseObject(result).getString("date");
+                qiyemingcheng = JSONObject.parseObject(result).getString("cname");
+                qiyename.setText(qiyemingcheng);
+                JSONArray jsonArray = JSONArray.parseArray(data);
+                adapter = new KaoShiJieGuoZhiFaAdapter(jsonArray, KaoShiJieGuoZhiFaActivity.this);
                 chengjiliebiao.setAdapter(adapter);
             }
 
@@ -107,6 +114,7 @@ public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
 
     void commitData(){
         RequestParams params = new RequestParams("http://af.0101hr.com/admin/qita1/xzzfjl");
+//        params.addBodyParameter("xkzbh","JY24107110024586");
         params.addBodyParameter("xkzbh",number);
         params.addBodyParameter("dyzfr",diyizhifa.getText()+"");
         params.addBodyParameter("dezfr",dierzhifa.getText()+"");
@@ -117,7 +125,7 @@ public class KaoShiJieGuoZhiFaActivity extends BaseActivity {
             @Override
             public void onSuccess(String result) {
                 JSONObject jsonObject = JSONObject.parseObject(result);
-                if("111111".equals(jsonObject.get("code"))){
+                if("111111".equals(jsonObject.getString("code"))){
                     ToastUtil.show(jsonObject.get("message")+"");
                     finish();
                 }
