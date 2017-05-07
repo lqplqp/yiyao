@@ -60,8 +60,13 @@ public class JieYeKaoShiAdapter extends BaseAdapter {
         }
 
         if(object !=null){
-            holder.kaochang.setText("" + object.get("id"));
-            holder.shifoutongguo.setText("" + object.get("sftg"));
+            holder.kaochang.setText("" + object.get("jyks"));
+            String sftg = object.getString("sftg");
+            if (sftg.equals("1")){
+                holder.shifoutongguo.setText("通过");
+            }else {
+                holder.shifoutongguo.setText("未通过");
+            }
 
             holder.jinrukaochang.setOnClickListener(new View.OnClickListener() {
                 @Override

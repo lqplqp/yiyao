@@ -20,6 +20,7 @@ import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenYongHuXueXiAdapter;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.utils.ToastUtil;
+import com.lxkj.yiyao.view.ExpandListView;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
@@ -37,13 +38,13 @@ public class LearningActivity extends BaseActivity {
 
 
     @BindView(R.id.jichukecheng_listview)
-    ListView jichukechengListview;
+    ExpandListView jichukechengListview;
     @BindView(R.id.xiangguanziliao_listview)
-    ListView xiangguanziliaoListview;
+    ExpandListView xiangguanziliaoListview;
     @BindView(R.id.zaixiankaoshi_listview)
-    ListView zaixiankaoshiListview;
+    ExpandListView zaixiankaoshiListview;
     @BindView(R.id.jieyezhengshu_listview)
-    ListView jieyezhengshuListview;
+    ExpandListView jieyezhengshuListview;
     @BindView(R.id.image)
     ImageView image;
     @BindView(R.id.title)

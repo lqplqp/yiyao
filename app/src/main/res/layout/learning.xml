@@ -263,14 +263,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"/>
 
-                <ListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:id="@+id/jichukecheng_listview">
 
 
-                </ListView>
+                </com.lxkj.yiyao.view.ExpandListView>
 
 
 
@@ -342,14 +342,14 @@
                     android:layout_height="1dp"/>
 
 
-                <ListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:id="@+id/xiangguanziliao_listview">
 
 
-                </ListView>
+                </com.lxkj.yiyao.view.ExpandListView>
 
 
             </LinearLayout>
@@ -419,14 +419,14 @@
                     android:layout_height="1dp"/>
 
 
-                <ListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:id="@+id/zaixiankaoshi_listview">
 
 
-                </ListView>
+                </com.lxkj.yiyao.view.ExpandListView>
 
 
             </LinearLayout>
@@ -484,14 +484,14 @@
                     android:layout_height="1dp"/>
 
 
-                <ListView
+                <com.lxkj.yiyao.view.ExpandListView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:id="@+id/jieyezhengshu_listview">
 
 
-                </ListView>
+                </com.lxkj.yiyao.view.ExpandListView>
 
 
             </LinearLayout>
