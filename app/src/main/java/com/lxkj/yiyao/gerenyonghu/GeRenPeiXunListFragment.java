@@ -7,7 +7,9 @@ import com.lxkj.yiyao.base.BaseFragment;
 import com.lxkj.yiyao.gerenyonghu.Adapter.GeRenPeiXunListAdapter;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
+import com.lxkj.yiyao.shengjugeren.Adapter.SJGRYiBaoPeiXunAdapter;
 import com.lxkj.yiyao.shiji.adapter.PeiXunListAdapter;
+import com.lxkj.yiyao.utils.SPUtil;
 import com.lxkj.yiyao.view.RefreshListView;
 
 import org.xutils.common.Callback;
@@ -31,7 +33,7 @@ public class GeRenPeiXunListFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    MBaseAdapter adapter;
+    SJGRYiBaoPeiXunAdapter adapter;
     private int page = 1;
 
 
@@ -77,18 +79,17 @@ public class GeRenPeiXunListFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String s){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_pxtzgl);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.sjgr_ybpxxm);
         params.addBodyParameter("page",page+"");
-        if(s!=null){
-            params.addBodyParameter("cx",s);
-        }
+        params.addBodyParameter("username", SPUtil.getUserName(getContext()));
 
         x.http().get(params, new Callback.CacheCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if(adapter == null){
-                    adapter = new GeRenPeiXunListAdapter(result);
+                    adapter = new SJGRYiBaoPeiXunAdapter(result);
+                    adapter.setActivity(getActivity());
                     listView.setAdapter(adapter);
                 }else{
                     adapter.addData(result);

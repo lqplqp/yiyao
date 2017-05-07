@@ -69,6 +69,27 @@
                 android:background="@drawable/table_border_bg"
                 android:id="@+id/peixunleixing" />
         </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_black"
+                android:background="@drawable/table_border_bg"
+                />
+            <TextView
+                android:layout_height="@dimen/table_hight"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="操作"
+                android:maxLength="12"
+                android:textSize="@dimen/qyinfo_text_size"
+                android:textColor="@color/global_bg_blue"
+                android:background="@drawable/table_border_bg"
+                android:id="@+id/caozuo" />
+        </TableRow>
        <!-- <TableRow>
             <TextView
                 android:layout_height="@dimen/table_hight"

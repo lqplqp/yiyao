@@ -34,7 +34,7 @@ public class SJGRYiBaoPeiXunXiangMuFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
 
-    MBaseAdapter adapter;
+    SJGRYiBaoPeiXunAdapter adapter;
     private int page = 1;
 
 

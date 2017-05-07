@@ -50,7 +50,7 @@ public class GeRenYongHuTongZhiXiaoXiAdapter extends BaseAdapter {
         }
         final JSONObject object = objects.getJSONObject(i);
 
-        holder.fabushijian.setText("网上培训通知  发布时间："+object.get("pxkssj"));
+        holder.fabushijian.setText("网上培训通知  发布时间："+object.get("cjsj"));
         holder.tongzhineirong.setText(""+object.get("tzbt"));
         holder.zhuangtai.setText("状态："+object.get("zt"));
         return view;

@@ -1,15 +1,18 @@
 package com.lxkj.yiyao.shengjugeren.Adapter;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.activity.LearningActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * Created by Administrator on 2017/3/2.
@@ -17,19 +20,35 @@ import butterknife.OnClick;
 
 public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.ViewHolder> {
 
+    private Activity activity;
+
+
 
     public SJGRYiBaoPeiXunAdapter(String bean) {
         super(bean);
     }
 
+    public void setActivity(Activity activity) {
+        this.activity = activity;
+    }
+
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
         //序号
-        holder.xuhao.setText(""+result.getString("id"));
+        holder.xuhao.setText("" + result.getString("id"));
         //培训名次
-        holder.peixunleixing.setText(""+result.getString("pxbmc"));
+        holder.peixunleixing.setText("" + result.getString("pxbmc"));
         //培训类型
-        holder.peixunleixing.setText(""+result.getString("pxblx"));
+        holder.peixunleixing.setText("" + result.getString("pxblx"));
+        final String id = result.getString("cid");
+        holder.caozuo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(activity, LearningActivity.class);
+                intent.putExtra("pxid", id);
+                activity.startActivity(intent);
+            }
+        });
        /* //培训时间
         holder.peixunshijian.setText(""+result.getString("pxkssj"));
         //证书名称
@@ -60,6 +79,8 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
         TextView peixunmingci;
         @BindView(R.id.peixunleixing)
         TextView peixunleixing;
+        @BindView(R.id.caozuo)
+        TextView caozuo;
       /*  @BindView(R.id.peixunshijian)
         TextView peixunshijian;
         @BindView(R.id.zhengshumingcheng)
