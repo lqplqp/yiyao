@@ -530,6 +530,7 @@ public class MainActivity extends AppCompatActivity {
              * 市级管理员
              */
             case 3:
+            case 4:
                 fragments.clear();
                 pagerTitles = getResources().getStringArray(R.array.shiji0);
                 HomeFragment homeFragment2 = new HomeFragment();
@@ -651,7 +652,7 @@ public class MainActivity extends AppCompatActivity {
             /**
              * 企业管理员
              */
-            case 4:
+            case 10:
                 qiye();
                 break;
             /**

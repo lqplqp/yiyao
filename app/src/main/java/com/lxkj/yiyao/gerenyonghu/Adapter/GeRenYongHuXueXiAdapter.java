@@ -45,7 +45,7 @@ public class GeRenYongHuXueXiAdapter extends MBaseAdapter <GeRenYongHuXueXiAdapt
             public void onClick(View view) {
                 ToastUtil.show("考试");
                 Intent intent = new Intent(mActivity, ExamActivity.class);
-                intent.putExtra("kmid",result.get("id").toString());
+                intent.putExtra("kmid",result.get   ("id").toString());
                 mActivity.startActivity(intent);
             }
         });

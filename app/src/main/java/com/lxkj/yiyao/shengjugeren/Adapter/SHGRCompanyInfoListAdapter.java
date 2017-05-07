@@ -1,11 +1,14 @@
 package com.lxkj.yiyao.shengjugeren.Adapter;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
 import com.lxkj.yiyao.R;
+import com.lxkj.yiyao.jianguan.QiYeRenYuanActivity;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 
 import butterknife.BindView;
@@ -17,13 +20,14 @@ import butterknife.ButterKnife;
 
 public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoListAdapter.ViewHolder> {
 
-
-    public SHGRCompanyInfoListAdapter(String bean) {
+    private Activity mActivity;
+    public SHGRCompanyInfoListAdapter(String bean , Activity activity) {
         super(bean);
+        mActivity = activity;
     }
 
     @Override
-    protected void fillData(int i, ViewHolder holder, JSONObject result) {
+    protected void fillData(int i, ViewHolder holder, final JSONObject result) {
         //查看
 
         //企业名称
@@ -40,6 +44,27 @@ public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoList
         holder.beizhu.setText(""+result.getString("bz"));
         //体检合格人数
         holder.tijianhegerenshu.setText("" + result.getString("tjhgrs"));
+
+        holder.chakan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", result.getString("qymc"));
+                mActivity.startActivity(intent);
+//                ((MainActivity)mActivity).setIndexFragement(1);
+            }
+        });
+
+        holder.qiyerenyuan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mActivity, QiYeRenYuanActivity.class);
+                intent.putExtra("qymc", result.getString("qymc"));
+                mActivity.startActivity(intent);
+            }
+        });
+
+
     }
 
 
@@ -71,6 +96,8 @@ public class SHGRCompanyInfoListAdapter extends MBaseAdapter<SHGRCompanyInfoList
         ImageView guoqitixin;
         @BindView(R.id.beizhu)
         TextView beizhu;
+        @BindView(R.id.qiyerenyuan)
+        TextView qiyerenyuan;
 
 
         ViewHolder(View view) {

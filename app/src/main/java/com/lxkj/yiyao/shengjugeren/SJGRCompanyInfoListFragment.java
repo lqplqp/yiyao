@@ -97,7 +97,7 @@ public class SJGRCompanyInfoListFragment extends BaseFragment {
             public void onSuccess(String result) {
                 Log.i(TAG, result);
                 if(adapter == null){
-                    adapter = new SHGRCompanyInfoListAdapter(result);
+                    adapter = new SHGRCompanyInfoListAdapter(result,getActivity());
                     listView.setAdapter(adapter);
                 }else{
                     adapter.addData(result);
