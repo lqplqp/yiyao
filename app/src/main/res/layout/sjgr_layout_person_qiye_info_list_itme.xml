@@ -56,15 +56,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
+                android:id="@+id/qiyemingcheng"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="新乡面对面重庆小店"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/qiyemingcheng" />
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView
@@ -76,15 +76,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
+                android:id="@+id/congyerenshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="3"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/congyerenshu" />
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView
@@ -96,15 +96,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
+                android:id="@+id/tijianhegerenshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/tijianhegerenshu" />
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView
@@ -116,15 +116,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
+                android:id="@+id/peixunhegerenshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/peixunhegerenshu" />
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView
@@ -136,15 +136,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
+                android:id="@+id/huodexinxikarenshu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="0"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
-                android:id="@+id/huodexinxikarenshu" />
+                android:gravity="center"
+                android:textColor="@color/global_black"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView
@@ -174,16 +174,15 @@
                 android:textColor="@color/global_black"
                 android:background="@drawable/table_border_bg"
                 />
+
             <TextView
                 android:id="@+id/beizhu"
                 android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="3人未获得信息卡"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:textColor="@color/global_red"
                 android:background="@drawable/table_border_bg"
-                />
+                android:gravity="center"
+                android:textColor="@color/global_red"
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
 
     </TableLayout>

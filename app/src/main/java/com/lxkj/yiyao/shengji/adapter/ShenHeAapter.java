@@ -27,20 +27,31 @@ public class ShenHeAapter extends MBaseAdapter<ShenHeAapter.ViewHolder> {
 
     @Override
     protected void fillData(int i, final ViewHolder holder, JSONObject result) {
+
+
+        if(result.get("dlyhm")!=null)
+
         //登录用户名
         holder.dengluyonghuming.setText(""+result.get("dlyhm"));
+        if(result.get("fr")!=null)
         //法人
         holder.faren.setText(""+result.get("fr"));
+        if(result.get("fwdx")!=null)
         //服务对象
         holder.fuwuduixiang.setText(""+result.get("fwdx"));
+        if(result.get("lxdh")!=null)
         //联系电话
         holder.lianxidianhua.setText(""+result.get("lxdh"));
+        if(result.get("shzt")!=null)
         //审核状态
         holder.shenhezhuangtai.setText(""+result.get("shzt"));
+        if(result.get("tjjgdz")!=null)
         //体检机构地址
         holder.tijianjigoudizhi.setText(""+result.get("tjjgdz"));
+        if(result.get("tjglmc")!=null)
         //体检机构名称
         holder.tijianjigoumingcheng.setText(""+result.get("tjglmc"));
+        if(result.get("id")!=null)
         //序号
         holder.xuhao.setText(""+result.get("id"));
 

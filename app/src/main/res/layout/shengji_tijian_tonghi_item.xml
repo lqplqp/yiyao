@@ -26,15 +26,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xuhao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="11111"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xuhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
 
@@ -52,15 +51,14 @@
                 />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/tijiandanwei"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="XXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/tijiandanwei" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
         <TableRow>
@@ -77,15 +75,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/tijianrenshu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="xxx"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/tijianrenshu" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
         <TableRow>
@@ -102,15 +99,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/hegerenshu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="XXXXXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/hegerenshu" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
 
@@ -126,15 +122,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/buhegerenshu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="156132156"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/buhegerenshu" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
             <TextView

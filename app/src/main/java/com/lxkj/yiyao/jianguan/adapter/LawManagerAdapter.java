@@ -27,26 +27,27 @@ public class LawManagerAdapter extends MBaseAdapter<LawManagerAdapter.ViewHolder
 
 
 
+        if(result.get("id")!=null)
         //序号
         holder.xuhao.setText("" + result.get("id"));
-
+        if(result.get("zfbh")!=null)
         //执法编号
         holder.zhifabianhao.setText("" + result.get("zfbh"));
-
+        if(result.get("zfrxm")!=null)
         //执法人姓名
         holder.zhifarenxingming.setText("" + result.get("zfrxm"));
-
+        if(result.get("zfsj")!=null)
         //执法时间
         holder.zhifashijian.setText("" + result.get("zfsj"));
-
+        if(result.get("bzfrxxkbh")!=null)
         //许可证编号
         holder.xukezhengbianhao.setText("" + result.get("bzfrxxkbh"));
 
-
+        if(result.get("bzfrxm")!=null)
         //被执法人
         holder.beizhifaren.setText("" + result.get("bzfrxm"));
 
-
+        if(result.get("zflx")!=null)
         //执法类型
         holder.zhifaleixing.setText("" + result.get("zflx"));
 

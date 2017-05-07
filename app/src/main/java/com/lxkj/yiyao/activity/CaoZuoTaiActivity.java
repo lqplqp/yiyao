@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.alibaba.fastjson.JSONObject;
@@ -43,6 +44,8 @@ public class CaoZuoTaiActivity extends BaseActivity {
     Button qiyezhifa;
     @BindView(R.id.shipin)
     TextView shipin;
+    @BindView(R.id.back_img)
+    ImageView backImg;
     private String qrInfo;
 
     private String xukezhengbianhao;
@@ -135,33 +138,39 @@ public class CaoZuoTaiActivity extends BaseActivity {
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.erweimashengcheng:
-                Intent intent = new Intent(this,GenerationQrCodeActivity.class);
+                Intent intent = new Intent(this, GenerationQrCodeActivity.class);
 
-                intent.putExtra("xkzbh",xukezhengbianhao);
+                intent.putExtra("xkzbh", xukezhengbianhao);
                 SharedPreferences sp = getSharedPreferences("shiyao", 0);
                 String id = sp.getString("username", "");
-                intent.putExtra("username",id);
+                intent.putExtra("username", id);
                 startActivity(intent);
                 break;
             case R.id.kaoshijieguo:
-                Intent intent2 = new Intent(this,KaoShiJieGuoZhiFaActivity.class);
-                intent2.putExtra("qrcode_result",xukezhengbianhao);
+                Intent intent2 = new Intent(this, KaoShiJieGuoZhiFaActivity.class);
+                intent2.putExtra("qrcode_result", xukezhengbianhao);
                 SharedPreferences sp2 = getSharedPreferences("shiyao", 0);
                 String id2 = sp2.getString("username", "");
-                intent2.putExtra("username",id2);
+                intent2.putExtra("username", id2);
 
+                intent2.putExtra("qiyemingcheng", qiyemingcheng.getText());
                 startActivity(intent2);
                 break;
             case R.id.qiyezhifa:
 
-                Intent intent3 = new Intent(this,QiYeZhiFaActivity.class);
-                intent3.putExtra("xkzbh",xukezhengbianhao);
+                Intent intent3 = new Intent(this, QiYeZhiFaActivity.class);
+                intent3.putExtra("xkzbh", xukezhengbianhao);
                 startActivity(intent3);
 
                 break;
         }
     }
 
+
+    @OnClick(R.id.back_img)
+    public void onClick() {
+        finish();
+    }
 }
 
 /*

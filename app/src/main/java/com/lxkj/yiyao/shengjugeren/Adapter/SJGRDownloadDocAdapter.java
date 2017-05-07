@@ -1,6 +1,8 @@
 package com.lxkj.yiyao.shengjugeren.Adapter;
 
+import android.app.NotificationManager;
 import android.os.Environment;
+import android.support.v4.app.NotificationCompat;
 import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
@@ -12,6 +14,7 @@ import com.lxkj.yiyao.R;
 import com.lxkj.yiyao.global.GlobalString;
 import com.lxkj.yiyao.jianguan.adapter.MBaseAdapter;
 import com.lxkj.yiyao.utils.DataUtils;
+import com.lxkj.yiyao.utils.FileDownload;
 import com.lxkj.yiyao.utils.ToastUtil;
 
 import org.xutils.common.Callback;
@@ -57,10 +60,18 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
 
         holder.time.setText(result.get("sj").toString());
 
+
+
         holder.line1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("wjdz").toString());
+
+
+                FileDownload.downLoad(GlobalString.BaseURL + result.get("wjdz").toString(),"/mnt/sdcard/" + result.get("wjdz").toString(),view.getContext());
+
+
+
+                /*RequestParams params = new RequestParams(GlobalString.BaseURL + result.get("wjdz").toString());
 
                 params.setAutoRename(true);
                 params.setAutoResume(true);//设置是否在下载是自动断点续传
@@ -89,7 +100,7 @@ public class SJGRDownloadDocAdapter extends MBaseAdapter<SJGRDownloadDocAdapter.
                     }
 
 
-                });
+                });*/
 
             }
         });

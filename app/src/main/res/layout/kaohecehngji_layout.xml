@@ -93,13 +93,14 @@
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/title_big_textsize"
                 />
+
             <TextView
+                android:id="@+id/qiyename"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/match_qiyemingcheng"
                 android:text="XXXXXXXXXXXXX"
-                android:textSize="@dimen/title_big_textsize"
-                />
+                android:textSize="@dimen/title_big_textsize" />
         </RelativeLayout>
         <View
             android:layout_width="match_parent"

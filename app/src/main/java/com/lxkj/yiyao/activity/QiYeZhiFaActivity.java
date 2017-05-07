@@ -69,6 +69,7 @@ public class QiYeZhiFaActivity extends BaseActivity {
 
     private String xukezhenghao ;
 
+    private String qiyemingcheng;
 
     @Override
     protected void init() {
@@ -262,7 +263,8 @@ public class QiYeZhiFaActivity extends BaseActivity {
         x.http().get(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
-
+                String s = result;
+                finish();
             }
 
             @Override

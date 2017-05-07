@@ -21,24 +21,36 @@ public class TiJianSearchAdapter extends MBaseAdapter<TiJianSearchAdapter.ViewHo
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
+
+        if(result.get("gongzuodanwei")!=null)
+
         //工作单位
         holder.gongzuodanwei.setText(""+result.get("gongzuodanwei"));
+        if(result.get("shenfenzhenghao")!=null)
         //身份证号
         holder.shenfenzhenghao.setText(""+result.get("shenfenzhenghao"));
+        if(result.get("shifouhege")!=null)
         //是否合格
         holder.shifouhege.setText(""+result.get("shifouhege"));
+        if(result.get("tijianbaogaobianhao")!=null)
         //体检报告编号
         holder.tijianbaogaobianhao.setText(""+result.get("tijianbaogaobianhao"));
+        if(result.get("tijianshijian")!=null)
         //体检时间
         holder.tijianshijian.setText(""+result.get("tijianshijian"));
+        if(result.get("tijianyiyuan")!=null)
         //体检医院
         holder.tijianyiyuan.setText(""+result.get("tijianyiyuan"));
+        if(result.get("xingbie")!=null)
         //性别
         holder.xingbie.setText(""+result.get("xingbie"));
+        if(result.get("xingming")!=null)
         //姓名
         holder.xingming.setText(""+result.get("xingming"));
+        if(result.get("id")!=null)
         //序号
         holder.xuhao.setText(""+result.get("id"));
+        if(result.get("zhuzhiyisheng")!=null)
         // 主治医生
         holder.zhuzhiyisheng.setText(""+result.get("zhuzhiyisheng"));
     }

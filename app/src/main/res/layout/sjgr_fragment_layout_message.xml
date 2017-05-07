@@ -32,6 +32,7 @@
         android:layout_height="100dp"></ListView>
 
         <LinearLayout
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -52,6 +53,7 @@
                 />
         </LinearLayout>
         <ListView
+            android:visibility="gone"
             android:id="@+id/list_view1"
             android:layout_width="match_parent"
             android:layout_height="100dp"></ListView>

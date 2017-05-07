@@ -105,6 +105,9 @@ public class CompanyManageyFragment extends BaseFragment {
                     shoujihao.setText(""+data.get("sjhm"));
                     danweidizhi.setText(data.get("szdq") +"-" + data.get("szdq1") +"-"+data.get("szdq2"));
 
+                    danwei.setText(data.get("dwdz")+"");
+
+
                 }
 
                 @Override

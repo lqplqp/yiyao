@@ -25,15 +25,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/xuhao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="1"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xuhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
 
@@ -50,15 +49,14 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/zhifabianhao"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="11111"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/zhifabianhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
 
@@ -76,15 +74,14 @@
                 android:id="@+id/textView18" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/zhifarenxingming"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="XXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/zhifarenxingming" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
         <TableRow>
@@ -98,42 +95,42 @@
                 android:text="执法时间"
                 android:textColor="@color/global_black"
                 android:textSize="@dimen/qyinfo_text_size" />
+
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/zhifashijian"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="2017-07-03"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/zhifashijian" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
         </TableRow>
-        <TableRow>
+        <TableRow
+            >
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="50dp"
+                android:id="@+id/textView49"
                 android:layout_width="0dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
+                android:singleLine="true"
                 android:text="被执法人信息卡编号许可证编号"
-
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/textView49" />
+                android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="50dp"
+                android:id="@+id/xukezhengbianhao"
                 android:layout_width="0dp"
+                android:layout_height="50dp"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="111111000\n0002343224"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/xukezhengbianhao" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
 
@@ -149,15 +146,14 @@
                 android:id="@+id/textView48" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/beizhifaren"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="XXXXXX"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/beizhifaren" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
         <TableRow>
 
@@ -172,17 +168,18 @@
                 android:textSize="@dimen/qyinfo_text_size" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/zhifaleixing"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="行政许可"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/qyinfo_text_size"
-                android:id="@+id/zhifaleixing" />
+                android:textSize="@dimen/qyinfo_text_size" />
         </TableRow>
-        <TableRow>
+        <TableRow
+            android:visibility="gone"
+            >
             <TextView
                 android:background="@drawable/table_frame_fray"
                 android:layout_height="@dimen/table_hight"

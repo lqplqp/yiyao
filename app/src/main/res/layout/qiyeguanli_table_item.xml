@@ -66,15 +66,14 @@
                 android:id="@+id/textView33" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/qiye_name"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="xxx小店"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/qiye_name" />
+                android:textSize="@dimen/table_textsize" />
         </TableRow>
         <TableRow>
 
@@ -113,15 +112,14 @@
                 android:id="@+id/textView" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/peixunhege_renshu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="xxx"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/peixunhege_renshu" />
+                android:textSize="@dimen/table_textsize" />
         </TableRow>
         <TableRow>
 
@@ -136,15 +134,14 @@
                 android:textSize="@dimen/table_textsize" />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/infocard_renshu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="xxx"
                 android:textColor="@color/global_black"
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/infocard_renshu" />
+                android:textSize="@dimen/table_textsize" />
         </TableRow>
         <TableRow>
 
@@ -188,16 +185,15 @@
                 />
 
             <TextView
-                android:background="@drawable/table_frame_fray"
-                android:layout_height="@dimen/table_hight"
+                android:id="@+id/beizhu"
                 android:layout_width="0dp"
+                android:layout_height="@dimen/table_hight"
                 android:layout_weight="1"
+                android:background="@drawable/table_frame_fray"
                 android:gravity="center"
-                android:text="xxx"
-                android:textColor="@color/global_red"
 
-                android:textSize="@dimen/table_textsize"
-                android:id="@+id/beizhu" />
+                android:textColor="@color/global_red"
+                android:textSize="@dimen/table_textsize" />
         </TableRow>
     </TableLayout>
 

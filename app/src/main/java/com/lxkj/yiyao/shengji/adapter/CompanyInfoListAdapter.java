@@ -37,13 +37,19 @@ public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.
         //查看
         context = holder.beizhu.getContext();
 
+        if(result.getString("qymc")!=null)
+
         //企业名称
         holder.qiyemingcheng.setText("" + result.getString("qymc"));
+        if(result.getString("cyrs")!=null)
         //从业人数
         holder.congyerenshu.setText("" + result.getString("cyrs"));
+        if(result.getString("pxhgrs")!=null)
         //培训合格人数
         holder.peixunhegerenshu.setText("" + result.getString("pxhgrs"));
+        if(result.getString("tjhgrs")!=null)
         holder.tijianhegerenshu.setText("" + result.getString("tjhgrs"));
+        if(result.getString("hdxxkrs")!=null)
         //获得信息卡人数
         holder.huodexinxikarenshu.setText("" + result.getString("hdxxkrs"));
         //过期提醒(image)
@@ -52,6 +58,7 @@ public class CompanyInfoListAdapter extends MBaseAdapter<CompanyInfoListAdapter.
         } else {
             holder.guoqitixin.setImageResource(R.mipmap.ic_weiguoqi);
         }
+        if(result.getString("qymc")!=null)
         holder.beizhu.setText("" + result.getString("bz"));
         final String qymc = result.getString("qymc");
         holder.chakan.setOnClickListener(new View.OnClickListener() {

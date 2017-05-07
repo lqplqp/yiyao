@@ -24,12 +24,15 @@ public class JGCompanyManAdapter extends MBaseAdapter<JGCompanyManAdapter.ViewHo
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
 
         //// TODO: 2017/3/2  在这把数据填充进去就gg
+
+        if(result.get("id") !=null)
+
         //序号
         holder.number.setText("" + result.get("id"));
-
+        if(result.get("zh") !=null)
         //用户账号
         holder.username.setText("" + result.get("zh"));
-
+        if(result.get("xm") !=null)
         //用户名
         holder.userName.setText("" + result.get("xm"));
 

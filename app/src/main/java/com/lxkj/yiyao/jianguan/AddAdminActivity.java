@@ -111,10 +111,10 @@ public class AddAdminActivity extends BaseActivity {
         params.addBodyParameter("qrmm",repassword.getText().toString());
         params.addBodyParameter("xm",adminname.getText().toString());
 
-        if(nan.isClickable()) {
+        if(nan.isSelected()) {
             params.addBodyParameter("xb", "男");
         }
-        if(nv.isClickable()) {
+        if(nv.isSelected()) {
             params.addBodyParameter("xb", "女");
         }
 

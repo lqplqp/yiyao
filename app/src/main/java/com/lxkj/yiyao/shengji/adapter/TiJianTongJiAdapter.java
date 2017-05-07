@@ -23,16 +23,24 @@ public class TiJianTongJiAdapter extends MBaseAdapter<TiJianTongJiAdapter.ViewHo
 
     @Override
     protected void fillData(int i, ViewHolder holder, JSONObject result) {
+
+        if(result.get("buhegerenshu")!=null)
+
         //不合格人数
         holder.buhegerenshu.setText(""+result.get("buhegerenshu"));
+        if(result.get("buhegerenshu")!=null)
         //合格人数
         holder.hegerenshu.setText(""+result.get("buhegerenshu"));
+        if(result.get("tijiandanwei")!=null)
         //体检单位
         holder.tijiandanwei.setText(""+result.get("tijiandanwei"));
+        if(result.get("tijianhegelv")!=null)
         //体检合格率
         holder.tijianhegelv.setText(""+result.get("tijianhegelv"));
+        if(result.get("tijianrenshu")!=null)
         //体检人数
         holder.tijianrenshu.setText(""+result.get("tijianrenshu"));
+        if(result.get("id")!=null)
         //序号
         holder.xuhao.setText(""+result.get("id"));
 
