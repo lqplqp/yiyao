@@ -19,11 +19,11 @@ public class ScannerQrCodeActivity extends BaseActivity{
 
     @Override
     protected void init() {
-        /*Intent intent = new Intent(this, CaptureActivity.class);
+        Intent intent = new Intent(this, CaptureActivity.class);
 
-        startActivityForResult(intent, REQUEST_CODE);*/
-        Intent intent = new Intent(this, KaoShiJieGuoZhiFaActivity.class);
-        startActivity(intent);
+        startActivityForResult(intent, REQUEST_CODE);
+        /*Intent intent = new Intent(this, KaoShiJieGuoZhiFaActivity.class);
+        startActivity(intent);*/
     }
 
 
