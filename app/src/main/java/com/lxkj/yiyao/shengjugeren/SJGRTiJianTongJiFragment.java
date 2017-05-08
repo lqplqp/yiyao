@@ -5,6 +5,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,7 +24,9 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -50,14 +54,16 @@ public class SJGRTiJianTongJiFragment extends BaseFragment {
     // ======================== 模板代码=============================
 
     MBaseAdapter adapter;
+    private ArrayAdapter<String> mSpinnerAdapter;
+    private String zhifaType;
     private int page = 1;
+    private int spinnerIndex;
 
 
     @Override
     protected void initView() {
-
+        initSpinner();
         requestData(null);
-
 
         listView.setOnRefreshListener(new RefreshListView.OnRefreshListener() {
             @Override
@@ -95,8 +101,10 @@ public class SJGRTiJianTongJiFragment extends BaseFragment {
 
     // ======================== 模板代码=============================
     public void requestData(String s){
-        RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.shiji_tjtj);
+        RequestParams params = new RequestParams(GlobalString.BaseURL + "/admin/fenji1/tjtj ");
         params.addBodyParameter("page",page+"");
+        params.addBodyParameter("order",spinnerIndex + "");
+
         if(s!=null){
             params.addBodyParameter("tjtj","");
             params.addBodyParameter("sj1",startTime.getText().toString());
@@ -199,5 +207,38 @@ public class SJGRTiJianTongJiFragment extends BaseFragment {
                 });
                 break;
         }
+    }
+
+    private List<String> selects = new ArrayList<String>();
+
+    private void initSpinner() {
+
+        selects.add("按体检机构统计");
+        selects.add("按企业单位统计");
+
+        mSpinnerAdapter = new ArrayAdapter<String>(getActivity(), R.layout.spinner_item, selects);
+        //第三步：为适配器设置下拉列表下拉时的菜单样式。
+        mSpinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        //第四步：将适配器添加到下拉列表上
+        tongjitiaojian.setAdapter(mSpinnerAdapter);
+        //第五步：为下拉列表设置各种事件的响应，这个事响应菜单被选中
+        tongjitiaojian.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
+            public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+                // TODO Auto-generated method stub
+
+                zhifaType = selects.get((int)arg3);
+                spinnerIndex = arg2;
+                /* 将mySpinner 显示*/
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("" + zhifaType);
+            }
+
+            public void onNothingSelected(AdapterView<?> arg0) {
+                // TODO Auto-generated method stub
+                //arg0.setVisibility(View.VISIBLE);
+                ToastUtil.show("12332");
+            }
+        });
+
     }
 }

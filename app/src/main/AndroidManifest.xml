@@ -2,28 +2,28 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.lxkj.yiyao">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
+
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
-        android:name=".App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,47 +31,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".shengji.QiYeRenYuanActivity"/>
-        <activity android:name=".jianguan.QiYeRenYuanActivity"/>
-        <activity android:name=".qiye.ZengJiaRenYuanActivity"/>
-        <activity android:name=".activity.XuanGouKeChengRenYuanActivity"/>
-        <activity android:name=".activity.YongHuYuEFuKuanActivity"/>
-        <activity android:name=".activity.CaoZuoTaiActivity"/>
-        <activity android:name=".activity.XueXiKeChengActivity"/>
-        <activity android:name=".activity.FuKuanActivity"/>
-        <activity android:name=".activity.GeRenScannerQrCodeActivity"/>
-        <activity android:name=".activity.KaoShiJieGuoZhiFaActivity"/>
-        <activity android:name=".activity.QiYeZhiFaActivity"/>
-
-        <activity android:name=".activity.GenerationQrCodeActivity"/>
-        <activity android:name=".activity.ScannerQrCodeActivity"/>
-
-        <activity android:name=".activity.MuBanActivity"/>
-        <activity android:name=".jianguan.JianGuanAddGuanLiYuanActivity"/>
-        <activity android:name=".activity.LearningActivity"/>
-        <activity android:name=".activity.PlayerActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"/>
+        <activity android:name=".shengji.QiYeRenYuanActivity" />
+        <activity android:name=".jianguan.QiYeRenYuanActivity" />
+        <activity android:name=".qiye.ZengJiaRenYuanActivity" />
+        <activity android:name=".activity.XuanGouKeChengRenYuanActivity" />
+        <activity android:name=".activity.YongHuYuEFuKuanActivity" />
+        <activity android:name=".activity.CaoZuoTaiActivity" />
+        <activity android:name=".activity.XueXiKeChengActivity" />
+        <activity android:name=".activity.FuKuanActivity" />
+        <activity android:name=".activity.GeRenScannerQrCodeActivity" />
+        <activity android:name=".activity.KaoShiJieGuoZhiFaActivity" />
+        <activity android:name=".activity.QiYeZhiFaActivity" />
+        <activity android:name=".activity.GenerationQrCodeActivity" />
+        <activity android:name=".activity.ScannerQrCodeActivity" />
+        <activity android:name=".activity.MuBanActivity" />
+        <activity android:name=".jianguan.JianGuanAddGuanLiYuanActivity" />
+        <activity android:name=".activity.LearningActivity" />
+        <activity
+            android:name=".activity.PlayerActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         />
-        <activity android:name=".activity.ExamResultActivity"/>
-
-        <activity android:name=".activity.LoginTestActivity"/>
-        <activity android:name=".activity.SelectTrainActivity"/>
-
-        <activity android:name=".shengjugeren.AddAdminActivity"/>
-        <activity android:name=".shiji.AddAdminActivity"/>
-
-
-        <activity android:name=".qiye.AddAdminActivity"/>
-        <activity android:name=".xianji.QyManagerAddAdminActivity"/>
-        <activity android:name=".shengji.AddAdminActivity"/>
-
-        <activity android:name=".jianguan.AddAdminActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".activity.RegisterActivity"/>
-        <activity android:name=".activity.Register1Activity"/>
-        <activity android:name=".activity.ExamActivity"/>
-        <activity android:name=".activity.PeiXunActivity"/>
+        <activity android:name=".activity.ExamResultActivity" />
+        <activity android:name=".activity.LoginTestActivity" />
+        <activity android:name=".activity.SelectTrainActivity" />
+        <activity android:name=".shengjugeren.AddAdminActivity" />
+        <activity android:name=".shiji.AddAdminActivity" />
+        <activity android:name=".qiye.AddAdminActivity" />
+        <activity android:name=".xianji.QyManagerAddAdminActivity" />
+        <activity android:name=".shengji.AddAdminActivity" />
+        <activity android:name=".jianguan.AddAdminActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".activity.RegisterActivity" />
+        <activity android:name=".activity.Register1Activity" />
+        <activity android:name=".activity.ExamActivity" />
+        <activity android:name=".activity.PeiXunActivity" />
+        <activity android:name=".activity.ImageActivity"></activity>
     </application>
 
 </manifest>

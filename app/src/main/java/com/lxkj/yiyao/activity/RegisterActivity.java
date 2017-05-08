@@ -82,6 +82,7 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
     @Override
     public void toRegister() {
 
+
         RequestParams params = new RequestParams(GlobalString.BaseURL + GlobalString.reg);
 
         params.addBodyParameter("username", username.getText().toString());
@@ -155,7 +156,14 @@ public class RegisterActivity extends BaseActivity implements RegisterContract.R
 
     @OnClick(R.id.register)
     public void onClick() {
-        toRegister();
+        if (TextUtils.isEmpty(username.getText().toString()) || TextUtils.isEmpty(password.getText().toString())
+                || TextUtils.isEmpty(repassword.getText().toString())
+                || TextUtils.isEmpty(repassword.getText().toString())
+                || TextUtils.isEmpty(qiyedizhi.getText().toString())){
+            ToastUtil.show("请完善资料");
+        }else {
+            toRegister();
+        }
     }
 
 

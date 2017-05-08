@@ -159,7 +159,16 @@ public class Register1Activity extends BaseActivity implements RegisterContract.
                 finish();
                 break;
             case R.id.register:
-                toRegister();
+                if(TextUtils.isEmpty(username.getText().toString())
+                        || TextUtils.isEmpty(xingming.getText().toString())
+                        || TextUtils.isEmpty(shenfenzheng.getText().toString())
+                        || TextUtils.isEmpty(password.getText().toString())
+                        || TextUtils.isEmpty(repassword.getText().toString())
+                        || TextUtils.isEmpty(qiyedizhi.getText().toString())){
+                    ToastUtil.show("请完善资料");
+                }else {
+                    toRegister();
+                }
                 break;
             case R.id.qiyedizhi:
                 PickViewUtils viewUtils = new PickViewUtils(Register1Activity.this, qiyedizhi);

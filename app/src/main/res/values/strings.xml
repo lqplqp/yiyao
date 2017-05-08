@@ -3,7 +3,6 @@
     <string name="close">close</string>
 
 
-
     <string name="app_name">食药系统</string>
     <string name="sj_admin_actor">监管人员管理</string>
     <string name="sj_admin_msg">对监管单位要参加培训的监管人员进行管理</string>
@@ -98,22 +97,22 @@
 
     <!--增加监管单位0-->
     <string-array name="zengjiajianguan0">
-        <item >首页</item>
-        <item >个人用户管理</item>
-        <item >企业管理</item>
-        <item >信息卡管理</item>
-        <item >监管单位管理</item>
-        <item >执法记录管理</item>
+        <item>首页</item>
+        <item>个人用户管理</item>
+        <item>企业管理</item>
+        <item>信息卡管理</item>
+        <item>监管单位管理</item>
+        <item>执法记录管理</item>
     </string-array>
     <!--增加监管单位-->
     <string-array name="zengjiajianguan2">
-        <item >添加管理员</item>
-        <item >添加企业管理员</item>
+        <item>添加管理员</item>
+        <item>添加企业管理员</item>
     </string-array>
 
     <!--增加监管单位1-->
     <string-array name="zengjiajianguan1">
-        <item >安全设置</item>
+        <item>安全设置</item>
     </string-array>
 
     <!-- 省局管理员0-->
@@ -166,7 +165,6 @@
     <string-array name="shengjiguanliyuan9">
         <item>安全设置</item>
     </string-array>
-
 
 
     <!-- 省局个人0-->
@@ -330,33 +328,32 @@
     </string-array>
 
 
-
     <!--3 市级个人-->
     <string-array name="ShiJiAdmin">
-        <item >首页</item><!--有-->
-        <item >选购培训项目</item><!--有-->
-        <item >培训项目订单</item><!--有-->
-        <item >已报培训项目</item><!--有-->
-        <item >通知消息</item>
-        <item >执法记录管理</item>
+        <item>首页</item><!--有-->
+        <item>选购培训项目</item><!--有-->
+        <item>培训项目订单</item><!--有-->
+        <item>已报培训项目</item><!--有-->
+        <item>通知消息</item>
+        <item>执法记录管理</item>
     </string-array>
     <!--4 企业管理员-->
     <string-array name="CompanyAdmin">
-        <item >首页</item><!--有-->
-        <item >选购培训项目</item><!--有-->
-        <item >培训项目订单</item><!--有-->
-        <item >已报培训项目</item><!--有-->
-        <item >通知消息</item><!--有-->
-        <item >执法记录管理</item>
+        <item>首页</item><!--有-->
+        <item>选购培训项目</item><!--有-->
+        <item>培训项目订单</item><!--有-->
+        <item>已报培训项目</item><!--有-->
+        <item>通知消息</item><!--有-->
+        <item>执法记录管理</item>
     </string-array>
     <!--5 县区级管理员-->
     <string-array name="XianAdmin">
-        <item >监管人员首页</item><!--有-->
-        <item >监管人员中心</item>
-        <item >培训学习</item><!--有-->
-        <item >企业管理</item><!--有-->
-        <item >监管统计</item>
-        <item >体检信息</item>
+        <item>监管人员首页</item><!--有-->
+        <item>监管人员中心</item>
+        <item>培训学习</item><!--有-->
+        <item>企业管理</item><!--有-->
+        <item>监管统计</item>
+        <item>体检信息</item>
     </string-array>
 
     <!--个人用户-->
@@ -401,32 +398,32 @@
     </string-array>
 
 
-<!--企业管理员增加企业人员  岗位-->
+    <!--企业管理员增加企业人员  岗位-->
     <string-array name="qiye_zhiwu">
-        <item >生产岗位</item>
-        <item >设计岗位</item>
-        <item >售后岗位</item>
-        <item >销售岗位</item>
-        <item >管理岗位</item>
-        <item >后勤岗位</item>
-        <item >人事岗位</item>
-        <item >其他岗位</item>
+        <item>生产岗位</item>
+        <item>设计岗位</item>
+        <item>售后岗位</item>
+        <item>销售岗位</item>
+        <item>管理岗位</item>
+        <item>后勤岗位</item>
+        <item>人事岗位</item>
+        <item>其他岗位</item>
     </string-array>
     <!--企业管理员增加企业人员  学历-->
     <string-array name="qiye_xueli">
-        <item >小学</item>
-        <item >初中</item>
-        <item >中专</item>
-        <item >高中</item>
-        <item >大专</item>
-        <item >本科</item>
-        <item >硕士</item>
-        <item >博士</item>
+        <item>小学</item>
+        <item>初中</item>
+        <item>中专</item>
+        <item>高中</item>
+        <item>大专</item>
+        <item>本科</item>
+        <item>硕士</item>
+        <item>博士</item>
     </string-array>
 
     <string-array name="shifouhege">
-        <item >是</item>
-        <item >否</item>
+        <item>是</item>
+        <item>否</item>
     </string-array>
 
     <!-- 体检端0-->

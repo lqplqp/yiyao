@@ -355,7 +355,8 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shengjiguanliyuan7);
                                 //体检统计
-                                TiJianTongJiFragment sjgrTiJianTongJiFragment = new TiJianTongJiFragment();
+                                SJGRTiJianTongJiFragment sjgrTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
+//                                TiJianTongJiFragment sjgrTiJianTongJiFragment = new TiJianTongJiFragment();
                                 //体检查询
                                 TiJianSearchFragment sjgrTiJianSearchFragment = new TiJianSearchFragment();
                                 fragments.add(sjgrTiJianTongJiFragment);
@@ -423,7 +424,7 @@ public class MainActivity extends AppCompatActivity {
                                 //监管人员信息
                                 SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment = new SJGRPersonManagerAddFragment();
                                 //我的证书  待定
-                                SJGRZhengShuFragment sjgrZhengShuFragment = new SJGRZhengShuFragment();
+                                XianJiYongHuZhengShuFragment sjgrZhengShuFragment = new XianJiYongHuZhengShuFragment();
                                /* SJGRPersonManagerAddFragment sjgrPersonManagerAddFragment1 = new SJGRPersonManagerAddFragment();*/
                                 //我的执法
                                 SJGRZhiFaSerachFragment sjgrZhiFaSerachFragment = new SJGRZhiFaSerachFragment();
@@ -612,7 +613,7 @@ public class MainActivity extends AppCompatActivity {
                                 setTitle("体检信息");
                                 pagerTitles = getResources().getStringArray(R.array.shiji6);
                                 //体检统计
-                                ShiJiTiJianTongJiFragment shiJiTiJianTongJiFragment = new ShiJiTiJianTongJiFragment();
+                                SJGRTiJianTongJiFragment shiJiTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
                                 //体检查询
                                 ShiJiTiJianSearchFragment shiJiTiJianSearchFragment = new ShiJiTiJianSearchFragment();
                                 fragments.add(shiJiTiJianTongJiFragment);
@@ -850,7 +851,8 @@ public class MainActivity extends AppCompatActivity {
                                 fragments.add(geRenYongHuYongHuXinXiFragment);
 
                                 //我的证书
-                                GeRenYongHuZhengShuFragment geRenYongHuZhengShuFragment = new GeRenYongHuZhengShuFragment();
+                                XianJiYongHuZhengShuFragment geRenYongHuZhengShuFragment = new XianJiYongHuZhengShuFragment();
+//                                GeRenYongHuZhengShuFragment geRenYongHuZhengShuFragment = new GeRenYongHuZhengShuFragment();
                                 fragments.add(geRenYongHuZhengShuFragment);
                                 //我的信息卡
                                 GeRenYongHuXinXiKaFargment geRenYongHuXinXiKaFargment = new GeRenYongHuXinXiKaFargment();
@@ -1005,7 +1007,7 @@ public class MainActivity extends AppCompatActivity {
                         setTitle("体检信息");
                         pagerTitles = getResources().getStringArray(R.array.shiji6);
                         //体检统计
-                        ShiJiTiJianTongJiFragment shiJiTiJianTongJiFragment = new ShiJiTiJianTongJiFragment();
+                        SJGRTiJianTongJiFragment shiJiTiJianTongJiFragment = new SJGRTiJianTongJiFragment();
                         //体检查询
                         ShiJiTiJianSearchFragment shiJiTiJianSearchFragment = new ShiJiTiJianSearchFragment();
                         fragments.add(shiJiTiJianTongJiFragment);
