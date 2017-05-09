@@ -46,6 +46,8 @@ public class SJGRYiBaoPeiXunAdapter extends MBaseAdapter<SJGRYiBaoPeiXunAdapter.
             public void onClick(View v) {
                 Intent intent = new Intent(activity, LearningActivity.class);
                 intent.putExtra("pxid", id);
+                intent.putExtra("user_type", -1);
+
                 activity.startActivity(intent);
             }
         });
