@@ -384,6 +384,13 @@ public class ExamActivity extends BaseActivity {
     }*/
 
     private void exam() {
+        nextBut.setVisibility(View.VISIBLE);
+        lastBut.setVisibility(View.VISIBLE);
+        if (current + 1 == examData.size()){
+            nextBut.setVisibility(View.GONE);
+        }else if (current == 0){
+            lastBut.setVisibility(View.GONE);
+        }
         currData = examData.get(current);
         questionTv.setText("" + currData.getId() + "." + currData.getTm() + "  (" + currData.getFs() + "分)");
         rbA.setText("A." + currData.getA());
